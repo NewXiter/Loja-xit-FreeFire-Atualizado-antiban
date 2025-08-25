@@ -1,14 +1,71 @@
+
 <!doctype html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Painel Xit - New Sensi </title>
+    <title>Painel Xit - Anti-ban Atualizado </title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --card: #141414;
+      --text: #e9f1f5;
+      --accent: #00e676;
+      --muted: #a9a9a9;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    h1, h2, h3 { font-family: 'Bebas Neue', sans-serif; }
+
+    .container { padding-left: 15px; padding-right: 15px; }
+
+    /* Hero */
+    .hero {
+      padding: 60px 15px;
+      text-align: center;
+      background: radial-gradient(circle at top left, rgba(0,230,118,.15), transparent 40%), 
+                  radial-gradient(circle at bottom right, rgba(0,0,0,.25), transparent 40%);
+    }
+    .hero img { max-width: 90px; margin-bottom: 16px; }
+
+    .tagline { font-size: 1.9rem; line-height: 1.15; margin-bottom: 8px; }
+    .neon {
+      color: #1ee08c;
+      text-shadow: 0 0 6px rgba(30,224,140,.8);
+    }
+
+    .btn-custom {
+      background-color: #000;
+      color: #fff;
+      border: 2px solid #00e676;
+      font-weight: 600;
+      padding: .75rem 1.25rem;
+    }
+    .btn-custom:hover { background-color: #00e676; color: #000; }
+
+    .card {
+      background-color: var(--card);
+      color: #fff;
+      border: 1px solid #222;
+      border-radius: 1rem;
+    }
+    .card-img-top { border-radius: 1rem 1rem 0 0; object-fit: cover; }
+
+    .badge-accent {
+      background-color: #00e676; color: #000; font-weight: 700;
+    }
 
     <style>
         body {
@@ -249,11 +306,12 @@
         <div class="container">
             <img src="imgs/logo.png" alt="Logo do Produto">
             <h1 class="display-5">
-               <span class="white-bold">O MELHOR</span>
+               <span class="white-bold">NOVO</span>
                  <span class="neon-red">PAINEL XIT</span>  <span class="white-bold">PRA DAR</span><br>
                 <span class="neon-vermelho">FULl VERMELHO!</span>
                <span class="fs-6 mt-5">NO</span>  <span class="white-bold">FREE FIRE</span><br>
-                <span class="white-bold">COM +</span>  <span class="neon-red">10K PLAYERS USANDO!</span>
+                <span class="white-bold">COM <span class="neon-red">INTELIGÊNCIA</span> <span class="white-bold">ARTIFICIAL</span><br>
+                <span class="white-bold"> + </span> <span class="neon-red">10MIL PLAYERS USANDO!</span>
             </h1>
 
 </div> <div class="ratio ratio-16x9 mt-4 video-neon">
@@ -262,11 +320,11 @@
     
     </div>
             <p class="fs-6 mt-3"> 
-                <strong id="contador-pessoas" class="neon-red">254</strong> usuários ativos agora
+                <strong id="contador-pessoas" class="neon-red">254</strong> usuários ativos agora!
             </p>
 
             <script>
-                let contador = 97;
+                let contador = 254;
                 const elemento = document.getElementById('contador-pessoas');
 
                 function subirPessoas() {
@@ -282,7 +340,7 @@
             </script>
                  </div>
        <a href="#planos"
-           <h2 class="btn btn-pulse-green fw-bold px-4 py-2"> COMPRAR XIT AGORA!
+           <h2 class="btn btn-pulse-green fw-bold px-4 py-2"> COMPRAR AGORA!
                 </a>
         <p class="fs-6 mt-3"> 
      </div>
@@ -298,10 +356,9 @@
                     <img src="imgs/trofeu.png" class="card-img-top" alt="Troféu - Vencer">
                     <div class="card-body">
                         <h5 class="card-title">Vença Todas as Partidas</h5>
-                        <p class="card-text"> tenha acesso aos melhores PAINEL VIP para da
-                            Full vermelho no Free Fire  para o seu celular tenha a famosa sensi que 
-                                  ﻿﻿﻿﻿﻿gruda! Ganhe x1, BR Rank, CS, Apostados,
-                            tudo usando o melhor Xit 100% Anti ban 100% Anti black Aprovado 100% seguro.</p>
+                        <p class="card-text"> tenha acesso aos melhores PAINEL para dar so capa no Free Fire! no seu celular tenha a famosa sensi que 
+                                  ﻿﻿﻿﻿﻿gruda! Ganhe todos x1, BR Rank, CS, e Apostados, 100% disfaçado
+                            tudo isso usando o melhor Xit que e 100% seguro.</p>
                     </div>
                 </div>
             </div>
@@ -336,7 +393,131 @@
     </div>
 
 
+ </div>
 
+    <div class="text-center p-3 mt-2">
+        <h1 class="display-2 text-light"> 
+             Veja abaixo alguns
+            <span class="neon-red">
+                FeedBacks de clientes
+            </span>
+        </h1>
+    </div>
+
+
+
+
+    <div id="carouselDepoimentos" class="carousel slide container py-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-center">
+                    <div class="card text-white text-center p-4 rounded-4"
+                        style="background-color: #121212; width: 90%; max-width: 400px;">
+                        <img src="imgs/pvsocial (1).jpg" alt="Depoimento 1" class="img-fluid">
+                        <div class="mb-2 mt-2">
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <div class="card text-white text-center p-4 rounded-4"
+                        style="background-color: #121212; width: 90%; max-width: 400px;">
+                        <img src="imgs/pvsocial (2).jpg" alt="Depoimento 2" class="img-fluid">
+                        <div class="mb-2 mt-2">
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <div class="card text-white text-center p-4 rounded-4"
+                        style="background-color: #121212; width: 90%; max-width: 400px;">
+                        <img src="imgs/pvsocial (3).jpg" alt="Depoimento 3" class="img-fluid">
+                        <div class="mb-2 mt-2">
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <div class="card text-white text-center p-4 rounded-4"
+                        style="background-color: #121212; width: 90%; max-width: 400px;">
+                        <img src="imgs/pvsocial (4).jpg" alt="Depoimento 3" class="img-fluid">
+                        <div class="mb-2 mt-2">
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <div class="card text-white text-center p-4 rounded-4"
+                        style="background-color: #121212; width: 90%; max-width: 400px;">
+                        <img src="imgs/pvsocial (5).jpg" alt="Depoimento 3" class="img-fluid">
+                        <div class="mb-2 mt-2">
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <div class="card text-white text-center p-4 rounded-4"
+                        style="background-color: #121212; width: 90%; max-width: 400px;">
+                        <img src="imgs/pvsocial (6).jpg" alt="Depoimento 3" class="img-fluid">
+                        <div class="mb-2 mt-2">
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                            <i class="bi bi-star-fill star-green"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
 
     <div class="text-center my-5">
         <h1 class="display-2  text-light">
@@ -346,7 +527,7 @@
     <div class="card pacote-card p-4 rounded-4 shadow-lg text-white mx-auto"
         style="max-width: 350px; background-color: #121212;">
         <div class="col-12 col-lg-6 mb-4 fade-in">
-            <img src="imgs/logo.png" class="img-fluid rounded w-50 shadow-lg" alt="Sobre o XIT Free Fire" />
+            <img src="imgs/logo.pn" class="img-fluid rounded w-50 shadow-lg" alt="Sobre o XIT Free Fire" />
         </div>
 
         <div class="col-12 col-lg-6 mb-4 fade-in">
@@ -498,132 +679,9 @@
             COMPRAR AGORA! 
         </span>
                     </a>
-            </div>
-
-    <div class="text-center p-3 mt-2">
-        <h1 class="display-2 text-light">
-            Veja abaixo alguns
-            <span class="neon-red">
-                FeedBacks de clientes
-            </span>
-        </h1>
-    </div>
-
-
-
-
-    <div id="carouselDepoimentos" class="carousel slide container py-5" data-bs-ride="carousel">
-        <div class="carousel-inner">
-
-            <div class="carousel-item active">
-                <div class="d-flex justify-content-center">
-                    <div class="card text-white text-center p-4 rounded-4"
-                        style="background-color: #121212; width: 90%; max-width: 400px;">
-                        <img src="imgs/pvsocial (1).jpg" alt="Depoimento 1" class="img-fluid">
-                        <div class="mb-2 mt-2">
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                    <div class="card text-white text-center p-4 rounded-4"
-                        style="background-color: #121212; width: 90%; max-width: 400px;">
-                        <img src="imgs/pvsocial (2).jpg" alt="Depoimento 2" class="img-fluid">
-                        <div class="mb-2 mt-2">
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                    <div class="card text-white text-center p-4 rounded-4"
-                        style="background-color: #121212; width: 90%; max-width: 400px;">
-                        <img src="imgs/pvsocial (3).jpg" alt="Depoimento 3" class="img-fluid">
-                        <div class="mb-2 mt-2">
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                    <div class="card text-white text-center p-4 rounded-4"
-                        style="background-color: #121212; width: 90%; max-width: 400px;">
-                        <img src="imgs/pvsocial (4).jpg" alt="Depoimento 3" class="img-fluid">
-                        <div class="mb-2 mt-2">
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                    <div class="card text-white text-center p-4 rounded-4"
-                        style="background-color: #121212; width: 90%; max-width: 400px;">
-                        <img src="imgs/pvsocial (5).jpg" alt="Depoimento 3" class="img-fluid">
-                        <div class="mb-2 mt-2">
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="d-flex justify-content-center">
-                    <div class="card text-white text-center p-4 rounded-4"
-                        style="background-color: #121212; width: 90%; max-width: 400px;">
-                        <img src="imgs/pvsocial (6).jpg" alt="Depoimento 3" class="img-fluid">
-                        <div class="mb-2 mt-2">
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                            <i class="bi bi-star-fill star-green"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        
         </div>
-
-        <!-- Controles -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
-            <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-            <span class="visually-hidden">Próximo</span>
-        </button>
-    </div>
-
+    
     <div class="container py-5">
         <div class="row align-items-center justify-content-center text-white text-center">
             <div class="col-12 col-md-4 mb-4">
@@ -775,10 +833,12 @@
     <!-- End Meta Pixel Code -->
 
     <script>
-        const nomes = ["João", "isabelle", "Maria", "Ana", "Matheus", "Juliana", "Rafaela", "Pedro", "Carlos", "Lucas",];
+        const nomes = ["João", "isabelle", "Maria", "Ana", "Matheus", "Juliana", "Rafaela", "Pedro", "Carlos", "Lucas", ];
         const acoes = [
-            "Comprou xit iphone",
-            "Comprou xit Android",
+            "Garantiu seu xit agora!",
+            "Aproveitou a Promoção",
+            "Comprou Painel xit iPhone",
+            "Comprou Painel xit Android",
             "Acabou de adquirir o painel CLT",
             "Realizou uma compra",
             "Confirmou o pagamento",
@@ -817,68 +877,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
