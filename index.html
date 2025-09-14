@@ -886,43 +886,49 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <!-- TikTok Pixel Code End -->
 
             
-    <script>
-        const nomes = ["Fabinho", "Adriano", "Athur", "Marcos", "Isabelle", "Bella", "Ana", "Vitor", "Rafael", "Matheus", "Juliana", "Rafaela", "kauane"];
-        const acoes = [
-            "Aproveitou a Promoção",
-            "Comprou Painel",
-            "Acabou de adquirir",
-            "Realizou uma Compra",
-            "Confirmou o Pagamento"
-        ];
+  <script>
+const nomes = [
+  "Fabinho", "Adriano", "Athur", "Marcos", "Isabelle", "Bella", "Ana", "Vitor", "Rafael", "Matheus",
+  "Juliana", "Rafaela", "Kauane", "Lucas", "Pedro", "Luana", "Bruno", "Camila", "Gustavo", "Fernanda"
+];
 
-        function mostrarNotificacao() {
-            const nome = nomes[Math.floor(Math.random() * nomes.length)];
-            const acao = acoes[Math.floor(Math.random() * acoes.length)];
-            const mensagem = `${nome} ${acao}`;
+const acoes = [
+  "aproveitou a promoção", "comprou um pacote VIP", "acabou de adquirir", "realizou uma compra", "confirmou pagamento",
+  "fez um pedido", "finalizou uma compra", "comprou agora", "adicionou ao carrinho", "fez uma aquisição"
+];
 
-            const notificacao = document.createElement("div");
-            notificacao.className = "notificacao";
-            notificacao.innerHTML = `<i class="bi bi-check-circle" style="margin-right: 8px;"></i> ${mensagem}`;
+function mostrarNotificacao() {
+  const nome = nomes[Math.floor(Math.random() * nomes.length)];
+  const acao = acoes[Math.floor(Math.random() * acoes.length)];
+  const mensagem = `${nome} ${acao}`;
 
-            document.getElementById("notificacoes").appendChild(notificacao);
+  const notificacao = document.createElement("div");
+  notificacao.className = "notificacao";
+  notificacao.innerHTML = `<i class="bi bi-check-circle-fill" style="margin-right:8px; color:#00e676;"></i> ${mensagem}`;
 
-            setTimeout(() => {
-                notificacao.remove();
-            }, 5000);
-        }
+  document.getElementById("notificacoes").appendChild(notificacao);
 
-        function loopNotificacoes() {
-            mostrarNotificacao();
-            const tempo = Math.floor(Math.random() * 7000) + 8000;
-            setTimeout(loopNotificacoes, tempo);
-        }
+  // Remove a notificação após 5 segundos
+  setTimeout(() => {
+    notificacao.remove();
+  }, 5000);
+}
 
-        window.onload = loopNotificacoes;
-    </script>
+function loopNotificacoes() {
+  mostrarNotificacao();
+  const tempo = Math.floor(Math.random() * 7000) + 8000; // entre 8 e 15 segundos
+  setTimeout(loopNotificacoes, tempo);
+}
 
+// Iniciar o loop ao carregar a página
+window.onload = () => {
+  // Começa a gerar notificações após 2 segundos
+  setTimeout(loopNotificacoes, 2000);
+};
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
 
