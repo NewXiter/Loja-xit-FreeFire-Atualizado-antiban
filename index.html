@@ -347,7 +347,14 @@
                 font-size: 11px;
                 padding: 8px 12px;
             }
-        }
+
+
+
+
+
+
+
+            
     /* Estilo do botão NEON com animação */
 .neon-btn {
   padding: 15px 30px;
@@ -379,10 +386,42 @@
   to {
     box-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055, 0 0 60px #ff0055;
   }
-    
+    /* Estilo do botão NEON com animação */
+.neon-btn {
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff0055; /* Cor vibrante VENDER */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 0 30px #ff0055;
+  transition: all 0.3s ease;
+  position: relative;
+  animation: neon-glow 1.5s infinite alternate;
+}
+
+.neon-btn:hover {
+  box-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055, 0 0 60px #ff0055;
+  transform: scale(1.05);
+}
+
+@keyframes neon-glow {
+  from {
+    box-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 0 30px #ff0055;
+  }
+  to {
+    box-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055, 0 0 60px #ff0055;
+  }
+
+
 </style>
 </head>
 <body>
+
+    
     <!-- Facebook Pixel noscript -->
     <noscript>
         <img height="1" width="1" style="display:none"
@@ -1132,6 +1171,7 @@
     </script>
 </body>
 </html>
+
 
 
 
