@@ -348,7 +348,39 @@
                 padding: 8px 12px;
             }
         }
-    </style>
+    /* Estilo do botão NEON com animação */
+.neon-btn {
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff0055; /* Cor vibrante VENDER */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 0 30px #ff0055;
+  transition: all 0.3s ease;
+  position: relative;
+  animation: neon-glow 1.5s infinite alternate;
+}
+
+/* Efeito de hover para mais brilho */
+.neon-btn:hover {
+  box-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055, 0 0 60px #ff0055;
+  transform: scale(1.05);
+}
+
+/* Animação NEON pulsante */
+@keyframes neon-glow {
+  from {
+    box-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 0 30px #ff0055;
+  }
+  to {
+    box-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055, 0 0 60px #ff0055;
+  }
+    
+</style>
 </head>
 <body>
     <!-- Facebook Pixel noscript -->
@@ -387,38 +419,21 @@
             <p class="fs-6 mt-3">
                 <strong id="contador-pessoas" class="neon-red">217</strong> usuários ativos agora!
             </p>
-            <div class="ratio ratio-16x9 mt-4 video-neon">
-                <iframe src="https://www.youtube.com/embed/SD8KYZ8MRpQ?si=-qPLQXDLwGlh2HY0" title="YouTube video player" allowfullscreen></iframe>
-            </div>
+          <!-- Video -->
+<div class="ratio ratio-16x9 mt-4 video-neon">
+    <iframe src="https://www.youtube.com/embed/SD8KYZ8MRpQ?si=-qPLQXDLwGlh2HY0" title="YouTube video player" allowfullscreen></iframe>
+</div>
+
+<!-- Botão VENDER com animação NEON -->
+<div class="neon-button-container text-center mt-4">
+    <a href="#" class="neon-btn">VENDER</a>
+</div>
+
                      </style>
         </div>
         <p class="fs-6 mt-3">
         <p class="caption">Assista ao vídeo acima e entenda</p>
-  <!-- Seção onde o vídeo está localizado -->
-<style>
-  .btn-cta-renovado {
-    background-color: #ff5733;
-    color: #ffffff;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-
-  .btn-cta-renovado:hover {
-    background-color: #e14a2b;
-  }
-</style>
-
-<section id="video-section">
-  <!-- Seu vídeo aqui -->
-</section>
-
-<div class="botao-abaixo-video" style="text-align: center; margin-top: 20px;">
-  <a href="#pricesec" class="btn-cta-renovado">Quero Acesso VIP Agora!</a>
-</div>
+        
 
 
 
@@ -1117,6 +1132,7 @@
     </script>
 </body>
 </html>
+
 
 
 
