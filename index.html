@@ -117,7 +117,47 @@
         .neon {
             color: #1ee08c;
             text-shadow: 0 0 6px rgba(30, 224, 140, 0.8);
+              }
+        
+ .neon-red {
+            color: #1cf300;
+            text-shadow: 0 0 5px #2bff00, 0 0 10px #005103, 0 0 20px #000000;
         }
+
+        .video-neon {
+            border-radius: 20px;
+            box-shadow: 0 0 10px #00ff00, 0 0 13px #00ff00;
+            overflow: hidden;
+        }
+
+        .video-neon iframe {
+            border: none;
+            border-radius: 20px;
+        }
+
+
+        .star-green {
+            color: #00ff00;
+            font-size: 1.2rem;
+        }
+
+        .card.text-white img {
+            border-radius: 1rem;
+            max-height: 330px;
+            object-fit: cover;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .pacote-card ul.lista-beneficios li {
+            margin-bottom: 6px;
+        }
+
+        .pacote-card .neon-red {
+            color: #1cf300;
+            text-shadow: 0 0 5px #2bff00, 0 0 10px #005103, 0 0 20px #000000;
+        }
+
 
         .btn-custom {
             background-color: #000;
@@ -148,6 +188,17 @@
             color: #000;
             font-weight: 700;
         }
+        
+.neo-vender {
+  /* estilos personalizados aqui */
+  border: 2px solid #00e676;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+.neo-vender:hover {
+  transform: scale(1.02);
+    
+}
 
         /* Estilos adicionais já definidos anteriormente, mantidos */
 
@@ -569,13 +620,13 @@
                 <span class="white-bold">ADQUIRA AGORA O SEU</span><br>
                 <span class="white-bold">Seu pacote <span class="neon-red">VIP</span></span>
             </h1>
-            <div class="card pacote-card p-4 rounded-4 shadow-lg mx-auto" style="max-width: 350px; background-color: #121212;">
+            
                 <!-- Conteúdo do pacote -->
                 <!-- Corrigi as tags abertas e fechadas -->
-                <div class="text-center mb-3">
+                       <div class="card pacote-card p-4 rounded-4 shadow-lg mx-auto" style="max-width: 350px; background-color: #121212;">
+                          
                     <img src="imgs/iphone.png" class="img-fluid rounded w-50" alt="Painel CLT VIP" />
                     
-                </div>
                 <h1 class="mb-3 white-bold text-center" style="font-size: 2rem; color: #00cc00;">
                     <span class="neon-vermelho">XIT</span> <span class="neon-red">ANDROID</span>
                 </h1>
@@ -603,25 +654,28 @@
             <li> <i class="bi bi-check-circle-fill star-green"></i> Suporte Exlusivo no ZAP 24/7</li>
         </ul>
                 <div class="preco text-center mb-2">
-                    <h0 class="fs-2 text-decoration-line-through mb-5" style="color: red; font-size: 1.4rem;">De R$129,90</h0>
-                    <h2 class="fw-bold mb-2" style="color: #fff; font-size: 2rem;">
-                        Por apenas <span class="neon-red fw-bold" style="font-size:2.5rem;">R$29,90</span>
-                    </h2>
-                    <a href="https://go.pepperpay.com.br/1xm07" class="btn btn-lg btn-success fw-bold btn-pulse-green" style="font-size:1.3rem; border-radius:30px; border:2px solid #00ff00; background: linear-gradient(90deg,#00e676,#00c853); color:#000; box-shadow:0 0 20px #00ff00;">
-                        <i class="bi bi-cart-fill me-2"></i> QUERO COMPRAR AGORA!
+  <h0 class="fs-2 text-decoration-line-through mb-5" style="color: red; font-size: 1.4rem;">
+    De 147,90 </h0>
+  <h2 class="fw-bold mb-2" style="color: #fff; font-size: 2rem;">
+    Por apenas   <span class="neon-red fw-bold" style="font-size:2.5rem; text-shadow:0 0 1px #00ff00,0 0 1px #00ff00;">R$29,90</span>
+                  </h2>
+  <a href="https://go.pepperpay.com.br/n9oz4"
+     class="btn btn-lg btn-success fw-bold btn-pulse-green"
+     style="font-size:1.3rem; border-radius:30px; border:2px solid #00ff00; background: linear-gradient(90deg,#00e676,#00c853); color:#000; box-shadow:0 0 20px #00ff00; animation:pulse 1.5s infinite;">
+    <i class="bi bi-cart-fill me-2"></i> QUERO COMPRAR AGORA!
                     </a>
                 </div>
             </div>
 <br><br>
             
-                           </h1>
-            <div class="card pacote-card p-4 rounded-4 shadow-lg mx-auto" style="max-width: 350px; background-color: #121212;">
+           
+                <div class="card pacote-card p-4 rounded-4 shadow-lg mx-auto" style="max-width: 350px; background-color: #121212;">
                 <!-- Conteúdo do pacote -->
                 <!-- Corrigi as tags abertas e fechadas -->
                 <div class="text-center mb-3">
                     <img src="imgs/iphone.png" class="img-fluid rounded w-50" alt="Painel CLT VIP" />
                     
-                </div>
+        
                 <h1 class="mb-3 white-bold text-center" style="font-size: 2rem; color: #00cc00;">
                     <span class="neon-vermelho">XIT</span> <span class="neon-red">IPHONE/iOS</span>
                 </h1>
@@ -648,32 +702,42 @@
             <li> <i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BLACKLIST!</li>
             <li> <i class="bi bi-check-circle-fill star-green"></i> Suporte Exlusivo no ZAP 24/7</li>
         </ul>
-                <div class="preco text-center mb-2">
-                    <h0 class="fs-2 text-decoration-line-through mb-5" style="color: red; font-size: 1.4rem;">De R$129,90</h0>
-                    <h2 class="fw-bold mb-2" style="color: #fff; font-size: 2rem;">
-                        Por apenas <span class="neon-red fw-bold" style="font-size:2.5rem;">R$29,90</span>
-                    </h2>
-                    <a href="https://go.pepperpay.com.br/1xm07" class="btn btn-lg btn-success fw-bold btn-pulse-green" style="font-size:1.3rem; border-radius:30px; border:2px solid #00ff00; background: linear-gradient(90deg,#00e676,#00c853); color:#000; box-shadow:0 0 20px #00ff00;">
-                        <i class="bi bi-cart-fill me-2"></i> QUERO COMPRAR AGORA!
+                      <div class="preco text-center mb-2">
+  <h0 class="fs-2 text-decoration-line-through mb-5" style="color: red; font-size: 1.4rem;">
+    De 147,90 </h0>
+  <h2 class="fw-bold mb-2" style="color: #fff; font-size: 2rem;">
+    Por apenas   <span class="neon-red fw-bold" style="font-size:2.5rem; text-shadow:0 0 1px #00ff00,0 0 1px #00ff00;">R$29,90</span>
+                  </h2>
+  <a href="https://go.pepperpay.com.br/1xm07"
+     class="btn btn-lg btn-success fw-bold btn-pulse-green"
+     style="font-size:1.3rem; border-radius:30px; border:2px solid #00ff00; background: linear-gradient(90deg,#00e676,#00c853); color:#000; box-shadow:0 0 20px #00ff00; animation:pulse 1.5s infinite;">
+    <i class="bi bi-cart-fill me-2"></i> QUERO COMPRAR AGORA!
                     </a>
+                    </div>
+
                 </div>
             </div>
+</div>
+</div>
+</div>
+
+
+
+
             
-    <div class="card pacote-card p-4 rounded-4 shadow-lg text-white mx-auto mt-5" id="planos"
-        style="max-width: 350px; background-color: #121212;">
+   <div class="card pacote-card p-4 rounded-4 shadow-lg mx-auto" style="max-width: 350px; background-color: #121212;">
         <div class="col-12 col-lg-6 mb-4 fade-in">
             <img src="imgs/logo.png" class="img-fluid rounded w-50 shadow-lg" alt="Painel CLT VIP" />
-        </div>
+    
 
         <div class="col-12 col-lg-6 fade-in">
             <img src="imgs/CLT.jpg" class="img-fluid rounded w-60" alt="Painel CLT VIP" />
-        </div>
-
+        
         <div class="text-center">
             <h1 class="display-2 text-light">
                 Painel CLT <span class="neon-red">VIP</span>
             </h1>
-        </div>
+    
 
         <div id="notificacoes" style="position: fixed; bottom: 20px; left: 20px; z-index: 9999;"></div>
 
@@ -710,7 +774,7 @@
       R$49,90
     </span>
   </h2>
-  <a href="https://go.pepperpay.com.br/n9oz4"
+  <a href="https://go.pepperpay.com.br/6ztdj"
      class="btn btn-lg btn-success fw-bold btn-pulse-green"
      style="font-size:1.3rem; border-radius:30px; border:2px solid #00ff00; background: linear-gradient(90deg,#00e676,#00c853); color:#000; box-shadow:0 0 20px #00ff00; animation:pulse 1.5s infinite;">
     <i class="bi bi-cart-fill me-2"></i> COMPRAR COM DESCONTO!
@@ -719,6 +783,12 @@
         </div>
             </div>
         </div>
+        </div>
+        </div>
+
+
+
+
         
  <div class="container py-5">
         <div class="row align-items-center justify-content-center text-white text-center">
@@ -734,7 +804,47 @@
             </div>
         </div>
     </div>
+ </div> <!-- fecha a div de pacotes -->
 
+
+
+
+
+        
+<!-- Fim dos pacotes -->
+</div> <!-- fecha a div de pacotes -->
+
+<!-- Nova seção Neo Vender -->
+<div class="container my-5">
+  <h2 class="text-center mb-4 neon-red" style="font-family: 'Bebas Neue', cursive;">novidades da new</h2>
+  <div class="row justify-content-center">
+    <div class="col-11 col-md-4 mb-4">
+      <div class="card p-3 bg-dark text-white rounded-4 shadow-lg">
+        <div class="d-flex justify-content-center mb-3">
+          <img src="imgs/novo-vendedor.png" alt="Neo Vender" class="img-fluid rounded w-50" />
+        </div>
+        <h3 class="text-center mb-3" style="font-family: 'Bebas Neue', cursive;">new sensi</h3>
+        <p class="text-center">
+          grupo exclusivo da new, fique por dentro das novidades e atualização futuras
+        </p>
+        <div class="text-center mt-3">
+  <a href="https://t.me/+yKuBpvqPaBU5MGMx" target="_blank" rel="noopener noreferrer" class="btn btn-success fw-bold" style="border-radius:30px;">Entra Agora</a>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fim da nova seção -->
+</div>
+        </div>
+      </div>
+    </div>
+
+
+        
+          
     <div class="container py-5" id="faq">
         <h2 class="text-center mb-4 neon-red" style="font-family: 'Bebas Neue', cursive;">Perguntas Frequentes (FAQ)
         </h2>
@@ -884,9 +994,6 @@
 
 </html>
 
-
-
-
-
-
-
+    </div>
+  </div>
+</div>
