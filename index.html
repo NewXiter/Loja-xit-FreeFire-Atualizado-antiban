@@ -454,7 +454,7 @@
             box-shadow: 0 10px 30px rgba(0, 255, 65, 0.3);
         }
 
-        /* ===== DEPOIMENTOS CAROUSEL PREMIUM ===== */
+        /* ===== DEPOIMENTOS CAROUSEL PREMIUM - IMAGENS PADRONIZADAS ===== */
         .testimonial-card {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -489,6 +489,47 @@
             100% { transform: rotate(360deg); }
         }
 
+        /* ===== PADRONIZAÇÃO DAS IMAGENS DE FEEDBACK ===== */
+        .feedback-image-container {
+            width: 100%;
+            height: 600px; /* Altura fixa baseada na maior imagem */
+            overflow: hidden;
+            border-radius: 15px;
+            position: relative;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(0, 255, 65, 0.2);
+        }
+
+        .feedback-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantém proporção e preenche o container */
+            object-position: center; /* Centraliza a imagem */
+            border-radius: 15px;
+            transition: var(--transition-smooth);
+        }
+
+        .feedback-image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Container do card de feedback */
+        .feedback-card {
+            background-color: #121212;
+            width: 90%;
+            max-width: 450px; /* Aumentei um pouco para acomodar melhor */
+            border-radius: 20px;
+            padding: 20px;
+            border: 2px solid rgba(0, 255, 65, 0.2);
+            transition: var(--transition-smooth);
+        }
+
+        .feedback-card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 15px 40px rgba(0, 255, 65, 0.3);
+            transform: translateY(-5px);
+        }
+
         .star-rating {
             display: flex;
             justify-content: center;
@@ -501,6 +542,11 @@
             font-size: 1.2rem;
             animation: starTwinkle 2s ease-in-out infinite;
             animation-delay: calc(var(--i) * 0.1s);
+        }
+
+        .star-green {
+            color: var(--accent-primary) !important;
+            text-shadow: 0 0 10px var(--accent-primary);
         }
 
         @keyframes starTwinkle {
@@ -974,6 +1020,16 @@
                 font-size: 12px;
                 width: 18px;
             }
+
+            /* Ajustes mobile para imagens de feedback */
+            .feedback-image-container {
+                height: 450px; /* Menor em mobile */
+            }
+
+            .feedback-card {
+                max-width: 350px;
+                padding: 15px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1009,6 +1065,16 @@
             
             .old-price {
                 font-size: 1.5rem;
+            }
+
+            /* Ajustes para telas muito pequenas */
+            .feedback-image-container {
+                height: 400px;
+            }
+
+            .feedback-card {
+                max-width: 320px;
+                padding: 12px;
             }
         }
 
@@ -1201,10 +1267,11 @@
         <!-- Primeiro depoimento -->
         <div class="carousel-item active">
             <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/pvsocial (6).jpg" alt="Depoimento 1" class="img-fluid">
-                    <div class="mb-2 mt-2">
+                <div class="feedback-card text-white text-center">
+                    <div class="feedback-image-container">
+                        <img src="imgs/pvsocial (6).jpg" alt="Depoimento 1">
+                    </div>
+                    <div class="star-rating">
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
@@ -1218,10 +1285,11 @@
         <!-- Segundo depoimento -->
         <div class="carousel-item">
             <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/pvsocial (2).jpg" alt="Depoimento 2" class="img-fluid">
-                    <div class="mb-2 mt-2">
+                <div class="feedback-card text-white text-center">
+                    <div class="feedback-image-container">
+                        <img src="imgs/pvsocial (2).jpg" alt="Depoimento 2">
+                    </div>
+                    <div class="star-rating">
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
@@ -1235,10 +1303,11 @@
         <!-- Terceiro depoimento -->
         <div class="carousel-item">
             <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/prova social 03.PNG" alt="Depoimento 3" class="img-fluid">
-                    <div class="mb-2 mt-2">
+                <div class="feedback-card text-white text-center">
+                    <div class="feedback-image-container">
+                        <img src="imgs/prova social 03.PNG" alt="Depoimento 3">
+                    </div>
+                    <div class="star-rating">
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
@@ -1252,10 +1321,11 @@
         <!-- Quarto depoimento -->
         <div class="carousel-item">
             <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/pvsocial (4).jpg" alt="Depoimento 4" class="img-fluid">
-                    <div class="mb-2 mt-2">
+                <div class="feedback-card text-white text-center">
+                    <div class="feedback-image-container">
+                        <img src="imgs/pvsocial (4).jpg" alt="Depoimento 4">
+                    </div>
+                    <div class="star-rating">
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
@@ -1269,10 +1339,11 @@
         <!-- Quinto depoimento -->
         <div class="carousel-item">
             <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/pvsocial (5).jpg" alt="Depoimento 5" class="img-fluid">
-                    <div class="mb-2 mt-2">
+                <div class="feedback-card text-white text-center">
+                    <div class="feedback-image-container">
+                        <img src="imgs/pvsocial (5).jpg" alt="Depoimento 5">
+                    </div>
+                    <div class="star-rating">
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
@@ -1286,10 +1357,11 @@
         <!-- Sexto depoimento -->
         <div class="carousel-item">
             <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/prova social 04.PNG" alt="Depoimento 6" class="img-fluid">
-                    <div class="mb-2 mt-2">
+                <div class="feedback-card text-white text-center">
+                    <div class="feedback-image-container">
+                        <img src="imgs/prova social 04.PNG" alt="Depoimento 6">
+                    </div>
+                    <div class="star-rating">
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
@@ -1303,10 +1375,11 @@
         <!-- Sétimo depoimento -->
         <div class="carousel-item">
             <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/prova social 01.jpg" alt="Depoimento 7" class="img-fluid">
-                    <div class="mb-2 mt-2">
+                <div class="feedback-card text-white text-center">
+                    <div class="feedback-image-container">
+                        <img src="imgs/prova social 01.jpg" alt="Depoimento 7">
+                    </div>
+                    <div class="star-rating">
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
@@ -1320,10 +1393,11 @@
         <!-- Oitavo depoimento -->
         <div class="carousel-item">
             <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/prova social 02.JPG" alt="Depoimento 8" class="img-fluid">
-                    <div class="mb-2 mt-2">
+                <div class="feedback-card text-white text-center">
+                    <div class="feedback-image-container">
+                        <img src="imgs/prova social 02.JPG" alt="Depoimento 8">
+                    </div>
+                    <div class="star-rating">
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
@@ -1337,10 +1411,11 @@
         <!-- Nono depoimento -->
         <div class="carousel-item">
             <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/prova social 05.jpg" alt="Depoimento 9" class="img-fluid">
-                    <div class="mb-2 mt-2">
+                <div class="feedback-card text-white text-center">
+                    <div class="feedback-image-container">
+                        <img src="imgs/prova social 05.jpg" alt="Depoimento 9">
+                    </div>
+                    <div class="star-rating">
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
                         <i class="bi bi-star-fill star-green"></i>
@@ -1433,7 +1508,7 @@
                             <span style="color: #ffffff;">Por apenas</span>
                             <div class="current-price">R$ 29,90</div>
                             <a href="https://go.perfectpay.com.br/PPU38CPTN1D" class="cta-premium w-100">
-                              🛒 COMPRAR COM DESCONTO AGORA! 
+                              🛒 QUERO COMPRAR AGORA! 
                             </a>
                         </div>
                     </div>
@@ -1476,7 +1551,7 @@
                             <span style="color: #ffffff;">Por apenas</span>
                             <div class="current-price">R$ 29,90</div>
                             <a href="https://go.perfectpay.com.br/PPU38CPTMME" class="cta-premium w-100">
-                                🛒 COMPRAR COM DESCONTO AGORA! 
+                                🛒 QUERO COMPRAR AGORA! 
                             </a>
                         </div>
                     </div>
@@ -1527,7 +1602,7 @@
                             <span style="color: #ffffff;">Por apenas</span>
                             <div class="current-price">R$ 49,90</div>
                             <a href="https://go.perfectpay.com.br/PPU38CPQM3H" class="cta-premium w-100">
-                                👑 QUERO SER VIP COMPRAR AGORA!
+                                👑 QUERO PAINEL CLT VIP!
                             </a>
                         </div>
                     </div>
@@ -1938,6 +2013,7 @@
     </script>
 </body>
 </html>
+
 
 
 
