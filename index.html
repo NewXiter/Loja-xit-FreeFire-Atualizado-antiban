@@ -43,7 +43,7 @@
     <!-- TikTok Pixel Code End -->
 
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>New Sensi - Painel XIT Premium | O Melhor do Brasil</title>
     <meta name="description" content="O painel XIT mais avançado do Brasil. +10.000 players já dominam o Free Fire. Mira automática 100% capa, anti-ban garantido." />
     
@@ -95,6 +95,8 @@
             line-height: 1.6;
             overflow-x: hidden;
             position: relative;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         /* Background animado profissional */
@@ -127,9 +129,9 @@
             text-rendering: optimizeLegibility;
         }
 
-        .display-1 { font-size: clamp(3rem, 8vw, 6rem); }
-        .display-2 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
-        .display-3 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        .display-1 { font-size: clamp(2.5rem, 7vw, 5rem); }
+        .display-2 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        .display-3 { font-size: clamp(1.8rem, 4vw, 3rem); }
 
         p, span, div, li, a {
             color: var(--text-primary);
@@ -189,10 +191,10 @@
         /* ===== BANNER SUPERIOR PREMIUM ===== */
         .premium-banner {
             background: var(--gradient-primary);
-            padding: 18px 0;
+            padding: 15px 0;
             text-align: center;
             font-family: 'Bebas Neue', cursive;
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-size: clamp(1rem, 2.5vw, 1.6rem);
             color: #000;
             position: relative;
             overflow: hidden;
@@ -221,7 +223,7 @@
             display: flex;
             align-items: center;
             position: relative;
-            padding: 80px 0;
+            padding: 60px 0;
             background: var(--gradient-dark);
             overflow: hidden;
         }
@@ -245,8 +247,8 @@
         }
 
         .logo-premium {
-            max-width: 120px;
-            margin-bottom: 30px;
+            max-width: 100px;
+            margin-bottom: 25px;
             filter: drop-shadow(0 0 20px rgba(0, 255, 65, 0.5));
             animation: logoFloat 6s ease-in-out infinite;
         }
@@ -257,14 +259,14 @@
         }
 
         .hero-title {
-            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-size: clamp(2rem, 6vw, 4rem);
             font-weight: 400;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             line-height: 1.1;
         }
 
         .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
             margin-bottom: 20px;
             color: var(--text-secondary);
         }
@@ -272,13 +274,14 @@
         .users-counter {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             background: rgba(0, 255, 65, 0.1);
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 50px;
             border: 2px solid var(--accent-primary);
             margin: 20px 0;
             animation: counterPulse 2s ease-in-out infinite;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
         }
 
         @keyframes counterPulse {
@@ -294,7 +297,7 @@
             box-shadow: 
                 0 0 30px rgba(0, 255, 65, 0.3),
                 var(--shadow-secondary);
-            margin: 40px 0;
+            margin: 30px 0;
             transform: perspective(1000px) rotateX(2deg);
             transition: var(--transition-smooth);
         }
@@ -322,11 +325,11 @@
         .cta-premium {
             position: relative;
             display: inline-block;
-            padding: 22px 45px;
-            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            padding: clamp(16px, 3vw, 22px) clamp(30px, 6vw, 45px);
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: #000 !important;
             background: var(--gradient-primary);
             background-size: 200% 200%;
@@ -340,13 +343,16 @@
                 0 0 20px rgba(0, 255, 65, 0.4),
                 0 10px 30px rgba(0, 0, 0, 0.3);
             animation: ctaGlow 3s ease-in-out infinite;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
         }
 
         .cta-premium:hover {
-            transform: translateY(-5px) scale(1.05);
+            transform: translateY(-3px) scale(1.02);
             box-shadow: 
                 0 0 40px rgba(0, 255, 65, 0.6),
-                0 20px 50px rgba(0, 0, 0, 0.4);
+                0 15px 40px rgba(0, 0, 0, 0.4);
             color: #000 !important;
             background-position: 100% 0;
         }
@@ -384,7 +390,7 @@
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: var(--border-radius);
-            padding: 30px;
+            padding: 25px;
             height: 100%;
             transition: var(--transition-smooth);
             position: relative;
@@ -404,7 +410,7 @@
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             box-shadow: var(--shadow-primary);
             border-color: var(--accent-primary);
         }
@@ -414,15 +420,15 @@
         }
 
         .feature-icon {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #000;
             box-shadow: 0 10px 30px rgba(0, 255, 65, 0.3);
         }
@@ -432,7 +438,7 @@
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: var(--border-radius);
-            padding: 25px;
+            padding: 20px;
             position: relative;
             overflow: hidden;
             transition: var(--transition-smooth);
@@ -463,13 +469,13 @@
         .star-rating {
             display: flex;
             justify-content: center;
-            gap: 5px;
-            margin: 15px 0;
+            gap: 4px;
+            margin: 12px 0;
         }
 
         .star-rating i {
             color: #ffd700;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             animation: starTwinkle 2s ease-in-out infinite;
             animation-delay: calc(var(--i) * 0.1s);
         }
@@ -479,60 +485,12 @@
             50% { opacity: 0.7; transform: scale(1.1); }
         }
 
-        /* ===== SEÇÃO DE URGÊNCIA PREMIUM ===== */
-        .urgency-section {
-            background: linear-gradient(135deg, var(--card-bg), #2d1b1b);
-            border: 2px solid var(--accent-danger);
-            border-radius: var(--border-radius);
-            padding: 50px 30px;
-            margin: 60px 0;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .urgency-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(255, 71, 87, 0.1), transparent, rgba(255, 71, 87, 0.1));
-            animation: urgencyPulse 3s infinite;
-        }
-
-        @keyframes urgencyPulse {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.6; }
-        }
-
-        .urgency-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .countdown-timer {
-            font-size: clamp(2rem, 5vw, 3rem);
-            color: var(--accent-danger);
-            font-weight: 900;
-            font-family: 'Bebas Neue', cursive;
-            text-shadow: 0 0 20px var(--accent-danger);
-            margin: 20px 0;
-            animation: timerPulse 1s infinite;
-        }
-
-        @keyframes timerPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
         /* ===== PROVA SOCIAL PREMIUM ===== */
         .social-proof {
             background: var(--gradient-primary);
             border-radius: var(--border-radius);
-            padding: 40px 30px;
-            margin: 40px 0;
+            padding: 30px 20px;
+            margin: 30px 0;
             color: #000 !important;
             text-align: center;
             position: relative;
@@ -564,15 +522,16 @@
             background: var(--card-bg);
             border: 2px solid rgba(255, 255, 255, 0.1);
             border-radius: var(--border-radius);
-            padding: 40px 30px;
+            padding: 30px 20px;
             position: relative;
             overflow: hidden;
             transition: var(--transition-smooth);
             height: 100%;
+            margin-bottom: 20px;
         }
 
         .package-card:hover {
-            transform: translateY(-15px);
+            transform: translateY(-10px);
             border-color: var(--accent-primary);
             box-shadow: var(--shadow-primary);
         }
@@ -594,19 +553,19 @@
         }
 
         .package-image {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px;
             display: block;
             border: 3px solid var(--accent-primary);
             box-shadow: 0 10px 30px rgba(0, 255, 65, 0.3);
         }
 
         .package-title {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            font-size: clamp(1.8rem, 4vw, 2.2rem);
+            margin-bottom: 12px;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -616,119 +575,98 @@
         .features-list {
             list-style: none;
             padding: 0;
-            margin: 30px 0;
+            margin: 25px 0;
         }
 
         .features-list li {
-            padding: 8px 0;
+            padding: 6px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             transition: var(--transition-smooth);
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
         }
 
         .features-list li:hover {
-            padding-left: 10px;
+            padding-left: 8px;
             color: var(--accent-primary);
         }
 
         .features-list i {
-            font-size: 1.1rem;
-            width: 20px;
+            font-size: 1rem;
+            width: 18px;
+            flex-shrink: 0;
         }
 
         .price-section {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
         .old-price {
-            font-size: 1.8rem;
+            font-size: clamp(1.4rem, 3vw, 1.6rem);
             color: var(--accent-danger);
             text-decoration: line-through;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .current-price {
-            font-size: 3rem;
+            font-size: clamp(2.2rem, 5vw, 2.8rem);
             font-weight: 900;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        /* ===== GARANTIA PREMIUM ===== */
-        .guarantee-section {
-            background: linear-gradient(135deg, #1a4d1a, #2d5a2d);
-            border: 3px solid var(--accent-secondary);
-            border-radius: var(--border-radius);
-            padding: 50px 30px;
-            margin: 60px 0;
-            position: relative;
-            text-align: center;
-        }
-
-        .guarantee-section::before {
-            content: '🛡️';
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent-secondary);
-            padding: 15px;
-            border-radius: 50%;
-            font-size: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0, 230, 118, 0.4);
-        }
-
-        /* ===== CONTADOR DE VENDAS MÓVEL ===== */
+        /* ===== CONTADOR DE VENDAS MÓVEL OTIMIZADO ===== */
         .sales-counter-mobile {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 15px;
+            right: 15px;
             background: linear-gradient(135deg, var(--accent-danger), #ff6b87);
             color: #fff;
-            padding: 15px 20px;
-            border-radius: 30px;
+            padding: 10px 14px;
+            border-radius: 25px;
             font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 14px;
+            font-weight: 600;
+            font-size: 11px;
             box-shadow: 
-                0 10px 30px rgba(255, 71, 87, 0.4),
-                0 0 20px rgba(255, 71, 87, 0.3);
+                0 8px 20px rgba(255, 71, 87, 0.3),
+                0 0 15px rgba(255, 71, 87, 0.2);
             z-index: 9999;
             cursor: move;
             user-select: none;
             transition: var(--transition-smooth);
             animation: counterBounce 3s infinite;
+            max-width: 140px;
+            text-align: center;
         }
 
         .sales-counter-mobile:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
             box-shadow: 
-                0 15px 40px rgba(255, 71, 87, 0.6),
-                0 0 30px rgba(255, 71, 87, 0.5);
+                0 10px 25px rgba(255, 71, 87, 0.4),
+                0 0 20px rgba(255, 71, 87, 0.3);
         }
 
         .sales-counter-mobile.dragging {
             animation: none;
-            transform: scale(1.1);
+            transform: scale(1.05);
             box-shadow: 
-                0 20px 50px rgba(255, 71, 87, 0.8),
-                0 0 40px rgba(255, 71, 87, 0.7);
+                0 15px 35px rgba(255, 71, 87, 0.6),
+                0 0 30px rgba(255, 71, 87, 0.5);
             z-index: 10001;
         }
 
         @keyframes counterBounce {
             0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
+            40% { transform: translateY(-8px); }
+            60% { transform: translateY(-4px); }
         }
 
-     
         /* ===== NOTIFICAÇÕES OTIMIZADAS PARA MOBILE ===== */
         .notification-container {
             position: fixed;
@@ -869,87 +807,183 @@
             font-size: clamp(0.85rem, 2vw, 0.95rem);
         }
 
-        /* ===== FAQ PREMIUM ===== */
-        .faq-section {
-            background: var(--card-bg);
-            border-radius: var(--border-radius);
-            padding: 50px 30px;
-            margin: 60px 0;
-        }
-
-        .accordion-item {
-            background: transparent !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            border-radius: 15px !important;
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
-
-        .accordion-button {
-            background: var(--card-bg) !important;
-            color: var(--text-primary) !important;
-            border: none !important;
-            padding: 20px 25px !important;
-            font-weight: 600;
-            transition: var(--transition-smooth);
-        }
-
-        .accordion-button:hover {
-            background: rgba(0, 255, 65, 0.1) !important;
-        }
-
-        .accordion-body {
-            background: var(--secondary-bg) !important;
-            color: var(--text-secondary) !important;
-            padding: 25px !important;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* ===== RESPONSIVIDADE PREMIUM ===== */
+        /* ===== RESPONSIVIDADE PREMIUM MOBILE ===== */
         @media (max-width: 768px) {
+            .premium-banner {
+                padding: 12px 0;
+                font-size: 14px;
+            }
+            
             .sales-counter-mobile {
                 top: 10px;
                 right: 10px;
-                font-size: 12px;
-                padding: 12px 16px;
+                font-size: 10px;
+                padding: 8px 12px;
+                max-width: 120px;
             }
             
             .notification-container {
                 left: 10px;
                 right: 10px;
+                bottom: 10px;
             }
             
             .purchase-notification {
-                max-width: calc(100% - 20px);
+                max-width: calc(100vw - 20px);
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+            
+            .notification-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
             }
             
             .cta-premium {
-                font-size: 1.2rem;
-                padding: 18px 35px;
+                font-size: 14px;
+                padding: 14px 25px;
+                letter-spacing: 0.5px;
             }
             
             .hero-premium {
-                min-height: 90vh;
-                padding: 60px 0;
+                min-height: 85vh;
+                padding: 40px 0;
             }
             
-            .urgency-section,
-            .guarantee-section {
-                padding: 30px 20px;
-                margin: 40px 0;
+            .hero-title {
+                font-size: clamp(1.8rem, 5vw, 3rem);
+                margin-bottom: 20px;
+            }
+            
+            .hero-subtitle {
+                font-size: clamp(0.9rem, 2vw, 1.2rem);
+                margin-bottom: 15px;
+            }
+            
+            .logo-premium {
+                max-width: 80px;
+                margin-bottom: 20px;
+            }
+            
+            .users-counter {
+                padding: 8px 16px;
+                font-size: 12px;
+                gap: 6px;
+            }
+            
+            .video-container {
+                margin: 20px 0;
+            }
+            
+            .feature-card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .feature-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+                margin-bottom: 15px;
             }
             
             .package-card {
-                padding: 30px 20px;
-                margin-bottom: 30px;
+                padding: 25px 15px;
+                margin-bottom: 25px;
+            }
+            
+            .package-image {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .features-list li {
+                font-size: 13px;
+                padding: 5px 0;
+            }
+            
+            .features-list i {
+                font-size: 12px;
+                width: 16px;
+            }
+            
+            .social-proof {
+                padding: 25px 15px;
+            }
+            
+            .faq-section {
+                padding: 30px 15px;
+            }
+            
+            .accordion-button {
+                padding: 12px 15px !important;
+                font-size: 14px;
+            }
+            
+            .accordion-body {
+                padding: 15px !important;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sales-counter-mobile {
+                font-size: 9px;
+                padding: 6px 10px;
+                max-width: 100px;
+            }
+            
+            .purchase-notification {
+                font-size: 11px;
+                padding: 8px 10px;
+            }
+            
+            .notification-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 11px;
+            }
+            
+            .notification-title {
+                font-size: 11px;
+            }
+            
+            .notification-product {
+                font-size: 10px;
+            }
+            
+            .notification-location {
+                font-size: 9px;
+            }
+            
+            .hero-title {
+                font-size: clamp(1.6rem, 4vw, 2.5rem);
+            }
+            
+            .cta-premium {
+                font-size: 13px;
+                padding: 12px 20px;
+            }
+            
+            .package-title {
+                font-size: clamp(1.5rem, 3vw, 1.8rem);
+            }
+            
+            .current-price {
+                font-size: clamp(1.8rem, 4vw, 2.2rem);
+            }
+            
+            .old-price {
+                font-size: clamp(1.2rem, 2.5vw, 1.4rem);
             }
         }
 
         /* ===== ANIMAÇÕES DE ENTRADA ===== */
         .fade-in-up {
             opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 0.8s ease forwards;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
         }
 
         @keyframes fadeInUp {
@@ -961,8 +995,8 @@
 
         .fade-in-left {
             opacity: 0;
-            transform: translateX(-50px);
-            animation: fadeInLeft 0.8s ease forwards;
+            transform: translateX(-30px);
+            animation: fadeInLeft 0.6s ease forwards;
         }
 
         @keyframes fadeInLeft {
@@ -974,8 +1008,8 @@
 
         .fade-in-right {
             opacity: 0;
-            transform: translateX(50px);
-            animation: fadeInRight 0.8s ease forwards;
+            transform: translateX(30px);
+            animation: fadeInRight 0.6s ease forwards;
         }
 
         @keyframes fadeInRight {
@@ -991,7 +1025,7 @@
         }
 
         .hover-lift:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
 
         .hover-glow {
@@ -999,7 +1033,7 @@
         }
 
         .hover-glow:hover {
-            box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+            box-shadow: 0 0 25px rgba(0, 255, 65, 0.2);
         }
 
         /* ===== OTIMIZAÇÕES DE PERFORMANCE ===== */
@@ -1011,6 +1045,78 @@
             transform: translateZ(0);
             backface-visibility: hidden;
             perspective: 1000px;
+        }
+
+        /* ===== GARANTIA PREMIUM ===== */
+        .guarantee-section {
+            background: linear-gradient(135deg, #1a4d1a, #2d5a2d);
+            border: 3px solid var(--accent-secondary);
+            border-radius: var(--border-radius);
+            padding: 40px 20px;
+            margin: 50px 0;
+            position: relative;
+            text-align: center;
+        }
+
+        .guarantee-section::before {
+            content: '🛡️';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-secondary);
+            padding: 12px;
+            border-radius: 50%;
+            font-size: 2rem;
+            box-shadow: 0 8px 25px rgba(0, 230, 118, 0.4);
+        }
+
+        /* ===== SEÇÃO DE URGÊNCIA PREMIUM ===== */
+        .urgency-section {
+            background: linear-gradient(135deg, var(--card-bg), #2d1b1b);
+            border: 2px solid var(--accent-danger);
+            border-radius: var(--border-radius);
+            padding: 40px 20px;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .urgency-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255, 71, 87, 0.1), transparent, rgba(255, 71, 87, 0.1));
+            animation: urgencyPulse 3s infinite;
+        }
+
+        @keyframes urgencyPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .urgency-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .countdown-timer {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--accent-danger);
+            font-weight: 900;
+            font-family: 'Bebas Neue', cursive;
+            text-shadow: 0 0 15px var(--accent-danger);
+            margin: 15px 0;
+            animation: timerPulse 1s infinite;
+        }
+
+        @keyframes timerPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
         }
     </style>
 </head>
@@ -1027,12 +1133,12 @@
         <strong>🔥 PROMOÇÃO VÁLIDA SÓ HOJE! PAINEL VIP 🔥</strong>
     </div>
 
-    <!-- Contador de Vendas Móvel e Arrastável -->
+    <!-- Contador de Vendas Móvel e Arrastável OTIMIZADO -->
     <div class="sales-counter-mobile" id="salesCounterMobile">
-        <i class="fas fa-fire"></i> <span id="salesCount">172</span> vendas hoje!
+        <i class="fas fa-fire"></i> <span id="salesCount">247</span> vendas!
     </div>
 
-    <!-- Container para Notificações Premium -->
+    <!-- Container para Notificações Premium OTIMIZADO -->
     <div class="notification-container" id="notificationContainer"></div>
 
     <!-- Hero Section Premium -->
@@ -1044,17 +1150,17 @@
                     
                     <h1 class="hero-title">
                         O <span class="neon-primary">PAINEL XIT</span> Nº1 DO BRASIL<br>
-                       MIRA <span class="neon-danger">FULL VERMELHO</span> SEMPRE!
+                        <span class="neon-danger">FULL VERMELHO</span> GARANTIDO!
                     </h1>
                     
                     <p class="hero-subtitle">
-                        Mais de <strong class="neon-primary">10 MIL players</strong> já XITAR no FF<br> • Mira 2x automática<br>
-                        • 100% Anti-ban Anti-BlackList<br> • Suporte vip 24horas
+                        Mais de <strong class="neon-primary">10 MIL players</strong> já XITA no Free Fire<br>
+                        Mira automática • 100% Anti-ban Anti-BlackList • Suporte 24horas
                     </p>
                     
                     <div class="users-counter">
                         <i class="fas fa-users"></i>
-                        <strong id="userCounter" class="neon-primary">491</strong> usuários ativos agora!
+                        <strong id="userCounter" class="neon-primary">247</strong> usuários ativos agora!
                     </div>
                     
                     <div class="video-container mt-4">
@@ -1064,10 +1170,11 @@
                                     allowfullscreen
                                     class="gpu-accelerated"></iframe>
                         </div>
-                       <p class="mt-3 mb-4" style="color: var(--text-secondary); font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    </div>
+                    
+                    <p class="mt-3 mb-4" style="color: var(--text-secondary); font-size: clamp(0.9rem, 2vw, 1.1rem);">
                         Assista ao vídeo acima e entenda
                     </p>
-                        </div>
                     
                     <a href="#pacotes" class="cta-premium will-change-transform">
                         🎯 QUERO MEU PAINEL VIP AGORA!
@@ -1077,9 +1184,8 @@
         </div>
     </section>
 
-
     <!-- Features Section Premium -->
-    <section class="py-5">
+    <section class="py-4">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 fade-in-left">
@@ -1087,8 +1193,8 @@
                         <div class="feature-icon">
                             <i class="fas fa-trophy"></i>
                         </div>
-                        <h3 class="text-center mb-3">Vitórias Garantidas</h3>
-                        <p class="text-center">
+                        <h3 class="text-center mb-3" style="font-size: clamp(1.3rem, 3vw, 1.6rem);">Vitórias Garantidas</h3>
+                        <p class="text-center" style="font-size: clamp(0.9rem, 2vw, 1rem);">
                             Mira 100% automática com precisão cirúrgica. Cada tiro é CAPA garantida. 
                             Transforme-se no player mais temido da partida.
                         </p>
@@ -1100,9 +1206,9 @@
                         <div class="feature-icon">
                             <i class="fas fa-crosshairs"></i>
                         </div>
-                        <h3 class="text-center mb-3">Mira Full vermelho</h3>
-                        <p class="text-center">
-                            Com Sistema de rastreamento avançado que gruda na cabeça dos inimigos. 
+                        <h3 class="text-center mb-3" style="font-size: clamp(1.3rem, 3vw, 1.6rem);">Mira Full vermelho</h3>
+                        <p class="text-center" style="font-size: clamp(0.9rem, 2vw, 1rem);">
+                           Com Sistema de rastreamento avançado que gruda na cabeça dos inimigos. 
                             2x automática que nunca falha, mesmo à longa distância.
                         </p>
                     </div>
@@ -1113,9 +1219,9 @@
                         <div class="feature-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h3 class="text-center mb-3">100% Anti-Ban</h3>
-                        <p class="text-center">
-                           Sistema de disfarce indetectável. Jogue com segurança total, 
+                        <h3 class="text-center mb-3" style="font-size: clamp(1.3rem, 3vw, 1.6rem);">100% Anti-Ban</h3>
+                        <p class="text-center" style="font-size: clamp(0.9rem, 2vw, 1rem);">
+                            Sistema de disfarce indetectável. Jogue com segurança total, 
                             sem risco de banimento ou blacklist. Garantia de proteção.
                         </p>
                     </div>
@@ -1125,9 +1231,9 @@
     </section>
 
     <!-- Depoimentos Premium Carousel -->
-    <section class="py-5">
+    <section class="py-4">
         <div class="container">
-            <h2 class="display-3 text-center mb-5 fade-in-up">
+            <h2 class="display-3 text-center mb-4 fade-in-up">
                 O Que Nossos <span class="neon-primary">Clientes VIP</span> Dizem
             </h2>
             
@@ -1195,9 +1301,7 @@
         </div>
     </section>
 
-  
-
-     <!-- Prova Social Premium -->
+    <!-- Prova Social Premium -->
     <div class="container">
         <div class="social-proof fade-in-up">
             <h3 class="display-5 mb-3" style="font-size: clamp(1.5rem, 4vw, 2.2rem);">
@@ -1209,7 +1313,7 @@
                     <p style="font-size: clamp(0.9rem, 2vw, 1rem);">Clientes satisfeitos</p>
                 </div>
                 <div class="col-md-4 mb-2">
-                    <h4 class="display-6" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">99.7%</h4>
+                    <h4 class="display-6" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">98.7%</h4>
                     <p style="font-size: clamp(0.9rem, 2vw, 1rem);">Taxa de aprovação</p>
                 </div>
                 <div class="col-md-4 mb-2">
@@ -1224,9 +1328,9 @@
     </div>
 
     <!-- Pacotes Premium -->
-    <section id="pacotes" class="py-5">
+    <section id="pacotes" class="py-4">
         <div class="container">
-            <h2 class="display-2 text-center mb-5 fade-in-up">
+            <h2 class="display-2 text-center mb-4 fade-in-up">
                 Escolha Seu <span class="neon-primary">Painel VIP</span>
             </h2>
             
@@ -1236,8 +1340,8 @@
                     <div class="package-card">
                         <img src="imgs/android.png" alt="Android" class="package-image">
                         
-                        <h3 class="package-title text-center">PAINEL <span class="neon-primary">VIP</span> ANDROID</h3>
-                        <p class="text-center text-muted mb-4">
+                        <h3 class="package-title text-center">PAINEL VIP ANDROID</h3>
+                        <p class="text-center text-muted mb-3" style="font-size: clamp(0.85rem, 2vw, 0.95rem);">
                             O painel mais avançado para Android
                         </p>
                         
@@ -1267,7 +1371,7 @@
                             <div class="old-price">De R$ 129,90</div>
                             <span style="color: #ffffff;">Por apenas</span>
                             <div class="current-price">R$ 19,90</div>
-                            <a href="https://go.pepperpay.com.br/6ztdj" class="cta-premium w-100">
+                            <a href="https://go.pepperpay.com.br/6ztdj" class="cta-premium">
                                 🛒 QUERO COMPRAR AGORA!
                             </a>
                         </div>
@@ -1279,9 +1383,9 @@
                     <div class="package-card">
                         <img src="imgs/iphone.png" alt="iPhone" class="package-image">
                         
-                        <h3 class="package-title text-center">PAINEL <span class="neon-primary">VIP</span> IPHONE</h3>
-                        <p class="text-center text-muted mb-4">
-                             O painel mais avançado para iPhone/iOS
+                        <h3 class="package-title text-center">PAINEL VIP IPHONE</h3>
+                        <p class="text-center text-muted mb-3" style="font-size: clamp(0.85rem, 2vw, 0.95rem);">
+                            O painel mais avançado para iPhone/iOS
                         </p>
                         
                         <ul class="features-list">
@@ -1310,7 +1414,7 @@
                             <div class="old-price">De R$ 147,90</div>
                             <span style="color: #ffffff;">Por apenas</span>
                             <div class="current-price">R$ 29,90</div>
-                            <a href="https://go.pepperpay.com.br/1xm07" class="cta-premium w-100">
+                            <a href="https://go.pepperpay.com.br/1xm07" class="cta-premium">
                                 🛒 QUERO COMPRAR AGORA!
                             </a>
                         </div>
@@ -1320,24 +1424,24 @@
                 <!-- Painel CLT VIP -->
                 <div class="col-lg-4 fade-in-right" style="animation-delay: 0.4s;">
                     <div class="package-card" style="border-color: var(--accent-secondary);">
-                        <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--gradient-primary); color: #000; padding: 8px 20px; border-radius: 20px; font-weight: 700; font-size: 0.9rem;">
-                           👑  MAIS VENDIDO!
+                        <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gradient-primary); color: #000; padding: 6px 16px; border-radius: 15px; font-weight: 700; font-size: 0.8rem;">
+                            MAIS VENDIDO
                         </div>
                         
                         <img src="imgs/CLT.jpg" alt="CLT VIP" class="package-image">
                         
                         <h3 class="package-title text-center">PAINEL CLT VIP</h3>
-                         <p class="text-center text-muted mb-8">
-                          painel definitivo - Android + iPhone
+                        <p class="text-center text-muted mb-3" style="font-size: clamp(0.85rem, 2vw, 0.95rem);">
+                            O painel definitivo - Android + iPhone
                         </p>
-                    
+                        
                         <ul class="features-list">
-                           <li><i class="fas fa-crown" style="color: #ffd700;"></i> Painel CLT Premium</li>
+                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> Painel CLT Premium</li>
                             <li><i class="fas fa-crown" style="color: #ffd700;"></i> Acesso permanente</li>
-                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> No Recoil (não espalha tiros)</li>
-                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Função HS pescoço + Bypass</li>
+                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> Função HS pescoço + Bypass</li>
                             <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> 2x Xitada + 2x Automática</li>
                             <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Rastreamento de cabeça avançado</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> No Recoil (não espalha tiro)</li>
                             <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> UMP automática premium</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Mira automática Full capa</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Disfarce 100% indetectável</li>
@@ -1359,8 +1463,8 @@
                             <div class="old-price">De R$ 214,97</div>
                             <span style="color: #ffffff;">Por apenas</span>
                             <div class="current-price">R$ 49,90</div>
-                            <a href="https://go.pepperpay.com.br/n9oz4" class="cta-premium w-100">
-                                👑 QUERO ACESSO VIP COMPLETO!
+                            <a href="https://go.pepperpay.com.br/n9oz4" class="cta-premium">
+                                👑 QUERO SER VIP!
                             </a>
                         </div>
                     </div>
@@ -1369,7 +1473,7 @@
         </div>
     </section>
 
-   <!-- Garantia Premium -->
+    <!-- Garantia Premium -->
     <div class="container">
         <div class="guarantee-section fade-in-up">
             <h2 class="display-4 mb-3" style="margin-top: 30px; font-size: clamp(1.8rem, 4vw, 2.5rem);">
@@ -1428,11 +1532,11 @@
     </section>
 
     <!-- FAQ Premium -->
-    <section class="py-5" id="faq">
+    <section class="py-4" id="faq">
         <div class="container">
             <div class="faq-section fade-in-up">
-                <h2 class="display-3 text-center mb-5">
-                    Perguntas <span class="neon-primary">Frequentes (FAQ)</span>
+                <h2 class="display-3 text-center mb-4">
+                    Perguntas <span class="neon-primary">Frequentes</span>
                 </h2>
                 
                 <div class="accordion" id="faqAccordion">
@@ -1454,7 +1558,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                COMO RECEBO O PRODUTO APÓS A COMPRA?
+                                COMO RECEBO O PAINEL APÓS A COMPRA?
                             </button>
                         </h2>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
@@ -1469,7 +1573,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                É DIFÍCIL DE INSTALAR?
+                                A INSTALAÇÃO É COMPLICADA?
                             </button>
                         </h2>
                         <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
@@ -1484,7 +1588,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                REALMENTE NÃO VOU LEVAR BAN?
+                                É REALMENTE ANTI-BAN?
                             </button>
                         </h2>
                         <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
@@ -1500,7 +1604,7 @@
         </div>
     </section>
 
-  <!-- Footer Premium -->
+    <!-- Footer Premium -->
     <footer class="py-4" style="background: var(--secondary-bg); border-top: 1px solid rgba(255, 255, 255, 0.1);">
         <div class="container text-center">
             <p class="mb-2" style="font-size: clamp(0.9rem, 2vw, 1rem);">&copy; 2024 New Sensi. Todos os direitos reservados.</p>
@@ -1527,7 +1631,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Sistema Premium de Interações -->
+    <!-- Sistema Premium de Interações -->
     <script>
         class PremiumInteractionSystem {
             constructor() {
@@ -1535,8 +1639,8 @@
                 this.userCounter = document.getElementById('userCounter');
                 this.notificationContainer = document.getElementById('notificationContainer');
                 
-                this.currentSales = 172;
-                this.currentUsers = 491;
+                this.currentSales = 247;
+                this.currentUsers = 247;
                 
                 this.init();
             }
@@ -1552,14 +1656,13 @@
             // Sistema de notificações otimizado para mobile
             showNotification() {
                 const names = [
-                    "João vitor", "Nataly Santos", "Pedro Costa", "Vinicius Castro", "Ana Lima", "Bella",
-                    "Juliana Oliveira", "Rafael Alves", "kamila Ferreira", "Matheus", "isabella", "Thiago Ribeiro", "Rafael Martins",
-                    "Gabriel Martins", "Larissa", "vitinho", "Letícia", "Rafaela", "Gabriel Alves", "Natália Gomes", "Rodrigo", "Yasmin Nunes", "Beatriz Carvalho", "Adriano"
+                    "João Silva", "Maria Santos", "Pedro Costa", "Ana Lima", "Carlos Souza",
+                    "Juliana Oliveira", "Rafael Alves", "Camila Ferreira", "Lucas Pereira", "Beatriz Rocha",
+                    "Gabriel Martins", "Larissa Cunha", "Felipe Barbosa", "Natália Gomes", "Diego Nascimento"
                 ];
                 
-                const products = ["Painel XIT Android", "Painel XIT iPhone", "Realizou uma Compra de R$49,90", "Aproveitou a Promoção", "Confirmou o Pagamento de 49,90",
-                                  "Realizou uma Compra de R$19,90", "Realizou uma Compra de R$29,90", "Confirmou o Pagamento de 19,90", "Confirmou o Pagamento de 29,90", "Painel CLT VIP"];
-                const cities = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Brasília", "Búzios RJ", "João pesso PB", "Fortaleza"];
+                const products = ["Painel Android", "Painel iPhone", "Painel CLT VIP"];
+                const cities = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Brasília", "Fortaleza"];
                 
                 const name = names[Math.floor(Math.random() * names.length)];
                 const product = products[Math.floor(Math.random() * products.length)];
@@ -1795,3 +1898,4 @@
     </script>
 </body>
 </html>
+
