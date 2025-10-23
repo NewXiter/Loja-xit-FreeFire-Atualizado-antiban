@@ -76,7 +76,7 @@
             --gradient-dark: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #111111 100%);
         }
 
-        /* ===== RESET E BASE ===== */
+        /* ===== RESET E BASE - REMOÇÃO SCROLL LATERAL ===== */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -86,6 +86,7 @@
         html {
             scroll-behavior: smooth;
             font-size: 16px;
+            overflow-x: hidden; /* Remove barra de rolagem horizontal */
         }
 
         body {
@@ -93,10 +94,19 @@
             color: var(--text-primary);
             font-family: 'Inter', 'Poppins', sans-serif;
             line-height: 1.6;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Remove barra de rolagem lateral */
             position: relative;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        /* Container global para prevenir overflow */
+        .container,
+        .container-fluid {
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
         /* Background animado profissional */
@@ -127,15 +137,17 @@
             line-height: 1.2;
             color: var(--text-primary);
             text-rendering: optimizeLegibility;
+            word-wrap: break-word;
         }
 
-        .display-1 { font-size: clamp(2.5rem, 7vw, 5rem); }
-        .display-2 { font-size: clamp(2rem, 5vw, 3.5rem); }
-        .display-3 { font-size: clamp(1.8rem, 4vw, 3rem); }
+        .display-1 { font-size: clamp(3rem, 8vw, 6rem); }
+        .display-2 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+        .display-3 { font-size: clamp(2rem, 5vw, 3.5rem); }
 
         p, span, div, li, a {
             color: var(--text-primary);
             font-weight: 400;
+            word-wrap: break-word;
         }
 
         /* ===== EFEITOS NEÓN PREMIUM ===== */
@@ -191,14 +203,15 @@
         /* ===== BANNER SUPERIOR PREMIUM ===== */
         .premium-banner {
             background: var(--gradient-primary);
-            padding: 15px 0;
+            padding: 18px 0;
             text-align: center;
             font-family: 'Bebas Neue', cursive;
-            font-size: clamp(1rem, 2.5vw, 1.6rem);
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
             color: #000;
             position: relative;
             overflow: hidden;
             z-index: 1000;
+            width: 100%;
         }
 
         .premium-banner::before {
@@ -223,9 +236,10 @@
             display: flex;
             align-items: center;
             position: relative;
-            padding: 60px 0;
+            padding: 80px 0;
             background: var(--gradient-dark);
             overflow: hidden;
+            width: 100%;
         }
 
         .hero-premium::before {
@@ -244,11 +258,13 @@
         .hero-content {
             position: relative;
             z-index: 2;
+            width: 100%;
+            max-width: 100%;
         }
 
         .logo-premium {
-            max-width: 100px;
-            margin-bottom: 25px;
+            max-width: 120px;
+            margin-bottom: 30px;
             filter: drop-shadow(0 0 20px rgba(0, 255, 65, 0.5));
             animation: logoFloat 6s ease-in-out infinite;
         }
@@ -259,29 +275,31 @@
         }
 
         .hero-title {
-            font-size: clamp(2rem, 6vw, 4rem);
+            font-size: clamp(2.5rem, 8vw, 5rem);
             font-weight: 400;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             line-height: 1.1;
+            word-wrap: break-word;
         }
 
         .hero-subtitle {
-            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
             margin-bottom: 20px;
             color: var(--text-secondary);
+            word-wrap: break-word;
         }
 
         .users-counter {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             background: rgba(0, 255, 65, 0.1);
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 50px;
             border: 2px solid var(--accent-primary);
             margin: 20px 0;
             animation: counterPulse 2s ease-in-out infinite;
-            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            max-width: 100%;
         }
 
         @keyframes counterPulse {
@@ -297,9 +315,11 @@
             box-shadow: 
                 0 0 30px rgba(0, 255, 65, 0.3),
                 var(--shadow-secondary);
-            margin: 30px 0;
+            margin: 40px 0;
             transform: perspective(1000px) rotateX(2deg);
             transition: var(--transition-smooth);
+            width: 100%;
+            max-width: 100%;
         }
 
         .video-container:hover {
@@ -325,11 +345,11 @@
         .cta-premium {
             position: relative;
             display: inline-block;
-            padding: clamp(16px, 3vw, 22px) clamp(30px, 6vw, 45px);
-            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            padding: 22px 45px;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             color: #000 !important;
             background: var(--gradient-primary);
             background-size: 200% 200%;
@@ -343,16 +363,15 @@
                 0 0 20px rgba(0, 255, 65, 0.4),
                 0 10px 30px rgba(0, 0, 0, 0.3);
             animation: ctaGlow 3s ease-in-out infinite;
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
+            max-width: 100%;
+            word-wrap: break-word;
         }
 
         .cta-premium:hover {
-            transform: translateY(-3px) scale(1.02);
+            transform: translateY(-5px) scale(1.05);
             box-shadow: 
                 0 0 40px rgba(0, 255, 65, 0.6),
-                0 15px 40px rgba(0, 0, 0, 0.4);
+                0 20px 50px rgba(0, 0, 0, 0.4);
             color: #000 !important;
             background-position: 100% 0;
         }
@@ -390,11 +409,13 @@
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: var(--border-radius);
-            padding: 25px;
+            padding: 30px;
             height: 100%;
             transition: var(--transition-smooth);
             position: relative;
             overflow: hidden;
+            width: 100%;
+            max-width: 100%;
         }
 
         .feature-card::before {
@@ -410,7 +431,7 @@
         }
 
         .feature-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-10px);
             box-shadow: var(--shadow-primary);
             border-color: var(--accent-primary);
         }
@@ -420,28 +441,30 @@
         }
 
         .feature-icon {
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: #000;
             box-shadow: 0 10px 30px rgba(0, 255, 65, 0.3);
         }
 
-        /* ===== DEPOIMENTOS CAROUSEL PREMIUM ===== */
+        /* ===== DEPOIMENTOS CAROUSEL PREMIUM - IMAGENS PADRONIZADAS ===== */
         .testimonial-card {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: var(--border-radius);
-            padding: 20px;
+            padding: 25px;
             position: relative;
             overflow: hidden;
             transition: var(--transition-smooth);
+            width: 100%;
+            max-width: 100%;
         }
 
         .testimonial-card::before {
@@ -466,18 +489,64 @@
             100% { transform: rotate(360deg); }
         }
 
+        /* ===== PADRONIZAÇÃO DAS IMAGENS DE FEEDBACK ===== */
+        .feedback-image-container {
+            width: 100%;
+            height: 2000px; /* Altura fixa baseada na maior imagem */
+            overflow: hidden;
+            border-radius: 25px;
+            position: relative;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(0, 255, 65, 0.2);
+        }
+
+        .feedback-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantém proporção e preenche o container */
+            object-position: center; /* Centraliza a imagem */
+            border-radius: 15px;
+            transition: var(--transition-smooth);
+        }
+
+        .feedback-image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Container do card de feedback */
+        .feedback-card {
+            background-color: #121212;
+            width: 90%;
+            max-width: 300px; /* Aumentei um pouco para acomodar melhor */
+            border-radius: 20px;
+            padding: 20px;
+            border: 2px solid rgba(0, 255, 65, 0.2);
+            transition: var(--transition-smooth);
+        }
+
+        .feedback-card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 15px 40px rgba(0, 255, 65, 0.3);
+            transform: translateY(-5px);
+        }
+
         .star-rating {
             display: flex;
             justify-content: center;
-            gap: 4px;
-            margin: 12px 0;
+            gap: 5px;
+            margin: 15px 0;
         }
 
         .star-rating i {
             color: #ffd700;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             animation: starTwinkle 2s ease-in-out infinite;
             animation-delay: calc(var(--i) * 0.1s);
+        }
+
+        .star-green {
+            color: var(--accent-primary) !important;
+            text-shadow: 0 0 10px var(--accent-primary);
         }
 
         @keyframes starTwinkle {
@@ -485,16 +554,68 @@
             50% { opacity: 0.7; transform: scale(1.1); }
         }
 
+        /* ===== SEÇÃO DE URGÊNCIA PREMIUM ===== */
+        .urgency-section {
+            background: linear-gradient(135deg, var(--card-bg), #2d1b1b);
+            border: 2px solid var(--accent-danger);
+            border-radius: var(--border-radius);
+            padding: 50px 30px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .urgency-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255, 71, 87, 0.1), transparent, rgba(255, 71, 87, 0.1));
+            animation: urgencyPulse 3s infinite;
+        }
+
+        @keyframes urgencyPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .urgency-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .countdown-timer {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--accent-danger);
+            font-weight: 900;
+            font-family: 'Bebas Neue', cursive;
+            text-shadow: 0 0 20px var(--accent-danger);
+            margin: 20px 0;
+            animation: timerPulse 1s infinite;
+        }
+
+        @keyframes timerPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
         /* ===== PROVA SOCIAL PREMIUM ===== */
         .social-proof {
             background: var(--gradient-primary);
             border-radius: var(--border-radius);
-            padding: 30px 20px;
-            margin: 30px 0;
+            padding: 40px 30px;
+            margin: 40px 0;
             color: #000 !important;
             text-align: center;
             position: relative;
             overflow: hidden;
+            width: 100%;
+            max-width: 100%;
         }
 
         .social-proof * {
@@ -522,16 +643,17 @@
             background: var(--card-bg);
             border: 2px solid rgba(255, 255, 255, 0.1);
             border-radius: var(--border-radius);
-            padding: 30px 20px;
+            padding: 40px 30px;
             position: relative;
             overflow: hidden;
             transition: var(--transition-smooth);
             height: 100%;
-            margin-bottom: 20px;
+            width: 100%;
+            max-width: 100%;
         }
 
         .package-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
             border-color: var(--accent-primary);
             box-shadow: var(--shadow-primary);
         }
@@ -553,118 +675,148 @@
         }
 
         .package-image {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 15px;
+            margin: 0 auto 20px;
             display: block;
             border: 3px solid var(--accent-primary);
             box-shadow: 0 10px 30px rgba(0, 255, 65, 0.3);
         }
 
         .package-title {
-            font-size: clamp(1.8rem, 4vw, 2.2rem);
-            margin-bottom: 12px;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            word-wrap: break-word;
         }
 
         .features-list {
             list-style: none;
             padding: 0;
-            margin: 25px 0;
+            margin: 30px 0;
+            width: 100%;
         }
 
         .features-list li {
-            padding: 6px 0;
+            padding: 8px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             transition: var(--transition-smooth);
-            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            word-wrap: break-word;
+            width: 100%;
         }
 
         .features-list li:hover {
-            padding-left: 8px;
+            padding-left: 10px;
             color: var(--accent-primary);
         }
 
         .features-list i {
-            font-size: 1rem;
-            width: 18px;
+            font-size: 1.1rem;
+            width: 20px;
             flex-shrink: 0;
         }
 
         .price-section {
             text-align: center;
-            margin-top: 25px;
+            margin-top: 30px;
+            width: 100%;
         }
 
         .old-price {
-            font-size: clamp(1.4rem, 3vw, 1.6rem);
+            font-size: 1.8rem;
             color: var(--accent-danger);
             text-decoration: line-through;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .current-price {
-            font-size: clamp(2.2rem, 5vw, 2.8rem);
+            font-size: 3rem;
             font-weight: 900;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        /* ===== GARANTIA PREMIUM ===== */
+        .guarantee-section {
+            background: linear-gradient(135deg, #1a4d1a, #2d5a2d);
+            border: 3px solid var(--accent-secondary);
+            border-radius: var(--border-radius);
+            padding: 50px 30px;
+            margin: 60px 0;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .guarantee-section::before {
+            content: '🛡️';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-secondary);
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 230, 118, 0.4);
         }
 
         /* ===== CONTADOR DE VENDAS MÓVEL OTIMIZADO ===== */
         .sales-counter-mobile {
             position: fixed;
-            top: 15px;
-            right: 15px;
+            top: 20px;
+            right: 20px;
             background: linear-gradient(135deg, var(--accent-danger), #ff6b87);
             color: #fff;
-            padding: 10px 14px;
-            border-radius: 25px;
+            padding: 15px 20px;
+            border-radius: 30px;
             font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 11px;
+            font-weight: 700;
+            font-size: 14px;
             box-shadow: 
-                0 8px 20px rgba(255, 71, 87, 0.3),
-                0 0 15px rgba(255, 71, 87, 0.2);
+                0 10px 30px rgba(255, 71, 87, 0.4),
+                0 0 20px rgba(255, 71, 87, 0.3);
             z-index: 9999;
             cursor: move;
             user-select: none;
             transition: var(--transition-smooth);
             animation: counterBounce 3s infinite;
-            max-width: 140px;
+            max-width: 180px;
             text-align: center;
         }
 
         .sales-counter-mobile:hover {
-            transform: scale(1.03);
+            transform: scale(1.05);
             box-shadow: 
-                0 10px 25px rgba(255, 71, 87, 0.4),
-                0 0 20px rgba(255, 71, 87, 0.3);
+                0 15px 40px rgba(255, 71, 87, 0.6),
+                0 0 30px rgba(255, 71, 87, 0.5);
         }
 
         .sales-counter-mobile.dragging {
             animation: none;
-            transform: scale(1.05);
+            transform: scale(1.1);
             box-shadow: 
-                0 15px 35px rgba(255, 71, 87, 0.6),
-                0 0 30px rgba(255, 71, 87, 0.5);
+                0 20px 50px rgba(255, 71, 87, 0.8),
+                0 0 40px rgba(255, 71, 87, 0.7);
             z-index: 10001;
         }
 
         @keyframes counterBounce {
             0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-8px); }
-            60% { transform: translateY(-4px); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
         }
 
         /* ===== NOTIFICAÇÕES OTIMIZADAS PARA MOBILE ===== */
@@ -773,15 +925,17 @@
         .faq-section {
             background: var(--card-bg);
             border-radius: var(--border-radius);
-            padding: 40px 20px;
-            margin: 50px 0;
+            padding: 50px 30px;
+            margin: 60px 0;
+            width: 100%;
+            max-width: 100%;
         }
 
         .accordion-item {
             background: transparent !important;
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            border-radius: 12px !important;
-            margin-bottom: 12px;
+            border-radius: 15px !important;
+            margin-bottom: 15px;
             overflow: hidden;
         }
 
@@ -789,10 +943,10 @@
             background: var(--card-bg) !important;
             color: var(--text-primary) !important;
             border: none !important;
-            padding: 15px 20px !important;
+            padding: 20px 25px !important;
             font-weight: 600;
             transition: var(--transition-smooth);
-            font-size: clamp(0.9rem, 2vw, 1rem);
+            word-wrap: break-word;
         }
 
         .accordion-button:hover {
@@ -802,24 +956,19 @@
         .accordion-body {
             background: var(--secondary-bg) !important;
             color: var(--text-secondary) !important;
-            padding: 20px !important;
+            padding: 25px !important;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            word-wrap: break-word;
         }
 
         /* ===== RESPONSIVIDADE PREMIUM MOBILE ===== */
         @media (max-width: 768px) {
-            .premium-banner {
-                padding: 12px 0;
-                font-size: 14px;
-            }
-            
             .sales-counter-mobile {
                 top: 10px;
                 right: 10px;
-                font-size: 10px;
-                padding: 8px 12px;
-                max-width: 120px;
+                font-size: 12px;
+                padding: 12px 16px;
+                max-width: 150px;
             }
             
             .notification-container {
@@ -841,97 +990,53 @@
             }
             
             .cta-premium {
-                font-size: 14px;
-                padding: 14px 25px;
-                letter-spacing: 0.5px;
+                font-size: 1.2rem;
+                padding: 18px 35px;
+                letter-spacing: 1px;
             }
             
             .hero-premium {
-                min-height: 85vh;
-                padding: 40px 0;
+                min-height: 90vh;
+                padding: 60px 0;
             }
             
-            .hero-title {
-                font-size: clamp(1.8rem, 5vw, 3rem);
-                margin-bottom: 20px;
-            }
-            
-            .hero-subtitle {
-                font-size: clamp(0.9rem, 2vw, 1.2rem);
-                margin-bottom: 15px;
-            }
-            
-            .logo-premium {
-                max-width: 80px;
-                margin-bottom: 20px;
-            }
-            
-            .users-counter {
-                padding: 8px 16px;
-                font-size: 12px;
-                gap: 6px;
-            }
-            
-            .video-container {
-                margin: 20px 0;
-            }
-            
-            .feature-card {
-                padding: 20px;
-                margin-bottom: 20px;
-            }
-            
-            .feature-icon {
-                width: 60px;
-                height: 60px;
-                font-size: 1.5rem;
-                margin-bottom: 15px;
+            .urgency-section,
+            .guarantee-section {
+                padding: 30px 20px;
+                margin: 40px 0;
             }
             
             .package-card {
-                padding: 25px 15px;
-                margin-bottom: 25px;
-            }
-            
-            .package-image {
-                width: 70px;
-                height: 70px;
+                padding: 30px 20px;
+                margin-bottom: 30px;
             }
             
             .features-list li {
-                font-size: 13px;
-                padding: 5px 0;
+                font-size: 14px;
+                padding: 6px 0;
             }
             
             .features-list i {
                 font-size: 12px;
-                width: 16px;
+                width: 18px;
             }
-            
-            .social-proof {
-                padding: 25px 15px;
+
+            /* Ajustes mobile para imagens de feedback */
+            .feedback-image-container {
+                height: 450px; /* Menor em mobile */
             }
-            
-            .faq-section {
-                padding: 30px 15px;
-            }
-            
-            .accordion-button {
-                padding: 12px 15px !important;
-                font-size: 14px;
-            }
-            
-            .accordion-body {
-                padding: 15px !important;
-                font-size: 13px;
+
+            .feedback-card {
+                max-width: 350px;
+                padding: 15px;
             }
         }
 
         @media (max-width: 480px) {
             .sales-counter-mobile {
-                font-size: 9px;
-                padding: 6px 10px;
-                max-width: 100px;
+                font-size: 11px;
+                padding: 10px 14px;
+                max-width: 130px;
             }
             
             .purchase-notification {
@@ -945,45 +1050,39 @@
                 font-size: 11px;
             }
             
-            .notification-title {
-                font-size: 11px;
-            }
-            
-            .notification-product {
-                font-size: 10px;
-            }
-            
-            .notification-location {
-                font-size: 9px;
-            }
-            
-            .hero-title {
-                font-size: clamp(1.6rem, 4vw, 2.5rem);
-            }
-            
             .cta-premium {
-                font-size: 13px;
-                padding: 12px 20px;
+                font-size: 1.1rem;
+                padding: 16px 30px;
             }
             
             .package-title {
-                font-size: clamp(1.5rem, 3vw, 1.8rem);
+                font-size: 2rem;
             }
             
             .current-price {
-                font-size: clamp(1.8rem, 4vw, 2.2rem);
+                font-size: 2.5rem;
             }
             
             .old-price {
-                font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+                font-size: 1.5rem;
+            }
+
+            /* Ajustes para telas muito pequenas */
+            .feedback-image-container {
+                height: 400px;
+            }
+
+            .feedback-card {
+                max-width: 320px;
+                padding: 12px;
             }
         }
 
         /* ===== ANIMAÇÕES DE ENTRADA ===== */
         .fade-in-up {
             opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.6s ease forwards;
+            transform: translateY(50px);
+            animation: fadeInUp 0.8s ease forwards;
         }
 
         @keyframes fadeInUp {
@@ -995,8 +1094,8 @@
 
         .fade-in-left {
             opacity: 0;
-            transform: translateX(-30px);
-            animation: fadeInLeft 0.6s ease forwards;
+            transform: translateX(-50px);
+            animation: fadeInLeft 0.8s ease forwards;
         }
 
         @keyframes fadeInLeft {
@@ -1008,8 +1107,8 @@
 
         .fade-in-right {
             opacity: 0;
-            transform: translateX(30px);
-            animation: fadeInRight 0.6s ease forwards;
+            transform: translateX(50px);
+            animation: fadeInRight 0.8s ease forwards;
         }
 
         @keyframes fadeInRight {
@@ -1025,7 +1124,7 @@
         }
 
         .hover-lift:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px);
         }
 
         .hover-glow {
@@ -1033,7 +1132,7 @@
         }
 
         .hover-glow:hover {
-            box-shadow: 0 0 25px rgba(0, 255, 65, 0.2);
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
         }
 
         /* ===== OTIMIZAÇÕES DE PERFORMANCE ===== */
@@ -1045,78 +1144,6 @@
             transform: translateZ(0);
             backface-visibility: hidden;
             perspective: 1000px;
-        }
-
-        /* ===== GARANTIA PREMIUM ===== */
-        .guarantee-section {
-            background: linear-gradient(135deg, #1a4d1a, #2d5a2d);
-            border: 3px solid var(--accent-secondary);
-            border-radius: var(--border-radius);
-            padding: 40px 20px;
-            margin: 50px 0;
-            position: relative;
-            text-align: center;
-        }
-
-        .guarantee-section::before {
-            content: '🛡️';
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent-secondary);
-            padding: 12px;
-            border-radius: 50%;
-            font-size: 2rem;
-            box-shadow: 0 8px 25px rgba(0, 230, 118, 0.4);
-        }
-
-        /* ===== SEÇÃO DE URGÊNCIA PREMIUM ===== */
-        .urgency-section {
-            background: linear-gradient(135deg, var(--card-bg), #2d1b1b);
-            border: 2px solid var(--accent-danger);
-            border-radius: var(--border-radius);
-            padding: 40px 20px;
-            margin: 50px 0;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .urgency-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(255, 71, 87, 0.1), transparent, rgba(255, 71, 87, 0.1));
-            animation: urgencyPulse 3s infinite;
-        }
-
-        @keyframes urgencyPulse {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.6; }
-        }
-
-        .urgency-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .countdown-timer {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            color: var(--accent-danger);
-            font-weight: 900;
-            font-family: 'Bebas Neue', cursive;
-            text-shadow: 0 0 15px var(--accent-danger);
-            margin: 15px 0;
-            animation: timerPulse 1s infinite;
-        }
-
-        @keyframes timerPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
         }
     </style>
 </head>
@@ -1133,12 +1160,12 @@
         <strong>🔥 PROMOÇÃO VÁLIDA SÓ HOJE! PAINEL VIP 🔥</strong>
     </div>
 
-    <!-- Contador de Vendas Móvel e Arrastável OTIMIZADO -->
+    <!-- Contador de Vendas Móvel e Arrastável -->
     <div class="sales-counter-mobile" id="salesCounterMobile">
-        <i class="fas fa-fire"></i> <span id="salesCount">247</span> vendas!
+        <i class="fas fa-fire"></i> <span id="salesCount">227</span> vendas hoje!
     </div>
 
-    <!-- Container para Notificações Premium OTIMIZADO -->
+    <!-- Container para Notificações Premium -->
     <div class="notification-container" id="notificationContainer"></div>
 
     <!-- Hero Section Premium -->
@@ -1154,13 +1181,15 @@
                     </h1>
                     
                     <p class="hero-subtitle">
-                        Mais de <strong class="neon-primary">10 MIL players</strong> já XITA no Free Fire<br>
-                        Mira automática • 100% Anti-ban Anti-BlackList • Suporte 24horas
+                        Painel Com Mais de <strong class="neon-primary">10.000 Players</strong><br>
+                        • Mira que gruda <span class="neon-danger">full vermelho</span><br>
+                        • 100% Anti-ban Anti-BlackList!<br> 
+                        • Suporte Exclusivo 24Horas!
                     </p>
                     
                     <div class="users-counter">
                         <i class="fas fa-users"></i>
-                        <strong id="userCounter" class="neon-primary">247</strong> usuários ativos agora!
+                        <strong id="userCounter" class="neon-primary">1000</strong> usuários ativos agora!
                     </div>
                     
                     <div class="video-container mt-4">
@@ -1170,14 +1199,10 @@
                                     allowfullscreen
                                     class="gpu-accelerated"></iframe>
                         </div>
-                    </div>
-                    
-                    <p class="mt-3 mb-4" style="color: var(--text-secondary); font-size: clamp(0.9rem, 2vw, 1.1rem);">
-                        Assista ao vídeo acima e entenda
-                    </p>
+                        </div>
                     
                     <a href="#pacotes" class="cta-premium will-change-transform">
-                        🎯 QUERO MEU PAINEL VIP AGORA!
+                         QUERO MEU PAINEL VIP! 🎯
                     </a>
                 </div>
             </div>
@@ -1185,7 +1210,7 @@
     </section>
 
     <!-- Features Section Premium -->
-    <section class="py-4">
+    <section class="py-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 fade-in-left">
@@ -1193,10 +1218,10 @@
                         <div class="feature-icon">
                             <i class="fas fa-trophy"></i>
                         </div>
-                        <h3 class="text-center mb-3" style="font-size: clamp(1.3rem, 3vw, 1.6rem);">Vitórias Garantidas</h3>
-                        <p class="text-center" style="font-size: clamp(0.9rem, 2vw, 1rem);">
+                        <h3 class="text-center mb-3">Mira 2x Automática</h3>
+                        <p class="text-center">
                             Mira 100% automática com precisão cirúrgica. Cada tiro é CAPA garantida. 
-                            Transforme-se no player mais temido da partida.
+                           2x Automática ela tem 100% de precisão de mira sem erra um tiro! Transforme-se no player mais temido do Free Fire
                         </p>
                     </div>
                 </div>
@@ -1206,10 +1231,10 @@
                         <div class="feature-icon">
                             <i class="fas fa-crosshairs"></i>
                         </div>
-                        <h3 class="text-center mb-3" style="font-size: clamp(1.3rem, 3vw, 1.6rem);">Mira Full vermelho</h3>
-                        <p class="text-center" style="font-size: clamp(0.9rem, 2vw, 1rem);">
-                           Com Sistema de rastreamento avançado que gruda na cabeça dos inimigos. 
-                            2x automática que nunca falha, mesmo à longa distância.
+                        <h3 class="text-center mb-3"> Rastreamento pra cabeça</h3>
+                        <p class="text-center">
+                            Com Sistema de rastreamento avançado que gruda na cabeça dos inimigos. 
+                            2x automática que gruda Full, mesmo à longa distância.
                         </p>
                     </div>
                 </div>
@@ -1219,9 +1244,9 @@
                         <div class="feature-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h3 class="text-center mb-3" style="font-size: clamp(1.3rem, 3vw, 1.6rem);">100% Anti-Ban</h3>
-                        <p class="text-center" style="font-size: clamp(0.9rem, 2vw, 1rem);">
-                            Sistema de disfarce indetectável. Jogue com segurança total, 
+                        <h3 class="text-center mb-3"> Sobre nosso Painel XIT</h3>
+                        <p class="text-center">
+                           Nosso Painel quanta com várias fuções no Sistema, como ESP, Aimbot, aimkill, e várias outras opções Avançadas. Jogue com segurança total, 
                             sem risco de banimento ou blacklist. Garantia de proteção.
                         </p>
                     </div>
@@ -1230,82 +1255,191 @@
         </div>
     </section>
 
-    <!-- Depoimentos Premium Carousel -->
-    <section class="py-4">
-        <div class="container">
-            <h2 class="display-3 text-center mb-4 fade-in-up">
-                O Que Nossos <span class="neon-primary">Clientes VIP</span> Dizem
-            </h2>
-            
-            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6 col-lg-4">
-                                <div class="testimonial-card">
-                                    <img src="imgs/pvsocial (6).jpg" alt="Depoimento Cliente" class="img-fluid rounded">
-                                    <div class="star-rating">
-                                        <i class="fas fa-star" style="--i: 1;"></i>
-                                        <i class="fas fa-star" style="--i: 2;"></i>
-                                        <i class="fas fa-star" style="--i: 3;"></i>
-                                        <i class="fas fa-star" style="--i: 4;"></i>
-                                        <i class="fas fa-star" style="--i: 5;"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6 col-lg-4">
-                                <div class="testimonial-card">
-                                    <img src="imgs/pvsocial (2).jpg" alt="Depoimento Cliente" class="img-fluid rounded">
-                                    <div class="star-rating">
-                                        <i class="fas fa-star" style="--i: 1;"></i>
-                                        <i class="fas fa-star" style="--i: 2;"></i>
-                                        <i class="fas fa-star" style="--i: 3;"></i>
-                                        <i class="fas fa-star" style="--i: 4;"></i>
-                                        <i class="fas fa-star" style="--i: 5;"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6 col-lg-4">
-                                <div class="testimonial-card">
-                                    <img src="imgs/prova social 03.PNG" alt="Depoimento Cliente" class="img-fluid rounded">
-                                    <div class="star-rating">
-                                        <i class="fas fa-star" style="--i: 1;"></i>
-                                        <i class="fas fa-star" style="--i: 2;"></i>
-                                        <i class="fas fa-star" style="--i: 3;"></i>
-                                        <i class="fas fa-star" style="--i: 4;"></i>
-                                        <i class="fas fa-star" style="--i: 5;"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+      </div>
+<!-- Seção de benefícios e pacotes -->
+    <section id="beneficios" class="beneficios">
+        
+    <div class="text-center p-3 mt-2">
+    <h1 class="display-2" style="color: #ffffff;"> 
+        Veja abaixo alguns
+        <span class="neon-red">
+            <span class="neon-primary">FeedBacks</span> de clientes
+        </span>
+    </h1>
+</div>
+        
+<div id="carouselDepoimentos" class="carousel slide container py-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <!-- Primeiro depoimento -->
+        <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/pvsocial (6).jpg" alt="Depoimento 1" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
                     </div>
                 </div>
-                
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                </button>
             </div>
         </div>
-    </section>
 
-    <!-- Prova Social Premium -->
+        <!-- Segundo depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/pvsocial (2).jpg" alt="Depoimento 2" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terceiro depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/prova social 03.PNG" alt="Depoimento 3" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quarto depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/pvsocial (4).jpg" alt="Depoimento 4" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quinto depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/pvsocial (5).jpg" alt="Depoimento 5" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sexto depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/prova social 04.PNG" alt="Depoimento 6" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sétimo depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/prova social 01.jpg" alt="Depoimento 7" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Oitavo depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/prova social 02.JPG" alt="Depoimento 8" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nono depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/prova social 05.jpg" alt="Depoimento 9" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+    </button>
+</div>
+
+     <!-- Prova Social Premium -->
     <div class="container">
         <div class="social-proof fade-in-up">
             <h3 class="display-5 mb-3" style="font-size: clamp(1.5rem, 4vw, 2.2rem);">
-                🔥 MAIS DE 10.000 PLAYERS JÁ ESCOLHERAM O PAINEL XIT! 🔥
+               🔱  MAIS DE 10.000 PLAYERS JÁ ESCOLHERAM O PAINEL XIT! 🔱
             </h3>
             <div class="row text-center">
                 <div class="col-md-4 mb-2">
@@ -1313,7 +1447,7 @@
                     <p style="font-size: clamp(0.9rem, 2vw, 1rem);">Clientes satisfeitos</p>
                 </div>
                 <div class="col-md-4 mb-2">
-                    <h4 class="display-6" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">98.7%</h4>
+                    <h4 class="display-6" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">99.7%</h4>
                     <p style="font-size: clamp(0.9rem, 2vw, 1rem);">Taxa de aprovação</p>
                 </div>
                 <div class="col-md-4 mb-2">
@@ -1328,9 +1462,9 @@
     </div>
 
     <!-- Pacotes Premium -->
-    <section id="pacotes" class="py-4">
+    <section id="pacotes" class="py-5">
         <div class="container">
-            <h2 class="display-2 text-center mb-4 fade-in-up">
+            <h2 class="display-2 text-center mb-5 fade-in-up">
                 Escolha Seu <span class="neon-primary">Painel VIP</span>
             </h2>
             
@@ -1340,8 +1474,8 @@
                     <div class="package-card">
                         <img src="imgs/android.png" alt="Android" class="package-image">
                         
-                        <h3 class="package-title text-center">PAINEL VIP ANDROID</h3>
-                        <p class="text-center text-muted mb-3" style="font-size: clamp(0.85rem, 2vw, 0.95rem);">
+                        <h3 class="package-title text-center"> <span class="neon-primary">ANDROID</span> </h3>
+                        <p class="text-center text-muted mb-4">
                             O painel mais avançado para Android
                         </p>
                         
@@ -1356,23 +1490,24 @@
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Aim Regedit</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 2x Aimbot</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> HeadShot</li>
-                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Mira que grudar</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Mira que gruda</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Disfarce 100% indetectável</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Com disfarçe pra não leva Ban!</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Instalar sem precisar de PC (opcional)</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Sensi VIP Full capa</li>
-                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Instalação do xit fácil e rápida</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Tutorial de Instalação fácil e rápida</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Acesso do Painel VIP na Hora!</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 100% Anti-Ban/Anti-BlackList!</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Nosso Whatsapp Oficial Como seu Suporte</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 7 Dias de Garantia</li>
                         </ul>
                         
                         <div class="price-section">
-                            <div class="old-price">De R$ 129,90</div>
+                            <div class="old-price">De R$ 147,90</div>
                             <span style="color: #ffffff;">Por apenas</span>
-                            <div class="current-price">R$ 19,90</div>
-                            <a href="https://go.pepperpay.com.br/6ztdj" class="cta-premium">
-                                🛒 QUERO COMPRAR AGORA!
+                            <div class="current-price">R$ 29,90</div>
+                            <a href="https://go.perfectpay.com.br/PPU38CPTN1D" class="cta-premium w-100">
+                              🛒 COMPRAR COM DESCONTO! 
                             </a>
                         </div>
                     </div>
@@ -1383,9 +1518,9 @@
                     <div class="package-card">
                         <img src="imgs/iphone.png" alt="iPhone" class="package-image">
                         
-                        <h3 class="package-title text-center">PAINEL VIP IPHONE</h3>
-                        <p class="text-center text-muted mb-3" style="font-size: clamp(0.85rem, 2vw, 0.95rem);">
-                            O painel mais avançado para iPhone/iOS
+                        <h3 class="package-title text-center"><span class="neon-primary">IPHONE/IOS</span></h3>
+                        <p class="text-center text-muted mb-4">
+                             O painel mais avançado para iPhone/iOS
                         </p>
                         
                         <ul class="features-list">
@@ -1399,12 +1534,13 @@
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Aim Regedit</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 2x Aimbot</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> HeadShot</li>
-                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Mira que grudar</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Mira que gruda</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Disfarce 100% indetectável</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Com disfarçe pra não leva Ban!</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Instalar sem precisar de PC (opcional)</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Sensi VIP Full capa</li>
-                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Instalação fácil e rápida</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Tutorial de Instalação fácil e rápida</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Acesso do Painel VIP na Hora!</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 100% Anti-Ban/Anti-BlackList!</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Nosso Whatsapp Oficial Como seu Suporte</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 7 Dias de garantia</li>
@@ -1414,8 +1550,8 @@
                             <div class="old-price">De R$ 147,90</div>
                             <span style="color: #ffffff;">Por apenas</span>
                             <div class="current-price">R$ 29,90</div>
-                            <a href="https://go.pepperpay.com.br/1xm07" class="cta-premium">
-                                🛒 QUERO COMPRAR AGORA!
+                            <a href="https://go.perfectpay.com.br/PPU38CPTMME" class="cta-premium w-100">
+                                🛒 COMPRAR COM DESCONTO! 
                             </a>
                         </div>
                     </div>
@@ -1424,46 +1560,48 @@
                 <!-- Painel CLT VIP -->
                 <div class="col-lg-4 fade-in-right" style="animation-delay: 0.4s;">
                     <div class="package-card" style="border-color: var(--accent-secondary);">
-                        <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gradient-primary); color: #000; padding: 6px 16px; border-radius: 15px; font-weight: 700; font-size: 0.8rem;">
-                            MAIS VENDIDO
+                        <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--gradient-primary); color: #000; padding: 8px 20px; border-radius: 20px; font-weight: 700; font-size: 0.9rem;">
+                            MAIS VENDIDO!
                         </div>
                         
                         <img src="imgs/CLT.jpg" alt="CLT VIP" class="package-image">
                         
-                        <h3 class="package-title text-center">PAINEL CLT VIP</h3>
-                        <p class="text-center text-muted mb-3" style="font-size: clamp(0.85rem, 2vw, 0.95rem);">
+                        <h3 class="package-title text-center"><span class="neon-primary">PAINEL CLT PREMIUM</span></h3>
+                        <p class="text-center text-muted mb-4">
                             O painel definitivo - Android + iPhone
                         </p>
                         
                         <ul class="features-list">
-                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> Painel CLT Premium</li>
-                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> Acesso permanente</li>
-                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> Função HS pescoço + Bypass</li>
-                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> 2x Xitada + 2x Automática</li>
-                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Rastreamento de cabeça avançado</li>
-                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> No Recoil (não espalha tiro)</li>
+                                     <ul class="features-list">
+                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> Painel Mod Menu FFH4X</li>
+                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> Acesso VIP Permanente</li>
+                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> No Recoil (não espalha tiros)</li>
+                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> 2x Xitada + 2x Automática</li>
+                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> Rastreamento de cabeça avançado</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Função HS pescoço + Bypass</li>
                             <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> UMP automática premium</li>
-                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Mira automática Full capa</li>
-                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Disfarce 100% indetectável</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Mira automática Full capa</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Disfarce 100% indetectável</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Aim Regedit</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 2x Aimbot</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> HeadShot</li>
-                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Mira que grudar!</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Mira que gruda!</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Disfarce 100% indetectável</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Com disfarçe pra não leva Ban!</li>
-                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Instalar sem precisar de PC (opcional)</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Instalar sem precisar de PC (opcional) </li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Sensi VIP Full capa</li>
-                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Instalação fácil e rápida</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Tutorial de Instalação fácil e rápida</li>
                             <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Suporte VIP Exclusivo 24h</li>
-                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Atualizações vitalícias</li>
-                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 30 Dias de Garantia!</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Bônus Atualizações vitalícias</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Atualização Acesso antecipado</li>             
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Garantia de 30 Dias</li>
                         </ul>
                         
                         <div class="price-section">
                             <div class="old-price">De R$ 214,97</div>
                             <span style="color: #ffffff;">Por apenas</span>
                             <div class="current-price">R$ 49,90</div>
-                            <a href="https://go.pepperpay.com.br/n9oz4" class="cta-premium">
+                            <a href="https://go.perfectpay.com.br/PPU38CPQM3H" class="cta-premium w-100">
                                 👑 QUERO SER VIP!
                             </a>
                         </div>
@@ -1473,7 +1611,7 @@
         </div>
     </section>
 
-    <!-- Garantia Premium -->
+  <!-- Garantia Premium -->
     <div class="container">
         <div class="guarantee-section fade-in-up">
             <h2 class="display-4 mb-3" style="margin-top: 30px; font-size: clamp(1.8rem, 4vw, 2.5rem);">
@@ -1506,36 +1644,13 @@
         </div>
     </div>
 
-    <!-- Comunidade Premium -->
-    <section class="py-4">
-        <div class="container">
-            <h2 class="display-3 text-center mb-4 fade-in-up">
-                Junte-se à Nossa <span class="neon-primary">Comunidade VIP</span>
-            </h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6 fade-in-up">
-                    <div class="feature-card text-center hover-glow">
-                        <img src="imgs/logo new sensi.jpg" alt="Comunidade New Sensi" class="package-image">
-                        <h3 class="mb-3 neon-primary" style="font-size: clamp(1.3rem, 3vw, 1.6rem);">Grupo VIP Exclusivo</h3>
-                        <p class="mb-4" style="font-size: clamp(0.9rem, 2vw, 1rem);">
-                            Acesso exclusivo ao nosso grupo VIP: atualizações em primeira mão, 
-                            suporte prioritário e contato direto com nossa equipe.
-                        </p>
-                        <a href="https://t.me/+yKuBpvqPaBU5MGMx" target="_blank" 
-                           class="cta-premium">
-                            🚀 ENTRAR NO GRUPO VIP
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- FAQ Premium -->
-    <section class="py-4" id="faq">
+    <section class="py-5" id="faq">
         <div class="container">
             <div class="faq-section fade-in-up">
-                <h2 class="display-3 text-center mb-4">
+                <h2 class="display-3 text-center mb-5">
                     Perguntas <span class="neon-primary">Frequentes</span>
                 </h2>
                 
@@ -1565,7 +1680,7 @@
                             <div class="accordion-body">
                                 <strong>Entrega instantânea!</strong> Assim que o pagamento for aprovado, 
                                 você recebe automaticamente todos os arquivos e instruções no seu email. 
-                                Pagou, já pode começar a xitar!
+                                Pagou, já pode começar a dominar!
                             </div>
                         </div>
                     </div>
@@ -1605,7 +1720,7 @@
     </section>
 
     <!-- Footer Premium -->
-    <footer class="py-4" style="background: var(--secondary-bg); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <footer class="py-5" style="background: var(--secondary-bg); border-top: 1px solid rgba(255, 255, 255, 0.1);">
         <div class="container text-center">
             <p class="mb-2" style="font-size: clamp(0.9rem, 2vw, 1rem);">&copy; 2024 New Sensi. Todos os direitos reservados.</p>
             <p class="mb-2" style="font-size: clamp(0.85rem, 1.8vw, 0.95rem);">
@@ -1639,8 +1754,8 @@
                 this.userCounter = document.getElementById('userCounter');
                 this.notificationContainer = document.getElementById('notificationContainer');
                 
-                this.currentSales = 247;
-                this.currentUsers = 247;
+                this.currentSales = 227;
+                this.currentUsers = 1000;
                 
                 this.init();
             }
@@ -1656,13 +1771,14 @@
             // Sistema de notificações otimizado para mobile
             showNotification() {
                 const names = [
-                    "João Silva", "Maria Santos", "Pedro Costa", "Ana Lima", "Carlos Souza",
-                    "Juliana Oliveira", "Rafael Alves", "Camila Ferreira", "Lucas Pereira", "Beatriz Rocha",
-                    "Gabriel Martins", "Larissa Cunha", "Felipe Barbosa", "Natália Gomes", "Diego Nascimento"
+                    "João Silva", "Bella", "Maria Santos", "Adriano silva", "Pedro Costa", "Ana", "Vitor", "Fabinho", "Carlos Souza", "Isabelle", "Rafaela", "Kauane", "Natally",
+                    "Juliana Oliveira", "Rafael Alves", "Camila Ferreira", "Lucas Pereira", "Beatriz Rocha", "Rafael", "Matheus", "Juliana", "Fernanda", "Rodrigo", "Davi", "Diego",
+                    "Gabriel Martins", "Larissa Cunha", "Leonardo Freitas", "Thiago Ribeiro", "Camila Rocha", "Adriano", "Natália Gomes", "Diego Nascimento"
                 ];
                 
-                const products = ["Painel Android", "Painel iPhone", "Painel CLT VIP"];
-                const cities = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Brasília", "Fortaleza"];
+                const products = ["☠️ Painel XIT Android", "☠️ Painel XIT iPhone/iOS", "👑 Painel CLT PREMIUM!"];
+                const cities = ["São Paulo", "Rio de Janeiro", "Vitória", "Belo Horizonte", "Salvador", "João Pessoa", "Campina Grande", "Campo Grande", "Salvador", "Porto Alegre", "Curitiba", "Maceió",
+                                "Recife", "Natal", "Brasília", "Fortaleza"];
                 
                 const name = names[Math.floor(Math.random() * names.length)];
                 const product = products[Math.floor(Math.random() * products.length)];
@@ -1786,9 +1902,2087 @@
 
                         counter.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
                         counter.style.position = 'fixed';
-                        counter.style.top = '15px';
+                        counter.style.top = '20px';
                         counter.style.right = 'auto';
-                        counter.style.left = '15px';
+                        counter.style.left = '20px';
+                    }
+                };
+
+                const dragEnd = () => {
+                    if (isDragging) {
+                        isDragging = false;
+                        counter.classList.remove('dragging');
+                    }
+                };
+
+                // Mouse events
+                counter.addEventListener('mousedown', dragStart);
+                document.addEventListener('mousemove', dragMove);
+                document.addEventListener('mouseup', dragEnd);
+
+                // Touch events para mobile
+                counter.addEventListener('touchstart', dragStart, { passive: false });
+                document.addEventListener('touchmove', dragMove, { passive: false });
+                document.addEventListener('touchend', dragEnd);
+            }
+            
+            // Animações de entrada
+            initAnimations() {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.animationPlayState = 'running';
+                        }
+                    });
+                }, observerOptions);
+                
+                document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => {
+                    el.style.animationPlayState = 'paused';
+                    observer.observe(el);
+                });
+            }
+            
+            // Micro-interações
+            initInteractions() {
+                // Hover effects para cards
+                document.querySelectorAll('.hover-lift').forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        card.style.transform = 'translateY(-8px)';
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'translateY(0)';
+                    });
+                });
+                
+                // Efeito de glow
+                document.querySelectorAll('.hover-glow').forEach(element => {
+                    element.addEventListener('mouseenter', () => {
+                        element.style.boxShadow = '0 0 30px rgba(0, 255, 65, 0.3)';
+                    });
+                    
+                    element.addEventListener('mouseleave', () => {
+                        element.style.boxShadow = '';
+                    });
+                });
+                
+                // Smooth scroll
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            }
+        }
+        
+        // Inicializar sistema
+        document.addEventListener('DOMContentLoaded', function() {
+            new PremiumInteractionSystem();
+            
+            // Preload de imagens críticas
+            const criticalImages = [
+                'imgs/logo.png',
+                'imgs/android.png', 
+                'imgs/iphone.png',
+                'imgs/CLT.jpg'
+            ];
+            
+            criticalImages.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        });
+        
+        // Otimização de performance
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => {
+                console.log('🚀 Sistema Premium inicializado com sucesso!');
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- TikTok Pixel Code Start -->
+    <script>
+        !function(w, d, t) {
+            w.TiktokAnalyticsObject = t;
+            var ttq = w[t] = w[t] || [];
+            ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"];
+            ttq.setAndDefer = function(t, e) { t[e] = function() { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } };
+            for (var i = 0; i < ttq.methods.length; i++) {
+                ttq.setAndDefer(ttq, ttq.methods[i]);
+            }
+            ttq.instance = function(t) {
+                for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) {
+                    ttq.setAndDefer(e, ttq.methods[n]);
+                }
+                return e
+            };
+            ttq.load = function(e, n) {
+                var r = "https://analytics.tiktok.com/i18n/pixel/events.js",
+                    o = n && n.partner;
+                ttq._i = ttq._i || {};
+                ttq._i[e] = [];
+                ttq._i[e]._u = r;
+                ttq._t = ttq._t || {};
+                ttq._t[e] = +new Date;
+                ttq._o = ttq._o || {};
+                ttq._o[e] = n || {};
+                var s = document.createElement("script");
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = r + "?sdkid=" + e + "&lib=" + t;
+                var x = document.getElementsByTagName("script")[0];
+                x.parentNode.insertBefore(s, x);
+            };
+
+            ttq.load('D31G2RRC77U7TGIRBM60');
+            ttq.page();
+        }(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>New Sensi - Painel XIT Premium | O Melhor do Brasil</title>
+    <meta name="description" content="O painel XIT mais avançado do Brasil. +10.000 players já dominam o Free Fire. Mira automática 100% capa, anti-ban garantido." />
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- CSS Frameworks -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/0b784d4cf8.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* ===== VARIÁVEIS CSS PROFISSIONAIS ===== */
+        :root {
+            --primary-bg: #0a0a0a;
+            --secondary-bg: #111111;
+            --card-bg: #1a1a1a;
+            --accent-primary: #00ff41;
+            --accent-secondary: #00e676;
+            --accent-danger: #ff4757;
+            --text-primary: #ffffff;
+            --text-secondary: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --shadow-primary: 0 20px 60px rgba(0, 255, 65, 0.15);
+            --shadow-secondary: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --border-radius: 20px;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --gradient-primary: linear-gradient(135deg, #00ff41 0%, #00e676 50%, #39ff14 100%);
+            --gradient-dark: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #111111 100%);
+        }
+
+        /* ===== RESET E BASE - REMOÇÃO SCROLL LATERAL ===== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            overflow-x: hidden; /* Remove barra de rolagem horizontal */
+        }
+
+        body {
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: 'Inter', 'Poppins', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden; /* Remove barra de rolagem lateral */
+            position: relative;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        /* Container global para prevenir overflow */
+        .container,
+        .container-fluid {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Background animado profissional */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(0, 255, 65, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 230, 118, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(255, 71, 87, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            animation: backgroundPulse 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        /* ===== TIPOGRAFIA PROFISSIONAL ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bebas Neue', cursive;
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--text-primary);
+            text-rendering: optimizeLegibility;
+            word-wrap: break-word;
+        }
+
+        .display-1 { font-size: clamp(3rem, 8vw, 6rem); }
+        .display-2 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+        .display-3 { font-size: clamp(2rem, 5vw, 3.5rem); }
+
+        p, span, div, li, a {
+            color: var(--text-primary);
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        /* ===== EFEITOS NEÓN PREMIUM ===== */
+        .neon-primary {
+            color: var(--accent-primary) !important;
+            text-shadow: 
+                0 0 5px var(--accent-primary),
+                0 0 10px var(--accent-primary),
+                0 0 20px var(--accent-primary),
+                0 0 40px var(--accent-primary);
+            animation: neonPulse 3s ease-in-out infinite alternate;
+        }
+
+        .neon-danger {
+            color: var(--accent-danger) !important;
+            text-shadow: 
+                0 0 5px var(--accent-danger),
+                0 0 10px var(--accent-danger),
+                0 0 20px var(--accent-danger);
+            animation: neonDangerPulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes neonPulse {
+            from { 
+                text-shadow: 
+                    0 0 5px var(--accent-primary),
+                    0 0 10px var(--accent-primary),
+                    0 0 20px var(--accent-primary);
+            }
+            to { 
+                text-shadow: 
+                    0 0 8px var(--accent-primary),
+                    0 0 15px var(--accent-primary),
+                    0 0 25px var(--accent-primary),
+                    0 0 35px var(--accent-primary);
+            }
+        }
+
+        @keyframes neonDangerPulse {
+            from { 
+                text-shadow: 
+                    0 0 5px var(--accent-danger),
+                    0 0 10px var(--accent-danger);
+            }
+            to { 
+                text-shadow: 
+                    0 0 8px var(--accent-danger),
+                    0 0 15px var(--accent-danger),
+                    0 0 25px var(--accent-danger);
+            }
+        }
+
+        /* ===== BANNER SUPERIOR PREMIUM ===== */
+        .premium-banner {
+            background: var(--gradient-primary);
+            padding: 18px 0;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: #000;
+            position: relative;
+            overflow: hidden;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        .premium-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: bannerShine 3s infinite;
+        }
+
+        @keyframes bannerShine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* ===== HERO SECTION PROFISSIONAL ===== */
+        .hero-premium {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 80px 0;
+            background: var(--gradient-dark);
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .hero-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at top center, rgba(0, 255, 65, 0.1) 0%, transparent 70%),
+                radial-gradient(circle at bottom left, rgba(0, 230, 118, 0.08) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .logo-premium {
+            max-width: 120px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 20px rgba(0, 255, 65, 0.5));
+            animation: logoFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1.1;
+            word-wrap: break-word;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+            word-wrap: break-word;
+        }
+
+        .users-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 255, 65, 0.1);
+            padding: 12px 24px;
+            border-radius: 50px;
+            border: 2px solid var(--accent-primary);
+            margin: 20px 0;
+            animation: counterPulse 2s ease-in-out infinite;
+            max-width: 100%;
+        }
+
+        @keyframes counterPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* ===== VÍDEO PREMIUM ===== */
+        .video-container {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 
+                0 0 30px rgba(0, 255, 65, 0.3),
+                var(--shadow-secondary);
+            margin: 40px 0;
+            transform: perspective(1000px) rotateX(2deg);
+            transition: var(--transition-smooth);
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .video-container:hover {
+            transform: perspective(1000px) rotateX(0deg) scale(1.02);
+            box-shadow: 
+                0 0 50px rgba(0, 255, 65, 0.5),
+                0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 255, 65, 0.1), transparent, rgba(0, 255, 65, 0.1));
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* ===== BOTÃO CTA PREMIUM ===== */
+        .cta-premium {
+            position: relative;
+            display: inline-block;
+            padding: 22px 45px;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #000 !important;
+            background: var(--gradient-primary);
+            background-size: 200% 200%;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            box-shadow: 
+                0 0 20px rgba(0, 255, 65, 0.4),
+                0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: ctaGlow 3s ease-in-out infinite;
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+
+        .cta-premium:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 
+                0 0 40px rgba(0, 255, 65, 0.6),
+                0 20px 50px rgba(0, 0, 0, 0.4);
+            color: #000 !important;
+            background-position: 100% 0;
+        }
+
+        .cta-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s;
+        }
+
+        .cta-premium:hover::before {
+            left: 100%;
+        }
+
+        @keyframes ctaGlow {
+            0%, 100% { 
+                box-shadow: 
+                    0 0 20px rgba(0, 255, 65, 0.4),
+                    0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+            50% { 
+                box-shadow: 
+                    0 0 30px rgba(0, 255, 65, 0.6),
+                    0 15px 40px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        /* ===== CARDS PREMIUM ===== */
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            height: 100%;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.6s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-primary);
+            border-color: var(--accent-primary);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: #000;
+            box-shadow: 0 10px 30px rgba(0, 255, 65, 0.3);
+        }
+
+        /* ===== DEPOIMENTOS CAROUSEL PREMIUM - IMAGENS PADRONIZADAS ===== */
+        .testimonial-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, var(--accent-primary), transparent);
+            animation: rotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .testimonial-card:hover::before {
+            opacity: 0.1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* ===== PADRONIZAÇÃO DAS IMAGENS DE FEEDBACK ===== */
+        .feedback-image-container {
+            width: 100%;
+            height: 2000px; /* Altura fixa baseada na maior imagem */
+            overflow: hidden;
+            border-radius: 25px;
+            position: relative;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(0, 255, 65, 0.2);
+        }
+
+        .feedback-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantém proporção e preenche o container */
+            object-position: center; /* Centraliza a imagem */
+            border-radius: 15px;
+            transition: var(--transition-smooth);
+        }
+
+        .feedback-image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Container do card de feedback */
+        .feedback-card {
+            background-color: #121212;
+            width: 90%;
+            max-width: 300px; /* Aumentei um pouco para acomodar melhor */
+            border-radius: 20px;
+            padding: 20px;
+            border: 2px solid rgba(0, 255, 65, 0.2);
+            transition: var(--transition-smooth);
+        }
+
+        .feedback-card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 15px 40px rgba(0, 255, 65, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin: 15px 0;
+        }
+
+        .star-rating i {
+            color: #ffd700;
+            font-size: 1.2rem;
+            animation: starTwinkle 2s ease-in-out infinite;
+            animation-delay: calc(var(--i) * 0.1s);
+        }
+
+        .star-green {
+            color: var(--accent-primary) !important;
+            text-shadow: 0 0 10px var(--accent-primary);
+        }
+
+        @keyframes starTwinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        /* ===== SEÇÃO DE URGÊNCIA PREMIUM ===== */
+        .urgency-section {
+            background: linear-gradient(135deg, var(--card-bg), #2d1b1b);
+            border: 2px solid var(--accent-danger);
+            border-radius: var(--border-radius);
+            padding: 50px 30px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .urgency-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255, 71, 87, 0.1), transparent, rgba(255, 71, 87, 0.1));
+            animation: urgencyPulse 3s infinite;
+        }
+
+        @keyframes urgencyPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .urgency-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .countdown-timer {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--accent-danger);
+            font-weight: 900;
+            font-family: 'Bebas Neue', cursive;
+            text-shadow: 0 0 20px var(--accent-danger);
+            margin: 20px 0;
+            animation: timerPulse 1s infinite;
+        }
+
+        @keyframes timerPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* ===== PROVA SOCIAL PREMIUM ===== */
+        .social-proof {
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            margin: 40px 0;
+            color: #000 !important;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .social-proof * {
+            color: #000 !important;
+        }
+
+        .social-proof::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: socialProofShine 4s infinite;
+        }
+
+        @keyframes socialProofShine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* ===== PACOTES PREMIUM ===== */
+        .package-card {
+            background: var(--card-bg);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .package-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow-primary);
+        }
+
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.6s ease;
+        }
+
+        .package-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .package-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+            border: 3px solid var(--accent-primary);
+            box-shadow: 0 10px 30px rgba(0, 255, 65, 0.3);
+        }
+
+        .package-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            word-wrap: break-word;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            width: 100%;
+        }
+
+        .features-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition-smooth);
+            word-wrap: break-word;
+            width: 100%;
+        }
+
+        .features-list li:hover {
+            padding-left: 10px;
+            color: var(--accent-primary);
+        }
+
+        .features-list i {
+            font-size: 1.1rem;
+            width: 20px;
+            flex-shrink: 0;
+        }
+
+        .price-section {
+            text-align: center;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .old-price {
+            font-size: 1.8rem;
+            color: var(--accent-danger);
+            text-decoration: line-through;
+            margin-bottom: 10px;
+        }
+
+        .current-price {
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 25px;
+        }
+
+        /* ===== GARANTIA PREMIUM ===== */
+        .guarantee-section {
+            background: linear-gradient(135deg, #1a4d1a, #2d5a2d);
+            border: 3px solid var(--accent-secondary);
+            border-radius: var(--border-radius);
+            padding: 50px 30px;
+            margin: 60px 0;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .guarantee-section::before {
+            content: '🛡️';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-secondary);
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 230, 118, 0.4);
+        }
+
+        /* ===== CONTADOR DE VENDAS MÓVEL OTIMIZADO ===== */
+        .sales-counter-mobile {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--accent-danger), #ff6b87);
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 30px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 
+                0 10px 30px rgba(255, 71, 87, 0.4),
+                0 0 20px rgba(255, 71, 87, 0.3);
+            z-index: 9999;
+            cursor: move;
+            user-select: none;
+            transition: var(--transition-smooth);
+            animation: counterBounce 3s infinite;
+            max-width: 180px;
+            text-align: center;
+        }
+
+        .sales-counter-mobile:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 15px 40px rgba(255, 71, 87, 0.6),
+                0 0 30px rgba(255, 71, 87, 0.5);
+        }
+
+        .sales-counter-mobile.dragging {
+            animation: none;
+            transform: scale(1.1);
+            box-shadow: 
+                0 20px 50px rgba(255, 71, 87, 0.8),
+                0 0 40px rgba(255, 71, 87, 0.7);
+            z-index: 10001;
+        }
+
+        @keyframes counterBounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* ===== NOTIFICAÇÕES OTIMIZADAS PARA MOBILE ===== */
+        .notification-container {
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+            z-index: 10000;
+            max-width: calc(100vw - 30px);
+        }
+
+        .purchase-notification {
+            background: linear-gradient(135deg, var(--card-bg), #2d2d2d);
+            border: 2px solid var(--accent-primary);
+            border-radius: 15px;
+            padding: 12px 15px;
+            max-width: 300px;
+            box-shadow: 
+                0 15px 30px rgba(0, 255, 65, 0.15),
+                0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateX(-120%);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            backdrop-filter: blur(10px);
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+            font-size: 13px;
+        }
+
+        .purchase-notification::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.1), transparent);
+            animation: notificationShine 3s infinite;
+        }
+
+        @keyframes notificationShine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .purchase-notification.show {
+            transform: translateX(0);
+        }
+
+        .notification-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .notification-icon {
+            width: 35px;
+            height: 35px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #000;
+            animation: iconPulse 2s infinite;
+            flex-shrink: 0;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .notification-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .notification-title {
+            font-weight: 700;
+            font-size: 12px;
+            color: var(--accent-primary);
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .notification-product {
+            font-weight: 600;
+            font-size: 11px;
+            color: var(--text-primary);
+            margin: 2px 0;
+            line-height: 1.2;
+        }
+
+        .notification-location {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        /* ===== FAQ PREMIUM ===== */
+        .faq-section {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 50px 30px;
+            margin: 60px 0;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .accordion-item {
+            background: transparent !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 15px !important;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            background: var(--card-bg) !important;
+            color: var(--text-primary) !important;
+            border: none !important;
+            padding: 20px 25px !important;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            word-wrap: break-word;
+        }
+
+        .accordion-button:hover {
+            background: rgba(0, 255, 65, 0.1) !important;
+        }
+
+        .accordion-body {
+            background: var(--secondary-bg) !important;
+            color: var(--text-secondary) !important;
+            padding: 25px !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            word-wrap: break-word;
+        }
+
+        /* ===== RESPONSIVIDADE PREMIUM MOBILE ===== */
+        @media (max-width: 768px) {
+            .sales-counter-mobile {
+                top: 10px;
+                right: 10px;
+                font-size: 12px;
+                padding: 12px 16px;
+                max-width: 150px;
+            }
+            
+            .notification-container {
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+            }
+            
+            .purchase-notification {
+                max-width: calc(100vw - 20px);
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+            
+            .notification-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
+            }
+            
+            .cta-premium {
+                font-size: 1.2rem;
+                padding: 18px 35px;
+                letter-spacing: 1px;
+            }
+            
+            .hero-premium {
+                min-height: 90vh;
+                padding: 60px 0;
+            }
+            
+            .urgency-section,
+            .guarantee-section {
+                padding: 30px 20px;
+                margin: 40px 0;
+            }
+            
+            .package-card {
+                padding: 30px 20px;
+                margin-bottom: 30px;
+            }
+            
+            .features-list li {
+                font-size: 14px;
+                padding: 6px 0;
+            }
+            
+            .features-list i {
+                font-size: 12px;
+                width: 18px;
+            }
+
+            /* Ajustes mobile para imagens de feedback */
+            .feedback-image-container {
+                height: 450px; /* Menor em mobile */
+            }
+
+            .feedback-card {
+                max-width: 350px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sales-counter-mobile {
+                font-size: 11px;
+                padding: 10px 14px;
+                max-width: 130px;
+            }
+            
+            .purchase-notification {
+                font-size: 11px;
+                padding: 8px 10px;
+            }
+            
+            .notification-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 11px;
+            }
+            
+            .cta-premium {
+                font-size: 1.1rem;
+                padding: 16px 30px;
+            }
+            
+            .package-title {
+                font-size: 2rem;
+            }
+            
+            .current-price {
+                font-size: 2.5rem;
+            }
+            
+            .old-price {
+                font-size: 1.5rem;
+            }
+
+            /* Ajustes para telas muito pequenas */
+            .feedback-image-container {
+                height: 400px;
+            }
+
+            .feedback-card {
+                max-width: 320px;
+                padding: 12px;
+            }
+        }
+
+        /* ===== ANIMAÇÕES DE ENTRADA ===== */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: fadeInLeft 0.8s ease forwards;
+        }
+
+        @keyframes fadeInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            animation: fadeInRight 0.8s ease forwards;
+        }
+
+        @keyframes fadeInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* ===== MICRO-INTERAÇÕES ===== */
+        .hover-lift {
+            transition: var(--transition-smooth);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+
+        .hover-glow {
+            transition: var(--transition-smooth);
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+        }
+
+        /* ===== OTIMIZAÇÕES DE PERFORMANCE ===== */
+        .will-change-transform {
+            will-change: transform;
+        }
+
+        .gpu-accelerated {
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Facebook Pixel noscript -->
+    <noscript>
+        <img height="1" width="1" style="display:none"
+          src="https://www.facebook.com/tr?id=3525977697696631&ev=PageView&noscript=1" />
+    </noscript>
+    
+    <!-- Banner Premium -->
+    <div class="premium-banner">
+        <strong>🔥 PROMOÇÃO VÁLIDA SÓ HOJE! PAINEL VIP 🔥</strong>
+    </div>
+
+    <!-- Contador de Vendas Móvel e Arrastável -->
+    <div class="sales-counter-mobile" id="salesCounterMobile">
+        <i class="fas fa-fire"></i> <span id="salesCount">227</span> vendas hoje!
+    </div>
+
+    <!-- Container para Notificações Premium -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- Hero Section Premium -->
+    <section class="hero-premium">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center hero-content fade-in-up">
+                    <img src="imgs/logo.png" alt="New Sensi Logo" class="logo-premium" />
+                    
+                    <h1 class="hero-title">
+                        O <span class="neon-primary">PAINEL XIT</span> Nº1 DO BRASIL<br>
+                        <span class="neon-danger">FULL VERMELHO</span> GARANTIDO!
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Painel Com Mais de <strong class="neon-primary">10.000 Players</strong><br>
+                        • Mira que gruda <span class="neon-danger">full vermelho</span><br>
+                        • 100% Anti-ban Anti-BlackList!<br> 
+                        • Suporte Exclusivo 24Horas!
+                    </p>
+                    
+                    <div class="users-counter">
+                        <i class="fas fa-users"></i>
+                        <strong id="userCounter" class="neon-primary">1000</strong> usuários ativos agora!
+                    </div>
+                    
+                    <div class="video-container mt-4">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/SD8KYZ8MRpQ?si=-qPLQXDLwGlh2HY0" 
+                                    title="Demonstração Painel XIT" 
+                                    allowfullscreen
+                                    class="gpu-accelerated"></iframe>
+                        </div>
+                        </div>
+                    
+                    <a href="#pacotes" class="cta-premium will-change-transform">
+                         QUERO MEU PAINEL VIP! 🎯
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section Premium -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 fade-in-left">
+                    <div class="feature-card hover-lift">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="text-center mb-3">Mira 2x Automática</h3>
+                        <p class="text-center">
+                            Mira 100% automática com precisão cirúrgica. Cada tiro é CAPA garantida. 
+                           2x Automática ela tem 100% de precisão de mira sem erra um tiro! Transforme-se no player mais temido do Free Fire
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="feature-card hover-lift">
+                        <div class="feature-icon">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <h3 class="text-center mb-3"> Rastreamento pra cabeça</h3>
+                        <p class="text-center">
+                            Com Sistema de rastreamento avançado que gruda na cabeça dos inimigos. 
+                            2x automática que gruda Full, mesmo à longa distância.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 fade-in-right" style="animation-delay: 0.4s;">
+                    <div class="feature-card hover-lift">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-center mb-3"> Sobre nosso Painel XIT</h3>
+                        <p class="text-center">
+                           Nosso Painel quanta com várias fuções no Sistema, como ESP, Aimbot, aimkill, e várias outras opções Avançadas. Jogue com segurança total, 
+                            sem risco de banimento ou blacklist. Garantia de proteção.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      </div>
+<!-- Seção de benefícios e pacotes -->
+    <section id="beneficios" class="beneficios">
+        
+    <div class="text-center p-3 mt-2">
+    <h1 class="display-2" style="color: #ffffff;"> 
+        Veja abaixo alguns
+        <span class="neon-red">
+            <span class="neon-primary">FeedBacks</span> de clientes
+        </span>
+    </h1>
+</div>
+        
+<div id="carouselDepoimentos" class="carousel slide container py-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <!-- Primeiro depoimento -->
+        <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/pvsocial (6).jpg" alt="Depoimento 1" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segundo depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/pvsocial (2).jpg" alt="Depoimento 2" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terceiro depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/prova social 03.PNG" alt="Depoimento 3" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quarto depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/pvsocial (4).jpg" alt="Depoimento 4" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quinto depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/pvsocial (5).jpg" alt="Depoimento 5" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sexto depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/prova social 04.PNG" alt="Depoimento 6" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sétimo depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/prova social 01.jpg" alt="Depoimento 7" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Oitavo depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/prova social 02.JPG" alt="Depoimento 8" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nono depoimento -->
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <div class="card text-white text-center p-4 rounded-4"
+                    style="background-color: #121212; width: 90%; max-width: 400px;">
+                    <img src="imgs/prova social 05.jpg" alt="Depoimento 9" class="img-fluid">
+                    <div class="mb-2 mt-2">
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                        <i class="bi bi-star-fill star-green"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+    </button>
+</div>
+
+     <!-- Prova Social Premium -->
+    <div class="container">
+        <div class="social-proof fade-in-up">
+            <h3 class="display-5 mb-3" style="font-size: clamp(1.5rem, 4vw, 2.2rem);">
+               🔱  MAIS DE 10.000 PLAYERS JÁ ESCOLHERAM O PAINEL XIT! 🔱
+            </h3>
+            <div class="row text-center">
+                <div class="col-md-4 mb-2">
+                    <h4 class="display-6" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">12.847</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem);">Clientes satisfeitos</p>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <h4 class="display-6" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">99.7%</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem);">Taxa de aprovação</p>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <h4 class="display-6" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">24/7</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem);">Suporte especializado</p>
+                </div>
+            </div>
+            <p class="mt-3" style="font-size: clamp(1rem, 2.5vw, 1.3rem);">
+                <strong>"Se você não está usando o Painel XIT, seus adversários estão levando vantagem sobre você!"</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- Pacotes Premium -->
+    <section id="pacotes" class="py-5">
+        <div class="container">
+            <h2 class="display-2 text-center mb-5 fade-in-up">
+                Escolha Seu <span class="neon-primary">Painel VIP</span>
+            </h2>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Painel Android -->
+                <div class="col-lg-4 fade-in-left">
+                    <div class="package-card">
+                        <img src="imgs/android.png" alt="Android" class="package-image">
+                        
+                        <h3 class="package-title text-center"> <span class="neon-primary">ANDROID</span> </h3>
+                        <p class="text-center text-muted mb-4">
+                            O painel mais avançado para Android
+                        </p>
+                        
+                        <ul class="features-list">
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Painel Mod Menu FFH4X</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Função HS pescoço + Bypass</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Mira automática 100% capa</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> 2x Automática</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Rastreamento de cabeça</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> UMP AUTOMÁTICA</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Aimbot Cabeça</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Aim Regedit</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 2x Aimbot</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> HeadShot</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Mira que gruda</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Disfarce 100% indetectável</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Com disfarçe pra não leva Ban!</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Instalar sem precisar de PC (opcional)</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Sensi VIP Full capa</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Tutorial de Instalação fácil e rápida</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Acesso do Painel VIP na Hora!</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 100% Anti-Ban/Anti-BlackList!</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Nosso Whatsapp Oficial Como seu Suporte</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 7 Dias de Garantia</li>
+                        </ul>
+                        
+                        <div class="price-section">
+                            <div class="old-price">De R$ 147,90</div>
+                            <span style="color: #ffffff;">Por apenas</span>
+                            <div class="current-price">R$ 29,90</div>
+                            <a href="https://go.perfectpay.com.br/PPU38CPTN1D" class="cta-premium w-100">
+                              🛒 COMPRAR COM DESCONTO! 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Painel iPhone -->
+                <div class="col-lg-4 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="package-card">
+                        <img src="imgs/iphone.png" alt="iPhone" class="package-image">
+                        
+                        <h3 class="package-title text-center"><span class="neon-primary">IPHONE/IOS</span></h3>
+                        <p class="text-center text-muted mb-4">
+                             O painel mais avançado para iPhone/iOS
+                        </p>
+                        
+                        <ul class="features-list">
+                           <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Painel Mod Menu FFH4X</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Função HS pescoço + Bypass</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Mira automática 100% capa</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> 2x Automática</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Rastreamento de cabeça</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> UMP AUTOMÁTICA</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Aimbot Cabeça</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Aim Regedit</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 2x Aimbot</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> HeadShot</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Mira que gruda</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Disfarce 100% indetectável</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Com disfarçe pra não leva Ban!</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Instalar sem precisar de PC (opcional)</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Sensi VIP Full capa</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Tutorial de Instalação fácil e rápida</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Acesso do Painel VIP na Hora!</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 100% Anti-Ban/Anti-BlackList!</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Nosso Whatsapp Oficial Como seu Suporte</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 7 Dias de garantia</li>
+                        </ul>
+                        
+                        <div class="price-section">
+                            <div class="old-price">De R$ 147,90</div>
+                            <span style="color: #ffffff;">Por apenas</span>
+                            <div class="current-price">R$ 29,90</div>
+                            <a href="https://go.perfectpay.com.br/PPU38CPTMME" class="cta-premium w-100">
+                                🛒 COMPRAR COM DESCONTO! 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Painel CLT VIP -->
+                <div class="col-lg-4 fade-in-right" style="animation-delay: 0.4s;">
+                    <div class="package-card" style="border-color: var(--accent-secondary);">
+                        <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--gradient-primary); color: #000; padding: 8px 20px; border-radius: 20px; font-weight: 700; font-size: 0.9rem;">
+                            MAIS VENDIDO!
+                        </div>
+                        
+                        <img src="imgs/CLT.jpg" alt="CLT VIP" class="package-image">
+                        
+                        <h3 class="package-title text-center"><span class="neon-primary">PAINEL CLT PREMIUM</span></h3>
+                        <p class="text-center text-muted mb-4">
+                            O painel definitivo - Android + iPhone
+                        </p>
+                        
+                        <ul class="features-list">
+                                     <ul class="features-list">
+                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> Painel Mod Menu FFH4X</li>
+                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> Acesso VIP Permanente</li>
+                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> No Recoil (não espalha tiros)</li>
+                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> 2x Xitada + 2x Automática</li>
+                            <li><i class="fas fa-crown" style="color: #ffd700;"></i> Rastreamento de cabeça avançado</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Função HS pescoço + Bypass</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> UMP automática premium</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Mira automática Full capa</li>
+                            <li><i class="fas fa-fire" style="color: var(--accent-danger);"></i> Disfarce 100% indetectável</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Aim Regedit</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> 2x Aimbot</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> HeadShot</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Mira que gruda!</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Disfarce 100% indetectável</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Com disfarçe pra não leva Ban!</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Instalar sem precisar de PC (opcional) </li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Sensi VIP Full capa</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Tutorial de Instalação fácil e rápida</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Suporte VIP Exclusivo 24h</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Bônus Atualizações vitalícias</li>
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Atualização Acesso antecipado</li>             
+                            <li><i class="fas fa-check" style="color: var(--accent-primary);"></i> Garantia de 30 Dias</li>
+                        </ul>
+                        
+                        <div class="price-section">
+                            <div class="old-price">De R$ 214,97</div>
+                            <span style="color: #ffffff;">Por apenas</span>
+                            <div class="current-price">R$ 49,90</div>
+                            <a href="https://go.perfectpay.com.br/PPU38CPQM3H" class="cta-premium w-100">
+                                👑 QUERO SER VIP!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Garantia Premium -->
+    <div class="container">
+        <div class="guarantee-section fade-in-up">
+            <h2 class="display-4 mb-3" style="margin-top: 30px; font-size: clamp(1.8rem, 4vw, 2.5rem);">
+                🛡️ GARANTIA TOTAL DE SATISFAÇÃO! 🛡️
+            </h2>
+            <p class="mb-3" style="font-size: clamp(1.1rem, 2.5vw, 1.4rem);">
+                <strong>Compre com total segurança e confiança!</strong>
+            </p>
+            <div class="row text-center">
+                <div class="col-md-6 mb-3">
+                    <h5 class="neon-primary" style="font-size: clamp(1rem, 2vw, 1.2rem);">✅ 7 DIAS DE GARANTIA</h5>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem);">Não funcionou? Devolvemos 100% do seu dinheiro!</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <h5 class="neon-primary" style="font-size: clamp(1rem, 2vw, 1.2rem);">✅ SUPORTE 24H</h5>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem);">Qualquer problema, nossa equipe resolve na hora!</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <h5 class="neon-primary" style="font-size: clamp(1rem, 2vw, 1.2rem);">✅ INSTALAÇÃO GRÁTIS</h5>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem);">Não consegue instalar? Fazemos para você!</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <h5 class="neon-primary" style="font-size: clamp(1rem, 2vw, 1.2rem);">✅ ANTI-BAN GARANTIDO</h5>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem);">Levou ban? Reembolsamos tudo!</p>
+                </div>
+            </div>
+            <p class="mt-3" style="font-size: clamp(1rem, 2.5vw, 1.2rem);">
+                <strong>"Sua satisfação é nossa prioridade. Compre sem medo!"</strong>
+            </p>
+        </div>
+    </div>
+
+
+
+    <!-- FAQ Premium -->
+    <section class="py-5" id="faq">
+        <div class="container">
+            <div class="faq-section fade-in-up">
+                <h2 class="display-3 text-center mb-5">
+                    Perguntas <span class="neon-primary">Frequentes</span>
+                </h2>
+                
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                COMO FUNCIONA O PRAZO DE GARANTIA?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Você tem até <strong>7 dias completos</strong> para testar nosso painel. 
+                                Se não ficar 100% satisfeito, devolvemos seu dinheiro integral, 
+                                sem perguntas e sem burocracia.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                COMO RECEBO O PAINEL APÓS A COMPRA?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <strong>Entrega instantânea!</strong> Assim que o pagamento for aprovado, 
+                                você recebe automaticamente todos os arquivos e instruções no seu email. 
+                                Pagou, já pode começar a dominar!
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                A INSTALAÇÃO É COMPLICADA?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <strong>Super simples!</strong> O processo leva menos de 5 minutos. 
+                                Incluímos tutorial em vídeo passo a passo e nossa equipe de suporte 
+                                está disponível 24h para ajudar. Se não conseguir, instalamos para você!
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                É REALMENTE ANTI-BAN?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <strong>100% Anti-ban garantido!</strong> Nosso sistema é indetectável 
+                                e já está sendo usado por mais de 10.000 players sem problemas. 
+                                Caso aconteça algo impossível, reembolsamos tudo!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Premium -->
+    <footer class="py-5" style="background: var(--secondary-bg); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="container text-center">
+            <p class="mb-2" style="font-size: clamp(0.9rem, 2vw, 1rem);">&copy; 2024 New Sensi. Todos os direitos reservados.</p>
+            <p class="mb-2" style="font-size: clamp(0.85rem, 1.8vw, 0.95rem);">
+                Instagram: 
+                <a href="https://instagram.com/new.sensi.ff" target="_blank" class="neon-primary">@new.sensi.ff</a>
+            </p>
+            <p class="text-muted" style="font-size: clamp(0.8rem, 1.5vw, 0.9rem);">Desenvolvido com ❤️ pela equipe <strong class="neon-primary">New Sensi</strong></p>
+        </div>
+    </footer>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s) {
+            if(f.fbq) return; n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
+            n.queue=[]; t=b.createElement(e); t.async=!0;
+            t.src=v; s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '3525977697696631');
+        fbq('track', 'PageView');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Sistema Premium de Interações -->
+    <script>
+        class PremiumInteractionSystem {
+            constructor() {
+                this.salesCounter = document.getElementById('salesCount');
+                this.userCounter = document.getElementById('userCounter');
+                this.notificationContainer = document.getElementById('notificationContainer');
+                
+                this.currentSales = 227;
+                this.currentUsers = 1000;
+                
+                this.init();
+            }
+            
+            init() {
+                this.startNotifications();
+                this.startCounters();
+                this.initDraggable();
+                this.initAnimations();
+                this.initInteractions();
+            }
+            
+            // Sistema de notificações otimizado para mobile
+            showNotification() {
+                const names = [
+                    "João Silva", "Bella", "Maria Santos", "Adriano silva", "Pedro Costa", "Ana", "Vitor", "Fabinho", "Carlos Souza", "Isabelle", "Rafaela", "Kauane", "Natally",
+                    "Juliana Oliveira", "Rafael Alves", "Camila Ferreira", "Lucas Pereira", "Beatriz Rocha", "Rafael", "Matheus", "Juliana", "Fernanda", "Rodrigo", "Davi", "Diego",
+                    "Gabriel Martins", "Larissa Cunha", "Leonardo Freitas", "Thiago Ribeiro", "Camila Rocha", "Adriano", "Natália Gomes", "Diego Nascimento"
+                ];
+                
+                const products = ["☠️ Painel XIT Android", "☠️ Painel XIT iPhone/iOS", "👑 Painel CLT PREMIUM!"];
+                const cities = ["São Paulo", "Rio de Janeiro", "Vitória", "Belo Horizonte", "Salvador", "João Pessoa", "Campina Grande", "Campo Grande", "Salvador", "Porto Alegre", "Curitiba", "Maceió",
+                                "Recife", "Natal", "Brasília", "Fortaleza"];
+                
+                const name = names[Math.floor(Math.random() * names.length)];
+                const product = products[Math.floor(Math.random() * products.length)];
+                const city = cities[Math.floor(Math.random() * cities.length)];
+                
+                const notification = document.createElement('div');
+                notification.className = 'purchase-notification';
+                notification.innerHTML = `
+                    <div class="notification-header">
+                        <div class="notification-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="notification-text">
+                            <p class="notification-title">🔥 NOVA COMPRA!</p>
+                            <p class="notification-product"><strong>${product}</strong></p>
+                            <p class="notification-location">${name} • ${city}</p>
+                        </div>
+                    </div>
+                `;
+                
+                this.notificationContainer.appendChild(notification);
+                
+                // Mostrar notificação
+                setTimeout(() => notification.classList.add('show'), 100);
+                
+                // Auto remover após 5 segundos
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.classList.remove('show');
+                        setTimeout(() => notification.remove(), 500);
+                    }
+                }, 5000);
+            }
+            
+            // Sistema de notificações
+            startNotifications() {
+                const showNotification = () => {
+                    this.showNotification();
+                    
+                    // Próxima notificação em 8-15 segundos
+                    const nextDelay = Math.floor(Math.random() * 7000) + 8000;
+                    setTimeout(showNotification, nextDelay);
+                };
+                
+                // Primeira notificação após 3 segundos
+                setTimeout(showNotification, 3000);
+            }
+            
+            // Atualizar contadores
+            updateCounters() {
+                // Atualizar vendas
+                if (this.salesCounter) {
+                    const increase = Math.floor(Math.random() * 3) + 1;
+                    this.currentSales += increase;
+                    this.salesCounter.textContent = this.currentSales;
+                }
+                
+                // Atualizar usuários
+                if (this.userCounter) {
+                    const increase = Math.floor(Math.random() * 8) + 3;
+                    this.currentUsers += increase;
+                    this.userCounter.textContent = this.currentUsers;
+                }
+            }
+            
+            startCounters() {
+                const updateCounters = () => {
+                    this.updateCounters();
+                    
+                    // Próxima atualização em 15-30 segundos
+                    const nextUpdate = Math.floor(Math.random() * 15000) + 15000;
+                    setTimeout(updateCounters, nextUpdate);
+                };
+                
+                // Primeira atualização após 10 segundos
+                setTimeout(updateCounters, 10000);
+            }
+            
+            // Contador arrastável otimizado para mobile
+            initDraggable() {
+                const counter = document.getElementById('salesCounterMobile');
+                if (!counter) return;
+                
+                let isDragging = false;
+                let currentX, currentY, initialX, initialY;
+                let xOffset = 0, yOffset = 0;
+
+                const dragStart = (e) => {
+                    const clientX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
+                    const clientY = e.type === "touchstart" ? e.touches[0].clientY : e.clientY;
+                    
+                    initialX = clientX - xOffset;
+                    initialY = clientY - yOffset;
+
+                    if (e.target === counter || counter.contains(e.target)) {
+                        isDragging = true;
+                        counter.classList.add('dragging');
+                    }
+                };
+
+                const dragMove = (e) => {
+                    if (isDragging) {
+                        e.preventDefault();
+                        
+                        const clientX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
+                        const clientY = e.type === "touchmove" ? e.touches[0].clientY : e.clientY;
+                        
+                        currentX = clientX - initialX;
+                        currentY = clientY - initialY;
+
+                        xOffset = currentX;
+                        yOffset = currentY;
+
+                        // Limitar dentro da viewport
+                        const rect = counter.getBoundingClientRect();
+                        const maxX = window.innerWidth - rect.width;
+                        const maxY = window.innerHeight - rect.height;
+
+                        xOffset = Math.max(0, Math.min(xOffset, maxX));
+                        yOffset = Math.max(0, Math.min(yOffset, maxY));
+
+                        counter.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+                        counter.style.position = 'fixed';
+                        counter.style.top = '20px';
+                        counter.style.right = 'auto';
+                        counter.style.left = '20px';
                     }
                 };
 
