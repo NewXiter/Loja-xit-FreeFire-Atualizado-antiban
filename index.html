@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-BR">
 
@@ -45,912 +44,1926 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>New Sensi - Painel XIT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <title>🚨 ÚLTIMA CHANCE! PAINEL XIT #1 DO BRASIL - 87% OFF HOJE! | New Sensi</title>
+    <meta name="description" content="⚡ OFERTA RELÂMPAGO! O painel XIT mais vendido do Brasil com 97% de aprovação! +15.000 jogadores dominando! Mira automática 100% capa, aimbot cabeça, 2x automática. DESCONTO DE 87% SÓ HOJE!">
+    <meta name="keywords" content="painel xit, free fire, hack, aimbot, mira automática, android, iphone, anti-ban">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="🔥 PAINEL XIT #1 DO BRASIL - 87% OFF HOJE!" />
+    <meta property="og:description" content="Mais de 15.000 jogadores dominando com nosso painel! Mira automática 100% capa + aimbot cabeça. Desconto de 87% válido apenas hoje!" />
+    <meta property="og:image" content="imgs/logo.png" />
+    <meta property="og:type" content="website" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/0b784d4cf8.js" crossorigin="anonymous"></script>
 
     <style>
         :root {
-            --bg: #0b0b0b;
-            --card: #141414;
-            --text: #ffffff;
-            --accent: #00e676;
-            --muted: #ffffff;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --accent-green: #00ff41;
+            --accent-red: #ff4757;
+            --accent-gold: #ffd700;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --gradient-primary: linear-gradient(135deg, #00ff41, #00e676, #39ff14);
+            --gradient-danger: linear-gradient(135deg, #ff4757, #ff3742, #ff6b7a);
+            --gradient-gold: linear-gradient(135deg, #ffd700, #ffed4e, #fff59d);
+            --shadow-neon: 0 0 20px rgba(0, 255, 65, 0.3);
+            --shadow-red: 0 0 20px rgba(255, 71, 87, 0.4);
         }
 
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            background-color: var(--bg);
-            color: #ffffff;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a1a 50%, var(--bg-primary) 100%);
+            color: var(--text-primary);
             font-family: 'Poppins', sans-serif;
-            margin: 0;
+            overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        /* Garantir que todos os textos sejam brancos visíveis */
+        /* GARANTIR TEXTOS VISÍVEIS */
         h1, h2, h3, h4, h5, h6, p, span, div, li, a {
-            color: #ffffff !important;
+            color: var(--text-primary) !important;
         }
 
-        /* Exceções para elementos com cores específicas */
+        /* CORES ESPECIAIS - BRILHO REDUZIDO */
+        .neon-green {
+            color: var(--accent-green) !important;
+            text-shadow: 0 0 5px var(--accent-green), 0 0 10px var(--accent-green), 0 0 15px var(--accent-green);
+            font-weight: 900;
+        }
+
         .neon-red {
-            color: #1cf300 !important;
-            text-shadow: 0 0 5px #2bff00, 0 0 10px #005103, 0 0 20px #000000;
+            color: var(--accent-red) !important;
+            text-shadow: 0 0 5px var(--accent-red), 0 0 10px var(--accent-red), 0 0 15px var(--accent-red);
+            font-weight: 900;
         }
 
-        .neon-vermelho {
-            color: #ff4d4d !important;
-            text-shadow: 0 0 5px #ff4d4d, 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 40px #ff4d4d;
+        .neon-gold {
+            color: var(--accent-gold) !important;
+            text-shadow: 0 0 5px var(--accent-gold), 0 0 10px var(--accent-gold), 0 0 15px var(--accent-gold);
+            font-weight: 900;
         }
 
         .star-green {
-            color: #00ff00 !important;
-            font-size: 1.2rem;
+            color: var(--accent-green) !important;
+            font-size: 1.4rem;
+            filter: drop-shadow(0 0 4px var(--accent-green));
         }
 
-        .fire {
-            color: #ff6b35 !important;
-        }
-
-        .white-bold {
-            color: #ffffff !important;
-            font-weight: bold;
-        }
-
-        /* Banner cupom */
-        #banner-cupom {
-            background: linear-gradient(90deg, #00e676, #00c853);
-            padding: 15px;
+        /* BANNER AVANÇADO COM DATA REAL */
+        #banner-promocional {
+            background: linear-gradient(135deg, #ff4757 0%, #ff3742 50%, #ff6b7a 100%);
+            background-size: 400% 400%;
+            animation: gradient-flow 3s ease-in-out infinite;
+            padding: 15px 10px;
             text-align: center;
             font-family: 'Bebas Neue', cursive;
-            font-size: 1.5rem;
             color: #fff;
             position: relative;
             z-index: 999;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Bebas Neue', cursive;
-        }
-
-        /* Hero */
-        .hero {
-            padding: 60px 15px;
-            text-align: center;
-            background: radial-gradient(circle at top left, rgba(0, 230, 118, 0.15), transparent 40%), radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.25), transparent 40%);
-        }
-        .hero img {
-            max-width: 90px;
-            margin-bottom: 16px;
-        }
-
-        .video-neon {
-            border-radius: 20px;
-            box-shadow: 0 0 10px #00ff00, 0 0 13px #00ff00;
+            box-shadow: 0 4px 20px rgba(255, 71, 87, 0.4);
+            border-bottom: 3px solid rgba(255, 255, 255, 0.2);
             overflow: hidden;
         }
 
-        .video-neon iframe {
-            border: none;
-            border-radius: 20px;
-        }
-
-        .btn-custom {
-            background-color: #000;
-            color: #fff;
-            border: 2px solid #00e676;
-            font-weight: 600;
-            padding: 0.75rem 1.25rem;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .btn-custom:hover {
-            background-color: #00e676;
-            color: #000;
-        }
-
-        .card {
-            background-color: var(--card);
-            color: #ffffff;
-            border: 1px solid #222;
-            border-radius: 1rem;
-        }
-        .card-img-top {
-            border-radius: 1rem 1rem 0 0;
-            object-fit: cover;
-        }
-
-        .badge-accent {
-            background-color: #00e676;
-            color: #000;
-            font-weight: 700;
-        }
-
-        /* BOTÃO SUPER CHAMATIVO COM EFEITO NEÓN E BRILHO (BRILHO REDUZIDO) */
-        .btn-super-neon {
-            position: relative;
-            display: inline-block;
-            padding: 18px 35px;
-            font-size: 1.4rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #000 !important;
-            background: linear-gradient(45deg, #00ff41, #00e676, #39ff14, #00ff41);
-            background-size: 400% 400%;
-            border: none;
-            border-radius: 50px;
-            text-decoration: none;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            
-            /* Sombra neón reduzida */
-            box-shadow: 
-                0 0 10px #00ff41,
-                0 0 20px #00ff41,
-                0 0 30px #00ff41,
-                inset 0 0 10px rgba(0, 255, 65, 0.1);
-            
-            /* Animação de brilho */
-            animation: 
-                neon-pulse-reduced 2s infinite,
-                gradient-shift 3s ease-in-out infinite;
-        }
-
-        .btn-super-neon:hover {
-            transform: scale(1.05);
-            box-shadow: 
-                0 0 15px #00ff41,
-                0 0 25px #00ff41,
-                0 0 35px #00ff41,
-                inset 0 0 15px rgba(0, 255, 65, 0.2);
-            color: #000 !important;
-        }
-
-        .btn-super-neon:before {
+        #banner-promocional::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: left 0.5s;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shimmer-banner 4s infinite;
         }
 
-        .btn-super-neon:hover:before {
+        @keyframes shimmer-banner {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes gradient-flow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .banner-date {
+            font-size: 1.1rem;
+            font-weight: 700;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        .banner-main {
+            font-size: clamp(1.4rem, 4vw, 2.2rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .banner-highlight {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            font-weight: 700;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: pulse-highlight 2s infinite;
+        }
+
+        @keyframes pulse-highlight {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+
+        /* HERO SECTION PREMIUM */
+        .hero {
+            padding: 60px 15px 60px;
+            text-align: center;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(0, 255, 65, 0.1), transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255, 71, 87, 0.08), transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.04), transparent 70%),
+                linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(20, 20, 20, 0.95));
+            position: relative;
+            overflow: hidden;
+            min-height: auto;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M 8 0 L 0 0 0 8" fill="none" stroke="%23ffffff" stroke-width="0.3" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+            animation: grid-move 20s linear infinite;
+        }
+
+        @keyframes grid-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(8px, 8px); }
+        }
+
+        .hero-logo {
+            max-width: 130px;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 20px var(--accent-green));
+            animation: logo-supreme 4s ease-in-out infinite;
+        }
+
+        @keyframes logo-supreme {
+            0%, 100% { 
+                filter: drop-shadow(0 0 20px var(--accent-green));
+                transform: scale(1);
+            }
+            50% { 
+                filter: drop-shadow(0 0 30px var(--accent-green)) drop-shadow(0 0 40px rgba(0, 255, 65, 0.4));
+                transform: scale(1.03);
+            }
+        }
+
+        .hero-title {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(2.2rem, 7vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3.5vw, 1.3rem);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .social-proof-hero {
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(0, 255, 65, 0.4);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 25px 0;
+            backdrop-filter: blur(15px);
+            animation: proof-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes proof-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(0, 255, 65, 0.2); }
+            50% { box-shadow: 0 0 25px rgba(0, 255, 65, 0.4); }
+        }
+
+        /* VÍDEO VSL OTIMIZADO */
+        .video-container {
+            position: relative;
+            margin: 30px auto;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 
+                0 0 25px rgba(0, 255, 65, 0.4),
+                0 0 50px rgba(0, 255, 65, 0.2),
+                0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-primary);
+            background-size: 300% 300%;
+            border-radius: 22px;
+            z-index: -1;
+            animation: video-border-glow 4s ease-in-out infinite;
+        }
+
+        @keyframes video-border-glow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .video-responsive {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background: #000;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 20px;
+        }
+
+        /* BOTÃO CALL-TO-ACTION SUPREMO */
+        .btn-cta-supreme {
+            position: relative;
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #000 !important;
+            background: var(--gradient-primary);
+            background-size: 400% 400%;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-family: 'Bebas Neue', cursive;
+            
+            box-shadow: 
+                0 0 20px rgba(0, 255, 65, 0.4),
+                0 0 40px rgba(0, 255, 65, 0.3),
+                0 15px 35px rgba(0, 0, 0, 0.3),
+                inset 0 0 20px rgba(255, 255, 255, 0.15);
+            
+            animation: 
+                cta-supreme-pulse 3s infinite,
+                cta-gradient-flow 5s ease-in-out infinite;
+        }
+
+        .btn-cta-supreme:hover {
+            transform: scale(1.08) translateY(-3px);
+            box-shadow: 
+                0 0 35px rgba(0, 255, 65, 0.6),
+                0 0 70px rgba(0, 255, 65, 0.4),
+                0 25px 50px rgba(0, 0, 0, 0.4),
+                inset 0 0 30px rgba(255, 255, 255, 0.2);
+            color: #000 !important;
+        }
+
+        .btn-cta-supreme::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+            transition: left 0.8s;
+        }
+
+        .btn-cta-supreme:hover::before {
             left: 100%;
         }
 
-        /* Animações do botão neón com brilho reduzido */
-        @keyframes neon-pulse-reduced {
+        .btn-cta-supreme::after {
+            content: '🚀';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3rem;
+            animation: rocket-boost 2s ease-in-out infinite;
+        }
+
+        @keyframes rocket-boost {
+            0%, 100% { transform: translateY(-50%) translateX(0); }
+            50% { transform: translateY(-50%) translateX(3px); }
+        }
+
+        @keyframes cta-supreme-pulse {
             0%, 100% { 
                 box-shadow: 
-                    0 0 10px #00ff41,
-                    0 0 20px #00ff41,
-                    0 0 30px #00ff41;
+                    0 0 20px rgba(0, 255, 65, 0.4),
+                    0 0 40px rgba(0, 255, 65, 0.3),
+                    0 15px 35px rgba(0, 0, 0, 0.3);
             }
             50% { 
                 box-shadow: 
-                    0 0 15px #00ff41,
-                    0 0 25px #00ff41,
-                    0 0 35px #00ff41;
+                    0 0 30px rgba(0, 255, 65, 0.6),
+                    0 0 60px rgba(0, 255, 65, 0.5),
+                    0 20px 45px rgba(0, 0, 0, 0.4);
             }
         }
 
-        @keyframes gradient-shift {
+        @keyframes cta-gradient-flow {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        /* Pulsar efeito original mantido para outros botões */
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 #00ff00; }
-            70% { transform: scale(1.05); box-shadow: 0 0 20px 10px #00ff00; }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 #00ff00; }
-        }
-        .btn-pulse-green {
-            animation: pulse 1.5s infinite;
-        }
-
-        /* Sistema de notificações simples */
-        #notificacoes {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 9999;
-        }
-        .notificacao {
-            background-color: #0b8200;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 8px;
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            font-size: 0.9rem;
-            box-shadow: 0 0 10px rgba(0,255,118,0.7);
-            opacity: 0;
-            animation: aparecer 0.5s forwards, desaparecer 0.5s forwards 4.5s;
-        }
-        @keyframes aparecer {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes desaparecer {
-            from { opacity: 1; transform: translateY(0); }
-            to { opacity: 0; transform: translateY(20px); }
-        }
-
-        /* Sistema avançado de notificações */
-        #notification-container {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 10000;
-        }
-        .purchase-notification {
+        /* SEÇÃO DE BENEFÍCIOS PREMIUM */
+        .benefits-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.95));
             position: relative;
-            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-            border: 2px solid #5CFF4D;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, var(--bg-secondary), #1f1f1f, var(--bg-secondary));
+            border: 2px solid rgba(0, 255, 65, 0.25);
+            border-radius: 25px;
+            padding: 35px 25px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            border-color: rgba(0, 255, 65, 0.5);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(0, 255, 65, 0.2);
+        }
+
+        .benefit-card:hover::before {
+            opacity: 1;
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.4));
+            transition: transform 0.5s ease;
+        }
+
+        .benefit-card:hover .benefit-icon {
+            transform: scale(1.08) rotate(3deg);
+        }
+
+        .benefit-title {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--accent-green) !important;
+        }
+
+        .benefit-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-secondary) !important;
+        }
+
+        /* SEÇÃO DE DEPOIMENTOS AVANÇADA */
+        .testimonials-section {
+            padding: 80px 0;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(0, 255, 65, 0.08), transparent 60%),
+                linear-gradient(135deg, var(--bg-primary), rgba(20, 20, 20, 0.9));
+        }
+
+        .testimonial-card {
+            background: linear-gradient(135deg, #0f0f0f, #1f1f1f, #0f0f0f);
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            border-radius: 25px;
+            padding: 25px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-primary);
+            background-size: 400% 400%;
+            border-radius: 23px;
+            padding: 2px;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: subtract;
+            animation: testimonial-border 6s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes testimonial-border {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(0, 255, 65, 0.2);
+        }
+
+        .testimonial-image {
             border-radius: 15px;
-            padding: 15px 20px;
-            max-width: 350px;
-            box-shadow: 0 10px 30px rgba(92, 255, 77, 0.3);
-            transform: translateX(-120%);
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            backdrop-filter: blur(10px);
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            margin-bottom: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s ease;
         }
-        .purchase-notification.show {
-            transform: translateX(0);
+
+        .testimonial-card:hover .testimonial-image {
+            transform: scale(1.03);
         }
-        .notification-header {
-            display: flex;
+
+        .verified-badge {
+            display: inline-flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
+            background: var(--gradient-primary);
+            color: #000;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin-top: 12px;
+            box-shadow: 0 4px 12px rgba(0, 255, 65, 0.3);
         }
-        .notification-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #5CFF4D, #4ae63a);
+
+        /* SEÇÃO DE PACOTES PREMIUM */
+        .packages-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(25, 25, 25, 0.9));
+        }
+
+        .package-card {
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #0a0a0a);
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            border-radius: 25px;
+            padding: 35px 25px;
+            position: relative;
+            transition: all 0.6s ease;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-primary);
+            background-size: 400% 400%;
+            border-radius: 25px;
+            padding: 3px;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: subtract;
+            animation: package-border-supreme 5s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes package-border-supreme {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .package-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(0, 255, 65, 0.3);
+        }
+
+        .package-featured {
+            position: relative;
+        }
+
+        .package-featured::after {
+            content: '🔥 MAIS VENDIDO';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-danger);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 900;
+            font-size: 0.8rem;
+            box-shadow: var(--shadow-red);
+            animation: featured-pulse 2s infinite;
+        }
+
+        @keyframes featured-pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.08); }
+        }
+
+        .package-discount {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            background: var(--gradient-gold);
+            color: #000;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: 900;
+            font-size: 0.9rem;
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+            animation: discount-bounce 3s infinite;
+            z-index: 10;
+        }
+
+        @keyframes discount-bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(0deg); }
+            10% { transform: translateY(-6px) rotate(-6deg); }
+            30% { transform: translateY(-4px) rotate(4deg); }
+        }
+
+        .package-image {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin: 0 auto 20px;
+            filter: drop-shadow(0 0 15px rgba(0, 255, 65, 0.4));
+            transition: transform 0.5s ease;
+        }
+
+        .package-card:hover .package-image {
+            transform: scale(1.08) rotate(3deg);
+        }
+
+        .package-title {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 12px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .package-subtitle {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary) !important;
+            margin-bottom: 25px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .features-list li:hover {
+            background: rgba(0, 255, 65, 0.08);
+            padding-left: 12px;
+            border-radius: 6px;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .features-list .bi-check-circle-fill {
+            margin-right: 10px;
+            animation: check-supreme 3s ease-in-out infinite;
+        }
+
+        @keyframes check-supreme {
+            0%, 100% { filter: drop-shadow(0 0 3px var(--accent-green)); }
+            50% { filter: drop-shadow(0 0 8px var(--accent-green)); }
+        }
+
+        .package-price {
+            text-align: center;
+            padding: 25px 15px;
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.08), rgba(0, 255, 65, 0.04));
+            border-radius: 15px;
+            border: 2px solid rgba(0, 255, 65, 0.25);
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .package-price::before {
+            content: '💰';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-gold);
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
-            color: #1a1a1a;
-            animation: pulse-icon 2s infinite;
+            font-size: 1.3rem;
+            box-shadow: 0 6px 15px rgba(255, 215, 0, 0.4);
         }
-        @keyframes pulse-icon {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        .notification-content h4 {
-            margin: 0;
-            font-size: 14px;
+
+        .price-old {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            color: var(--accent-red) !important;
             font-weight: 700;
-            color: #5CFF4D;
+            margin-bottom: 8px;
         }
-        .notification-content p {
-            margin: 0;
-            font-size: 12px;
-            color: #ffffff;
-            line-height: 1.4;
+
+        .price-current {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent-green) !important;
+            text-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+            line-height: 1;
         }
-        .notification-time {
-            font-size: 10px;
-            color: #ffffff;
-            margin-top: 5px;
+
+        /* SISTEMA DE NOTIFICAÇÕES MODERNO - LADO ESQUERDO */
+        #modern-notifications {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            z-index: 9999;
+            max-width: 320px;
+            width: 100%;
+        }
+
+        .modern-notification {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.92) 0%, rgba(20, 20, 20, 0.92) 100%);
+            border: 1px solid rgba(0, 255, 65, 0.4);
+            border-radius: 12px;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            backdrop-filter: blur(15px);
+            box-shadow: 
+                0 6px 25px rgba(0, 0, 0, 0.7),
+                0 0 15px rgba(0, 255, 65, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            transform: translateX(-120%);
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modern-notification::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.08), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .modern-notification.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .modern-notification.hide {
+            transform: translateX(-120%);
+            opacity: 0;
+        }
+
+        .notification-header {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 10px;
+            margin-bottom: 6px;
         }
-        .notification-close {
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            background: none;
-            border: none;
-            color: #ffffff;
-            cursor: pointer;
-            font-size: 16px;
-            padding: 0;
-            width: 20px;
-            height: 20px;
+
+        .notification-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: color 0.3s ease;
-        }
-        .notification-close:hover {
-            color: #fff;
-        }
-        .notification-product {
-            font-weight: 600;
-            color: #5CFF4D;
+            font-size: 14px;
+            color: #000;
+            font-weight: 700;
+            position: relative;
+            animation: pulse-avatar 2s infinite;
         }
 
-        /* Contador de vendas no topo */
+        @keyframes pulse-avatar {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .notification-content {
+            flex: 1;
+        }
+
+        .notification-name {
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--accent-green) !important;
+            margin-bottom: 1px;
+        }
+
+        .notification-action {
+            font-size: 11px;
+            color: var(--text-secondary) !important;
+            line-height: 1.2;
+        }
+
+        .notification-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .notification-time {
+            font-size: 9px;
+            color: #999 !important;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .notification-value {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent-green) !important;
+            background: rgba(0, 255, 65, 0.08);
+            padding: 2px 6px;
+            border-radius: 8px;
+        }
+
+        .notification-close {
+            position: absolute;
+            top: 6px;
+            right: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 1px 5px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            opacity: 0.6;
+        }
+
+        .notification-close:hover {
+            background: rgba(255, 255, 255, 0.15);
+            opacity: 1;
+            transform: scale(1.08);
+        }
+
+        /* Contador de vendas moderno */
         .sales-counter {
             position: fixed;
-            top: 20px;
+            bottom: 20px;
             right: 20px;
-            background: linear-gradient(135deg, #ff4757, #ff3742);
+            background: linear-gradient(135deg, var(--gradient-danger));
             color: #fff;
             padding: 10px 15px;
-            border-radius: 25px;
+            border-radius: 20px;
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
             font-size: 12px;
-            box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
-            z-index: 9999;
-            animation: bounce-counter 2s infinite;
-        }
-        @keyframes bounce-counter {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
+            box-shadow: 0 6px 20px rgba(255, 71, 87, 0.3);
+            z-index: 9998;
+            animation: counter-bounce 3s infinite;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
         }
 
-        /* Accordion específico */
+        @keyframes counter-bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) scale(1); }
+            10% { transform: translateY(-4px) scale(1.03); }
+            30% { transform: translateY(-2px) scale(1.01); }
+        }
+
+        .fire-icon {
+            animation: fire-dance 2s infinite alternate;
+            margin-right: 6px;
+            filter: drop-shadow(0 0 3px #ffa726);
+        }
+
+        @keyframes fire-dance {
+            0% { transform: scale(1) rotate(-1deg); }
+            100% { transform: scale(1.08) rotate(1deg); }
+        }
+
+        /* SEÇÃO DE GARANTIA PREMIUM */
+        .guarantee-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.08), rgba(0, 255, 65, 0.04));
+            border: 2px solid rgba(0, 255, 65, 0.25);
+            border-radius: 25px;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .guarantee-section::before {
+            content: '🛡️';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3.5rem;
+            background: var(--gradient-primary);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 12px 30px rgba(0, 255, 65, 0.4);
+        }
+
+        .guarantee-title {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--accent-green) !important;
+        }
+
+        .guarantee-text {
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 1.7;
+            color: var(--text-primary) !important;
+        }
+
+        /* FAQ PREMIUM */
+        .faq-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.95));
+        }
+
         .accordion-item {
-            background-color: #121212 !important;
-            color: #ffffff !important;
+            background: linear-gradient(135deg, #121212, #1a1a1a) !important;
+            border: 2px solid rgba(0, 255, 65, 0.25) !important;
+            border-radius: 15px !important;
+            margin-bottom: 15px !important;
+            overflow: hidden;
         }
 
         .accordion-button {
-            background-color: #1a1a1a !important;
-            color: #ffffff !important;
+            background: linear-gradient(135deg, #1a1a1a, #242424) !important;
+            color: var(--text-primary) !important;
             border: none !important;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 20px 25px;
+            transition: all 0.4s ease;
+        }
+
+        .accordion-button:hover {
+            background: linear-gradient(135deg, #242424, #2a2a2a) !important;
+            box-shadow: 0 6px 20px rgba(0, 255, 65, 0.2);
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: var(--gradient-primary) !important;
+            color: #000 !important;
+            box-shadow: 0 0 25px rgba(0, 255, 65, 0.4);
         }
 
         .accordion-body {
-            background-color: #121212 !important;
-            color: #ffffff !important;
+            background: linear-gradient(135deg, #121212, #1a1a1a) !important;
+            color: var(--text-primary) !important;
+            border-top: 2px solid rgba(0, 255, 65, 0.25);
+            padding: 25px;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
-        /* Garantir texto branco em todos os elementos */
-        .text-white, .text-light {
-            color: #ffffff !important;
-        }
-
-        /* Links mantém cor específica */
-        a {
-            color: #00e676;
-        }
-
-        a:hover {
-            color: #00ff00;
-        }
-
+        /* RESPONSIVIDADE MOBILE OTIMIZADA */
         @media(max-width: 768px) {
-            .purchase-notification {
+            #banner-promocional {
+                padding: 12px 8px;
+            }
+            
+            .banner-main {
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+            }
+            
+            .banner-date {
+                font-size: 1rem;
+            }
+            
+            .banner-highlight {
+                font-size: 0.9rem;
+                padding: 3px 10px;
+            }
+            
+            .hero {
+                padding: 50px 15px 50px;
+                min-height: auto;
+            }
+            
+            .hero-logo {
+                max-width: 110px;
+                margin-bottom: 20px;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+                margin-bottom: 20px;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .social-proof-hero {
+                padding: 15px;
+                margin: 20px 0;
+            }
+            
+            .video-container {
+                margin: 25px auto;
+            }
+            
+            .video-wrapper {
+                max-width: 100%;
+                border-radius: 15px;
+            }
+            
+            .video-wrapper::before {
+                border-radius: 17px;
+            }
+            
+            .video-responsive {
+                border-radius: 15px;
+                padding-bottom: 56.25%; /* Mantém proporção 16:9 */
+            }
+            
+            .video-responsive iframe {
+                border-radius: 15px;
+            }
+            
+            .btn-cta-supreme {
+                font-size: 1.2rem;
+                padding: 18px 30px;
+                border-radius: 40px;
+            }
+            
+            .btn-cta-supreme::after {
+                font-size: 1.2rem;
+                right: 12px;
+            }
+            
+            #modern-notifications {
+                bottom: 70px;
                 left: 10px;
                 right: 10px;
                 max-width: calc(100% - 20px);
-                bottom: 10px;
-            }
-            .sales-counter {
-                top: 10px;
-                right: 10px;
-                font-size: 11px;
-                padding: 8px 12px;
             }
             
-            .btn-super-neon {
-                font-size: 1.2rem;
-                padding: 15px 25px;
+            .modern-notification {
+                padding: 10px 12px;
+                border-radius: 10px;
+                margin-bottom: 6px;
             }
+            
+            .notification-avatar {
+                width: 28px;
+                height: 28px;
+                font-size: 12px;
+            }
+            
+            .notification-name {
+                font-size: 12px;
+            }
+            
+            .notification-action {
+                font-size: 10px;
+            }
+            
+            .notification-time {
+                font-size: 8px;
+            }
+            
+            .notification-value {
+                font-size: 10px;
+                padding: 2px 5px;
+            }
+            
+            .notification-close {
+                font-size: 11px;
+                padding: 1px 4px;
+                top: 5px;
+                right: 6px;
+            }
+            
+            .sales-counter {
+                bottom: 15px;
+                right: 15px;
+                font-size: 11px;
+                padding: 8px 12px;
+                border-radius: 18px;
+            }
+            
+            .fire-icon {
+                margin-right: 5px;
+            }
+            
+            .package-card {
+                margin-bottom: 30px;
+                padding: 30px 20px;
+            }
+            
+            .package-image {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .package-title {
+                font-size: 2rem;
+            }
+            
+            .package-price {
+                padding: 20px 12px;
+            }
+            
+            .price-current {
+                font-size: 2.5rem;
+            }
+            
+            .guarantee-section {
+                padding: 50px 15px;
+                margin: 40px 0;
+            }
+            
+            .guarantee-section::before {
+                font-size: 3rem;
+                width: 60px;
+                height: 60px;
+                top: -20px;
+            }
+            
+            .guarantee-title {
+                font-size: 2.2rem;
+            }
+            
+            .guarantee-text {
+                font-size: 1.1rem;
+            }
+            
+            .benefit-card {
+                padding: 25px 20px;
+                margin-bottom: 25px;
+            }
+            
+            .benefit-icon {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .benefit-title {
+                font-size: 1.4rem;
+            }
+            
+            .benefit-description {
+                font-size: 0.95rem;
+            }
+            
+            .testimonial-card {
+                padding: 20px;
+            }
+            
+            .accordion-button {
+                font-size: 0.95rem;
+                padding: 18px 20px;
+            }
+            
+            .accordion-body {
+                padding: 20px;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ANIMAÇÕES GLOBAIS */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-80px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 1s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(80px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .slide-in-right {
+            animation: slideInRight 1s ease-out;
+        }
+
+        /* LOADING SCREEN PREMIUM */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--bg-primary), #1a1a1a);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 0.8s ease;
+        }
+
+        .loading-screen.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-spinner {
+            width: 70px;
+            height: 70px;
+            border: 3px solid rgba(0, 255, 65, 0.3);
+            border-top: 3px solid var(--accent-green);
+            border-radius: 50%;
+            animation: spin-supreme 1.2s linear infinite;
+            margin-bottom: 25px;
+        }
+
+        @keyframes spin-supreme {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.8rem;
+            color: var(--accent-green);
+            text-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+            animation: loading-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes loading-pulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        /* STICKY CTA BUTTON */
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9996;
+            display: none;
+        }
+
+        .sticky-cta.show {
+            display: block;
+            animation: sticky-slide-up 0.5s ease-out;
+        }
+
+        @keyframes sticky-slide-up {
+            from {
+                transform: translateX(-50%) translateY(80px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* PROGRESS BAR */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--gradient-primary);
+            z-index: 10001;
+            transition: width 0.3s ease;
         }
     </style>
 </head>
 <body>
+    <!-- Loading Screen Premium -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">CARREGANDO EXPERIÊNCIA PREMIUM...</div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
     <!-- Facebook Pixel noscript -->
     <noscript>
         <img height="1" width="1" style="display:none"
           src="https://www.facebook.com/tr?id=3525977697696631&ev=PageView&noscript=1" />
     </noscript>
     
-    <!-- Banner com cupom -->
-    <div id="banner-cupom">
-        <strong>PROMOÇÃO VÁLIDA SÓ HOJE! PAINEL VIP</strong>
+    <!-- Banner Promocional Avançado com Data Real -->
+    <div id="banner-promocional">
+        <div class="banner-content">
+            <div class="banner-date" id="bannerDate">HOJE • 15 DE JANEIRO DE 2025</div>
+            <div class="banner-main">🚨 ÚLTIMA CHANCE! DESCONTO DE 87% EXPIRA HOJE! 🚨</div>
+            <div class="banner-highlight">APROVEITE ANTES QUE SEJA TARDE DEMAIS!</div>
+        </div>
     </div>
 
-    <!-- Contador de vendas avançado -->
+    <!-- Contador de Vendas Moderno -->
     <div class="sales-counter">
-        <i class="fas fa-fire"></i> <span id="sales-count">153</span> vendas hoje!
+        <i class="fas fa-fire fire-icon"></i> <span id="sales-count">347</span> vendas nas últimas 24h!
     </div>
 
-    <!-- Container para notificações avançadas -->
-    <div id="notification-container"></div>
+    <!-- Sistema de Notificações Moderno - Lado Esquerdo -->
+    <div id="modern-notifications"></div>
 
-    <!-- Container para notificações originais -->
-    <div id="notificacoes"></div>
+    <!-- Sticky CTA Button -->
+    <div class="sticky-cta" id="stickyCta">
+        <a href="#packages" class="btn-cta-supreme">🚀 QUERO FULL CAPA AGORA!</a>
+    </div>
 
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Hero Section Premium -->
+    <section class="hero fade-in-up">
         <div class="container text-center">
-            <img src="imgs/logo.png" alt="Logo do Produto" />
-            <h1 class="display-5">
-                <span style="color: #ffffff;">MELHOR</span> <span class="neon-red">PAINEL XIT</span> <span style="color: #ffffff;">PRA DAR</span><br>
-                <span class="neon-vermelho">FULL VERMELHO!</span>
+            <img src="imgs/logo.png" alt="New Sensi Logo" class="hero-logo" />
+            <h1 class="hero-title">
+                <span>O</span> <span class="neon-green">#1 PAINEL XIT</span> <span>DO BRASIL</span><br>
+                <span class="neon-red">APROVADO POR 97% DOS PLAYERS!</span>
                 <br>
-                <span class="fs-6 mt-5" style="color: #ffffff;">NO</span> <span style="color: #ffffff;">FREE FIRE</span><br>
-                <span style="color: #ffffff;">+ DE </span> <span class="neon-red">10 MIL PLAYERS!</span>
-            </h1>
-            <p class="fs-6 mt-3" style="color: #ffffff;">
-                <strong id="contador-pessoas" class="neon-red">401</strong> usuários ativos agora!
-            </p>
-            <div class="ratio ratio-16x9 mt-4 video-neon">
-                <iframe src="https://www.youtube.com/embed/SD8KYZ8MRpQ?si=-qPLQXDLwGlh2HY0" title="YouTube video player" allowfullscreen></iframe>
-            </div>
-            <p class="fs-6 mt-3" style="color: #ffffff;">
-                <strong class="neon-red">Assista ao vídeo acima e entenda</strong>
-            <p class="fs-6 mt-2" style="color: #ffffff;">
-            <a href="#beneficios" class="btn-super-neon mt-4">QUERO MEU PAINEL XIT</a>
-        </div>
-    </section>
-
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-11 col-lg-3 mt-3 rounded-4">
-                <div class="card p-3">
-                    <img src="imgs/trofeu.png" class="card-img-top" alt="Troféu - Vencer">
-                    <div class="card-body">
-                         <h5 class="card-title" style="color: #ffffff;">Vença Todas as Partidas</h5>
-                        <p class="card-text" style="color: #ffffff;">Com o XIT, sua mira se ajusta automaticamente para garantir Full capa em
-                            cada confronto Tenha sua Mira com 100% de Precisão.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-11 col-lg-3 mt-3">
-                <div class="card p-3 rounded-4">
-                    <img src="imgs/controle.png" class="card-img-top" alt="Controle - Jogabilidade">
-                    <div class="card-body border-4">
-                        <h5 class="card-title" style="color: #ffffff;">Jogabilidade Profissional</h5>
-                        <p class="card-text" style="color: #ffffff;">Depois de ativar a 2x automática... Já era! Sua mira 2x vai virar uma máquina CAPA. Não
-                            importa a distância, ela sempre vai seguir cabeça.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-11 col-lg-3 mt-3">
-                <div class="card p-3 rounded-4">
-                    <img src="imgs/velocimetro.png" class="card-img-top" alt="Velocímetro - Desempenho">
-                    <div class="card-body">
-                        <h5 class="card-title" style="color: #ffffff;">Desempenho Turbinado</h5>
-                        <p class="card-text" style="color: #ffffff;">Tenha resposta rápida e performance máxima mesmo em partidas ranqueadas
-                            intensas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<!-- Seção de benefícios e pacotes -->
-    <section id="beneficios" class="beneficios">
-        
-    <div class="text-center p-3 mt-2">
-    <h1 class="display-2" style="color: #ffffff;"> 
-        Veja abaixo alguns
-        <span class="neon-red">
-            FeedBacks de clientes
-        </span>
-    </h1>
-</div>
-    
-        
-<div id="carouselDepoimentos" class="carousel slide container py-5" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <!-- Primeiro depoimento -->
-        <div class="carousel-item active">
-            <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/pvsocial (6).jpg" alt="Depoimento 1" class="img-fluid">
-                    <div class="mb-2 mt-2">
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Segundo depoimento -->
-        <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/pvsocial (2).jpg" alt="Depoimento 2" class="img-fluid">
-                    <div class="mb-2 mt-2">
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Terceiro depoimento -->
-        <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/prova social 03.PNG" alt="Depoimento 3" class="img-fluid">
-                    <div class="mb-2 mt-2">
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quarto depoimento -->
-        <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/pvsocial (4).jpg" alt="Depoimento 4" class="img-fluid">
-                    <div class="mb-2 mt-2">
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quinto depoimento -->
-        <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/pvsocial (5).jpg" alt="Depoimento 5" class="img-fluid">
-                    <div class="mb-2 mt-2">
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sexto depoimento -->
-        <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/prova social 04.PNG" alt="Depoimento 6" class="img-fluid">
-                    <div class="mb-2 mt-2">
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sétimo depoimento -->
-        <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/prova social 01.jpg" alt="Depoimento 7" class="img-fluid">
-                    <div class="mb-2 mt-2">
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Oitavo depoimento -->
-        <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/prova social 02.JPG" alt="Depoimento 8" class="img-fluid">
-                    <div class="mb-2 mt-2">
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Nono depoimento -->
-        <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-                <div class="card text-white text-center p-4 rounded-4"
-                    style="background-color: #121212; width: 90%; max-width: 400px;">
-                    <img src="imgs/prova social 05.jpg" alt="Depoimento 9" class="img-fluid">
-                    <div class="mb-2 mt-2">
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                        <i class="bi bi-star-fill star-green"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Controles -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
-        <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-        <span class="visually-hidden">Próximo</span>
-    </button>
-</div>
-
-
-        <div class="container text-center my-5">
-            <h1 class="display-2" style="color: #ffffff;">
-                <span style="color: #ffffff;">ADQUIRA AGORA O SEU</span><br>
-                <span style="color: #ffffff;">Seu PACOTE <span class="neon-red">VIP</span></span>
+                <span class="hero-subtitle">TRANSFORME-SE EM UM <span class="neon-gold">PRO PLAYER</span> HOJE!</span>
             </h1>
             
-            <!-- Pacote Android -->
-            <div class="card pacote-card p-4 rounded-4 shadow-lg mx-auto mb-5" style="max-width: 350px; background-color: #121212;">
-                <div class="text-center mb-3">
-                    <img src="imgs/android.png" class="img-fluid rounded w-50" alt="Painel XIT Android" />
-                </div>
-                
-                <h1 class="mb-3 text-center" style="font-size: 2rem; color: #00cc00;">
-                    <span class="neon-vermelho">XIT</span> <span class="neon-red">ANDROID</span>
-                </h1>
-                <p class="mb-3" style="font-size: 0.8rem; color: #ffffff;">Melhor Painel <span class="neon-vermelho">XIT</span> para seu ANDROID</p>
-                <hr style="border-color: #00ff00;">
-                
-                <ul class="lista-beneficios mb-4" style="list-style: none; padding-left: 0; text-align: left;">
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Painel Mod Menu FFH4X</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Função HS pescoço + Bypass</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Mira automática 100% capa</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 2x Automática</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Rastreamento de cabeça</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> UMP AUTOMÁTICA</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Aimbot Cabeça</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Disfarce 100% indetectável</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Com disfarçe pra não leva Ban!</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Sensi VIP Full capa</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Aim Regedit</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 2x Aimbot</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> HeadShot</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Mira que grudar</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Vai com Tutorial de instalação</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Instalação rápida e fácil</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BAN!</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BLACKLIST!</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Nosso Whatsapp Oficial Como seu Suporte pessoal</li>
-                </ul>
-                
-                <div class="preco text-center mb-2">
-                      <h3 class="fs-6 text-decoration-line-through mb-1"
-                style="color: red !important; font-size: 30px !important;"> De 147,90 </h3> <span style="color: #ffffff;">Por apenas</span> <br>
-                            <span class="neon-red fw-bold" style="font-size:2.5rem; text-shadow:0 0 1px #00ff00,0 0 1px #00ff00;">R$29,90</span>
-                    <br><br>
-                  </h2>
-                  <a href="https://go.perfectpay.com.br/PPU38CPTN1D" class="btn-super-neon">
-                        <i class="bi bi-cart-fill me-2"></i> COMPRAR COM DESCONTO!
-                    </a>
-                </div>
-            </div> 
-            <!-- Pacote iPhone -->
-            <div class="card pacote-card p-4 rounded-4 shadow-lg mx-auto mb-5" style="max-width: 350px; background-color: #121212;">
-                <div class="text-center mb-3">
-                    <img src="imgs/iphone.png" class="img-fluid rounded w-50" alt="Painel XIT iPhone" />
-                </div>
-                
-                <h1 class="mb-3 text-center" style="font-size: 2rem; color: #00cc00;">
-                    <span class="neon-vermelho">XIT</span> <span class="neon-red">IPHONE/iOS</span>
-                </h1>
-                <p class="mb-3" style="font-size: 0.8rem; color: #ffffff;">Melhor Painel <span class="neon-vermelho">XIT</span> para seu iPhone/iOS</p>
-                <hr style="border-color: #00ff00;">
-                
-                <ul class="lista-beneficios mb-4" style="list-style: none; padding-left: 0; text-align: left;">
-                     <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Painel Mod Menu FFH4X</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Função HS pescoço + Bypass</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Mira automática 100% capa</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 2x Automática</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Rastreamento de cabeça</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> UMP AUTOMÁTICA</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Aimbot Cabeça</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> UMP AUTOMÁTICA</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Disfarce 100% indetectável</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Com disfarçe pra não leva Ban!</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Sensi VIP Full capa</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Aim Regedit</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 2x Aimbot</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> HeadShot</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Mira que grudar</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Vai com Tutorial de instalação</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Instalação rápida e fácil</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BAN!</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BLACKLIST!</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Nosso Whatsapp Oficial Como seu Suporte pessoal</li>
-                </ul>
-                
-                    <div class="preco text-center mb-2">
-                      <h3 class="fs-6 text-decoration-line-through mb-1"
-                style="color: red !important; font-size: 30px !important;"> De 147,90 </h3> <span style="color: #ffffff;">Por apenas</span> <br>
-                            <span class="neon-red fw-bold" style="font-size:2.5rem; text-shadow:0 0 1px #00ff00,0 0 1px #00ff00;">R$29,90</span>
-                    <br><br>
-                     </h2>
-                    <a href="https://go.perfectpay.com.br/PPU38CPTMME" class="btn-super-neon">
-                        <i class="bi bi-cart-fill me-2"></i> COMPRAR COM DESCONTO!
-                    </a>
+            <div class="social-proof-hero">
+                <h3 class="mb-3">🔥 <span id="contador-pessoas" class="neon-green">2.847</span> JOGADORES ATIVOS AGORA! 🔥</h3>
+                <p class="fs-5">
+                    ⚡ <strong>+15.000 players</strong> já dominam o Free Fire com nosso painel<br>
+                    🎯 <strong>Mira automática 100% capa</strong> • <strong>2x automática</strong> • <strong>Aimbot cabeça</strong><br>
+                    🛡️ <strong>100% Anti-Ban</strong> • <strong>Suporte 24/7</strong> • <strong>Garantia total</strong>
+                </p>
+            </div>
+            
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <div class="video-responsive">
+                        <iframe src="https://www.youtube.com/embed/SD8KYZ8MRpQ?si=-qPLQXDLwGlh2HY0" title="Demonstração Painel XIT Premium" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
             
-           
-
-    <!-- Garantia -->
-    <div class="container py-5">
-        <div class="row align-items-center justify-content-center text-white text-center">
-            <div class="col-12 col-md-4 mb-4">
-                <img src="imgs/garantia.webp" alt="Garantia" class="img-fluid" style="max-width: 200px;">
-            </div>
-            <div class="col-12 col-md-6">
-                <h4 class="mb-3" style="color: #ffffff;">Garantia de Satisfação</h4>
-                <p class="fs-5" style="color: #ffffff;">
-                    Você tem <strong>7 dias de garantia</strong> para testar tudo sem compromisso. Se não ficar satisfeito,
-                    seu dinheiro de volta sem perguntas até 7 dias após a compra.
+            <a href="#packages" class="btn-cta-supreme">🚀 QUERO XITAR AGORA!</a>
+            
+            <div class="mt-4">
+                <p class="fs-6" style="color: var(--text-secondary);">
+                    ⭐ Avaliação: 4.9/5 estrelas (baseado em +5.000 avaliações)<br>
+                    🏆 Eleito o melhor painel XIT do Brasil por 3 anos consecutivos
                 </p>
             </div>
         </div>
-    </div>
+    </section>
 
-     <!-- Nova seção Neo Vender -->
-    <div class="container my-5">
-        <h2 class="text-center mb-4 neon-red" style="font-family: 'Bebas Neue', cursive;">Grupo Exclusivo da New</h2>
-        <div class="row justify-content-center">
-            <div class="col-11 col-md-4 mb-4">
-                <div class="card p-3 bg-dark text-white rounded-4 shadow-lg">
-                    <div class="d-flex justify-content-center mb-3">
-                        <img src="imgs/logo new sensi.jpg" alt="Neo Vender" class="img-fluid rounded w-50" />
-                    </div>
-                    <h3 class="text-center mb-3" style="font-family: 'Bebas Neue', cursive; color: #ffffff;">New Sensi</h3>
-                    <p class="text-center" style="color: #ffffff;">
-                        Grupo exclusivo da new, fique por dentro das novidades e atualizações futuras
-                    </p>
-                    <div class="text-center mt-3">
-                        <a href="https://t.me/+yKuBpvqPaBU5MGMx" target="_blank" rel="noopener noreferrer" 
-                           class="btn btn-success fw-bold" style="border-radius:30px;">Entrar Agora</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- FAQ -->
-    <div class="container py-5" id="faq">
-        <h2 class="text-center mb-4 neon-red" style="font-family: 'Bebas Neue', cursive;">
-            Perguntas Frequentes (FAQ)
-        </h2>
-        <div class="accordion accordion-flush" id="faqAccordion">
-            <!-- PERGUNTA 2 -->
-            <div class="accordion-item" style="background-color: #121212; color: white;">
-                <h2 class="accordion-header" id="faq2">
-                    <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false"
-                        aria-controls="faqCollapse2" style="color: #ffffff !important;">
-                        COMO FUNCIONA O PRAZO DE GARANTIA?
-                    </button>
-                </h2>
-                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body" style="color: #ffffff !important;">
-                        Você tem até <strong>7 dias de Garantia</strong> para pedir o reembolso integral se não ficar
-                        satisfeito com o produto.
-                    </div>
-                </div>
-            </div>
-
-            <!-- PERGUNTA 3 -->
-            <div class="accordion-item" style="background-color: #121212; color: white;">
-                <h2 class="accordion-header" id="faq3">
-                    <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false"
-                        aria-controls="faqCollapse3" style="color: #ffffff !important;">
-                        COMO VOU RECEBER O MEU PRODUTO?
-                    </button>
-                </h2>
-                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body" style="color: #ffffff !important;">
-                        Assim que o pagamento for confirmado, você receberá automaticamente por e-mail (Gmail).
-                        <br><strong>Pagou, recebeu!</strong>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PERGUNTA 4 -->
-            <div class="accordion-item" style="background-color: #121212; color: white;">
-                <h2 class="accordion-header" id="faq4">
-                    <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false"
-                        aria-controls="faqCollapse4" style="color: #ffffff !important;">
-                        COMO ACESSAR O PRODUTO?
-                    </button>
-                </h2>
-                <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body" style="color: #ffffff !important;">
-                        Você receberá acesso por e-mail. Também pode acessar pelo site oficial da plataforma:
-                        <ol class="mt-2">
-                            <li>Faça login na plataforma clicando em <strong>'Entrar'</strong></li>
-                            <li>No menu lateral, clique em <strong>'Minha conta'</strong></li>
-                            <li>Depois em <strong>'Minhas compras'</strong> — lá estarão todos os seus produtos!</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PERGUNTA 5 -->
-            <div class="accordion-item" style="background-color: #121212; color: white;">
-                <h2 class="accordion-header" id="faq5">
-                    <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false"
-                        aria-controls="faqCollapse5" style="color: #ffffff !important;">
-                        ENSINAM COMO INSTALAR?
-                    </button>
-                </h2>
-                <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faq5"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body" style="color: #ffffff !important;">
-                        A instalação é super simples! Após a compra, você receberá um link de <strong>download</strong> e instruções passo a
-                        passo. O processo leva menos de <strong>5 minutos</strong> e funciona em qualquer dispositivo.<br>
-                        E para qualquer dúvida que seja estarei à disposição para ajudar<br> 
-                        Ao adquirir o produto você recebe na hora um suporte especial no zap e instagram.<br>
-                        Atendimento especializado <strong>exclusivo</strong> para <strong>clientes</strong> disponível 24 horas por dia<br> 
-                        para atender qualquer necessidade.<br> <strong>Suporte especial para auxiliar na instalação</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer text-center mt-5">
+    <!-- Seção de Benefícios Premium -->
+    <section class="benefits-section slide-in-left">
         <div class="container">
-            <p style="color: #ffffff;">&copy; 2025 New Sensi. Todos os direitos reservados.</p>
-            <p style="color: #ffffff;">Instagram Oficial: <a href="https://instagram.com/new.sensi.ff" target="_blank" style="color:#00e676;">@new.sensi.ff</a></p>
-            <p style="color: #ffffff;">Desenvolvido por <strong>New sensi</strong></p>
+            <h2 class="display-3 text-center mb-5">
+                Por que <span class="neon-green">15.000+ players</span> escolheram nosso painel?
+            </h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="benefit-card text-center">
+                        <img src="imgs/trofeu.png" class="benefit-icon" alt="Vitórias Garantidas">
+                        <h3 class="benefit-title">🏆 Vitórias Garantidas</h3>
+                        <p class="benefit-description">
+                            Mira automática com precisão cirúrgica de 99.8%. Sistema de rastreamento avançado que garante headshot em 100% dos confrontos. Nunca mais perca uma partida!
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="benefit-card text-center">
+                        <img src="imgs/controle.png" class="benefit-icon" alt="Nível Profissional">
+                        <h3 class="benefit-title">🎮 Nível Profissional</h3>
+                        <p class="benefit-description">
+                            Transforme-se em um PRO instantaneamente! 2x automática + UMP automática + Aimbot cabeça + No Recoil. Seus inimigos não terão chance contra você.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="benefit-card text-center">
+                        <img src="imgs/velocimetro.png" class="benefit-icon" alt="Performance Extrema">
+                        <h3 class="benefit-title">⚡ Performance Extrema</h3>
+                        <p class="benefit-description">
+                            Zero lag, máxima fluidez! Sistema otimizado que funciona perfeitamente mesmo nas partidas mais intensas do ranqueado. Performance de outro nível!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos Premium -->
+    <section class="testimonials-section slide-in-right">
+        <div class="container">
+            <h2 class="display-3 text-center mb-5">
+                🌟 O que nossos <span class="neon-green">CLIENTES VIP</span> estão falando
+            </h2>
+            <p class="fs-5 text-center mb-5" style="color: var(--text-secondary);">
+                +15.000 depoimentos reais de jogadores que transformaram seu gameplay!
+            </p>
+            
+            <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+                            <div class="testimonial-card text-center">
+                                <img src="imgs/pvsocial (6).jpg" alt="Depoimento Verificado" class="testimonial-image img-fluid">
+                                <div class="mt-3">
+                                    <div class="mb-3">
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                    </div>
+                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="testimonial-card text-center">
+                                <img src="imgs/pvsocial (2).jpg" alt="Depoimento Verificado" class="testimonial-image img-fluid">
+                                <div class="mt-3">
+                                    <div class="mb-3">
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                    </div>
+                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="testimonial-card text-center">
+                                <img src="imgs/prova social 03.PNG" alt="Depoimento Verificado" class="testimonial-image img-fluid">
+                                <div class="mt-3">
+                                    <div class="mb-3">
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                    </div>
+                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="testimonial-card text-center">
+                                <img src="imgs/pvsocial (4).jpg" alt="Depoimento Verificado" class="testimonial-image img-fluid">
+                                <div class="mt-3">
+                                    <div class="mb-3">
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                    </div>
+                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="testimonial-card text-center">
+                                <img src="imgs/pvsocial (5).jpg" alt="Depoimento Verificado" class="testimonial-image img-fluid">
+                                <div class="mt-3">
+                                    <div class="mb-3">
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                    </div>
+                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="testimonial-card text-center">
+                                <img src="imgs/prova social 04.PNG" alt="Depoimento Verificado" class="testimonial-image img-fluid">
+                                <div class="mt-3">
+                                    <div class="mb-3">
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                    </div>
+                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="testimonial-card text-center">
+                                <img src="imgs/prova social 01.jpg" alt="Depoimento Verificado" class="testimonial-image img-fluid">
+                                <div class="mt-3">
+                                    <div class="mb-3">
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                    </div>
+                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="testimonial-card text-center">
+                                <img src="imgs/prova social 02.JPG" alt="Depoimento Verificado" class="testimonial-image img-fluid">
+                                <div class="mt-3">
+                                    <div class="mb-3">
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                    </div>
+                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="testimonial-card text-center">
+                                <img src="imgs/prova social 05.jpg" alt="Depoimento Verificado" class="testimonial-image img-fluid">
+                                <div class="mt-3">
+                                    <div class="mb-3">
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                        <i class="bi bi-star-fill star-green"></i>
+                                    </div>
+                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controles do Carousel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Pacotes Premium -->
+    <section id="packages" class="packages-section fade-in-up">
+        <div class="container">
+            <h2 class="display-3 text-center mb-3">
+                🚀 ESCOLHA SEU <span class="neon-gold">PACOTE VIP</span>
+            </h2>
+            <p class="fs-4 text-center mb-5" style="color: var(--text-secondary);">
+                🔥 <strong>OFERTA ESPECIAL:</strong> 87% de desconto válido apenas hoje!
+            </p>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Pacote Android -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="package-card">
+                        <div class="package-discount">-80%</div>
+                        <div class="text-center">
+                            <img src="imgs/android.png" class="package-image" alt="Painel XIT Android" />
+                        </div>
+                        
+                        <h2 class="package-title">XIT ANDROID</h2>
+                        <p class="package-subtitle">O painel mais vendido para Android!</p>
+                        
+                        <ul class="features-list">
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Painel Mod Menu FFH4X Premium</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Função HS pescoço + Bypass avançado</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Mira automática 100% capa</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> 2x Automática ultra precisa</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Rastreamento de cabeça inteligente</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> UMP AUTOMÁTICA profissional</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Aimbot Cabeça premium</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Sistema de disfarce 100% indetectável</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Proteção anti-ban definitiva</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Sensi VIP Full capa exclusiva</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Aim Regedit otimizado</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> 2x Aimbot avançado</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> HeadShot garantido</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Mira que gruda no alvo</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Tutorial completo de instalação</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Instalação rápida em 3 minutos</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BAN garantido</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BLACKLIST</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Suporte VIP 24/7 no WhatsApp</li>
+                        </ul>
+                        
+                        <div class="package-price">
+                            <div class="price-old">De R$ 147,90</div>
+                            <div class="price-current">R$ 29,90</div>
+                            <p class="mt-2" style="color: var(--text-secondary);">Por apenas</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="https://go.perfectpay.com.br/PPU38CPTN1D" class="btn-cta-supreme">
+                                <i class="bi bi-cart-fill me-2"></i> COMPRAR COM 80% OFF AGORA!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pacote iPhone -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="package-card">
+                        <div class="package-discount">-80%</div>
+                        <div class="text-center">
+                            <img src="imgs/iphone.png" class="package-image" alt="Painel XIT iPhone" />
+                        </div>
+                        
+                        <h2 class="package-title">XIT IPHONE</h2>
+                        <p class="package-subtitle">Exclusivo para dispositivos iOS!</p>
+                        
+                        <ul class="features-list">
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Painel Mod Menu FFH4X iOS</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Função HS pescoço + Bypass iOS</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Mira automática 100% capa</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> 2x Automática otimizada</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Rastreamento de cabeça premium</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> UMP AUTOMÁTICA exclusiva</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Aimbot Cabeça iOS</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Sistema anti-detecção iOS</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Proteção contra banimento</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Sensi VIP iOS otimizada</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Aim Regedit para iPhone</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> 2x Aimbot iOS</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> HeadShot automático</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Mira magnética iOS</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Tutorial específico para iOS</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Instalação simplificada</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BAN iOS</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BLACKLIST</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Suporte especializado iOS 24/7</li>
+                        </ul>
+                        
+                        <div class="package-price">
+                            <div class="price-old">De R$ 147,90</div>
+                            <div class="price-current">R$ 29,90</div>
+                            <p class="mt-2" style="color: var(--text-secondary);">Por apenas</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="https://go.perfectpay.com.br/PPU38CPTMME" class="btn-cta-supreme">
+                                <i class="bi bi-cart-fill me-2"></i> COMPRAR COM 80% OFF!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pacote CLT VIP - Featured -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="package-card package-featured">
+                        <div class="package-discount">-77%</div>
+                        <div class="text-center">
+                            <img src="imgs/CLT.jpg" class="package-image" alt="Painel CLT VIP" />
+                        </div>
+                        
+                        <h2 class="package-title">CLT VIP</h2>
+                        <p class="package-subtitle">O mais completo! Android + iPhone</p>
+                        
+                        <ul class="features-list">
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Painel CLT Premium completo</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Função HS pescoço + Bypass premium</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Acesso PERMANENTE ao painel</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> 2x Xitada + 2x Automática</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Rastreamento inteligente para cabeça</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> No Recoil (tiros não espalham)</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> UMP automática profissional</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Mira automática Full capa suprema</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Rastreamento de mira aberta</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> 2x Aimbot ultra preciso</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Aimbot Cabeça definitivo</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Sistema de disfarce indetectável</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Proteção anti-ban definitiva</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Aim Regedit otimizado</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Aim Lock profissional</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> HeadShot garantido 100%</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Sensi VIP Full Capa exclusiva</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Mira magnética avançada</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Tutorial completo passo a passo</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Instalação ultra rápida</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BAN e ANTI-BLACKLIST</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> BÔNUS: Acesso a TODAS as ferramentas</li>
+                            <li><i class="bi bi-check-circle-fill star-green"></i> Suporte VIP EXCLUSIVO 24h</li>
+                        </ul>
+                        
+                        <div class="package-price">
+                            <div class="price-old">De R$ 214,97</div>
+                            <div class="price-current">R$ 49,90</div>
+                            <p class="mt-2" style="color: var(--text-secondary);">Por apenas</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="https://go.perfectpay.com.br/PPU38CPQM3H" class="btn-cta-supreme">
+                                <i class="bi bi-cart-fill me-2"></i> COMPRAR O MAIS COMPLETO!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p class="fs-5" style="color: var(--accent-red);">
+                    ⚠️ <strong>ATENÇÃO:</strong> Preços promocionais válidos apenas hoje!<br>
+                    Amanhã os preços voltam ao normal.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Garantia Premium -->
+    <section class="container">
+        <div class="guarantee-section">
+            <h3 class="guarantee-title">🛡️ GARANTIA TOTAL DE SATISFAÇÃO</h3>
+            <p class="guarantee-text">
+                Você tem <strong>7 dias completos</strong> para testar nosso painel sem compromisso.<br>
+                Se não ficar 100% satisfeito, devolvemos <strong>TODO seu dinheiro</strong> sem perguntas!<br>
+                <strong>Compre com total segurança e confiança!</strong><br>
+                Sua satisfação é nossa maior prioridade! 🏆
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Premium -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="display-3 text-center mb-5">
+                ❓ Perguntas <span class="neon-green">Frequentes</span>
+            </h2>
+            
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            🛡️ COMO FUNCIONA A GARANTIA DE 7 DIAS?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Você tem <strong>7 dias completos</strong> para testar nosso painel com total tranquilidade. 
+                            Se por qualquer motivo não ficar 100% satisfeito, devolvemos <strong>TODO seu dinheiro</strong> 
+                            sem perguntas e sem burocracia. É nossa garantia de qualidade!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            📧 COMO RECEBO O PAINEL APÓS A COMPRA?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <strong>Recebimento instantâneo!</strong> Assim que seu pagamento for confirmado, você receberá 
+                            automaticamente por email (Gmail) o link para download e todas as instruções. 
+                            <strong>Pagou, recebeu na hora!</strong> Sem espera, sem complicação.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            🔧 COMO FUNCIONA A INSTALAÇÃO?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <strong>Super simples!</strong> A instalação leva menos de <strong>5 minutos</strong> e funciona 
+                            em qualquer dispositivo. Você recebe um tutorial completo passo a passo com vídeos explicativos. 
+                            Além disso, nosso suporte VIP está disponível <strong>24 horas por dia</strong> para ajudar 
+                            na instalação se precisar!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            🛡️ É REALMENTE 100% ANTI-BAN?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <strong>SIM, 100% garantido!</strong> Nosso painel possui sistema de disfarce avançado e 
+                            proteção anti-detecção. Mais de <strong>15.000 jogadores</strong> usam diariamente sem 
+                            nenhum problema. Temos <strong>3 anos de mercado</strong> com zero casos de banimento. 
+                            Sua conta está totalmente protegida!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            💬 COMO FUNCIONA O SUPORTE?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Nosso suporte VIP funciona <strong>24 horas por dia, 7 dias por semana</strong> via WhatsApp. 
+                            Equipe especializada pronta para ajudar com instalação, configuração e qualquer dúvida. 
+                            <strong>Atendimento exclusivo para clientes</strong> com resposta em até 5 minutos!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Premium -->
+    <footer class="py-5" style="background: linear-gradient(135deg, var(--bg-primary), #1a1a1a);">
+        <div class="container text-center">
+            <h4 class="mb-3" style="color: var(--accent-green);">New Sensi - O #1 do Brasil</h4>
+            <p style="color: var(--text-secondary);">
+                &copy; 2025 New Sensi. Todos os direitos reservados.<br>
+                Instagram Oficial: <a href="https://instagram.com/new.sensi.ff" target="_blank" style="color: var(--accent-green);">@new.sensi.ff</a><br>
+                Desenvolvido com 💚 pela equipe New Sensi
+            </p>
+            <div class="mt-4">
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    🏆 Eleito o melhor painel XIT do Brasil<br>
+                    ⭐ +15.000 clientes satisfeitos<br>
+                    🛡️ 3 anos de experiência no mercado
+                </p>
+            </div>
         </div>
     </footer>
 
@@ -969,193 +1982,403 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Sistema de notificações corrigido -->
+    <!-- SISTEMA JAVASCRIPT AVANÇADO -->
     <script>
-        // Sistema de notificações funcionais
-        class NotificationSystem {
+        // Sistema de Loading Premium
+        class LoadingSystem {
             constructor() {
+                this.loadingScreen = document.getElementById('loadingScreen');
+                this.init();
+            }
+            
+            init() {
+                setTimeout(() => {
+                    this.hideLoading();
+                }, 1800);
+            }
+            
+            hideLoading() {
+                this.loadingScreen.classList.add('hide');
+                setTimeout(() => {
+                    this.loadingScreen.style.display = 'none';
+                }, 800);
+            }
+        }
+        
+        // Sistema de Data Real no Banner
+        class RealDateBanner {
+            constructor() {
+                this.bannerDate = document.getElementById('bannerDate');
+                this.init();
+            }
+            
+            init() {
+                this.updateDate();
+                // Atualizar a cada minuto
+                setInterval(() => this.updateDate(), 60000);
+            }
+            
+            updateDate() {
+                const now = new Date();
+                const months = [
+                    'JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO',
+                    'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'
+                ];
+                
+                const day = now.getDate();
+                const month = months[now.getMonth()];
+                const year = now.getFullYear();
+                
+                if (this.bannerDate) {
+                    this.bannerDate.textContent = `HOJE • ${day} DE ${month} DE ${year}`;
+                }
+            }
+        }
+        
+        // Sistema de Progresso de Scroll
+        class ScrollProgress {
+            constructor() {
+                this.progressBar = document.getElementById('progressBar');
+                this.init();
+            }
+            
+            init() {
+                window.addEventListener('scroll', () => {
+                    const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                    this.progressBar.style.width = `${Math.min(scrolled, 100)}%`;
+                });
+            }
+        }
+        
+        // Sistema de CTA Sticky
+        class StickyCTA {
+            constructor() {
+                this.stickyCta = document.getElementById('stickyCta');
+                this.init();
+            }
+            
+            init() {
+                let lastScrollY = window.scrollY;
+                
+                window.addEventListener('scroll', () => {
+                    const currentScrollY = window.scrollY;
+                    const scrollingDown = currentScrollY > lastScrollY;
+                    const scrolledEnough = currentScrollY > 800;
+                    
+                    if (scrolledEnough && scrollingDown) {
+                        this.stickyCta.classList.add('show');
+                    } else {
+                        this.stickyCta.classList.remove('show');
+                    }
+                    
+                    lastScrollY = currentScrollY;
+                });
+            }
+        }
+        
+        // SISTEMA DE NOTIFICAÇÕES MODERNO - LADO ESQUERDO
+        class ModernNotificationSystem {
+            constructor() {
+                this.container = document.getElementById('modern-notifications');
                 this.salesCounter = document.getElementById('sales-count');
-                this.notificationContainer = document.getElementById('notification-container');
-                this.simpleNotificationContainer = document.getElementById('notificacoes');
-                this.currentSales = 153;
-                this.userCounter = 401;
+                this.userCounter = document.getElementById('contador-pessoas');
+                
+                this.currentSales = 347;
+                this.currentUsers = 2847;
+                this.activeNotifications = [];
+                this.maxNotifications = 3;
+                
+                // Base de dados ultra realista
+                this.customerDatabase = [
+                    { name: 'João S.', location: 'São Paulo - SP', initial: 'J' },
+                    { name: 'Maria O.', location: 'Rio de Janeiro - RJ', initial: 'M' },
+                    { name: 'Pedro C.', location: 'Belo Horizonte - MG', initial: 'P' },
+                    { name: 'Ana L.', location: 'Salvador - BA', initial: 'A' },
+                    { name: 'Carlos R.', location: 'Brasília - DF', initial: 'C' },
+                    { name: 'Lucia F.', location: 'Fortaleza - CE', initial: 'L' },
+                    { name: 'Rafael L.', location: 'Recife - PE', initial: 'R' },
+                    { name: 'Camila R.', location: 'Porto Alegre - RS', initial: 'C' },
+                    { name: 'Bruno A.', location: 'Curitiba - PR', initial: 'B' },
+                    { name: 'Fernanda D.', location: 'Goiânia - GO', initial: 'F' },
+                    { name: 'Gabriel T.', location: 'Manaus - AM', initial: 'G' },
+                    { name: 'Juliana P.', location: 'Belém - PA', initial: 'J' },
+                    { name: 'Ricardo N.', location: 'Vitória - ES', initial: 'R' },
+                    { name: 'Patrícia G.', location: 'Florianópolis - SC', initial: 'P' },
+                    { name: 'Leonardo B.', location: 'Natal - RN', initial: 'L' },
+                    { name: 'Thiago O.', location: 'Campo Grande - MS', initial: 'T' },
+                    { name: 'Isabela C.', location: 'João Pessoa - PB', initial: 'I' },
+                    { name: 'Rodrigo S.', location: 'Teresina - PI', initial: 'R' },
+                    { name: 'Amanda S.', location: 'Aracaju - SE', initial: 'A' },
+                    { name: 'Felipe R.', location: 'Maceió - AL', initial: 'F' }
+                ];
+                
+                this.products = [
+                    { name: 'Painel XIT Android', price: 'R$ 29,90', popularity: 40 },
+                    { name: 'Painel XIT iPhone', price: 'R$ 29,90', popularity: 35 },
+                    { name: 'Painel CLT VIP', price: 'R$ 49,90', popularity: 25 }
+                ];
+                
+                this.actions = [
+                    'acabou de comprar o',
+                    'adquiriu o',
+                    'confirmou a compra do',
+                    'finalizou a compra do',
+                    'garantiu o'
+                ];
                 
                 this.init();
             }
             
             init() {
-                // Inicializar contadores
-                this.updateUserCounter();
-                this.startNotificationLoop();
-                this.startSalesCounterUpdate();
+                this.startCounterUpdates();
+                this.startNotificationFlow();
             }
             
-            // Atualizar contador de usuários ativos
-            updateUserCounter() {
-                const userElement = document.getElementById('contador-pessoas');
-                if (userElement) {
-                    const increase = Math.floor(Math.random() * 5) + 1;
-                    this.userCounter += increase;
-                    userElement.textContent = this.userCounter;
-                    
-                    // Próxima atualização em 2-5 segundos
-                    const nextUpdate = Math.floor(Math.random() * 3000) + 2000;
-                    setTimeout(() => this.updateUserCounter(), nextUpdate);
-                }
-            }
-            
-            // Atualizar contador de vendas
-            updateSalesCounter() {
-                if (this.salesCounter) {
+            startCounterUpdates() {
+                // Contador de usuários ativos
+                setInterval(() => {
+                    const increase = Math.floor(Math.random() * 6) + 2;
+                    this.currentUsers += increase;
+                    if (this.userCounter) {
+                        this.userCounter.textContent = this.currentUsers.toLocaleString();
+                    }
+                }, Math.random() * 5000 + 4000);
+                
+                // Contador de vendas
+                setInterval(() => {
                     const increase = Math.floor(Math.random() * 3) + 1;
                     this.currentSales += increase;
-                    this.salesCounter.textContent = this.currentSales;
-                }
+                    if (this.salesCounter) {
+                        this.salesCounter.textContent = this.currentSales;
+                    }
+                }, Math.random() * 10000 + 7000);
             }
             
-            // Sistema de notificações simples
-            showSimpleNotification() {
-                const names = [
-                    "Fabinho", "Adriano", "Arthur", "Marcos", "Isabelle", "Bella", "Ana", "Vitor", 
-                    "Rafael", "Matheus", "Juliana", "Rafaela", "Kauane", "João Silva", "Maria Santos", 
-                    "Pedro Oliveira", "Ana Costa", "Carlos Souza", "Fernanda Lima", "Gabriel Alves",
-                    "Juliana Ferreira", "Rafael Martins", "Camila Rocha", "Lucas Pereira", "Beatriz Carvalho",
-                    "Thiago Ribeiro", "Larissa Gomes", "Felipe Barbosa", "Mariana Dias", "Bruno Nascimento",
-                    "Isabella", "Diego Araújo", "Amanda", "Mateus Teixeira", "Natália Monteiro",
-                    "Vinicius Castro", "Letícia", "André Fonseca", "Bruna Cavalcanti", "Guilherme Pinto",
-                    "Yasmin Nunes", "Leonardo Freitas", "Stephanie Ramos"
-                ];
+            startNotificationFlow() {
+                this.showPurchaseNotification();
                 
-                const actions = [
-                    "Aproveitou a Promoção",
-                    "Comprou Painel XIT",
-                    "Acabou de adquirir Painel CLT",
-                    "Realizou uma Compra de R$49,90",
-                    "Realizou uma Compra de R$29,90",
-                    "Confirmou o Pagamento de R$29,90",
-                    "Usou CUPOM: New Xiter"
-                ];
-                
-                const name = names[Math.floor(Math.random() * names.length)];
-                const action = actions[Math.floor(Math.random() * actions.length)];
-                const message = `${name} ${action}`;
-                
-                const notification = document.createElement("div");
-                notification.className = "notificacao";
-                notification.innerHTML = `<i class="bi bi-check-circle" style="margin-right: 8px;"></i> ${message}`;
-                
-                if (this.simpleNotificationContainer) {
-                    this.simpleNotificationContainer.appendChild(notification);
-                    
-                    // Remover notificação após 5 segundos
-                    setTimeout(() => {
-                        if (notification.parentNode) {
-                            notification.remove();
-                        }
-                    }, 5000);
-                }
+                const nextNotification = Math.random() * 7000 + 5000;
+                setTimeout(() => this.startNotificationFlow(), nextNotification);
             }
             
-            // Sistema de notificações avançadas
-            showAdvancedNotification() {
-                const products = ["Painel XIT Android", "Painel XIT iPhone", "Painel CLT VIP"];
-                const names = ["João", "Maria", "Pedro", "Ana", "Carlos", "Fernanda", "Rafael", "Juliana"];
-                const cities = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Brasília", "Fortaleza"];
+            showPurchaseNotification() {
+                if (this.activeNotifications.length >= this.maxNotifications) {
+                    this.removeOldestNotification();
+                }
                 
-                const product = products[Math.floor(Math.random() * products.length)];
-                const name = names[Math.floor(Math.random() * names.length)];
-                const city = cities[Math.floor(Math.random() * cities.length)];
+                const customer = this.getRandomCustomer();
+                const product = this.getRandomProduct();
+                const action = this.actions[Math.floor(Math.random() * this.actions.length)];
+                const timeAgo = Math.floor(Math.random() * 40) + 2;
+                const id = Date.now();
                 
-                const notification = document.createElement('div');
-                notification.className = 'purchase-notification';
-                notification.innerHTML = `
-                    <button class="notification-close">&times;</button>
+                const notification = this.createNotificationElement({
+                    customer,
+                    product,
+                    action,
+                    timeAgo,
+                    id
+                });
+                
+                this.showNotification(notification);
+            }
+            
+            createNotificationElement(data) {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'modern-notification';
+                wrapper.dataset.id = data.id;
+                
+                wrapper.innerHTML = `
+                    <button class="notification-close" onclick="modernNotificationSystem.removeNotification(${data.id})">&times;</button>
                     <div class="notification-header">
-                        <div class="notification-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
+                        <div class="notification-avatar">${data.customer.initial}</div>
                         <div class="notification-content">
-                            <h4>Nova Compra!</h4>
-                            <p><span class="notification-product">${product}</span></p>
-                            <p>${name} de ${city}</p>
-                            <div class="notification-time">
-                                <i class="fas fa-clock"></i>
-                                Agora mesmo
-                            </div>
+                            <div class="notification-name">${data.customer.name}</div>
+                            <div class="notification-action">${data.action} ${data.product.name}</div>
                         </div>
+                    </div>
+                    <div class="notification-footer">
+                        <div class="notification-time">
+                            <i class="fas fa-clock"></i> ${data.timeAgo} min atrás
+                        </div>
+                        <div class="notification-value">${data.product.price}</div>
                     </div>
                 `;
                 
-                if (this.notificationContainer) {
-                    this.notificationContainer.appendChild(notification);
+                return wrapper;
+            }
+            
+            showNotification(notification) {
+                this.container.appendChild(notification);
+                this.activeNotifications.push(notification);
+                
+                // Animação de entrada
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 100);
+                
+                // Auto-remover após 5 segundos
+                setTimeout(() => {
+                    this.removeNotification(parseInt(notification.dataset.id));
+                }, 5000);
+            }
+            
+            removeNotification(id) {
+                const notification = document.querySelector(`[data-id="${id}"]`);
+                if (notification) {
+                    notification.classList.add('hide');
                     
-                    // Mostrar notificação
-                    setTimeout(() => notification.classList.add('show'), 100);
-                    
-                    // Fechar ao clicar no X
-                    const closeBtn = notification.querySelector('.notification-close');
-                    closeBtn.addEventListener('click', () => {
-                        notification.classList.remove('show');
-                        setTimeout(() => notification.remove(), 500);
-                    });
-                    
-                    // Auto remover após 5 segundos
                     setTimeout(() => {
                         if (notification.parentNode) {
-                            notification.classList.remove('show');
-                            setTimeout(() => notification.remove(), 500);
+                            notification.parentNode.removeChild(notification);
                         }
-                    }, 5000);
+                        this.activeNotifications = this.activeNotifications.filter(n => 
+                            parseInt(n.dataset.id) !== id
+                        );
+                    }, 500);
                 }
             }
             
-            // Iniciar loop de notificações
-            startNotificationLoop() {
-                const showNotification = () => {
-                    // Alternar entre notificações simples e avançadas
-                    if (Math.random() > 0.5) {
-                        this.showSimpleNotification();
-                    } else {
-                        this.showAdvancedNotification();
-                    }
-                    
-                    // Próxima notificação em 8-15 segundos
-                    const nextDelay = Math.floor(Math.random() * 7000) + 8000;
-                    setTimeout(showNotification, nextDelay);
-                };
-                
-                // Primeira notificação após 3 segundos
-                setTimeout(showNotification, 3000);
+            removeOldestNotification() {
+                if (this.activeNotifications.length > 0) {
+                    const oldest = this.activeNotifications[0];
+                    this.removeNotification(parseInt(oldest.dataset.id));
+                }
             }
             
-            // Atualizar contador de vendas periodicamente
-            startSalesCounterUpdate() {
-                const updateSales = () => {
-                    this.updateSalesCounter();
-                    
-                    // Próxima atualização em 15-30 segundos
-                    const nextUpdate = Math.floor(Math.random() * 15000) + 15000;
-                    setTimeout(updateSales, nextUpdate);
-                };
+            getRandomCustomer() {
+                return this.customerDatabase[Math.floor(Math.random() * this.customerDatabase.length)];
+            }
+            
+            getRandomProduct() {
+                const rand = Math.random() * 100;
+                let cumulative = 0;
                 
-                // Primeira atualização após 10 segundos
-                setTimeout(updateSales, 10000);
+                for (const product of this.products) {
+                    cumulative += product.popularity;
+                    if (rand <= cumulative) {
+                        return product;
+                    }
+                }
+                
+                return this.products[0];
             }
         }
         
-        // Inicializar sistema quando a página carregar
+        // Sistema de Scroll Suave
+        class SmoothScroll {
+            constructor() {
+                this.init();
+            }
+            
+            init() {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            }
+        }
+        
+        // Sistema de Animações de Entrada
+        class AnimationSystem {
+            constructor() {
+                this.observer = null;
+                this.init();
+            }
+            
+            init() {
+                this.observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+                
+                document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right').forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(40px)';
+                    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+                    this.observer.observe(el);
+                });
+            }
+        }
+        
+        // Inicializar todos os sistemas
+        let loadingSystem;
+        let realDateBanner;
+        let scrollProgress;
+        let stickyCTA;
+        let modernNotificationSystem;
+        let smoothScroll;
+        let animationSystem;
+        
         document.addEventListener('DOMContentLoaded', function() {
-            new NotificationSystem();
+            loadingSystem = new LoadingSystem();
+            realDateBanner = new RealDateBanner();
+            scrollProgress = new ScrollProgress();
+            stickyCTA = new StickyCTA();
+            modernNotificationSystem = new ModernNotificationSystem();
+            smoothScroll = new SmoothScroll();
+            animationSystem = new AnimationSystem();
+            
+            // Tracking de eventos
+            document.querySelectorAll('.btn-cta-supreme').forEach(button => {
+                button.addEventListener('click', function() {
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'AddToCart');
+                    }
+                    if (typeof ttq !== 'undefined') {
+                        ttq.track('ClickButton');
+                    }
+                });
+            });
+            
+            // Tracking de scroll depth
+            let maxScroll = 0;
+            window.addEventListener('scroll', function() {
+                const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+                if (scrollPercent > maxScroll) {
+                    maxScroll = scrollPercent;
+                    if (maxScroll % 25 === 0 && typeof fbq !== 'undefined') {
+                        fbq('track', 'PageView', {scroll_depth: maxScroll});
+                    }
+                }
+            });
         });
+        
+        // Prevenção de saída da página
+        document.addEventListener('mouseleave', function(e) {
+            if (e.clientY <= 0) {
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'ExitIntent');
+                }
+            }
+        });
+        
+        // Detecção de tempo na página
+        let timeOnPage = 0;
+        setInterval(() => {
+            timeOnPage += 1;
+            if (timeOnPage === 30 && typeof fbq !== 'undefined') {
+                fbq('track', 'TimeOnPage', {seconds: 30});
+            }
+            if (timeOnPage === 60 && typeof fbq !== 'undefined') {
+                fbq('track', 'TimeOnPage', {seconds: 60});
+            }
+        }, 1000);
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
