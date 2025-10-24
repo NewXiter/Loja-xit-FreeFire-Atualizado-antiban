@@ -95,30 +95,33 @@
         }
 
         /* CORES ESPECIAIS - BRILHO REDUZIDO */
-       .neon-green {
+      .neon-green {
     color: var(--accent-green) !important;
-    text-shadow: 0 0 1px var(--accent-green), 0 0 5px var(--accent-green), 0 0 10px var(--accent-green);
+    /* Diminuir o brilho trocando para sombras menores e menos intensas */
+    text-shadow: 0 0 0.5px var(--accent-green), 0 0 2px var(--accent-green);
     font-weight: 900;
 }
 
 .neon-red {
     color: var(--accent-red) !important;
-    text-shadow: 0 0 5px var(--accent-red), 0 0 10px var(--accent-red), 0 0 15px var(--accent-red);
+    /* Diminuir o brilho */
+    text-shadow: 0 0 1px var(--accent-red), 0 0 2px var(--accent-red);
     font-weight: 900;
 }
 
 .neon-gold {
     color: var(--accent-gold) !important;
-    text-shadow: 0 0 5px var(--accent-gold), 0 0 10px var(--accent-gold), 0 0 15px var(--accent-gold);
+    /* Diminuir o brilho */
+    text-shadow: 0 0 1px var(--accent-gold), 0 0 2px var(--accent-gold);
     font-weight: 900;
 }
 
-
-        .star-green {
-            color: var(--accent-green) !important;
-            font-size: 1.0rem;
-            filter: drop-shadow(0 0 1px var(--accent-green));
-        }
+.star-green {
+    color: var(--accent-green) !important;
+    font-size: 1.0rem;
+    /* Reduzir a sombra para diminuir o efeito de brilho */
+    filter: drop-shadow(0 0 0.5px var(--accent-green));
+}
 
         /* BANNER AVANÇADO COM DATA REAL */
         #banner-promocional {
@@ -1457,7 +1460,7 @@
     <section class="benefits-section slide-in-left">
         <div class="container">
             <h2 class="display-3 text-center mb-5">
-                Por que <span class="neon-green">12.000+ players</span> escolheram nosso painel?
+                Por que <span class="neon-green">15.000+ players</span> escolheram nosso painel?
             </h2>
             
             <div class="row g-4">
@@ -2383,5 +2386,6 @@
     </script>
 </body>
 </html>
+
 
 
