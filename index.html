@@ -95,32 +95,33 @@
         }
 
         /* CORES ESPECIAIS - BRILHO REDUZIDO */
+        
      .neon-green {
     color: var(--accent-green) !important;
-    /* Aumentar o brilho ajustando as sombras */
-    text-shadow: 0 0 1px var(--accent-green), 0 0 4px var(--accent-green);
+    /* Diminuir o brilho trocando para sombras menores e menos intensas */
+    text-shadow: 0 0 0.5px var(--accent-green), 0 0 2px var(--accent-green);
     font-weight: 900;
 }
 
 .neon-red {
     color: var(--accent-red) !important;
-    /* Aumentar o brilho ajustando as sombras */
-    text-shadow: 0 0 2px var(--accent-red), 0 0 4px var(--accent-red);
+    /* Diminuir o brilho */
+    text-shadow: 0 0 1px var(--accent-red), 0 0 2px var(--accent-red);
     font-weight: 900;
 }
 
 .neon-gold {
     color: var(--accent-gold) !important;
-    /* Aumentar o brilho ajustando as sombras */
-    text-shadow: 0 0 2px var(--accent-gold), 0 0 4px var(--accent-gold);
+    /* Diminuir o brilho */
+    text-shadow: 0 0 1px var(--accent-gold), 0 0 2px var(--accent-gold);
     font-weight: 900;
 }
 
 .star-green {
     color: var(--accent-green) !important;
     font-size: 1.0rem;
-    /* Aumentar o efeito de sombra para mais brilho */
-    filter: drop-shadow(0 0 1px var(--accent-green));
+    /* Reduzir a sombra para diminuir o efeito de brilho */
+    filter: drop-shadow(0 0 0.5px var(--accent-green));
 }
 
 
@@ -2387,6 +2388,7 @@
     </script>
 </body>
 </html>
+
 
 
 
