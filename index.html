@@ -81,12 +81,11 @@
             padding: 0;
         }
 
-        body {
-            background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a1a 50%, var(--bg-primary) 100%);
-            color: var(--text-primary);
-            font-family: 'Poppins', sans-serif;
-            overflow-x: hidden;
-            line-height: 1.6;
+      body {
+    background: linear-gradient(135deg, var(--bg-primary), #0d0d0d, var(--bg-primary));
+    /* fundo mais escuro */
+}
+
         }
 
         /* GARANTIR TEXTOS VISÍVEIS */
@@ -96,10 +95,11 @@
 
         /* CORES ESPECIAIS - BRILHO MUITO REDUZIDO */
         .neon-green {
-            color: var(--accent-green) !important;
-            text-shadow: 0 0 2px var(--accent-green), 0 0 4px var(--accent-green);
-            font-weight: 900;
-        }
+    color: var(--accent-green) !important;
+    text-shadow: 0 0 1px var(--accent-green); /* menos brilho */
+    font-weight: 900;
+}
+
 
         .neon-red {
             color: var(--accent-red) !important;
@@ -2382,3 +2382,4 @@
     </script>
 </body>
 </html>
+
