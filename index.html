@@ -1,2360 +1,701 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <!-- TikTok Pixel Code Start -->
-    <script>
-        !function(w, d, t) {
-            w.TiktokAnalyticsObject = t;
-            var ttq = w[t] = w[t] || [];
-            ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"];
-            ttq.setAndDefer = function(t, e) { t[e] = function() { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } };
-            for (var i = 0; i < ttq.methods.length; i++) {
-                ttq.setAndDefer(ttq, ttq.methods[i]);
-            }
-            ttq.instance = function(t) {
-                for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) {
-                    ttq.setAndDefer(e, ttq.methods[n]);
-                }
-                return e
-            };
-            ttq.load = function(e, n) {
-                var r = "https://analytics.tiktok.com/i18n/pixel/events.js",
-                    o = n && n.partner;
-                ttq._i = ttq._i || {};
-                ttq._i[e] = [];
-                ttq._i[e]._u = r;
-                ttq._t = ttq._t || {};
-                ttq._t[e] = +new Date;
-                ttq._o = ttq._o || {};
-                ttq._o[e] = n || {};
-                var s = document.createElement("script");
-                s.type = "text/javascript";
-                s.async = true;
-                s.src = r + "?sdkid=" + e + "&lib=" + t;
-                var x = document.getElementsByTagName("script")[0];
-                x.parentNode.insertBefore(s, x);
-            };
-
-            ttq.load('D31G2RRC77U7TGIRBM60');
-            ttq.page();
-        }(window, document, 'ttq');
-    </script>
-    <!-- TikTok Pixel Code End -->
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>🚨 ÚLTIMA CHANCE! PAINEL XIT #1 DO BRASIL - 87% OFF HOJE! | New Sensi</title>
-    <meta name="description" content="⚡ OFERTA RELÂMPAGO! O painel XIT mais vendido do Brasil com 97% de aprovação! +15.000 jogadores dominando! Mira automática 100% capa, aimbot cabeça, 2x automática. DESCONTO DE 87% SÓ HOJE!">
-    <meta name="keywords" content="painel xit, free fire, hack, aimbot, mira automática, android, iphone, anti-ban">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="🔥 PAINEL XIT #1 DO BRASIL - 87% OFF HOJE!" />
-    <meta property="og:description" content="Mais de 15.000 jogadores dominando com nosso painel! Mira automática 100% capa + aimbot cabeça. Desconto de 87% válido apenas hoje!" />
-    <meta property="og:image" content="imgs/logo.png" />
-    <meta property="og:type" content="website" />
-    
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/0b784d4cf8.js" crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOJA XITER - Painel XIT 100% Verificado</title>
+    <meta name="description" content="Painel XIT profissional para Free Fire - Transforme seu gameplay agora!">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #141414;
-            --accent-green: #00ff41;
-            --accent-red: #ff4757;
-            --accent-gold: #ffd700;
-            --text-primary: #ffffff;
-            --text-secondary: #cccccc;
-            --gradient-primary: linear-gradient(135deg, #00ff41, #00e676, #39ff14);
-            --gradient-danger: linear-gradient(135deg, #ff4757, #ff3742, #ff6b7a);
-            --gradient-gold: linear-gradient(135deg, #ffd700, #ffed4e, #fff59d);
-            --shadow-neon: 0 0 20px rgba(0, 255, 65, 0.3);
-            --shadow-red: 0 0 20px rgba(255, 71, 87, 0.4);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-    body {
-        background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a1a 50%, var(--bg-primary) 100%);
-        color: var(--text-primary);
-        font-family: 'Poppins', sans-serif;
-        overflow-x: hidden;
-        line-height: 1.6;
-    }
-
-
-        /* GARANTIR TEXTOS VISÍVEIS */
-        h1, h2, h3, h4, h5, h6, p, span, div, li, a {
-            color: var(--text-primary) !important;
-        }
-
-        /* CORES ESPECIAIS - BRILHO MUITO REDUZIDO */
-        .neon-green {
-    color: var(--accent-green) !important;
-    text-shadow: 0 0 1px var(--accent-green); /* menos brilho */
-    font-weight: 900;
-}
-
-
-        .neon-red {
-            color: var(--accent-red) !important;
-            text-shadow: 0 0 1px var(--accent-red), 0 0 1px var(--accent-red);
-            font-weight: 900;
-        }
-
-        .neon-gold {
-            color: var(--accent-gold) !important;
-            text-shadow: 0 0 1px var(--accent-gold), 0 0 2px var(--accent-gold);
-            font-weight: 900;
-        }
-
-        .star-green {
-            color: var(--accent-green) !important;
-            font-size: 1.4rem;
-            filter: drop-shadow(0 0 2px var(--accent-green));
-        }
-
-        /* BANNER AVANÇADO COM DATA REAL */
-        #banner-promocional {
-            background: linear-gradient(135deg, #ff4757 0%, #ff3742 50%, #ff6b7a 100%);
-            background-size: 400% 400%;
-            animation: gradient-flow 3s ease-in-out infinite;
-            padding: 15px 10px;
-            text-align: center;
-            font-family: 'Bebas Neue', cursive;
-            color: #fff;
-            position: relative;
-            z-index: 999;
-            box-shadow: 0 4px 20px rgba(255, 71, 87, 0.4);
-            border-bottom: 3px solid rgba(255, 255, 255, 0.2);
-            overflow: hidden;
-        }
-
-        #banner-promocional::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            animation: shimmer-banner 4s infinite;
-        }
-
-        @keyframes shimmer-banner {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        @keyframes gradient-flow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .banner-content {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .banner-date {
-            font-size: 1.1rem;
-            font-weight: 700;
-            opacity: 0.9;
-            letter-spacing: 1px;
-        }
-
-        .banner-main {
-            font-size: clamp(1.4rem, 4vw, 2.2rem);
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            line-height: 1.2;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .banner-highlight {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: clamp(0.9rem, 3vw, 1.1rem);
-            font-weight: 700;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            animation: pulse-highlight 2s infinite;
-        }
-
-        @keyframes pulse-highlight {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.9; }
-        }
-
-        /* HERO SECTION PREMIUM */
-        .hero {
-            padding: 60px 15px 60px;
-            text-align: center;
-            background: 
-                radial-gradient(circle at 25% 25%, rgba(0, 255, 65, 0.1), transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(255, 71, 87, 0.08), transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.04), transparent 70%),
-                linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(20, 20, 20, 0.95));
-            position: relative;
-            overflow: hidden;
-            min-height: auto;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M 8 0 L 0 0 0 8" fill="none" stroke="%23ffffff" stroke-width="0.3" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-            animation: grid-move 20s linear infinite;
-        }
-
-        @keyframes grid-move {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(8px, 8px); }
-        }
-
-        .hero-logo {
-            max-width: 130px;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 10px var(--accent-green));
-            animation: logo-supreme 4s ease-in-out infinite;
-        }
-
-        @keyframes logo-supreme {
-            0%, 100% { 
-                filter: drop-shadow(0 0 10px var(--accent-green));
-                transform: scale(1);
-            }
-            50% { 
-                filter: drop-shadow(0 0 15px var(--accent-green)) drop-shadow(0 0 20px rgba(0, 255, 65, 0.4));
-                transform: scale(1.03);
-            }
-        }
-
-        .hero-title {
-            font-family: 'Bebas Neue', cursive;
-            font-size: clamp(2.2rem, 7vw, 4.5rem);
-            line-height: 1.1;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1rem, 3.5vw, 1.3rem);
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .social-proof-hero {
-            background: rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(0, 255, 65, 0.4);
-            border-radius: 20px;
-            padding: 20px;
-            margin: 25px 0;
-            backdrop-filter: blur(15px);
-            animation: proof-glow 3s ease-in-out infinite;
-        }
-
-        @keyframes proof-glow {
-            0%, 100% { box-shadow: 0 0 8px rgba(0, 255, 65, 0.2); }
-            50% { box-shadow: 0 0 12px rgba(0, 255, 65, 0.3); }
-        }
-
-        /* VÍDEO VSL OTIMIZADO - TAMANHO PERFEITO */
-        .video-container {
-            position: relative;
-            margin: 30px auto;
-            max-width: 100%;
-            width: 100%;
-        }
-
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            max-width: 800px; /* Reduzido para mobile/desktop */
-            margin: 0 auto;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 
-                0 0 15px rgba(0, 255, 65, 0.3),
-                0 0 30px rgba(0, 255, 65, 0.15),
-                0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .video-wrapper::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: var(--gradient-primary);
-            background-size: 300% 300%;
-            border-radius: 22px;
-            z-index: -1;
-            animation: video-border-glow 4s ease-in-out infinite;
-        }
-
-        @keyframes video-border-glow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .video-responsive {
-            position: relative;
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            background: #000;
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
-        .video-responsive iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 20px;
-        }
-
-        /* BOTÃO CALL-TO-ACTION SUPREMO */
-        .btn-cta-supreme {
-            position: relative;
-            display: inline-block;
-            padding: 20px 40px;
-            font-size: clamp(1.1rem, 3.5vw, 1.6rem);
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #000 !important;
-            background: var(--gradient-primary);
-            background-size: 400% 400%;
-            border: none;
-            border-radius: 50px;
-            text-decoration: none;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            font-family: 'Bebas Neue', cursive;
-            
-            box-shadow: 
-                0 0 15px rgba(0, 255, 65, 0.3),
-                0 0 25px rgba(0, 255, 65, 0.2),
-                0 10px 25px rgba(0, 0, 0, 0.3),
-                inset 0 0 15px rgba(255, 255, 255, 0.15);
-            
-            animation: 
-                cta-supreme-pulse 3s infinite,
-                cta-gradient-flow 5s ease-in-out infinite;
-        }
-
-        .btn-cta-supreme:hover {
-            transform: scale(1.08) translateY(-3px);
-            box-shadow: 
-                0 0 25px rgba(0, 255, 65, 0.5),
-                0 0 50px rgba(0, 255, 65, 0.3),
-                0 20px 40px rgba(0, 0, 0, 0.4),
-                inset 0 0 25px rgba(255, 255, 255, 0.2);
-            color: #000 !important;
-        }
-
-        .btn-cta-supreme::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-            transition: left 0.8s;
-        }
-
-        .btn-cta-supreme:hover::before {
-            left: 100%;
-        }
-
-        .btn-cta-supreme::after {
-            content: '🚀';
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.3rem;
-            animation: rocket-boost 2s ease-in-out infinite;
-        }
-
-        @keyframes rocket-boost {
-            0%, 100% { transform: translateY(-50%) translateX(0); }
-            50% { transform: translateY(-50%) translateX(3px); }
-        }
-
-        @keyframes cta-supreme-pulse {
-            0%, 100% { 
-                box-shadow: 
-                    0 0 15px rgba(0, 255, 65, 0.3),
-                    0 0 25px rgba(0, 255, 65, 0.2),
-                    0 10px 25px rgba(0, 0, 0, 0.3);
-            }
-            50% { 
-                box-shadow: 
-                    0 0 20px rgba(0, 255, 65, 0.4),
-                    0 0 35px rgba(0, 255, 65, 0.3),
-                    0 15px 35px rgba(0, 0, 0, 0.4);
-            }
-        }
-
-        @keyframes cta-gradient-flow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* SEÇÃO DE BENEFÍCIOS PREMIUM */
-        .benefits-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.95));
-            position: relative;
-        }
-
-        .benefit-card {
-            background: linear-gradient(135deg, var(--bg-secondary), #1f1f1f, var(--bg-secondary));
-            border: 2px solid rgba(0, 255, 65, 0.25);
-            border-radius: 25px;
-            padding: 35px 25px;
-            transition: all 0.5s ease;
-            position: relative;
-            overflow: hidden;
-            height: 100%;
-        }
-
-        .benefit-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--gradient-primary);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            border-color: rgba(0, 255, 65, 0.5);
-            box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.4),
-                0 0 20px rgba(0, 255, 65, 0.15);
-        }
-
-        .benefit-card:hover::before {
-            opacity: 1;
-        }
-
-        .benefit-icon {
-            width: 70px;
-            height: 70px;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 0 6px rgba(0, 255, 65, 0.3));
-            transition: transform 0.5s ease;
-        }
-
-        .benefit-card:hover .benefit-icon {
-            transform: scale(1.08) rotate(3deg);
-        }
-
-        .benefit-title {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            color: var(--accent-green) !important;
-        }
-
-        .benefit-description {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: var(--text-secondary) !important;
-        }
-
-        /* SEÇÃO DE DEPOIMENTOS AVANÇADA */
-        .testimonials-section {
-            padding: 80px 0;
-            background: 
-                radial-gradient(circle at 30% 30%, rgba(0, 255, 65, 0.08), transparent 60%),
-                linear-gradient(135deg, var(--bg-primary), rgba(20, 20, 20, 0.9));
-        }
-
-        .testimonial-card {
-            background: linear-gradient(135deg, #0f0f0f, #1f1f1f, #0f0f0f);
-            border: 2px solid rgba(0, 255, 65, 0.3);
-            border-radius: 25px;
-            padding: 25px;
-            transition: all 0.5s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonial-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--gradient-primary);
-            background-size: 400% 400%;
-            border-radius: 23px;
-            padding: 2px;
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask-composite: subtract;
-            animation: testimonial-border 6s ease-in-out infinite;
-            z-index: -1;
-        }
-
-        @keyframes testimonial-border {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.4),
-                0 0 20px rgba(0, 255, 65, 0.15);
-        }
-
-        .testimonial-image {
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            transition: transform 0.5s ease;
-        }
-
-        .testimonial-card:hover .testimonial-image {
-            transform: scale(1.03);
-        }
-
-        .verified-badge {
-            display: inline-flex;
-            align-items: center;
-            background: var(--gradient-primary);
-            color: #000;
-            padding: 6px 12px;
-            border-radius: 15px;
-            font-weight: 700;
-            font-size: 0.8rem;
-            margin-top: 12px;
-            box-shadow: 0 4px 12px rgba(0, 255, 65, 0.2);
-        }
-
-        /* SEÇÃO DE PACOTES PREMIUM */
-        .packages-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(25, 25, 25, 0.9));
-        }
-
-        .package-card {
-            background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #0a0a0a);
-            border: 3px solid transparent;
-            background-clip: padding-box;
-            border-radius: 25px;
-            padding: 35px 25px;
-            position: relative;
-            transition: all 0.6s ease;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .package-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--gradient-primary);
-            background-size: 400% 400%;
-            border-radius: 25px;
-            padding: 3px;
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask-composite: subtract;
-            animation: package-border-supreme 5s ease-in-out infinite;
-            z-index: -1;
-        }
-
-        @keyframes package-border-supreme {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .package-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            box-shadow: 
-                0 30px 60px rgba(0, 0, 0, 0.5),
-                0 0 25px rgba(0, 255, 65, 0.2);
-        }
-
-        .package-featured {
-            position: relative;
-        }
-
-        .package-featured::after {
-            content: '🔥 MAIS VENDIDO';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--gradient-danger);
-            color: #fff;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 900;
-            font-size: 0.8rem;
-            box-shadow: var(--shadow-red);
-            animation: featured-pulse 2s infinite;
-        }
-
-        @keyframes featured-pulse {
-            0%, 100% { transform: translateX(-50%) scale(1); }
-            50% { transform: translateX(-50%) scale(1.08); }
-        }
-
-        .package-discount {
-            position: absolute;
-            top: -12px;
-            right: -12px;
-            background: var(--gradient-gold);
-            color: #000;
-            padding: 10px 15px;
-            border-radius: 20px;
-            font-weight: 900;
-            font-size: 0.9rem;
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
-            animation: discount-bounce 3s infinite;
-            z-index: 10;
-        }
-
-        @keyframes discount-bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(0deg); }
-            10% { transform: translateY(-6px) rotate(-6deg); }
-            30% { transform: translateY(-4px) rotate(4deg); }
-        }
-
-        .package-image {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-            margin: 0 auto 20px;
-            filter: drop-shadow(0 0 8px rgba(0, 255, 65, 0.3));
-            transition: transform 0.5s ease;
-        }
-
-        .package-card:hover .package-image {
-            transform: scale(1.08) rotate(3deg);
-        }
-
-        .package-title {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 12px;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .package-subtitle {
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-secondary) !important;
-            margin-bottom: 25px;
-        }
-
-        .features-list {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-        }
-
-        .features-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s ease;
-            position: relative;
-            font-size: 0.9rem;
-        }
-
-        .features-list li:hover {
-            background: rgba(0, 255, 65, 0.08);
-            padding-left: 12px;
-            border-radius: 6px;
-        }
-
-        .features-list li:last-child {
-            border-bottom: none;
-        }
-
-        .features-list .bi-check-circle-fill {
-            margin-right: 10px;
-            animation: check-supreme 3s ease-in-out infinite;
-        }
-
-        @keyframes check-supreme {
-            0%, 100% { filter: drop-shadow(0 0 2px var(--accent-green)); }
-            50% { filter: drop-shadow(0 0 4px var(--accent-green)); }
-        }
-
-        .package-price {
-            text-align: center;
-            padding: 25px 15px;
-            background: linear-gradient(135deg, rgba(0, 255, 65, 0.08), rgba(0, 255, 65, 0.04));
-            border-radius: 15px;
-            border: 2px solid rgba(0, 255, 65, 0.25);
-            position: relative;
-            margin-bottom: 25px;
-        }
-
-        .package-price::before {
-            content: '💰';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--gradient-gold);
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            box-shadow: 0 6px 15px rgba(255, 215, 0, 0.4);
-        }
-
-        .price-old {
-            font-size: 1.5rem;
-            text-decoration: line-through;
-            color: var(--accent-red) !important;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .price-current {
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--accent-green) !important;
-            text-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
-            line-height: 1;
-        }
-
-        /* SISTEMA DE NOTIFICAÇÕES MODERNO - LADO ESQUERDO INFERIOR */
-        #modern-notifications {
-            position: fixed;
-            bottom: 80px;
-            left: 20px;
-            z-index: 9999;
-            max-width: 320px;
-            width: 100%;
-        }
-
-        .modern-notification {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.92) 0%, rgba(20, 20, 20, 0.92) 100%);
-            border: 1px solid rgba(0, 255, 65, 0.4);
-            border-radius: 12px;
-            padding: 12px 15px;
-            margin-bottom: 8px;
-            backdrop-filter: blur(15px);
-            box-shadow: 
-                0 6px 25px rgba(0, 0, 0, 0.7),
-                0 0 10px rgba(0, 255, 65, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.08);
-            transform: translateX(-120%);
-            opacity: 0;
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .modern-notification::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.06), transparent);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .modern-notification.show {
-            transform: translateX(0);
-            opacity: 1;
-        }
-
-        .modern-notification.hide {
-            transform: translateX(-120%);
-            opacity: 0;
-        }
-
-        .notification-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 6px;
-        }
-
-        .notification-avatar {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            color: #000;
-            font-weight: 700;
-            position: relative;
-            animation: pulse-avatar 2s infinite;
-        }
-
-        @keyframes pulse-avatar {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-        }
-
-        .notification-content {
-            flex: 1;
-        }
-
-        .notification-name {
-            font-weight: 700;
-            font-size: 13px;
-            color: var(--accent-green) !important;
-            margin-bottom: 1px;
-        }
-
-        .notification-action {
-            font-size: 11px;
-            color: var(--text-secondary) !important;
-            line-height: 1.2;
-        }
-
-        .notification-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 6px;
-            padding-top: 6px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .notification-time {
-            font-size: 9px;
-            color: #999 !important;
-            display: flex;
-            align-items: center;
-            gap: 3px;
-        }
-
-        .notification-value {
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--accent-green) !important;
-            background: rgba(0, 255, 65, 0.08);
-            padding: 2px 6px;
-            border-radius: 8px;
-        }
-
-        .notification-close {
-            position: absolute;
-            top: 6px;
-            right: 8px;
-            background: rgba(255, 255, 255, 0.08);
-            border: none;
-            color: #fff;
-            cursor: pointer;
-            font-size: 12px;
-            padding: 1px 5px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            opacity: 0.6;
-        }
-
-        .notification-close:hover {
-            background: rgba(255, 255, 255, 0.15);
-            opacity: 1;
-            transform: scale(1.08);
-        }
-
-        /* Contador de vendas moderno */
-        .sales-counter {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, var(--gradient-danger));
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 20px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 12px;
-            box-shadow: 0 6px 20px rgba(255, 71, 87, 0.3);
-            z-index: 9998;
-            animation: counter-bounce 3s infinite;
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(8px);
-        }
-
-        @keyframes counter-bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0) scale(1); }
-            10% { transform: translateY(-4px) scale(1.03); }
-            30% { transform: translateY(-2px) scale(1.01); }
-        }
-
-        .fire-icon {
-            animation: fire-dance 2s infinite alternate;
-            margin-right: 6px;
-            filter: drop-shadow(0 0 3px #ffa726);
-        }
-
-        @keyframes fire-dance {
-            0% { transform: scale(1) rotate(-1deg); }
-            100% { transform: scale(1.08) rotate(1deg); }
-        }
-
-        /* SEÇÃO DE GARANTIA PREMIUM */
-        .guarantee-section {
-            padding: 60px 0;
-            background: linear-gradient(135deg, rgba(0, 255, 65, 0.08), rgba(0, 255, 65, 0.04));
-            border: 2px solid rgba(0, 255, 65, 0.25);
-            border-radius: 25px;
-            margin: 50px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .guarantee-section::before {
-            content: '🛡️';
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 3.5rem;
-            background: var(--gradient-primary);
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 12px 30px rgba(0, 255, 65, 0.4);
-        }
-
-        .guarantee-title {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 25px;
-            color: var(--accent-green) !important;
-        }
-
-        .guarantee-text {
-            font-size: 1.2rem;
-            text-align: center;
-            line-height: 1.7;
-            color: var(--text-primary) !important;
-        }
-
-        /* FAQ PREMIUM */
-        .faq-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.95));
-        }
-
-        .accordion-item {
-            background: linear-gradient(135deg, #121212, #1a1a1a) !important;
-            border: 2px solid rgba(0, 255, 65, 0.25) !important;
-            border-radius: 15px !important;
-            margin-bottom: 15px !important;
-            overflow: hidden;
-        }
-
-        .accordion-button {
-            background: linear-gradient(135deg, #1a1a1a, #242424) !important;
-            color: var(--text-primary) !important;
-            border: none !important;
-            font-weight: 700;
-            font-size: 1rem;
-            padding: 20px 25px;
-            transition: all 0.4s ease;
-        }
-
-        .accordion-button:hover {
-            background: linear-gradient(135deg, #242424, #2a2a2a) !important;
-            box-shadow: 0 6px 20px rgba(0, 255, 65, 0.2);
-        }
-
-        .accordion-button:not(.collapsed) {
-            background: var(--gradient-primary) !important;
-            color: #000 !important;
-            box-shadow: 0 0 25px rgba(0, 255, 65, 0.4);
-        }
-
-        .accordion-body {
-            background: linear-gradient(135deg, #121212, #1a1a1a) !important;
-            color: var(--text-primary) !important;
-            border-top: 2px solid rgba(0, 255, 65, 0.25);
-            padding: 25px;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        /* RESPONSIVIDADE MOBILE OTIMIZADA */
-        @media(max-width: 768px) {
-            #banner-promocional {
-                padding: 12px 8px;
-            }
-            
-            .banner-main {
-                font-size: 1.4rem;
-                letter-spacing: 1px;
-            }
-            
-            .banner-date {
-                font-size: 1rem;
-            }
-            
-            .banner-highlight {
-                font-size: 0.9rem;
-                padding: 3px 10px;
-            }
-            
-            .hero {
-                padding: 50px 15px 50px;
-                min-height: auto;
-            }
-            
-            .hero-logo {
-                max-width: 110px;
-                margin-bottom: 20px;
-            }
-            
-            .hero-title {
-                font-size: 2.2rem;
-                margin-bottom: 20px;
-            }
-            
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-            
-            .social-proof-hero {
-                padding: 15px;
-                margin: 20px 0;
-            }
-            
-            .video-container {
-                margin: 25px auto;
-            }
-            
-            .video-wrapper {
-                max-width: 100%;
-                border-radius: 15px;
-            }
-            
-            .video-wrapper::before {
-                border-radius: 17px;
-            }
-            
-            .video-responsive {
-                border-radius: 15px;
-                padding-bottom: 56.25%; /* Mantém proporção 16:9 */
-            }
-            
-            .video-responsive iframe {
-                border-radius: 15px;
-            }
-            
-            .btn-cta-supreme {
-                font-size: 1.2rem;
-                padding: 18px 30px;
-                border-radius: 40px;
-            }
-            
-            .btn-cta-supreme::after {
-                font-size: 1.2rem;
-                right: 12px;
-            }
-            
-            #modern-notifications {
-                bottom: 70px;
-                left: 10px;
-                right: 10px;
-                max-width: calc(100% - 20px);
-            }
-            
-            .modern-notification {
-                padding: 10px 12px;
-                border-radius: 10px;
-                margin-bottom: 6px;
-            }
-            
-            .notification-avatar {
-                width: 28px;
-                height: 28px;
-                font-size: 12px;
-            }
-            
-            .notification-name {
-                font-size: 12px;
-            }
-            
-            .notification-action {
-                font-size: 10px;
-            }
-            
-            .notification-time {
-                font-size: 8px;
-            }
-            
-            .notification-value {
-                font-size: 10px;
-                padding: 2px 5px;
-            }
-            
-            .notification-close {
-                font-size: 11px;
-                padding: 1px 4px;
-                top: 5px;
-                right: 6px;
-            }
-            
-            .sales-counter {
-                bottom: 15px;
-                right: 15px;
-                font-size: 11px;
-                padding: 8px 12px;
-                border-radius: 18px;
-            }
-            
-            .fire-icon {
-                margin-right: 5px;
-            }
-            
-            .package-card {
-                margin-bottom: 30px;
-                padding: 30px 20px;
-            }
-            
-            .package-image {
-                width: 90px;
-                height: 90px;
-            }
-            
-            .package-title {
-                font-size: 2rem;
-            }
-            
-            .package-price {
-                padding: 20px 12px;
-            }
-            
-            .price-current {
-                font-size: 2.5rem;
-            }
-            
-            .guarantee-section {
-                padding: 50px 15px;
-                margin: 40px 0;
-            }
-            
-            .guarantee-section::before {
-                font-size: 3rem;
-                width: 60px;
-                height: 60px;
-                top: -20px;
-            }
-            
-            .guarantee-title {
-                font-size: 2.2rem;
-            }
-            
-            .guarantee-text {
-                font-size: 1.1rem;
-            }
-            
-            .benefit-card {
-                padding: 25px 20px;
-                margin-bottom: 25px;
-            }
-            
-            .benefit-icon {
-                width: 60px;
-                height: 60px;
-            }
-            
-            .benefit-title {
-                font-size: 1.4rem;
-            }
-            
-            .benefit-description {
-                font-size: 0.95rem;
-            }
-            
-            .testimonial-card {
-                padding: 20px;
-            }
-            
-            .accordion-button {
-                font-size: 0.95rem;
-                padding: 18px 20px;
-            }
-            
-            .accordion-body {
-                padding: 20px;
-                font-size: 0.95rem;
-            }
-        }
-
-        /* ANIMAÇÕES GLOBAIS */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-80px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .slide-in-left {
-            animation: slideInLeft 1s ease-out;
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(80px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .slide-in-right {
-            animation: slideInRight 1s ease-out;
-        }
-
-        /* LOADING SCREEN PREMIUM */
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--bg-primary), #1a1a1a);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 99999;
-            transition: opacity 0.8s ease;
-        }
-
-        .loading-screen.hide {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loading-spinner {
-            width: 70px;
-            height: 70px;
-            border: 3px solid rgba(0, 255, 65, 0.3);
-            border-top: 3px solid var(--accent-green);
-            border-radius: 50%;
-            animation: spin-supreme 1.2s linear infinite;
-            margin-bottom: 25px;
-        }
-
-        @keyframes spin-supreme {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .loading-text {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 1.8rem;
-            color: var(--accent-green);
-            text-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
-            animation: loading-pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes loading-pulse {
-            0%, 100% { opacity: 0.7; }
-            50% { opacity: 1; }
-        }
-
-        /* STICKY CTA BUTTON */
-        .sticky-cta {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 9996;
-            display: none;
-        }
-
-        .sticky-cta.show {
-            display: block;
-            animation: sticky-slide-up 0.5s ease-out;
-        }
-
-        @keyframes sticky-slide-up {
-            from {
-                transform: translateX(-50%) translateY(80px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(-50%) translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* PROGRESS BAR */
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 3px;
-            background: var(--gradient-primary);
-            z-index: 10001;
-            transition: width 0.3s ease;
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+            animation: scroll 20s linear infinite;
         }
     </style>
 </head>
-<body>
-    <!-- Loading Screen Premium -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-spinner"></div>
-        <div class="loading-text">CARREGANDO EXPERIÊNCIA PREMIUM...</div>
+<body class="bg-gradient-to-b from-gray-900 to-black">
+    <!-- Banner de Urgência -->
+    <div class="bg-gradient-to-r from-red-600 to-pink-600 text-white py-3 text-center font-bold animate-pulse">
+        ⚡ PROMOÇÃO RELÂMPAGO: Termina em <span id="timer">23:59:45</span> ⚡
     </div>
 
-    <!-- Progress Bar -->
-    <div class="progress-bar" id="progressBar"></div>
+  
 
-    <!-- Facebook Pixel noscript -->
-    <noscript>
-        <img height="1" width="1" style="display:none"
-          src="https://www.facebook.com/tr?id=3525977697696631&ev=PageView&noscript=1" />
-    </noscript>
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-gray-900 to-black text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <img src="https://static.lumi.new/03/03af9622056718bde17a728ece6c9024.webp" alt="NEW XITER Logo" class="h-12 w-auto">
+                <div>
+                    <h1 class="font-bold text-base">LOJA XITER</h1>
+                    <p class="text-gray-400 text-xs">✅ Painel XIT 100% Verificado</p>
+                </div>
+            </div>
+            <a href="#produtos" class="hover:bg-gray-500 text-white px-6 py-2 rounded-full transition-all hover:scale-105 shadow-md bg-[#1AC641] font-semibold text-center text-sm">
+                Comprar Agora
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-20 overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="bg-red-600 text-white inline-block px-6 py-2 rounded-full font-bold mb-6 animate-bounce">
+                    ⚠️ ÚLTIMA UNIDADES: Estoque Acabando!
+                </div>
+                <h2 class="text-5xl md:text-6xl mb-6 leading-tight font-bold text-center">
+                    Não Seja Mais Um <span class="text-red-400">PERDEDOR</span><br>
+                    <span class="text-gray-300">DOMINE</span> Com Painel XIT
+                </h2>
+                <p class="text-xl md:text-2xl mb-4 text-gray-300">
+                    Enquanto você joga com PAINEL amador que não fucionar, seus adversários estão usando nosso PAINEL XIT profissional e te DESTRUINDO.
+                </p>
+                <p class="text-lg mb-8 text-yellow-300 font-bold">
+                    ⚡ Painel XIT é 100% SEGURO - Entrega IMEDIATA por E-mail após pagamento!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                    <a href="#produtos" class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-md">
+                        🚀 Quero COMPRAR AGORA
+                    </a>
+                    <div class="text-sm text-gray-300">
+                        ✅ Garantia de 7 dias<br>
+                        ✅ Entrega Instantânea
+                    </div>
+                </div>
+                <div class="mt-8 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-300">2000+</div>
+                        <div class="text-sm text-gray-400">Players XITANDO</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-red-400">40%</div>
+                        <div class="text-sm text-gray-400">OFF Por Tempo Limitado</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-400">7 Dias</div>
+                        <div class="text-sm text-gray-400">Garantia Total</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VSL Section -->
+    <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-8">
+                    <div class="bg-red-600 text-white inline-block px-6 py-2 rounded-full font-bold mb-4 animate-pulse">
+                        🎥 ASSISTA AGORA - O VIDEO ABAIXO EXCLUSIVO
+                    </div>
+                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+                        Descubra Como <span class="text-green-400">XITAR 100%</span> Seus Adversários
+                    </h3>
+                    <p class="text-xl text-gray-400 mb-8">
+                        ⚠️ Este vídeo será REMOVIDO em breve! Não perca esta oportunidade única
+                    </p>
+                </div>
+                
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-green-500/30 bg-black">
+                    <div class="aspect-video">
+                        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/SD8KYZ8MRpQ?si=bepOaIfikElrl_1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <a href="#produtos" class="inline-block bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-12 py-5 rounded-full font-bold text-xl transition-all hover:scale-105 shadow-lg animate-pulse">
+                        🚀 QUERO MEU PAINEL XIT AGORA!
+                    </a>
+                    <p class="text-sm text-gray-400 mt-4">
+                        ✅ Entrega Imediata | ✅ Garantia de 7 Dias | ✅ 40% OFF Hoje
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Problemas -->
+    <section class="py-16 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-4xl font-bold text-center mb-4 text-white">
+                    Oque nosso <span class="text-red-500">PAINEL XIT</span> Tem que os outros não Tem:
+                </h3>
+                <p class="text-center text-gray-400 mb-12 text-lg">Sem um painel profissional, Sem a sensi ideal, você NUNCA vai conseguir aquele satisfatório</p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-red-500">
+                        <div class="flex items-start gap-4">
+                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <div>
+                                <p class="text-red-400 font-bold mb-2 line-through">Não tem sistema Avançado anti-Ban</p>
+                                <p class="text-green-400 font-semibold flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Sistema Avançado 100% anti-Ban/anti-BlackList 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-red-500">
+                        <div class="flex items-start gap-4">
+                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <div>
+                                <p class="text-red-400 font-bold mb-2 line-through">Sistema antigo desatualizado</p>
+                                <p class="text-green-400 font-semibold flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Nosso sistema é o mais atualizado e completo do mercado
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-red-500">
+                        <div class="flex items-start gap-4">
+                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <div>
+                                <p class="text-red-400 font-bold mb-2 line-through">Gruda peito não fucionar</p>
+                                <p class="text-green-400 font-semibold flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Painel que gruda Full capa sem passar da cabeça 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-red-500">
+                        <div class="flex items-start gap-4">
+                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            <div>
+                                <p class="text-red-400 font-bold mb-2 line-through">Não tem como disfaçar, não tem como jogar rank</p>
+                                <p class="text-green-400 font-semibold flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Painel 100% disfarçado oculto, podendo jogar ap, ou salas, rank, cs rank 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+    <!-- Diferenciais -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-12 text-white">O Que Você GANHA Comprando AGORA</h3>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-xl bg-gray-800 hover:bg-gray-750 transition-all">
+                    <div class="inline-block p-4 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-white">Entrega Instantânea</h4>
+                    <p class="text-gray-400 text-sm">Receba por E-MAIL em segundos após o pagamento</p>
+                </div>
+
+                <div class="text-center p-6 rounded-xl bg-gray-800 hover:bg-gray-750 transition-all">
+                    <div class="inline-block p-4 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-white">Garantia de 7 Dias</h4>
+                    <p class="text-gray-400 text-sm">100% do seu dinheiro de volta se não gostar</p>
+                </div>
+
+                <div class="text-center p-6 rounded-xl bg-gray-800 hover:bg-gray-750 transition-all">
+                    <div class="inline-block p-4 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-white">segurança total</h4>
+                    <p class="text-gray-400 text-sm">100% anti-ban anti-blacklist</p>
+                </div>
+
+                <div class="text-center p-6 rounded-xl bg-gray-800 hover:bg-gray-750 transition-all">
+                    <div class="inline-block p-4 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-white">Melhore Seu Rank</h4>
+                    <p class="text-gray-400 text-sm">subar na rank, jogue apostados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="inline-block bg-red-600 text-white px-6 py-2 rounded-full font-bold mb-4">
+                    ⏰ ESTOQUE LIMITADO - Restam Poucas Unidades!
+                </div>
+                <h3 class="text-4xl font-bold mb-4 text-white">Escolha Seu Pacote VIP abaixo</h3>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Não espere mais para ter a mira e a sensi dos sonhos. Cada minuto que você espera, mais pra traz você vai ficando.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Pacote Iniciante -->
+                <div class="bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-2 relative border border-gray-700">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://static.lumi.new/53/5334eaf11cc346f5434927d6ae073113.webp" alt="Pacote Iniciante" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">
+                            12 unidades restantes
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold mb-2 text-white">Pacote Iniciante</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Comece a sentir a diferença nos primeiros tiros</p>
+                        
+                        <div class="mb-4">
+                            <p class="text-xs text-gray-500 mb-2 font-semibold">📦 Você Recebe na hora no seu (E-mail):</p>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                 </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Painel basico iniciante
+                                  </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Mira automática 100% capa
+                                 </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                   Rastreamento de cabeça
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Sensi VIP Full capa
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Mira que gruda
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Disfarce 100% indetectável
+                                </li>
+                                 <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                   100% Anti-Ban/Anti-BlackList!
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-700">
+                            <div>
+                                <span class="text-3xl font-bold text-green-400">R$ 24,90</span>
+                                <p class="text-xs text-gray-400 mt-1">💳 Parcelado em até 4x</p>
+                            </div>
+                            <a href="https://go.perfectpay.com.br/PPU38CQ4R2K" target="_blank" class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-6 py-3 rounded-full font-semibold transition-all hover:scale-105 shadow-md flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                Comprar
+                            </a>
+                        </div>
+
+                        <div class="mt-4 pt-4 border-t border-gray-700">
+                            <p class="text-center text-gray-400 flex items-center justify-center gap-2 text-base">
+                                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                Garantia de 7 dias | Entrega imediata por e-mail
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pacote Premium -->
+                <div class="bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-2 relative border border-gray-700">
+                    <div class="absolute top-4 left-4 right-4 z-10">
+                        <div class="bg-gradient-to-r from-red-600 to-pink-600 text-white px-4 py-2 rounded-lg text-sm font-bold text-center shadow-md animate-pulse">
+                            🔥 79,78% OFF - ECONOMIZE R$ 118! | Apenas 3 unidades disponíveis
+                        </div>
+                    </div>
+                    <div class="absolute top-16 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10 shadow-md animate-bounce">
+                        ⭐ MAIS VENDIDO
+                    </div>
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://static.lumi.new/0d/0d584e9ed794f3e4a5baa4f0fe81d830.webp" alt="Pacote Premium" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold mb-2 text-white">Pacote Premium</h4>
+                        <p class="text-gray-400 mb-4 text-sm">Comece a sentir uma grande diferença nos primeiros tiros</p>
+                        
+                        <div class="mb-4">
+                            <p class="text-xs text-gray-500 mb-2 font-semibold">📦 Você Recebe na hora no seu (E-mail):</p>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Painel xit + Mod Menu FFH4X
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Rastreamento de cabeça Pro
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    2x Automática
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                     Aimbot Cabeça
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Aim Regedit
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    2x Aimbot
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    100% HeadShot
+                                </li>
+                                 <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                   Sensi VIP Full capa
+                                </li>
+                                 <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Disfarce 100% indetectável
+                                </li>
+                                 <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    100% Anti-Ban/Anti-BlackList!
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Nosso Whatsapp Oficial Como seu Suporte Pessoal
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-green-900/50 border border-green-500 rounded-lg p-3 mb-4">
+                            <p class="text-green-400 text-sm font-bold flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                                + BÔNUS: Função HS pescoço + Bypass + secredos dos Famosos!
+                            </p>
+                        </div>
+                        
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-700">
+                            <div>
+                                <div class="text-sm text-gray-500 line-through">R$ 147,90</div>
+                                <span class="text-3xl font-bold text-green-400">R$ 29,90</span>
+                                <p class="text-xs text-gray-400 mt-1">💳 Parcelado em até 5x</p>
+                            </div>
+                            <a href="https://go.perfectpay.com.br/PPU38CQ4R2I" target="_blank" class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-6 py-3 rounded-full font-semibold transition-all hover:scale-105 shadow-md flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                Comprar
+                            </a>
+                        </div>
+
+                        <div class="mt-4 pt-4 border-t border-gray-700">
+                            <p class="text-center text-gray-400 flex items-center justify-center gap-2 text-base">
+                                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                Garantia de 7 dias | Entrega imediata por e-mail
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-20 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-4">📱 Clientes Reais, Resultados Reais</h3>
+            <p class="text-center text-gray-400 mb-8 text-lg">Veja as conversas de quem já está usando o Painel VIP</p>
+            
+            <div class="relative max-w-6xl mx-auto">
+                <div class="hidden md:block">
+                    <div class="flex gap-6 animate-scroll">
+                        <img src="https://static.lumi.new/03/03769f331e6585d8dc4aa12039d77b68.webp" alt="Feedback 1" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
+                        <img src="https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp" alt="Feedback 2" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
+                        <img src="https://static.lumi.new/ef/ef18c64cf0c5d23efd41237beadb341e.webp" alt="Feedback 3" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
+                        <img src="https://static.lumi.new/83/8353ac944cba71a88419ac25276ae161.webp" alt="Feedback 4" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
+                        <img src="https://static.lumi.new/18/1854e98d1e0bbac7e82991bce2fe2f1d.webp" alt="Feedback 5" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
+                        <!-- Duplicado para loop -->
+                        <img src="https://static.lumi.new/03/03769f331e6585d8dc4aa12039d77b68.webp" alt="Feedback 1" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
+                        <img src="https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp" alt="Feedback 2" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
+                        <img src="https://static.lumi.new/ef/ef18c64cf0c5d23efd41237beadb341e.webp" alt="Feedback 3" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
+                        <img src="https://static.lumi.new/83/8353ac944cba71a88419ac25276ae161.webp" alt="Feedback 4" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
+                        <img src="https://static.lumi.new/18/1854e98d1e0bbac7e82991bce2fe2f1d.webp" alt="Feedback 5" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
+                    </div>
+                </div>
+
+                <!-- Mobile Carousel -->
+                <div class="md:hidden relative">
+                    <div id="carousel" class="flex overflow-x-hidden scroll-smooth snap-x snap-mandatory">
+                        <div class="w-full flex-shrink-0 snap-center px-4">
+                            <img src="https://static.lumi.new/03/03769f331e6585d8dc4aa12039d77b68.webp" alt="Feedback 1" class="w-full h-auto max-h-[600px] object-contain rounded-2xl shadow-2xl border-2 border-green-500/30 mx-auto">
+                        </div>
+                        <div class="w-full flex-shrink-0 snap-center px-4">
+                            <img src="https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp" alt="Feedback 2" class="w-full h-auto max-h-[600px] object-contain rounded-2xl shadow-2xl border-2 border-green-500/30 mx-auto">
+                        </div>
+                        <div class="w-full flex-shrink-0 snap-center px-4">
+                            <img src="https://static.lumi.new/ef/ef18c64cf0c5d23efd41237beadb341e.webp" alt="Feedback 3" class="w-full h-auto max-h-[600px] object-contain rounded-2xl shadow-2xl border-2 border-green-500/30 mx-auto">
+                        </div>
+                        <div class="w-full flex-shrink-0 snap-center px-4">
+                            <img src="https://static.lumi.new/83/8353ac944cba71a88419ac25276ae161.webp" alt="Feedback 4" class="w-full h-auto max-h-[600px] object-contain rounded-2xl shadow-2xl border-2 border-green-500/30 mx-auto">
+                        </div>
+                        <div class="w-full flex-shrink-0 snap-center px-4">
+                            <img src="https://static.lumi.new/18/1854e98d1e0bbac7e82991bce2fe2f1d.webp" alt="Feedback 5" class="w-full h-auto max-h-[600px] object-contain rounded-2xl shadow-2xl border-2 border-green-500/30 mx-auto">
+                        </div>
+                    </div>
+                    
+                    <button onclick="prevImage()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full transition-all z-10">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    
+                    <button onclick="nextImage()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full transition-all z-10">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                    
+                    <div class="flex justify-center gap-2 mt-6" id="indicators">
+                        <button onclick="goToImage(0)" class="w-3 h-3 rounded-full bg-green-500 w-8"></button>
+                        <button onclick="goToImage(1)" class="w-3 h-3 rounded-full bg-gray-600"></button>
+                        <button onclick="goToImage(2)" class="w-3 h-3 rounded-full bg-gray-600"></button>
+                        <button onclick="goToImage(3)" class="w-3 h-3 rounded-full bg-gray-600"></button>
+                        <button onclick="goToImage(4)" class="w-3 h-3 rounded-full bg-gray-600"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-2xl font-bold text-yellow-300 mb-2">
+                    💬 Todas essas mensagens são REAIS - Clientes satisfeitos todo dia!
+                </p>
+                <p class="text-gray-400">
+                    Não fique de fora! Garanta seu XIT agora e seja o próximo a comemorar
+                </p>
+            </div>
+        </div>
+    </section>
+
+                
+                  <div class="mt-12 bg-gradient-to-r from-red-900 to-orange-900 p-8 rounded-2xl text-center border-2 border-red-500">
+                    <svg class="w-16 h-16 text-yellow-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h4 class="text-2xl font-bold text-white mb-3">
+                        ⚠️ ATENÇÃO: Você Vai Se Arrepender se Não Agir AGORA
+                    </h4>
+                    <p class="text-gray-200 text-lg">
+                        Centenas de gamers já perderam a última promoção e estão PAGANDO MAIS CARO ou continuando a PERDER partidas. 
+                        <span class="block mt-2 text-yellow-300 font-bold">Não seja você o próximo a se arrepender!</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <!-- Banner Promocional Avançado com Data Real -->
-    <div id="banner-promocional">
-        <div class="banner-content">
-            <div class="banner-date" id="bannerDate">HOJE • 15 DE JANEIRO DE 2025</div>
-            <div class="banner-main">🚨 ÚLTIMA CHANCE! 87% OFF DESCONTO ESPECIAL DE NATAL! 🎅</div>
-            <div class="banner-highlight">APROVEITE ANTES QUE SEJA TARDE DEMAIS!</div>
-        </div>
-    </div>
 
-    <!-- Contador de Vendas Moderno -->
-    <div class="sales-counter">
-        <i class="fas fa-fire fire-icon"></i> <span id="sales-count">524</span> vendas nos últimos 7 dias!
-    </div>
-
-    <!-- Sistema de Notificações Moderno - Lado Esquerdo -->
-    <div id="modern-notifications"></div>
-
-    <!-- Sticky CTA Button -->
-    <div class="sticky-cta" id="stickyCta">
-        <a href="#packages" class="btn-cta-supreme">🚀 QUERO MEU XIT AGORA!</a>
-    </div>
-
-    <!-- Hero Section Premium -->
-    <section class="hero fade-in-up">
-        <div class="container text-center">
-            <img src="imgs/logo.png" alt="New Sensi Logo" class="hero-logo" />
-            <h1 class="hero-title">
-                <span>O</span> <span class="neon-green">MELHOR PAINEL XIT</span><br> <span class="neon-gold">NA SUA MÃO!</span> <br>
-               <span> Não Seja Mais Um <span class="neon-red">PERDEDOR!</span>
-                <br>
-                <span class="hero-subtitle">TRANSFORME-SE EM UM <span class="neon-gold">PRO PLAYER</span> AINDA HOJE!</span>
-            </h1>
-            
-            <div class="social-proof-hero">
-                <h3 class="mb-3">🔥 <span id="contador-pessoas" class="neon-green">2.847</span> JOGADORES ATIVOS AGORA! 🔥</h3>
-                <p class="fs-5">
-                    ⚡ <strong>+15.000 players</strong> já xita no Free Fire com nosso painel xit<br>
-                    🎯 <strong>Mira 100% automática</strong> <br>• <strong>2x automática</strong> <br>• <strong>Aimbot cabeça</strong><br>
-                    🛡️ <strong>100% Anti-Ban Anti-Black</strong><br> • <strong>Suporte no zap 24/7</strong><br> • <strong>Garantia total de 7 dias</strong>
+    <!-- Garantia Blindada -->
+    <section class="py-16 bg-gradient-to-r from-green-900 to-emerald-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <svg class="w-20 h-20 text-green-400 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                <h3 class="text-4xl font-bold text-white mb-4">
+                    Garantia Blindada de 7 Dias
+                </h3>
+                <p class="text-xl text-green-100 mb-6">
+                    Se você não conseguir dar full capa é melhorar sua taxa de (HS) CAPA em 98,9% no Free Fire, devolvemos 100% do seu dinheiro de volta. SEM PERGUNTAS!
                 </p>
-            </div>
-            
-            <div class="video-container">
-                <div class="video-wrapper">
-                    <div class="video-responsive">
-                        <iframe src="https://www.youtube.com/embed/SD8KYZ8MRpQ?si=-qPLQXDLwGlh2HY0" title="Demonstração Painel XIT Premium" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-            
-            <a href="#packages" class="btn-cta-supreme">🚀 QUERO MEU XIT AGORA!</a>
-            
-            <div class="mt-4">
-                <p class="fs-6" style="color: var(--text-secondary);">
-                    ⭐ Avaliação: 4.9/5 estrelas (baseado em +5.000 avaliações)<br>
-                    🏆 Eleito o melhor painel XIT do Brasil por 3 anos consecutivos
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Benefícios Premium -->
-    <section class="benefits-section slide-in-left">
-        <div class="container">
-            <h2 class="display-3 text-center mb-5">
-                Por que <span class="neon-green">15.000+ players</span> escolheram nosso painel?
-            </h2>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="benefit-card text-center">
-                        <img src="imgs/trofeu.png" class="benefit-icon" alt="Vitórias Garantidas">
-                        <h3 class="benefit-title">🏆 Vitórias Garantidas</h3>
-                        <p class="benefit-description">
-                            Mira automática com precisão cirúrgica de 99.8%. Sistema de rastreamento avançado que garante headshot em 100% dos confrontos. Nunca mais perca uma partida!
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="benefit-card text-center">
-                        <img src="imgs/controle.png" class="benefit-icon" alt="Nível Profissional">
-                        <h3 class="benefit-title">🎮 Nível Profissional</h3>
-                        <p class="benefit-description">
-                            Transforme-se em um PRO instantaneamente! 2x automática + UMP automática + Aimbot cabeça + No Recoil. Seus inimigos não terão chance contra você.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="benefit-card text-center">
-                        <img src="imgs/velocimetro.png" class="benefit-icon" alt="Performance Extrema">
-                        <h3 class="benefit-title">⚡ Performance Extrema</h3>
-                        <p class="benefit-description">
-                            Zero lag, máxima fluidez! Sistema otimizado que funciona perfeitamente mesmo nas partidas mais intensas do ranqueado. Performance de outro nível!
-                        </p>
-                    </div>
+                <div class="bg-white/10 backdrop-blur p-6 rounded-xl">
+                    <p class="text-green-200 text-lg">
+                        Você não tem NADA a perder e TUDO a ganhar. Compre agora, teste por 7 dias, 
+                        e se não gostar (o que é IMPOSSÍVEL), devolvemos cada centavo.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Depoimentos Premium -->
-    <section class="testimonials-section slide-in-right">
-        <div class="container">
-            <h2 class="display-3 text-center mb-5">
-                🌟 O que nossos <span class="neon-green">CLIENTES VIP</span> estão falando
-            </h2>
-            <p class="fs-5 text-center mb-5" style="color: var(--text-secondary);">
-                +15.000 depoimentos reais de jogadores que transformaram sua gameplay!
-            </p>
-            
-            <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="d-flex justify-content-center">
-                            <div class="testimonial-card text-center">
-                                <img src="imgs/pvsocial (6).jpg" alt="Depoimento Verificado" class="testimonial-image img-fluid">
-                                <div class="mt-3">
-                                    <div class="mb-3">
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                    </div>
-                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="testimonial-card text-center">
-                                <img src="imgs/pvsocial (2).jpg" alt="Depoimento Verificado" class="testimonial-image img-fluid">
-                                <div class="mt-3">
-                                    <div class="mb-3">
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                    </div>
-                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="testimonial-card text-center">
-                                <img src="imgs/prova social 03.PNG" alt="Depoimento Verificado" class="testimonial-image img-fluid">
-                                <div class="mt-3">
-                                    <div class="mb-3">
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                    </div>
-                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="testimonial-card text-center">
-                                <img src="imgs/pvsocial (4).jpg" alt="Depoimento Verificado" class="testimonial-image img-fluid">
-                                <div class="mt-3">
-                                    <div class="mb-3">
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                    </div>
-                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="testimonial-card text-center">
-                                <img src="imgs/pvsocial (5).jpg" alt="Depoimento Verificado" class="testimonial-image img-fluid">
-                                <div class="mt-3">
-                                    <div class="mb-3">
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                    </div>
-                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="testimonial-card text-center">
-                                <img src="imgs/prova social 04.PNG" alt="Depoimento Verificado" class="testimonial-image img-fluid">
-                                <div class="mt-3">
-                                    <div class="mb-3">
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                    </div>
-                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="testimonial-card text-center">
-                                <img src="imgs/prova social 01.jpg" alt="Depoimento Verificado" class="testimonial-image img-fluid">
-                                <div class="mt-3">
-                                    <div class="mb-3">
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                    </div>
-                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="testimonial-card text-center">
-                                <img src="imgs/prova social 02.JPG" alt="Depoimento Verificado" class="testimonial-image img-fluid">
-                                <div class="mt-3">
-                                    <div class="mb-3">
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                    </div>
-                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center">
-                            <div class="testimonial-card text-center">
-                                <img src="imgs/prova social 05.jpg" alt="Depoimento Verificado" class="testimonial-image img-fluid">
-                                <div class="mt-3">
-                                    <div class="mb-3">
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                        <i class="bi bi-star-fill star-green"></i>
-                                    </div>
-                                    <span class="verified-badge">✅ CLIENTE VERIFICADO</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-4xl font-bold mb-4 text-white">🔥 Garanta Seu Pacote VIP AGORA</h3>
+                    <p class="text-red-400 text-xl font-bold mb-2">⚡ Entrega IMEDIATA por E-mail após confirmação do pagamento!</p>
+                    <p class="text-gray-400 text-lg">Escolha seu pacote acima e receba instantaneamente</p>
                 </div>
                 
-                <!-- Controles do Carousel -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                    <span class="visually-hidden">Próximo</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Pacotes Premium -->
-    <section id="packages" class="packages-section fade-in-up">
-        <div class="container">
-            <h2 class="display-3 text-center mb-3">
-                🚀 ESCOLHA SEU <span class="neon-gold">PACOTE VIP</span>
-            </h2>
-            
-            <div class="row g-4 justify-content-center">
-                <!-- Pacote Android -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="package-card package-featured">
-                        <div class="package-discount">-87%</div>
-                        <div class="text-center">
-                            <img src="imgs/android.png" class="package-image" alt="Painel XIT Android" />
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-br from-gray-800 to-black text-white p-8 rounded-2xl border border-gray-700">
+                        <h4 class="text-2xl font-bold mb-6">Informações de Contato</h4>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <svg class="w-6 h-6 text-gray-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <div>
+                                    <p class="font-semibold mb-1">E-mail de Suporte</p>
+                                    <p class="text-gray-300">newsensi@oficial.com.br</p>
+                                    <p class="text-xs text-green-300 mt-2">✅ Entrega do produto por este e-mail</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <svg class="w-6 h-6 text-gray-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                <div>
+                                    <p class="font-semibold mb-1">Entrega</p>
+                                    <p class="text-gray-300">100% DIGITAL - Instantânea por e-mail</p>
+                                </div>
+                            </div>
                         </div>
                         
-                        <h2 class="package-title">XIT ANDROID</h2>
-                        <p class="package-subtitle">O painel mais vendido para Android!</p>
-                        
-                        <ul class="features-list">
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Painel Mod Menu FFH4X</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Função HS pescoço + Bypass avançado</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Mira automática 100% capa</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> 2x Automática ultra precisa</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Rastreamento de cabeça inteligente</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> UMP AUTOMÁTICA profissional</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Aimbot Cabeça premium</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Sistema de disfarce 100% indetectável</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Proteção anti-ban definitiva</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Sensi VIP Full capa exclusiva</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Aim Regedit otimizado</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> 2x Aimbot avançado</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> HeadShot garantido</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Mira que gruda no alvo</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Tutorial completo de instalação</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Instalação rápida em 3 minutos</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BAN garantido</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BLACKLIST</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Suporte VIP 24/7 no WhatsApp</li>
-                        </ul>
-                        
-                        <div class="package-price">
-                            <div class="price-old">De R$ 147,90</div>
-                            <div class="price-current">R$ 19,90</div>
-                            <p class="mt-2" style="color: var(--text-secondary);">Por apenas</p>
+                        <div class="mt-8 pt-8 border-t border-gray-700 space-y-4">
+                            <div class="bg-green-900/50 p-4 rounded-lg border border-green-500">
+                                <p class="text-sm text-green-300 font-bold flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                    Garantia de 7 dias após a compra
+                                </p>
+                            </div>
+                            <div class="bg-red-900/50 p-4 rounded-lg border border-red-500">
+                                <p class="text-sm text-red-300 font-bold">
+                                    🔥 OFERTA: Pacote Premium com 79,78% OFF - Economize R$ 118!
+                                </p>
+                            </div>
                         </div>
-                        
-                        <div class="text-center">
-                            <a href="https://go.perfectpay.com.br/PPU38CPTN1D" class="btn-cta-supreme">
-                                <i class="bi bi-cart-fill me-2"></i> COMPRAR AGORA COM 87% OFF!
+                    </div>
+                    
+                    <div class="flex items-center justify-center">
+                        <div class="text-center p-8 bg-gradient-to-br from-gray-800 to-black rounded-2xl border border-gray-700">
+                            <svg class="w-16 h-16 text-green-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <h4 class="text-2xl font-bold text-white mb-4">Pronto para Começar?</h4>
+                            <p class="text-gray-400 mb-6">Escolha seu pacote acima e clique em "Comprar" para ser redirecionado ao seu PAINEL XIT</p>
+                            <a href="#produtos" class="inline-block bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-8 py-3 rounded-full font-bold transition-all hover:scale-105 shadow-md">
+                                Finalizar Compra e Receber AGORA
                             </a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Pacote iPhone -->
-                <div class="col-lg-4 col-md-6">
-                        <div class="package-card package-featured">
-                        <div class="package-discount">-87%</div>
-                        <div class="text-center">
-                            <img src="imgs/iphone.png" class="package-image" alt="Painel XIT iPhone" />
-                        </div>
-                        
-                        <h2 class="package-title">XIT IPHONE</h2>
-                        <p class="package-subtitle">O painel mais vendido para iOS!</p>
-                        
-                        <ul class="features-list">
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Painel Mod Menu FFH4X iOS</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Função HS pescoço + Bypass iOS</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Mira automática 100% capa</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> 2x Automática 100% FULL VERMELHO!</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Rastreamento de cabeça PRO</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> UMP AUTOMÁTICA FULL CAPA!</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Aimbot Cabeça iOS</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Sistema anti-detecção iOS</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Proteção contra banimento</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Sensi VIP iOS otimizada</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Aim Regedit para iPhone</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> 2x Aimbot iOS</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> HeadShot automático</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Mira 2X 100% CAPA iOS</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Tutorial específico para iOS</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Instalação simplificada</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BAN iOS</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BLACKLIST</li>
-                            <li><i class="bi bi-check-circle-fill star-green"></i> Suporte VIP 24/7 no WhatsApp</li>
-                        </ul>
-                        
-                        <div class="package-price">
-                            <div class="price-old">De R$ 147,90</div>
-                            <div class="price-current">R$ 19,90</div>
-                            <p class="mt-2" style="color: var(--text-secondary);">Por apenas</p>
-                        </div>
-                        
-                        <div class="text-center">
-                            <a href="https://go.perfectpay.com.br/PPU38CPTMME" class="btn-cta-supreme">
-                                <i class="bi bi-cart-fill me-2"></i> COMPRAR AGORA COM 87% OFF!
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-             
-            
-            <div class="text-center mt-5">
-                <p class="fs-5" style="color: var(--accent-red);">
-                    ⚠️ <strong>ATENÇÃO:</strong> Preços promocionais só até esse NATAL!<br>
-                    depois os preços voltam ao normal.
-                </p>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Garantia Premium -->
-    <section class="container">
-        <div class="guarantee-section">
-            <h3 class="guarantee-title">🛡️ GARANTIA TOTAL DE SATISFAÇÃO</h3>
-            <p class="guarantee-text">
-                Você tem <strong>7 dias completos</strong> para testar nosso painel sem compromisso.<br>
-                Se não ficar 100% satisfeito, devolvemos <strong>TODO seu dinheiro</strong> sem perguntas!<br>
-                <strong>Compre com total segurança e confiança!</strong><br>
-                Sua satisfação é nossa maior prioridade! 🏆
-            </p>
-        </div>
-    </section>
-
-    <!-- FAQ Premium -->
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="display-3 text-center mb-5">
-                ❓ Perguntas <span class="neon-green">Frequentes</span>
-            </h2>
-            
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            🛡️ COMO FUNCIONA A GARANTIA DE 7 DIAS?
-                        </button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Você tem <strong>7 dias completos</strong> para testar nosso painel com total tranquilidade. 
-                            Se por qualquer motivo não ficar 100% satisfeito, devolvemos <strong>TODO seu dinheiro</strong> 
-                            sem perguntas e sem burocracia. É nossa garantia de qualidade!
-                        </div>
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 to-black text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-xl font-bold">New sensi</h3>
                     </div>
+                    <p class="text-gray-400 text-sm">
+                        Produtos de alta qualidade para gamers que querem dominar no Free Fire em 2026. Entrega imediata apos o pagamento no e-mail, as compras nesse site são 100% seguras.
+                    </p>
                 </div>
                 
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                            📧 COMO RECEBO O PAINEL APÓS A COMPRA?
-                        </button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            <strong>Recebimento instantâneo!</strong> Assim que seu pagamento for confirmado, você receberá 
-                            automaticamente por email (Gmail) o link para download e todas as instruções. 
-                            <strong>Pagou, recebeu na hora!</strong> Sem espera, sem complicação.
-                        </div>
-                    </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-400">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#produtos" class="hover:text-white transition-colors">Pacotes</a></li>
+                        <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
+                    </ul>
                 </div>
                 
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                            🔧 COMO FUNCIONA A INSTALAÇÃO?
-                        </button>
-                    </h2>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            <strong>Super simples!</strong> A instalação leva menos de <strong>5 minutos</strong> e funciona 
-                            em qualquer dispositivo. Você recebe um tutorial completo passo a passo com vídeos explicativos. 
-                            Além disso, nosso suporte VIP está disponível <strong>24 horas por dia</strong> para ajudar 
-                            na instalação se precisar!
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                            🛡️ É REALMENTE 100% ANTI-BAN?
-                        </button>
-                    </h2>
-                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            <strong>SIM, 100% garantido!</strong> Nosso painel possui sistema de disfarce avançado e 
-                            proteção anti-detecção. Mais de <strong>15.000 jogadores</strong> usam diariamente sem 
-                            nenhum problema. Temos <strong>3 anos de mercado</strong> com zero casos de banimento. 
-                            Sua conta está totalmente protegida!
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                            💬 COMO FUNCIONA O SUPORTE?
-                        </button>
-                    </h2>
-                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Nosso suporte VIP funciona <strong>24 horas por dia, 7 dias por semana</strong> via WhatsApp. 
-                            Equipe especializada pronta para ajudar com instalação, configuração e qualquer dúvida. 
-                            <strong>Atendimento exclusivo para clientes</strong> com resposta em até 5 minutos!
-                        </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-400">Formas de Pagamento</h4>
+                    <p class="text-gray-400 text-sm mb-4">
+                        💳 Cartão de Crédito em até 12x<br>
+                        💰 PIX (5% de desconto)<br>
+                        🏦 Boleto Bancário
+                    </p>
+                    <div class="bg-green-900/30 p-3 rounded-lg border border-green-500">
+                        <p class="text-xs text-green-300 font-bold">
+                            ✅ Garantia de 7 dias | Produto Digital
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer Premium -->
-    <footer class="py-5" style="background: linear-gradient(135deg, var(--bg-primary), #1a1a1a);">
-        <div class="container text-center">
-            <h4 class="mb-3" style="color: var(--accent-green);">New Sensi - 1º do Brasil</h4>
-            <p style="color: var(--text-secondary);">
-                &copy; 2025 New Sensi. Todos os direitos reservados.<br>
-                Instagram Oficial: <a href="https://instagram.com/new.sensi.ff" target="_blank" style="color: var(--accent-green);">@new.sensi.ff</a><br>
-                Desenvolvido com 💚 pela equipe New Sensi
-            </p>
-            <div class="mt-4">
-                <p style="color: var(--text-secondary); font-size: 0.9rem;">
-                    🏆 Eleito o melhor painel XIT do Brasil<br>
-                    ⭐ +15.000 clientes satisfeitos<br>
-                    🛡️ 3 anos de experiência no mercado
-                </p>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2024 New sensi ff. Todos os direitos reservados.</p>
+                <p class="mt-2">🎮 Level Up Your Game! 🎮</p>
             </div>
         </div>
     </footer>
 
-    <!-- Meta Pixel Code -->
     <script>
-        !function(f,b,e,v,n,t,s) {
-            if(f.fbq) return; n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
-            n.queue=[]; t=b.createElement(e); t.async=!0;
-            t.src=v; s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)
-        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '3525977697696631');
-        fbq('track', 'PageView');
-    </script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- SISTEMA JAVASCRIPT AVANÇADO -->
-    <script>
-        // Sistema de Loading Premium
-        class LoadingSystem {
-            constructor() {
-                this.loadingScreen = document.getElementById('loadingScreen');
-                this.init();
-            }
-            
-            init() {
-                setTimeout(() => {
-                    this.hideLoading();
-                }, 1800);
-            }
-            
-            hideLoading() {
-                this.loadingScreen.classList.add('hide');
-                setTimeout(() => {
-                    this.loadingScreen.style.display = 'none';
-                }, 800);
-            }
-        }
-        
-        // Sistema de Data Real no Banner
-        class RealDateBanner {
-            constructor() {
-                this.bannerDate = document.getElementById('bannerDate');
-                this.init();
-            }
-            
-            init() {
-                this.updateDate();
-                // Atualizar a cada minuto
-                setInterval(() => this.updateDate(), 60000);
-            }
-            
-            updateDate() {
-                const now = new Date();
-                const months = [
-                    'JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO',
-                    'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'
-                ];
-                
-                const day = now.getDate();
-                const month = months[now.getMonth()];
-                const year = now.getFullYear();
-                
-                if (this.bannerDate) {
-                    this.bannerDate.textContent = `HOJE • ${day} DE ${month} DE ${year}`;
-                }
-            }
-        }
-        
-        // Sistema de Progresso de Scroll
-        class ScrollProgress {
-            constructor() {
-                this.progressBar = document.getElementById('progressBar');
-                this.init();
-            }
-            
-            init() {
-                window.addEventListener('scroll', () => {
-                    const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                    this.progressBar.style.width = `${Math.min(scrolled, 100)}%`;
-                });
-            }
-        }
-        
-        // Sistema de CTA Sticky
-        class StickyCTA {
-            constructor() {
-                this.stickyCta = document.getElementById('stickyCta');
-                this.init();
-            }
-            
-            init() {
-                let lastScrollY = window.scrollY;
-                
-                window.addEventListener('scroll', () => {
-                    const currentScrollY = window.scrollY;
-                    const scrollingDown = currentScrollY > lastScrollY;
-                    const scrolledEnough = currentScrollY > 800;
-                    
-                    if (scrolledEnough && scrollingDown) {
-                        this.stickyCta.classList.add('show');
-                    } else {
-                        this.stickyCta.classList.remove('show');
-                    }
-                    
-                    lastScrollY = currentScrollY;
-                });
-            }
-        }
-        
-        // SISTEMA DE NOTIFICAÇÕES MODERNO - LADO ESQUERDO
-        class ModernNotificationSystem {
-            constructor() {
-                this.container = document.getElementById('modern-notifications');
-                this.salesCounter = document.getElementById('sales-count');
-                this.userCounter = document.getElementById('contador-pessoas');
-                
-                this.currentSales = 524;
-                this.currentUsers = 2847;
-                this.activeNotifications = [];
-                this.maxNotifications = 3;
-                
-                // Base de dados ultra realista
-                this.customerDatabase = [
-                    { name: 'João S.', location: 'São Paulo - SP', initial: 'J' },
-                    { name: 'Maria O.', location: 'Rio de Janeiro - RJ', initial: 'M' },
-                    { name: 'Pedro C.', location: 'Belo Horizonte - MG', initial: 'P' },
-                    { name: 'Ana L.', location: 'Salvador - BA', initial: 'A' },
-                    { name: 'Carlos R.', location: 'Brasília - DF', initial: 'C' },
-                    { name: 'Lucia F.', location: 'Fortaleza - CE', initial: 'L' },
-                    { name: 'Rafael L.', location: 'Recife - PE', initial: 'R' },
-                    { name: 'Camila R.', location: 'Porto Alegre - RS', initial: 'C' },
-                    { name: 'Bruno A.', location: 'Curitiba - PR', initial: 'B' },
-                    { name: 'Fernanda D.', location: 'Goiânia - GO', initial: 'F' },
-                    { name: 'Gabriel T.', location: 'Manaus - AM', initial: 'G' },
-                    { name: 'Juliana P.', location: 'Belém - PA', initial: 'J' },
-                    { name: 'Ricardo N.', location: 'Vitória - ES', initial: 'R' },
-                    { name: 'Patrícia G.', location: 'Florianópolis - SC', initial: 'P' },
-                    { name: 'Leonardo B.', location: 'Natal - RN', initial: 'L' },
-                    { name: 'Thiago O.', location: 'Campo Grande - MS', initial: 'T' },
-                    { name: 'Isabela C.', location: 'João Pessoa - PB', initial: 'I' },
-                    { name: 'Rodrigo S.', location: 'Teresina - PI', initial: 'R' },
-                    { name: 'Amanda S.', location: 'Aracaju - SE', initial: 'A' },
-                    { name: 'Felipe R.', location: 'Maceió - AL', initial: 'F' }
-                ];
-                
-                this.products = [
-                    { name: 'Painel XIT Android', price: 'R$ 19,90', popularity: 40 },
-                    { name: 'Painel XIT iPhone', price: 'R$ 19,90', popularity: 35 },
-                    { name: 'Painel CLT VIP', price: 'R$ 29,90', popularity: 25 }
-                ];
-                
-                this.actions = [
-                    'acabou de comprar o',
-                    'adquiriu o',
-                    'confirmou a compra do',
-                    'finalizou a compra do',
-                    'garantiu o'
-                ];
-                
-                this.init();
-            }
-            
-            init() {
-                this.startCounterUpdates();
-                this.startNotificationFlow();
-            }
-            
-            startCounterUpdates() {
-                // Contador de usuários ativos
-                setInterval(() => {
-                    const increase = Math.floor(Math.random() * 6) + 2;
-                    this.currentUsers += increase;
-                    if (this.userCounter) {
-                        this.userCounter.textContent = this.currentUsers.toLocaleString();
-                    }
-                }, Math.random() * 5000 + 4000);
-                
-                // Contador de vendas
-                setInterval(() => {
-                    const increase = Math.floor(Math.random() * 3) + 1;
-                    this.currentSales += increase;
-                    if (this.salesCounter) {
-                        this.salesCounter.textContent = this.currentSales;
-                    }
-                }, Math.random() * 10000 + 7000);
-            }
-            
-            startNotificationFlow() {
-                this.showPurchaseNotification();
-                
-                const nextNotification = Math.random() * 7000 + 5000;
-                setTimeout(() => this.startNotificationFlow(), nextNotification);
-            }
-            
-            showPurchaseNotification() {
-                if (this.activeNotifications.length >= this.maxNotifications) {
-                    this.removeOldestNotification();
-                }
-                
-                const customer = this.getRandomCustomer();
-                const product = this.getRandomProduct();
-                const action = this.actions[Math.floor(Math.random() * this.actions.length)];
-                const timeAgo = Math.floor(Math.random() * 40) + 2;
-                const id = Date.now();
-                
-                const notification = this.createNotificationElement({
-                    customer,
-                    product,
-                    action,
-                    timeAgo,
-                    id
-                });
-                
-                this.showNotification(notification);
-            }
-            
-            createNotificationElement(data) {
-                const wrapper = document.createElement('div');
-                wrapper.className = 'modern-notification';
-                wrapper.dataset.id = data.id;
-                
-                wrapper.innerHTML = `
-                    <button class="notification-close" onclick="modernNotificationSystem.removeNotification(${data.id})">&times;</button>
-                    <div class="notification-header">
-                        <div class="notification-avatar">${data.customer.initial}</div>
-                        <div class="notification-content">
-                            <div class="notification-name">${data.customer.name}</div>
-                            <div class="notification-action">${data.action} ${data.product.name}</div>
-                        </div>
-                    </div>
-                    <div class="notification-footer">
-                        <div class="notification-time">
-                            <i class="fas fa-clock"></i> ${data.timeAgo} min atrás
-                        </div>
-                        <div class="notification-value">${data.product.price}</div>
-                    </div>
-                `;
-                
-                return wrapper;
-            }
-            
-            showNotification(notification) {
-                this.container.appendChild(notification);
-                this.activeNotifications.push(notification);
-                
-                // Animação de entrada
-                setTimeout(() => {
-                    notification.classList.add('show');
-                }, 100);
-                
-                // Auto-remover após 5 segundos
-                setTimeout(() => {
-                    this.removeNotification(parseInt(notification.dataset.id));
-                }, 5000);
-            }
-            
-            removeNotification(id) {
-                const notification = document.querySelector(`[data-id="${id}"]`);
-                if (notification) {
-                    notification.classList.add('hide');
-                    
-                    setTimeout(() => {
-                        if (notification.parentNode) {
-                            notification.parentNode.removeChild(notification);
-                        }
-                        this.activeNotifications = this.activeNotifications.filter(n => 
-                            parseInt(n.dataset.id) !== id
-                        );
-                    }, 500);
-                }
-            }
-            
-            removeOldestNotification() {
-                if (this.activeNotifications.length > 0) {
-                    const oldest = this.activeNotifications[0];
-                    this.removeNotification(parseInt(oldest.dataset.id));
-                }
-            }
-            
-            getRandomCustomer() {
-                return this.customerDatabase[Math.floor(Math.random() * this.customerDatabase.length)];
-            }
-            
-            getRandomProduct() {
-                const rand = Math.random() * 100;
-                let cumulative = 0;
-                
-                for (const product of this.products) {
-                    cumulative += product.popularity;
-                    if (rand <= cumulative) {
-                        return product;
-                    }
-                }
-                
-                return this.products[0];
-            }
-        }
-        
-        // Sistema de Scroll Suave
-        class SmoothScroll {
-            constructor() {
-                this.init();
-            }
-            
-            init() {
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const target = document.querySelector(this.getAttribute('href'));
-                        if (target) {
-                            target.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }
-                    });
-                });
-            }
-        }
-        
-        // Sistema de Animações de Entrada
-        class AnimationSystem {
-            constructor() {
-                this.observer = null;
-                this.init();
-            }
-            
-            init() {
-                this.observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }
-                    });
-                }, {
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -40px 0px'
-                });
-                
-                document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right').forEach(el => {
-                    el.style.opacity = '0';
-                    el.style.transform = 'translateY(40px)';
-                    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-                    this.observer.observe(el);
-                });
-            }
-        }
-        
-        // Inicializar todos os sistemas
-        let loadingSystem;
-        let realDateBanner;
-        let scrollProgress;
-        let stickyCTA;
-        let modernNotificationSystem;
-        let smoothScroll;
-        let animationSystem;
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            loadingSystem = new LoadingSystem();
-            realDateBanner = new RealDateBanner();
-            scrollProgress = new ScrollProgress();
-            stickyCTA = new StickyCTA();
-            modernNotificationSystem = new ModernNotificationSystem();
-            smoothScroll = new SmoothScroll();
-            animationSystem = new AnimationSystem();
-            
-            // Tracking de eventos
-            document.querySelectorAll('.btn-cta-supreme').forEach(button => {
-                button.addEventListener('click', function() {
-                    if (typeof fbq !== 'undefined') {
-                        fbq('track', 'AddToCart');
-                    }
-                    if (typeof ttq !== 'undefined') {
-                        ttq.track('ClickButton');
-                    }
-                });
-            });
-            
-            // Tracking de scroll depth
-            let maxScroll = 0;
-            window.addEventListener('scroll', function() {
-                const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
-                if (scrollPercent > maxScroll) {
-                    maxScroll = scrollPercent;
-                    if (maxScroll % 25 === 0 && typeof fbq !== 'undefined') {
-                        fbq('track', 'PageView', {scroll_depth: maxScroll});
-                    }
-                }
-            });
-        });
-        
-        // Prevenção de saída da página
-        document.addEventListener('mouseleave', function(e) {
-            if (e.clientY <= 0) {
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'ExitIntent');
-                }
-            }
-        });
-        
-        // Detecção de tempo na página
-        let timeOnPage = 0;
+        // Timer
+        let timeLeft = { hours: 23, minutes: 59, seconds: 45 };
         setInterval(() => {
-            timeOnPage += 1;
-            if (timeOnPage === 30 && typeof fbq !== 'undefined') {
-                fbq('track', 'TimeOnPage', {seconds: 30});
+            if (timeLeft.seconds > 0) {
+                timeLeft.seconds--;
+            } else if (timeLeft.minutes > 0) {
+                timeLeft.minutes--;
+                timeLeft.seconds = 59;
+            } else if (timeLeft.hours > 0) {
+                timeLeft.hours--;
+                timeLeft.minutes = 59;
+                timeLeft.seconds = 59;
             }
-            if (timeOnPage === 60 && typeof fbq !== 'undefined') {
-                fbq('track', 'TimeOnPage', {seconds: 60});
-            }
+            document.getElementById("timer").textContent = 
+                String(timeLeft.hours).padStart(2, "0") + ":" +
+                String(timeLeft.minutes).padStart(2, "0") + ":" +
+                String(timeLeft.seconds).padStart(2, "0");
         }, 1000);
+
+        // Carousel Mobile
+        let currentIndex = 0;
+        const totalImages = 5;
+
+        function updateCarousel() {
+            const carousel = document.getElementById("carousel");
+            const indicators = document.getElementById("indicators").children;
+            
+            carousel.scrollTo({
+                left: currentIndex * carousel.offsetWidth,
+                behavior: "smooth"
+            });
+
+            for (let i = 0; i < indicators.length; i++) {
+                if (i === currentIndex) {
+                    indicators[i].className = "w-3 h-3 rounded-full bg-green-500 w-8";
+                } else {
+                    indicators[i].className = "w-3 h-3 rounded-full bg-gray-600";
+                }
+            }
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        }
+
+        function goToImage(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        // Contador de Pessoas Online (varia aleatoriamente)
+        let onlineCount = 258;
+        let stockCount = 12;
+        
+        setInterval(() => {
+            // Pessoas online variam entre 240 e 280
+            const change = Math.random() > 0.5 ? 1 : -1;
+            onlineCount += change;
+            
+            if (onlineCount > 280) onlineCount = 280;
+            if (onlineCount < 240) onlineCount = 240;
+            
+            document.getElementById("onlineCount").textContent = onlineCount;
+            
+            // Estoque diminui ocasionalmente (5% de chance a cada 3 segundos)
+            if (Math.random() < 0.05 && stockCount > 3) {
+                stockCount--;
+                document.getElementById("stockCount").textContent = stockCount;
+            }
+        }, 3000); // Atualiza a cada 3 segundos
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
