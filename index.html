@@ -14,15 +14,67 @@
         .animate-scroll {
             animation: scroll 20s linear infinite;
         }
+        
+        /* Animações para notificações de venda */
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideOutDown {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+        }
+        
+        .notification-enter {
+            animation: slideInUp 0.5s ease-out forwards;
+        }
+        
+        .notification-exit {
+            animation: slideOutDown 0.5s ease-in forwards;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-b from-gray-900 to-black">
+    <!-- Notificação de Vendas (Popup) -->
+    <div id="saleNotification" class="fixed bottom-6 left-6 z-[100] hidden">
+        <div class="bg-gradient-to-r from-green-900 to-emerald-900 text-white px-6 py-4 rounded-lg shadow-2xl border-2 border-green-500 max-w-sm">
+            <div class="flex items-start gap-4">
+                <div class="bg-green-500 rounded-full p-2 flex-shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <div class="flex-1">
+                    <p class="font-bold text-sm mb-1">🎉 Nova Compra Confirmada!</p>
+                    <p class="text-sm text-green-100" id="notificationText"></p>
+                    <p class="text-xs text-green-300 mt-1" id="notificationTime"></p>
+                </div>
+                <button onclick="closeNotification()" class="text-green-300 hover:text-white">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Banner de Urgência -->
     <div class="bg-gradient-to-r from-red-600 to-pink-600 text-white py-3 text-center font-bold animate-pulse">
         ⚡ PROMOÇÃO RELÂMPAGO: Termina em <span id="timer">23:59:45</span> ⚡
     </div>
-
-  
 
     <!-- Header -->
     <header class="bg-gradient-to-r from-gray-900 to-black text-white shadow-md sticky top-0 z-50">
@@ -181,6 +233,19 @@
                     </div>
                 </div>
 
+                <div class="mt-12 bg-gradient-to-r from-red-900 to-orange-900 p-8 rounded-2xl text-center border-2 border-red-500">
+                    <svg class="w-16 h-16 text-yellow-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h4 class="text-2xl font-bold text-white mb-3">
+                        ⚠️ ATENÇÃO: Você Vai Se Arrepender se Não Agir AGORA
+                    </h4>
+                    <p class="text-gray-200 text-lg">
+                        Centenas de gamers já perderam a última promoção e estão PAGANDO MAIS CARO ou continuando a PERDER partidas. 
+                        <span class="block mt-2 text-yellow-300 font-bold">Não seja você o próximo a se arrepender!</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Diferenciais -->
     <section class="py-16 bg-gray-900">
@@ -252,18 +317,17 @@
                         <div class="mb-4">
                             <p class="text-xs text-gray-500 mb-2 font-semibold">📦 Você Recebe na hora no seu (E-mail):</p>
                             <ul class="text-sm text-gray-300 space-y-1">
-                                 </li>
                                 <li class="flex items-center gap-2">
                                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                  Painel basico iniciante
-                                  </li>
+                                    Painel basico iniciante
+                                </li>
                                 <li class="flex items-center gap-2">
                                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                  Mira automática 100% capa
-                                 </li>
+                                    Mira automática 100% capa
+                                </li>
                                 <li class="flex items-center gap-2">
                                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                   Rastreamento de cabeça
+                                    Rastreamento de cabeça
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
@@ -275,11 +339,11 @@
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                  Disfarce 100% indetectável
+                                    Disfarce 100% indetectável
                                 </li>
-                                 <li class="flex items-center gap-2">
+                                <li class="flex items-center gap-2">
                                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                   100% Anti-Ban/Anti-BlackList!
+                                    100% Anti-Ban/Anti-BlackList!
                                 </li>
                             </ul>
                         </div>
@@ -339,7 +403,7 @@
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                     Aimbot Cabeça
+                                    Aimbot Cabeça
                                 </li>
                                 <li class="flex items-center gap-2">
                                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
@@ -353,15 +417,15 @@
                                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                     100% HeadShot
                                 </li>
-                                 <li class="flex items-center gap-2">
+                                <li class="flex items-center gap-2">
                                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                   Sensi VIP Full capa
+                                    Sensi VIP Full capa
                                 </li>
-                                 <li class="flex items-center gap-2">
+                                <li class="flex items-center gap-2">
                                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                     Disfarce 100% indetectável
                                 </li>
-                                 <li class="flex items-center gap-2">
+                                <li class="flex items-center gap-2">
                                     <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                     100% Anti-Ban/Anti-BlackList!
                                 </li>
@@ -474,22 +538,6 @@
             </div>
         </div>
     </section>
-
-                
-                  <div class="mt-12 bg-gradient-to-r from-red-900 to-orange-900 p-8 rounded-2xl text-center border-2 border-red-500">
-                    <svg class="w-16 h-16 text-yellow-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                    <h4 class="text-2xl font-bold text-white mb-3">
-                        ⚠️ ATENÇÃO: Você Vai Se Arrepender se Não Agir AGORA
-                    </h4>
-                    <p class="text-gray-200 text-lg">
-                        Centenas de gamers já perderam a última promoção e estão PAGANDO MAIS CARO ou continuando a PERDER partidas. 
-                        <span class="block mt-2 text-yellow-300 font-bold">Não seja você o próximo a se arrepender!</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
 
     <!-- Garantia Blindada -->
     <section class="py-16 bg-gradient-to-r from-green-900 to-emerald-900">
@@ -676,26 +724,73 @@
             updateCarousel();
         }
 
-        // Contador de Pessoas Online (varia aleatoriamente)
-        let onlineCount = 258;
-        let stockCount = 12;
+        // Sistema de Notificações de Vendas (Social Proof)
+        const customerNames = [
+            "Gabriel", "Lucas", "Matheus", "Rafael", "Felipe", "Bruno", "Thiago",
+            "Pedro", "João", "Gustavo", "Vitor", "Diego", "Henrique", "Carlos",
+            "Ricardo", "Fernando", "Marcelo", "André", "Rodrigo", "Leandro"
+        ];
         
+        const packages = [
+            { name: "Pacote Iniciante", emoji: "🎮" },
+            { name: "Pacote Premium", emoji: "⭐" }
+        ];
+        
+        const cities = [
+            "São Paulo-SP", "Rio de Janeiro-RJ", "Belo Horizonte-MG", "Curitiba-PR",
+            "Porto Alegre-RS", "Salvador-BA", "Brasília-DF", "Fortaleza-CE",
+            "Recife-PE", "Manaus-AM", "Goiânia-GO", "Belém-PA", "Campinas-SP",
+            "São Luís-MA", "Natal-RN", "Maceió-AL", "João Pessoa-PB", "Vitória-ES"
+        ];
+
+        function getRandomItem(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+
+        function getRandomMinutes() {
+            return Math.floor(Math.random() * 25) + 1; // 1-25 minutos
+        }
+
+        function showSaleNotification() {
+            const notification = document.getElementById("saleNotification");
+            const name = getRandomItem(customerNames);
+            const pkg = getRandomItem(packages);
+            const city = getRandomItem(cities);
+            const minutes = getRandomMinutes();
+            
+            document.getElementById("notificationText").textContent = 
+                `${name} de ${city} comprou ${pkg.emoji} ${pkg.name}`;
+            document.getElementById("notificationTime").textContent = 
+                `⏰ Há ${minutes} minuto${minutes > 1 ? 's' : ''} atrás`;
+            
+            notification.classList.remove("hidden");
+            notification.classList.remove("notification-exit");
+            notification.classList.add("notification-enter");
+            
+            // Auto-close após 5 segundos
+            setTimeout(() => {
+                closeNotification();
+            }, 5000);
+        }
+
+        function closeNotification() {
+            const notification = document.getElementById("saleNotification");
+            notification.classList.remove("notification-enter");
+            notification.classList.add("notification-exit");
+            
+            setTimeout(() => {
+                notification.classList.add("hidden");
+            }, 500);
+        }
+
+        // Mostrar primeira notificação após 3 segundos
+        setTimeout(showSaleNotification, 3000);
+        
+        // Mostrar notificações a cada 8-15 segundos
         setInterval(() => {
-            // Pessoas online variam entre 240 e 280
-            const change = Math.random() > 0.5 ? 1 : -1;
-            onlineCount += change;
-            
-            if (onlineCount > 280) onlineCount = 280;
-            if (onlineCount < 240) onlineCount = 240;
-            
-            document.getElementById("onlineCount").textContent = onlineCount;
-            
-            // Estoque diminui ocasionalmente (5% de chance a cada 3 segundos)
-            if (Math.random() < 0.05 && stockCount > 3) {
-                stockCount--;
-                document.getElementById("stockCount").textContent = stockCount;
-            }
-        }, 3000); // Atualiza a cada 3 segundos
+            const randomDelay = Math.random() * 7000 + 8000; // 8-15 segundos
+            setTimeout(showSaleNotification, randomDelay);
+        }, 15000);
     </script>
 </body>
 </html>
