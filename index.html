@@ -176,6 +176,166 @@
         </div>
     </section>
 
+    <!-- Vídeos de Demonstração do Painel XIT -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="bg-gradient-to-r from-green-600 to-emerald-600 text-white inline-block px-6 py-2 rounded-full font-bold mb-4 animate-pulse">
+                        🎮 VEJA O PAINEL EM AÇÃO
+                    </div>
+                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+                        Assista Como o <span class="text-green-400">Painel XIT</span> Funciona na Prática
+                    </h3>
+                    <p class="text-xl text-gray-400 mb-4">
+                        🔥 Veja jogadores reais usando o Painel XIT e DOMINANDO no Free Fire
+                    </p>
+                </div>
+                
+                <div class="relative">
+                    <!-- Carrossel de Vídeos -->
+                    <div id="videoCarousel" class="overflow-hidden rounded-2xl border-4 border-green-500/30 bg-black">
+                        <div class="flex transition-transform duration-500 ease-in-out" id="videoSlider">
+                            <!-- Vídeo 1 -->
+                            <div class="w-full flex-shrink-0">
+                                <video controls class="w-full h-auto" preload="metadata">
+                                    <source src="https://static.lumi.new/material/4c/4c3920ee0c20a50ab3845329fc251574.mp4" type="video/mp4">
+                                    Seu navegador não suporta vídeos.
+                                </video>
+                            </div>
+                            
+                            <!-- Vídeo 2 -->
+                            <div class="w-full flex-shrink-0">
+                                <video controls class="w-full h-auto" preload="metadata">
+                                    <source src="https://static.lumi.new/material/f9/f97370f9db3d76f4161f881ee70015fe.mp4" type="video/mp4">
+                                    Seu navegador não suporta vídeos.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botões de Navegação -->
+                    <button onclick="prevVideo()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black text-white p-4 rounded-full transition-all z-10 hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    
+                    <button onclick="nextVideo()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black text-white p-4 rounded-full transition-all z-10 hover:scale-110">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                    
+                    <!-- Indicadores -->
+                    <div class="flex justify-center gap-3 mt-6" id="videoIndicators">
+                        <button onclick="goToVideo(0)" class="w-3 h-3 rounded-full bg-green-500 transition-all duration-300"></button>
+                        <button onclick="goToVideo(1)" class="w-3 h-3 rounded-full bg-gray-600 transition-all duration-300"></button>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-gradient-to-r from-gray-800 to-gray-900 p-6 rounded-2xl text-center border-2 border-green-500/50">
+                    <p class="text-xl font-bold text-white mb-2 flex items-center justify-center gap-3">
+                        <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        É ISSO QUE VOCÊ VAI CONSEGUIR!
+                    </p>
+                    <p class="text-gray-300">
+                        Mira perfeita, movimento suave e HEAD SHOT direto - tudo isso pode ser SEU em minutos!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vídeo Antes/Depois do Painel XIT -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="bg-gradient-to-r from-red-600 to-pink-600 text-white inline-block px-6 py-2 rounded-full font-bold mb-4 animate-pulse">
+                        ⚡ COMPARAÇÃO REAL
+                    </div>
+                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+                        🎯 <span class="text-red-400">ANTES</span> vs <span class="text-green-400">DEPOIS</span> do Painel XIT
+                    </h3>
+                    <p class="text-xl text-gray-400 mb-4">
+                        Veja a diferença REAL no gameplay - Sem Painel vs Com Painel XIT
+                    </p>
+                </div>
+                
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-green-500/50 bg-black">
+                    <div class="aspect-video">
+                        <video controls class="w-full h-full object-contain" preload="metadata">
+                            <source src="https://static.lumi.new/material/8a/8a1544c39dad86cff1a97f6d5576e949.mov" type="video/quicktime">
+                            <source src="https://static.lumi.new/material/8a/8a1544c39dad86cff1a97f6d5576e949.mov" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="mt-12 grid md:grid-cols-2 gap-6">
+                    <!-- ANTES -->
+                    <div class="bg-gradient-to-br from-red-900/30 to-red-950/30 p-6 rounded-2xl border-2 border-red-500/50 text-center">
+                        <div class="text-6xl mb-4">❌</div>
+                        <h4 class="text-2xl font-bold text-red-400 mb-3">ANTES (Sem Painel)</h4>
+                        <ul class="text-gray-300 space-y-2 text-left">
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                Mira tremendo e imprecisa
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                Difícil acertar HEAD SHOT
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                Perde confrontos diretos
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                Sensibilidade descontrolada
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- DEPOIS -->
+                    <div class="bg-gradient-to-br from-green-900/30 to-emerald-950/30 p-6 rounded-2xl border-2 border-green-500 text-center animate-pulse">
+                        <div class="text-6xl mb-4">✅</div>
+                        <h4 class="text-2xl font-bold text-green-400 mb-3">DEPOIS (Com Painel XIT)</h4>
+                        <ul class="text-gray-300 space-y-2 text-left">
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Mira automática 100% CAPA
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                HEAD SHOT direto e fácil
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Domina todos os confrontos
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Sensi VIP perfeita e suave
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-gradient-to-r from-yellow-900 to-orange-900 p-8 rounded-2xl text-center border-2 border-yellow-500">
+                    <svg class="w-16 h-16 text-yellow-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <h4 class="text-3xl font-bold text-white mb-3">
+                        🔥 ESSA É A DIFERENÇA QUE O PAINEL XIT FAZ!
+                    </h4>
+                    <p class="text-yellow-100 text-lg mb-6">
+                        Não é magia, não é sorte - é tecnologia PROFISSIONAL ao seu alcance!<br>
+                        <span class="font-bold text-yellow-300">De PERDEDOR para CAMPEÃO em minutos!</span>
+                    </p>
+                    <a href="#produtos" class="inline-block bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-10 py-4 rounded-full font-bold text-xl transition-all hover:scale-105 shadow-lg">
+                        🚀 QUERO ESSA TRANSFORMAÇÃO AGORA!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Como Funciona (3 Passos Simples) -->
     <section class="py-20 bg-black">
         <div class="container mx-auto px-4">
@@ -1010,6 +1170,46 @@
                 faq.classList.add('hidden');
                 icon.style.transform = 'rotate(0deg)';
             }
+        }
+
+        // Carrossel de Vídeos
+        let currentVideoIndex = 0;
+        const totalVideos = 2;
+
+        function updateVideoCarousel() {
+            const slider = document.getElementById("videoSlider");
+            const indicators = document.getElementById("videoIndicators").children;
+            const videos = slider.querySelectorAll("video");
+            
+            // Para todos os vídeos
+            videos.forEach(video => video.pause());
+            
+            // Move o carrossel
+            slider.style.transform = `translateX(-${currentVideoIndex * 100}%)`;
+            
+            // Atualiza indicadores
+            for (let i = 0; i < indicators.length; i++) {
+                if (i === currentVideoIndex) {
+                    indicators[i].className = "w-8 h-3 rounded-full bg-green-500 transition-all duration-300";
+                } else {
+                    indicators[i].className = "w-3 h-3 rounded-full bg-gray-600 transition-all duration-300";
+                }
+            }
+        }
+
+        function nextVideo() {
+            currentVideoIndex = (currentVideoIndex + 1) % totalVideos;
+            updateVideoCarousel();
+        }
+
+        function prevVideo() {
+            currentVideoIndex = (currentVideoIndex - 1 + totalVideos) % totalVideos;
+            updateVideoCarousel();
+        }
+
+        function goToVideo(index) {
+            currentVideoIndex = index;
+            updateVideoCarousel();
         }
     </script>
 </body>
