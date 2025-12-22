@@ -3,22 +3,760 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOJA XITER - Painel XIT 100% Verificado</title>
-    <meta name="description" content="Painel XIT profissional para Free Fire - Transforme seu gameplay agora!">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Painel XIT - New Sensi FF 2025</title>
+    <link rel="icon" href="https://lumi.new/lumi.ing/logo.png" />
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '3525977697696631');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+    
     <style>
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-scroll {
-            animation: scroll 20s linear infinite;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        /* Animações para notificações de venda */
-        @keyframes slideInUp {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Banner de Desconto */
+        .discount-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(to right, #dc2626, #ef4444, #dc2626);
+            color: white;
+            text-align: center;
+            padding: 8px 4px;
+            font-size: 14px;
+            font-weight: 900;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .discount-banner .highlight {
+            color: #fbbf24;
+        }
+        
+        @media (min-width: 640px) {
+            .discount-banner {
+                font-size: 18px;
+            }
+        }
+        
+        /* Faixa Animada */
+        .marquee-section {
+            background: #000;
+            border-top: 1px solid rgba(220, 38, 38, 0.5);
+            border-bottom: 1px solid rgba(220, 38, 38, 0.5);
+            padding: 45px 0 12px 0;
+            overflow: hidden;
+        }
+        
+        .marquee-content {
+            white-space: nowrap;
+            animation: scroll-left 20s linear infinite;
+            display: inline-block;
+        }
+        
+        .marquee-content span {
+            font-size: 24px;
+            font-weight: 900;
+            color: #dc2626;
+        }
+        
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        /* Notificações de Compra */
+        .notification {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 1000;
+            background: linear-gradient(to right, rgba(17, 24, 39, 0.95), rgba(0, 0, 0, 0.95));
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(220, 38, 38, 0.5);
+            border-radius: 12px;
+            padding: 16px;
+            max-width: 350px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            animation: slide-in 0.5s ease-out;
+            display: none;
+        }
+        
+        .notification.show {
+            display: flex;
+        }
+        
+        .notification-icon {
+            width: 40px;
+            height: 40px;
+            background: #dc2626;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+        
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(127, 29, 29, 0.2), #000, #000);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1000px;
+            text-align: center;
+        }
+        
+        .hero-logo {
+            width: 160px;
+            margin: 0 auto 32px;
+            animation: pulse 2s infinite;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-logo {
+                width: 224px;
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+        
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 48px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero h1 {
+                font-size: 64px;
+            }
+        }
+        
+        .hero h1 .red {
+            color: #dc2626;
+        }
+        
+        .hero p {
+            font-size: 12px;
+            color: #d1d5db;
+            max-width: 768px;
+            margin: 0 auto 48px;
+        }
+        
+        @media (min-width: 768px) {
+            .hero p {
+                font-size: 20px;
+            }
+        }
+        
+        .video-container {
+            margin: 48px 0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid rgba(220, 38, 38, 0.3);
+            max-width: 896px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .video-container iframe,
+        .video-container video {
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: block;
+        }
+        
+        .cta-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            margin-top: 32px;
+        }
+        
+        @media (min-width: 640px) {
+            .cta-section {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        
+        .btn-primary {
+            background: #dc2626;
+            color: white;
+            font-weight: bold;
+            padding: 16px 48px;
+            border-radius: 8px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.5);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background: #b91c1c;
+            transform: scale(1.05);
+        }
+        
+        .cta-info {
+            font-size: 14px;
+            color: #9ca3af;
+        }
+        
+        .bounce-arrow {
+            position: absolute;
+            bottom: 40px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Sections */
+        .section {
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 48px;
+            }
+        }
+        
+        .section-subtitle {
+            color: #9ca3af;
+            text-align: center;
+            margin-bottom: 64px;
+            font-size: 18px;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 24px;
+        }
+        
+        @media (min-width: 768px) {
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .card {
+            background: linear-gradient(to bottom right, rgba(127, 29, 29, 0.2), #111827);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(127, 29, 29, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .card:hover {
+            border-color: rgba(220, 38, 38, 0.5);
+            transform: scale(1.05);
+        }
+        
+        .card-icon {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f87171;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        
+        .card-description {
+            color: #9ca3af;
+            text-align: center;
+        }
+        
+        /* Soluções Section */
+        .solution-card {
+            background: linear-gradient(to right, #111827, #000);
+            padding: 32px;
+            border-radius: 16px;
+            border: 2px solid rgba(220, 38, 38, 0.3);
+            transition: all 0.3s;
+            margin-bottom: 24px;
+        }
+        
+        .solution-card:hover {
+            border-color: #dc2626;
+        }
+        
+        .solution-content {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        
+        @media (min-width: 768px) {
+            .solution-content {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        
+        .solution-text {
+            flex: 1;
+        }
+        
+        .solution-number {
+            font-size: 64px;
+            font-weight: 900;
+            color: #dc2626;
+            opacity: 0.2;
+        }
+        
+        @media (min-width: 768px) {
+            .solution-number {
+                font-size: 96px;
+            }
+        }
+        
+        .solution-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 16px 0;
+        }
+        
+        @media (min-width: 768px) {
+            .solution-title {
+                font-size: 32px;
+            }
+        }
+        
+        .solution-description {
+            color: #9ca3af;
+            font-size: 18px;
+        }
+        
+        /* Ofertas Section */
+        .plan-card {
+            position: relative;
+            background: linear-gradient(to bottom, #111827, #000);
+            padding: 32px;
+            border-radius: 16px;
+            border: 2px solid #1f2937;
+            transition: all 0.3s;
+        }
+        
+        .plan-card.popular {
+            border-color: #dc2626;
+            transform: scale(1.05);
+        }
+        
+        .plan-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #dc2626;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .plan-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .plan-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ef4444;
+            margin-bottom: 16px;
+        }
+        
+        .plan-price {
+            font-size: 48px;
+            font-weight: 900;
+        }
+        
+        .plan-period {
+            color: #9ca3af;
+            margin-top: 8px;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        
+        .plan-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: #d1d5db;
+        }
+        
+        .plan-features li::before {
+            content: "✓";
+            color: #dc2626;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .btn-plan {
+            width: 100%;
+            padding: 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        
+        .btn-plan.primary {
+            background: #dc2626;
+            color: white;
+            box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.5);
+        }
+        
+        .btn-plan.primary:hover {
+            background: #b91c1c;
+        }
+        
+        .btn-plan.secondary {
+            background: #1f2937;
+            color: white;
+        }
+        
+        .btn-plan.secondary:hover {
+            background: #374151;
+        }
+        
+        /* Feedback Carousel */
+        .carousel-container {
+            position: relative;
+            max-width: 672px;
+            margin: 0 auto;
+        }
+        
+        .carousel-image {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid rgba(220, 38, 38, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .carousel-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            backdrop-filter: blur(4px);
+        }
+        
+        .carousel-btn:hover {
+            background: #dc2626;
+        }
+        
+        .carousel-btn.prev {
+            left: 8px;
+        }
+        
+        .carousel-btn.next {
+            right: 8px;
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 24px;
+        }
+        
+        .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4b5563;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            padding: 0;
+        }
+        
+        .indicator.active {
+            background: #dc2626;
+            width: 32px;
+        }
+        
+        /* Garantia Section */
+        .guarantee-section {
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, #000, #111827);
+        }
+        
+        .guarantee-container {
+            max-width: 896px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .guarantee-image {
+            width: 192px;
+            margin: 0 auto 32px;
+        }
+        
+        @media (min-width: 768px) {
+            .guarantee-image {
+                width: 256px;
+            }
+        }
+        
+        .guarantee-box {
+            background: linear-gradient(to bottom right, rgba(127, 29, 29, 0.2), #111827);
+            padding: 32px;
+            border-radius: 16px;
+            border: 2px solid rgba(220, 38, 38, 0.3);
+            margin-bottom: 32px;
+        }
+        
+        .guarantee-text {
+            font-size: 20px;
+            color: #d1d5db;
+            line-height: 1.8;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: linear-gradient(to right, #111827, #000);
+            border-radius: 12px;
+            border: 1px solid #1f2937;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            border-color: rgba(220, 38, 38, 0.5);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 24px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(17, 24, 39, 0.5);
+        }
+        
+        .faq-question span {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .faq-bullet {
+            color: #dc2626;
+        }
+        
+        .faq-arrow {
+            width: 24px;
+            height: 24px;
+            color: #dc2626;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+        
+        .faq-arrow.rotate {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-answer.show {
+            max-height: 500px;
+        }
+        
+        .faq-answer-content {
+            padding: 0 24px 24px 24px;
+            color: #9ca3af;
+            line-height: 1.8;
+            padding-left: 48px;
+        }
+        
+        /* Pop-up Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .modal-overlay.show {
+            display: flex;
+        }
+        
+        @keyframes fadeIn {
             from {
-                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .modal-content {
+            background: linear-gradient(to bottom, #111827, #000);
+            border: 2px solid #dc2626;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            animation: slideUp 0.3s ease-out;
+            box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.5);
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
                 opacity: 0;
             }
             to {
@@ -27,1069 +765,880 @@
             }
         }
         
-        @keyframes slideOutDown {
-            from {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateY(100%);
-                opacity: 0;
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: transparent;
+            border: none;
+            color: #9ca3af;
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .modal-close:hover {
+            color: #dc2626;
+        }
+        
+        .modal-badge {
+            background: #dc2626;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .modal-title {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            color: white;
+        }
+        
+        .modal-subtitle {
+            color: #9ca3af;
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+        
+        .modal-price-container {
+            background: rgba(220, 38, 38, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .modal-old-price {
+            font-size: 20px;
+            color: #9ca3af;
+            text-decoration: line-through;
+            margin-bottom: 8px;
+        }
+        
+        .modal-new-price {
+            font-size: 48px;
+            font-weight: 900;
+            color: #dc2626;
+            margin-bottom: 8px;
+        }
+        
+        .modal-discount-text {
+            color: #fbbf24;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .modal-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .modal-btn {
+            width: 100%;
+            padding: 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        
+        .modal-btn-primary {
+            background: #dc2626;
+            color: white;
+            box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.5);
+        }
+        
+        .modal-btn-primary:hover {
+            background: #b91c1c;
+            transform: scale(1.05);
+        }
+        
+        .modal-btn-secondary {
+            background: transparent;
+            color: #9ca3af;
+            border: 1px solid #374151;
+        }
+        
+        .modal-btn-secondary:hover {
+            background: #1f2937;
+            color: white;
+        }
+        
+        .plan-buyers-tag {
+            text-align: center;
+            margin-top: 12px;
+            padding: 8px;
+            background: rgba(220, 38, 38, 0.1);
+            border-radius: 8px;
+            font-size: 14px;
+            color: #d1d5db;
+        }
+        
+        .plan-buyers-tag strong {
+            color: #dc2626;
+            font-size: 16px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 48px 20px;
+            background: #000;
+            border-top: 1px solid #111827;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-main {
+                flex-direction: row;
             }
         }
         
-        .notification-enter {
-            animation: slideInUp 0.5s ease-out forwards;
+        .footer-left {
+            text-align: center;
         }
         
-        .notification-exit {
-            animation: slideOutDown 0.5s ease-in forwards;
+        @media (min-width: 768px) {
+            .footer-left {
+                text-align: left;
+            }
+        }
+        
+        .footer-logo {
+            width: 128px;
+            margin: 0 auto 16px;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-logo {
+                margin: 0 0 16px 0;
+            }
+        }
+        
+        .footer-copyright {
+            color: #6b7280;
+            font-size: 14px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .footer-link {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-link:hover {
+            color: #dc2626;
+        }
+        
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid #111827;
+            text-align: center;
+        }
+        
+        .footer-disclaimer {
+            color: #4b5563;
+            font-size: 14px;
         }
     </style>
 </head>
-<body class="bg-gradient-to-b from-gray-900 to-black">
-    <!-- Notificação de Vendas (Popup) -->
-    <div id="saleNotification" class="fixed bottom-6 left-6 z-[100] hidden">
-        <div class="bg-gradient-to-r from-green-900 to-emerald-900 text-white px-6 py-4 rounded-lg shadow-2xl border-2 border-green-500 max-w-sm">
-            <div class="flex items-start gap-4">
-                <div class="bg-green-500 rounded-full p-2 flex-shrink-0">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
+<body>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=3525977697696631&ev=PageView&noscript=1" />
+    </noscript>
+
+    <!-- Banner de Desconto Fixo -->
+    <div class="discount-banner">
+        <div class="container">
+            <span>OFERTA ESPECIAL: <span class="highlight">SÓ HOJE!</span> Nessa Pagina</span>
+        </div>
+    </div>
+
+    <!-- Faixa Animada "NEW SENSI" -->
+    <div class="marquee-section">
+        <div class="marquee-content">
+            <span>NEW SENSI • FREE FIRE • ATUALIZADO 2025 • NEW SENSI • FREE FIRE • ATUALIZADO 2025 • NEW SENSI • FREE FIRE • ATUALIZADO 2025 • NEW SENSI • FREE FIRE • ATUALIZADO 2025 • NEW SENSI • FREE FIRE • ATUALIZADO 2025 • NEW SENSI • FREE FIRE • ATUALIZADO 2025</span>
+        </div>
+    </div>
+
+    <!-- Notificações de Compra -->
+    <div class="notification" id="notification">
+        <div class="notification-icon">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+        </div>
+        <div>
+            <p style="color: white; font-size: 14px; font-weight: 600;">🔥 Compra Realizada!</p>
+            <p style="color: #d1d5db; font-size: 12px; margin-top: 4px;" id="buyerName"></p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="https://static.lumi.new/material/c0/c0add45d46c1d90121fdceace3cdbf7f.png" alt="Legit XIT Logo" class="hero-logo">
+            
+            <h1>
+                O PAINEL MAIS <span class="red">ATUALIZADO</span><br>
+                E SEGURO DO FREE FIRE
+            </h1>
+            
+            <p>Acesso instantâneo ao melhor painel do Free Fire. Sem risco de ban, sem complicação. Apenas abra e use como um aplicativo normal.</p>
+
+            <!-- Video Wistia Atualizado -->
+            <div style="position: relative; width: 100%; max-width: 800px; margin: 20px auto;">
+                <h3 style="text-align: center; margin-bottom: 20px; font-size: 1.5em; font-weight: bold; color: #0fd712;">OFERTA ESPECIAL SÓ HOJE!</h3>
+                <script src="https://fast.wistia.com/player.js" async></script>
+                <script src="https://fast.wistia.com/embed/m8pcxycab8.js" async type="module"></script>
+                <style>
+                    wistia-player[media-id='m8pcxycab8']:not(:defined) { 
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/m8pcxycab8/swatch'); 
+                        display: block; 
+                        filter: blur(5px); 
+                        padding-top: 56.25%; 
+                    }
+                </style>
+                <wistia-player media-id="m8pcxycab8" aspect="1.7777777777777777"></wistia-player>
+            </div>
+
+            <div class="cta-section">
+                <a href="#ofertas" class="btn-primary">GARANTIR ACESSO AGORA</a>
+                <p class="cta-info">✓ Acesso imediato • ✓ Garantia de 7 dias</p>
+            </div>
+        </div>
+
+        <div class="bounce-arrow">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #dc2626;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Dores Section -->
+    <section class="section" style="background: linear-gradient(to bottom, #000, #111827);">
+        <div class="container">
+            <h2 class="section-title">
+                Cansado de <span style="color: #dc2626;">Perder Tempo</span>?
+            </h2>
+            <p class="section-subtitle">Sabemos como é frustrante enfrentar esses problemas...</p>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">⚠️</div>
+                    <h3 class="card-title">Risco de Ban</h3>
+                    <p class="card-description">Medo constante de ser banido usando painéis não confiáveis</p>
                 </div>
-                <div class="flex-1">
-                    <p class="font-bold text-sm mb-1">🎉 Nova Compra Confirmada!</p>
-                    <p class="text-sm text-green-100" id="notificationText"></p>
-                    <p class="text-xs text-green-300 mt-1" id="notificationTime"></p>
+
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3 class="card-title">Painéis Desatualizados</h3>
+                    <p class="card-description">Ferramentas que param de funcionar após cada atualização do jogo</p>
                 </div>
-                <button onclick="closeNotification()" class="text-green-300 hover:text-white">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+
+                <div class="card">
+                    <div class="card-icon">😤</div>
+                    <h3 class="card-title">Instalação Complicada</h3>
+                    <p class="card-description">Processos difíceis com arquivos confusos e pastas complicadas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soluções Section -->
+    <section class="section" style="background: linear-gradient(to bottom, #111827, #000);">
+        <div class="container">
+            <h2 class="section-title">
+                A <span style="color: #dc2626;">Solução</span> Perfeita
+            </h2>
+            <p class="section-subtitle">Painel XIT resolve todos esses problemas de uma vez</p>
+
+            <!-- Vídeo do Painel em Ação -->
+            <div style="margin-bottom: 48px;">
+                <div class="video-container" style="max-width: 896px; margin: 0 auto;">
+                    <script src="https://fast.wistia.com/player.js" async></script>
+                    <script src="https://fast.wistia.com/embed/wkc2wjaez1.js" async type="module"></script>
+                    <style>
+                        wistia-player[media-id='wkc2wjaez1']:not(:defined) { 
+                            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/wkc2wjaez1/swatch'); 
+                            display: block; 
+                            filter: blur(5px); 
+                            padding-top:55.0%; 
+                        }
+                    </style>
+                    <wistia-player media-id="wkc2wjaez1" aspect="1.8181818181818181"></wistia-player>
+                </div>
+                <p style="text-align: center; color: #9ca3af; margin-top: 16px; font-size: 18px;">👆 Veja o Painel XIT em ação</p>
+            </div>
+
+            <div>
+                <div class="solution-card">
+                    <div class="solution-content">
+                        <div class="solution-text">
+                            <div class="solution-number">1º</div>
+                            <h3 class="solution-title">Acesso Imediato ao Painel</h3>
+                            <p class="solution-description">Imediatamente após o pagamento concluído você receberá acesso ao Painel Legit XIT e um vídeo ensinando a baixar e configurar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-content">
+                        <div class="solution-text">
+                            <div class="solution-number">2º</div>
+                            <h3 class="solution-title">Zero Complicação</h3>
+                            <p class="solution-description">Você não precisará mexer com nenhum arquivo e pastas, nada complicado! Você apenas abre o Painel Legit XIT igual um aplicativo normal do celular e usa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-content">
+                        <div class="solution-text">
+                            <div class="solution-number">3º</div>
+                            <h3 class="solution-title">Segurança Total</h3>
+                            <p class="solution-description">Depois de baixado e configurado, O Painel XIT vai reconhecer apenas o que é cabeça e... CAPA! Mas claro, sem risco nenhum de BAN e nem de BLACKLIST.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ofertas Section -->
+    <section id="ofertas" class="section" style="background: linear-gradient(to bottom, #000, rgba(127, 29, 29, 0.1));">
+        <div class="container">
+            <h2 class="section-title">
+                Escolha Seu <span style="color: #dc2626;">Plano</span>
+            </h2>
+            <p class="section-subtitle">Todos os planos incluem atualizações e suporte</p>
+
+            <div class="grid grid-3">
+                <!-- Plano MENSAL -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">MENSAL</h3>
+                        <div>
+                            <span class="plan-price">R$ 14,90</span>
+                            <p class="plan-period">por mês</p>
+                        </div>
+                    </div>
+
+                    <ul class="plan-features">
+                        <li>Acesso completo ao painel</li>
+                        <li>Atualizações constantes</li>
+                        <li>Suporte 24/7</li>
+                        <li>Sem risco de ban</li>
+                        <li>Vídeo tutorial incluído</li>
+                    </ul>
+
+                    <a href="#" class="btn-plan secondary" onclick="event.preventDefault(); document.getElementById('discountModal').classList.add('show');">COMEÇAR AGORA</a>
+                    <div class="plan-buyers-tag">
+                        <strong>247</strong> pessoas já compraram
+                    </div>
+                </div>
+
+                <!-- Plano PERMANENTE (Mais Popular - NO MEIO) -->
+                <div class="plan-card popular">
+                    <div class="popular-badge">MAIS POPULAR</div>
+                    
+                    <div class="plan-header">
+                        <h3 class="plan-name">PERMANENTE</h3>
+                        <div>
+                            <span class="plan-price">R$ 37,90</span>
+                            <p class="plan-period">acesso vitalício</p>
+                        </div>
+                    </div>
+
+                    <ul class="plan-features">
+                        <li>Acesso completo ao painel</li>
+                        <li>Acesso para sempre</li>
+                        <li>Atualizações PRA SEMPRE</li>
+                        <li>Melhor custo-benefício</li>
+                        <li>Vídeo tutorial incluído</li>
+                        <li>Sem risco de ban OU BlackList!</li>
+                        <li>Prioridade no Suporte VIP</li>
+                        <li>Bônus Exclusivos: SENSI VIP + SECREDOS DOS FAMOSOS</li>
+                        
+                    </ul>
+
+                    <a href="https://go.perfectpay.com.br/PPU38CQ52QR" class="btn-plan primary" target="_blank">COMEÇAR AGORA</a>
+                    <div class="plan-buyers-tag">
+                        <strong>1.543</strong> pessoas já compraram
+                    </div>
+                </div>
+
+                <!-- Plano TRIMESTRAL -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">TRIMESTRAL</h3>
+                        <div>
+                            <span class="plan-price">R$ 24,90</span>
+                            <p class="plan-period">3 meses</p>
+                        </div>
+                    </div>
+
+                    <ul class="plan-features">
+                        <li>Acesso completo ao painel</li>
+                        <li>Atualizações constantes</li>
+                        <li>Vídeo tutorial incluído</li>
+                        <li>Prioridade no suporte</li>
+                        <li>Sem risco de ban OU BlackList!</li>
+                        <li>Bônus exclusivos</li>
+                    </ul>
+
+                    <a href="https://go.perfectpay.com.br/PPU38CQ52QP" class="btn-plan secondary" target="_blank">COMEÇAR AGORA</a>
+                    <div class="plan-buyers-tag">
+                        <strong>682</strong> pessoas já compraram
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedbacks dos Clientes Section -->
+    <section class="section" style="background: linear-gradient(to bottom, rgba(127, 29, 29, 0.1), #000);">
+        <div class="container">
+            <h2 class="section-title">
+                Veja o Que <span style="color: #dc2626;">Nossos Clientes</span> Falam
+            </h2>
+            <p class="section-subtitle">Feedbacks reais de quem já está usando</p>
+
+            <div class="carousel-container">
+                <div class="carousel-image">
+                    <img id="carouselImage" src="https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp" alt="Feedback">
+                </div>
+
+                <button class="carousel-btn prev" onclick="prevFeedback()">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
+                </button>
+                
+                <button class="carousel-btn next" onclick="nextFeedback()">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <div class="carousel-indicators" id="indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section class="section" style="background: linear-gradient(to bottom, #000, rgba(127, 29, 29, 0.1));">
+        <div class="container">
+            <h2 class="section-title">
+                O Que Dizem Nossos <span style="color: #dc2626;">Usuários</span>
+            </h2>
+            <p class="section-subtitle">Milhares de jogadores já estão usando</p>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <div style="display: flex; gap: 4px; margin-bottom: 16px;">
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                    </div>
+                    <p style="color: #d1d5db; margin-bottom: 16px; font-style: italic;">"Melhor painel que já usei! Sem complicação e realmente funciona sem risco de ban."</p>
+                    <div>
+                        <p style="font-weight: bold;">João Silva</p>
+                        <p style="font-size: 14px; color: #6b7280;">Jogador há 2 anos</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div style="display: flex; gap: 4px; margin-bottom: 16px;">
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                    </div>
+                    <p style="color: #d1d5db; margin-bottom: 16px; font-style: italic;">"A instalação é super simples e o suporte responde rapidinho. Recomendo demais!"</p>
+                    <div>
+                        <p style="font-weight: bold;">Maria Santos</p>
+                        <p style="font-size: 14px; color: #6b7280;">Streamer</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div style="display: flex; gap: 4px; margin-bottom: 16px;">
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                    </div>
+                    <p style="color: #d1d5db; margin-bottom: 16px; font-style: italic;">"Uso o plano permanente e não me arrependo. Atualizações constantes e funciona perfeitamente."</p>
+                    <div>
+                        <p style="font-weight: bold;">Pedro Costa</p>
+                        <p style="font-size: 14px; color: #6b7280;">Jogador Competitivo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantia Section -->
+    <section class="guarantee-section">
+        <div class="guarantee-container">
+            <div style="margin-bottom: 32px;">
+                <img src="https://static.lumi.new/06/061be501724c5e769503ae86bf7aafd5.webp" alt="7 Dias de Garantia" class="guarantee-image">
+            </div>
+
+            <h2 class="section-title">
+                <span style="color: #dc2626;">Garantia Total</span>
+            </h2>
+            
+            <div class="guarantee-box">
+                <p class="guarantee-text">
+                    Você ganhou <strong style="color: white;">UMA SEMANA INTEIRA</strong> para testar à vontade o PAINEL da New sensi. 
+                    Se você não gostar, devolvemos <strong style="color: #dc2626;">cada centavo</strong> do seu dinheiro de volta 
+                    <span style="color: #ef4444;"> (sem treta)</span>.
+                </p>
+            </div>
+
+            <a href="#ofertas" class="btn-primary" style="padding: 20px 64px; font-size: 20px;">TESTAR SEM RISCO AGORA</a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="background: linear-gradient(to bottom, #111827, #000);">
+        <div class="container">
+            <h2 class="section-title">
+                <span style="color: #dc2626;">Dúvidas</span> Frequentes
+            </h2>
+            <p class="section-subtitle">Respostas para as perguntas mais comuns</p>
+
+            <div style="max-width: 896px; margin: 0 auto;">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(0)">
+                        <span>
+                            <span class="faq-bullet">●</span>
+                            O PAINEL DA LEGIT JÁ ESTÁ ATUALIZADO?
+                        </span>
+                        <svg class="faq-arrow" id="arrow-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="answer-0">
+                        <div class="faq-answer-content">
+                            Sim, tanto o MENSAL quanto o TRIMESTRAL e o PERMANENTE estão 100% atualizados de acordo com a última atualização do Free Fire (30/10/25). A diferença é que você ganha atualizações PRA SEMPRE adquirindo o PERMANENTE
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(1)">
+                        <span>
+                            <span class="faq-bullet">●</span>
+                            A NEW SENSI AJUDA NA INSTALAÇÃO?
+                        </span>
+                        <svg class="faq-arrow" id="arrow-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="answer-1">
+                        <div class="faq-answer-content">
+                            Sim! Fornecemos um vídeo tutorial completo ensinando passo a passo como baixar e configurar o painel. Além disso, nosso suporte está disponível 24/7 para qualquer dúvida.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(2)">
+                        <span>
+                            <span class="faq-bullet">●</span>
+                            ISSO É H@CK?
+                        </span>
+                        <svg class="faq-arrow" id="arrow-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="answer-2">
+                        <div class="faq-answer-content">
+                            SIM! O Painel XIT funciona de forma segura e inteligente, reconhecendo apenas elementos do jogo sem modificar arquivos do sistema. Por isso não há risco de ban ou blacklist.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(3)">
+                        <span>
+                            <span class="faq-bullet">●</span>
+                            QUANDO RECEBO O ACESSO?
+                        </span>
+                        <svg class="faq-arrow" id="arrow-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="answer-3">
+                        <div class="faq-answer-content">
+                            Imediatamente após a confirmação do pagamento! Você receberá um email com as instruções de acesso ao painel e o vídeo tutorial.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(4)">
+                        <span>
+                            <span class="faq-bullet">●</span>
+                            POR ONDE EU ACESSO O PAINEL E OS BÔNUS?
+                        </span>
+                        <svg class="faq-arrow" id="arrow-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="answer-4">
+                        <div class="faq-answer-content">
+                            Após a compra, você receberá um link de acesso exclusivo por email. O painel funciona como um aplicativo normal do celular - basta abrir e usar.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(5)">
+                        <span>
+                            <span class="faq-bullet">●</span>
+                            E SE EU NÃO GOSTAR DO PAINEL DA NEW SENSI?
+                        </span>
+                        <svg class="faq-arrow" id="arrow-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer" id="answer-5">
+                        <div class="faq-answer-content">
+                            Sem problemas! Você tem 7 dias de garantia incondicional. Se não gostar, devolvemos 100% do seu dinheiro, sem perguntas e sem complicação.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Desconto Pop-up -->
+    <div class="modal-overlay" id="discountModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            
+            <div class="modal-badge">🔥 OFERTA EXCLUSIVA</div>
+            
+            <h2 class="modal-title">ESPERA! Você está prestes a perder o melhor negócio! 💰</h2>
+            
+            <p class="modal-subtitle">O plano PERMANENTE está com DESCONTO ESPECIAL só aqui nesta página!</p>
+            
+            <div class="modal-price-container">
+                <div class="modal-old-price">De R$ 149,90</div>
+                <div class="modal-new-price">R$ 29,90</div>
+                <div class="modal-discount-text">80% DE DESCONTO - Só hoje!</div>
+            </div>
+            
+            <div class="modal-buttons">
+                <a href="https://go.perfectpay.com.br/PPU38CQ52SE" class="modal-btn modal-btn-primary" target="_blank">
+                    🎯 SIM! QUERO O DESCONTO PERMANENTE
+                </a>
+                <button class="modal-btn modal-btn-secondary" onclick="proceedToMonthly()">
+                    Não, prefiro continuar com o mensal
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Banner de Urgência -->
-    <div class="bg-gradient-to-r from-red-600 to-pink-600 text-white py-3 text-center font-bold animate-pulse">
-        ⚡ PROMOÇÃO RELÂMPAGO: Termina em <span id="timer">23:59:45</span> ⚡
+    <!-- Modal de Desconto Pop-up -->
+    <div class="modal-overlay" id="discountModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            
+            <div class="modal-badge">🔥 OFERTA EXCLUSIVA</div>
+            
+            <h2 class="modal-title">ESPERA! Você está prestes a perder o melhor negócio! 💰</h2>
+            
+            <p class="modal-subtitle">O plano PERMANENTE está com DESCONTO ESPECIAL só aqui nesta página!</p>
+            
+            <div class="modal-price-container">
+                <div class="modal-old-price">De R$ 149,90</div>
+                <div class="modal-new-price">R$ 29,90</div>
+                <div class="modal-discount-text">80% DE DESCONTO - Só hoje!</div>
+            </div>
+            
+            <div class="modal-buttons">
+                <a href="https://go.perfectpay.com.br/PPU38CQ52SE" class="modal-btn modal-btn-primary" target="_blank">
+                    🎯 SIM! QUERO O DESCONTO PERMANENTE
+                </a>
+                <button class="modal-btn modal-btn-secondary" onclick="proceedToMonthly()">
+                    Não, prefiro continuar com o mensal
+                </button>
+            </div>
+        </div>
     </div>
 
-    <!-- Header -->
-    <header class="bg-gradient-to-r from-gray-900 to-black text-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <img src="https://static.lumi.new/03/03af9622056718bde17a728ece6c9024.webp" alt="NEW XITER Logo" class="h-12 w-auto">
-                <div>
-                    <h1 class="font-bold text-base">LOJA XITER</h1>
-                    <p class="text-gray-400 text-xs"> </p>
-                </div>
-            </div>
-            <a href="#produtos" class="hover:bg-gray-500 text-white px-6 py-2 rounded-full transition-all hover:scale-105 shadow-md bg-[#1AC641] font-semibold text-center text-sm">
-                COMPRAR
-            </a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-20 overflow-hidden">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="bg-red-600 text-white inline-block px-6 py-2 rounded-full font-bold mb-6 animate-bounce">
-                    ⚠️ ÚLTIMA UNIDADES: Estoque Acabando!
-                </div>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight font-bold text-center">
-                    Melhor <span class="text-green-400">PAINEL XIT</span> <br> Mira 100% Automática<br> + Aimbot
-                    <span class="text-white">Pra dar <span class="text-red-400">FULL<br> CAPA</span> no Free Fire!</span><br>  <span class="text-red-400">Sem Ban</span> em 2026
-                </h2>
-                <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-4 text-gray-300">
-                    Painel Profissional com Aimbot + Sensi VIP - Usado por +2000 Players
-                </p>
-                <p class="text-lg mb-8 text-yellow-300 font-bold">
-                    ⚡ Painel XIT é 100% SEGURO - Entrega IMEDIATA por E-mail + Tutorial de instalação
-            
-                    <div class="text-sm text-gray-300">
-                        ✅ Full capa Garantido!<br>
-                        ✅ 100% Anti-ban é Anti-BlackList!
-                    </div>
-                </div>
-                <div class="mt-8 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-gray-300">2000+</div>
-                        <div class="text-sm text-gray-400">Players XITANDO</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-red-400">90%</div>
-                        <div class="text-sm text-gray-400">OFF Por Tempo Limitado</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-green-400">7 Dias</div>
-                        <div class="text-sm text-gray-400">Garantia Total</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VSL Section -->
-    <section class="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-8">
-                    <div class="bg-red-600 text-white inline-block px-6 py-2 rounded-full font-bold mb-4 animate-pulse">
-                        🎥 ASSISTA AGORA - O VIDEO ABAIXO EXCLUSIVO
-                    </div>
-                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-white">
-                        Descubra Como <span class="text-green-400">XITAR 100%</span> No Free Fire em 2026!
-                    </h3>
-                    <p class="text-xl text-gray-400 mb-8">
-                        ⚠️ Este vídeo será REMOVIDO em breve! Não perca esta oportunidade única
-                    </p>
-                </div>
-                
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-green-500/30 bg-black">
-                    <div class="aspect-video">
-                        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/SD8KYZ8MRpQ?si=bepOaIfikElrl_1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-full"></iframe>
-                    </div>
-                </div>
-
-                <div class="mt-8 text-center">
-                    <a href="#produtos" class="inline-block bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-12 py-5 rounded-full font-bold text-xl transition-all hover:scale-105 shadow-lg animate-pulse">
-                        🚀 QUERO MEU PAINEL XIT AGORA!
-                    </a>
-                    <p class="text-sm text-gray-400 mt-4">
-                        ✅ Entrega Imediata | ✅ 100% Anti-ban! | ✅ 100% Anti-BlackList!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vídeos de Demonstração do Painel XIT -->
-    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-12">
-                    <div class="bg-gradient-to-r from-green-600 to-emerald-600 text-white inline-block px-6 py-2 rounded-full font-bold mb-4 animate-pulse">
-                        🎮 VEJA O PAINEL EM AÇÃO
-                    </div>
-                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-white">
-                        Assista Como o <span class="text-green-400">Painel XIT</span> Funciona na Prática
-                    </h3>
-                    <p class="text-xl text-gray-400 mb-4">
-                        🔥 Veja jogadores reais usando o Painel XIT e XITANDO no Free Fire
-                    </p>
-                </div>
-                
-                <div class="relative">
-                    <!-- Carrossel de Vídeos -->
-                    <div id="videoCarousel" class="overflow-hidden rounded-2xl border-4 border-green-500/30 bg-black">
-                        <div class="flex transition-transform duration-500 ease-in-out" id="videoSlider">
-                            <!-- Vídeo 1 -->
-                            <div class="w-full flex-shrink-0">
-                                <video controls class="w-full h-auto" preload="metadata">
-                                    <source src="https://static.lumi.new/material/4c/4c3920ee0c20a50ab3845329fc251574.mp4" type="video/mp4">
-                                    Seu navegador não suporta vídeos.
-                                </video>
-                            </div>
-                            
-                            <!-- Vídeo 2 -->
-                            <div class="w-full flex-shrink-0">
-                                <video controls class="w-full h-auto" preload="metadata">
-                                    <source src="https://static.lumi.new/material/f9/f97370f9db3d76f4161f881ee70015fe.mp4" type="video/mp4">
-                                    Seu navegador não suporta vídeos.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Botões de Navegação -->
-                    <button onclick="prevVideo()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black text-white p-4 rounded-full transition-all z-10 hover:scale-110">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    </button>
-                    
-                    <button onclick="nextVideo()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black text-white p-4 rounded-full transition-all z-10 hover:scale-110">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
-                    
-                    <!-- Indicadores -->
-                    <div class="flex justify-center gap-3 mt-6" id="videoIndicators">
-                        <button onclick="goToVideo(0)" class="w-3 h-3 rounded-full bg-green-500 transition-all duration-300"></button>
-                        <button onclick="goToVideo(1)" class="w-3 h-3 rounded-full bg-gray-600 transition-all duration-300"></button>
-                    </div>
-                </div>
-
-                <div class="mt-12 bg-gradient-to-r from-gray-800 to-gray-900 p-6 rounded-2xl text-center border-2 border-green-500/50">
-                    <p class="text-xl font-bold text-white mb-2 flex items-center justify-center gap-3">
-                        <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        É ISSO QUE VOCÊ VAI CONSEGUIR!
-                    </p>
-                    <p class="text-gray-300">
-                        Mira perfeita, movimento suave e Full CAPA - tudo isso pode ser SEU em minutos!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vídeo Antes/Depois do Painel XIT -->
-    <section class="py-20 bg-black">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-12">
-                    <div class="bg-gradient-to-r from-red-600 to-pink-600 text-white inline-block px-6 py-2 rounded-full font-bold mb-4 animate-pulse">
-                        ⚡ COMPARAÇÃO REAL
-                    </div>
-                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-white">
-                        🎯 <span class="text-red-400">ANTES</span> vs <span class="text-green-400">DEPOIS</span> do Painel XIT
-                    </h3>
-                    <p class="text-xl text-gray-400 mb-4">
-                        Veja a diferença REAL no gameplay - Sem Painel vs Com Painel XIT
-                    </p>
-                </div>
-                
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-green-500/50 bg-black">
-                    <div class="aspect-video">
-                        <video controls class="w-full h-full object-contain" preload="metadata">
-                            <source src="https://static.lumi.new/material/8a/8a1544c39dad86cff1a97f6d5576e949.mov" type="video/quicktime">
-                            <source src="https://static.lumi.new/material/8a/8a1544c39dad86cff1a97f6d5576e949.mov" type="video/mp4">
-                            Seu navegador não suporta vídeos.
-                        </video>
-                    </div>
-                </div>
-
-                <div class="mt-12 grid md:grid-cols-2 gap-6">
-                    <!-- ANTES -->
-                    <div class="bg-gradient-to-br from-red-900/30 to-red-950/30 p-6 rounded-2xl border-2 border-red-500/50 text-center">
-                        <div class="text-6xl mb-4">❌</div>
-                        <h4 class="text-2xl font-bold text-red-400 mb-3">ANTES (Sem Painel)</h4>
-                        <ul class="text-gray-300 space-y-2 text-left">
-                            <li class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                                Mira tremendo e imprecisa
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                                Difícil acertar um CAPA
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                                Perde confrontos diretos
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                                Sensibilidade descontrolada
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- DEPOIS -->
-                    <div class="bg-gradient-to-br from-green-900/30 to-emerald-950/30 p-6 rounded-2xl border-2 border-green-500 text-center animate-pulse">
-                        <div class="text-6xl mb-4">✅</div>
-                        <h4 class="text-2xl font-bold text-green-400 mb-3">DEPOIS (Com Painel XIT)</h4>
-                        <ul class="text-gray-300 space-y-2 text-left">
-                            <li class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Mira automática 100% CAPA
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Dando Muito CAPA fácil!
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Ganhando partidas fácil em Rank ou ap
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Sensi VIP perfeita e Grudando Full!
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="mt-12 bg-gradient-to-r from-yellow-900 to-orange-900 p-8 rounded-2xl text-center border-2 border-yellow-500">
-                    <svg class="w-16 h-16 text-yellow-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    <h4 class="text-3xl font-bold text-white mb-3">
-                         ESSA É A DIFERENÇA QUE O PAINEL XIT FAZ!
-                    </h4>
-                    <p class="text-yellow-100 text-lg mb-6">
-                        Não é magia, não é sorte - é Painel PROFISSIONAL ao seu alcance!<br>
-                        <span class="font-bold text-yellow-300">De PERDEDOR para CAMPEÃO em minutos!</span>
-                    </p>
-                    <a href="#produtos" class="inline-block bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-10 py-4 rounded-full font-bold text-xl transition-all hover:scale-105 shadow-lg">
-                        🚀 QUERO MEU PAINEL XIT AGORA!
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Como Funciona (3 Passos Simples) -->
-    <section class="py-20 bg-black">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <div class="inline-block bg-green-600 text-white px-6 py-2 rounded-full font-bold mb-4">
-                        ⚡ SIMPLES E RÁPIDO
-                    </div>
-                    <h3 class="text-4xl md:text-5xl font-bold text-white mb-4">
-                        📲 Como Funciona? <span class="text-green-400">3 Passos Simples</span>
-                    </h3>
-                    <p class="text-xl text-gray-400">
-                        Em menos de 10 minutos você estará XITANDO no Free Fire
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8 mb-12">
-                    <!-- Passo 1 -->
-                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border-2 border-green-500/30 hover:border-green-500 transition-all hover:-translate-y-2">
-                        <div class="text-7xl mb-6 text-center">1️⃣</div>
-                        <h4 class="text-2xl font-bold text-white mb-4 text-center">Escolha Seu Pacote</h4>
-                        <p class="text-gray-300 text-center mb-4">
-                            Clique em "Comprar" no pacote que você deseja e finalize o pagamento
-                        </p>
-                        <div class="bg-green-900/30 p-4 rounded-lg border border-green-500">
-                            <p class="text-sm text-green-300 text-center">
-                                💳 PIX, Cartão ou Boleto<br>
-                                🔒 Pagamento 100% Seguro
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Passo 2 -->
-                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border-2 border-green-500/30 hover:border-green-500 transition-all hover:-translate-y-2">
-                        <div class="text-7xl mb-6 text-center">2️⃣</div>
-                        <h4 class="text-2xl font-bold text-white mb-4 text-center">Receba no E-mail</h4>
-                        <p class="text-gray-300 text-center mb-4">
-                            Em até 5 minutos você recebe o arquivo + tutorial completo de instalação
-                        </p>
-                        <div class="bg-green-900/30 p-4 rounded-lg border border-green-500">
-                            <p class="text-sm text-green-300 text-center">
-                                ⚡ Entrega INSTANTÂNEA<br>
-                                📧 Direto na sua caixa de entrada
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Passo 3 -->
-                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border-2 border-green-500/30 hover:border-green-500 transition-all hover:-translate-y-2">
-                        <div class="text-7xl mb-6 text-center">3️⃣</div>
-                        <h4 class="text-2xl font-bold text-white mb-4 text-center">Instale e XITER 100%</h4>
-                        <p class="text-gray-300 text-center mb-4">
-                            Siga o tutorial passo-a-passo e comece a XITAR em 10 minutos
-                        </p>
-                        <div class="bg-green-900/30 p-4 rounded-lg border border-green-500">
-                            <p class="text-sm text-green-300 text-center">
-                                🎯 Tutorial em Vídeo<br>
-                                🔥 Comece a usar HOJE
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Banner Extra -->
-                <div class="bg-gradient-to-r from-green-900 to-emerald-900 p-8 rounded-2xl text-center border-2 border-green-500">
-                    <h4 class="text-2xl font-bold text-white mb-3 flex items-center justify-center gap-3">
-                        <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        É TÃO FÁCIL QUE ATÉ INICIANTES CONSEGUEM!
-                    </h4>
-                    <p class="text-green-100 text-lg">
-                        Não precisa ser expert em tecnologia. Nosso tutorial é feito para QUALQUER PESSOA conseguir instalar e usar em minutos.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Problemas -->
-    <section class="py-16 bg-gradient-to-b from-gray-900 to-black">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h3 class="text-4xl font-bold text-center mb-4 text-white">
-                    Oque nosso <span class="text-red-500">PAINEL XIT</span> Tem que os outros não Tem:
-                </h3>
-                <p class="text-center text-gray-400 mb-12 text-lg">Sem um painel profissional, Sem a sensi ideal, você NUNCA vai conseguir aquele satisfatório</p>
-                
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-red-500">
-                        <div class="flex items-start gap-4">
-                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                            <div>
-                                <p class="text-red-400 font-bold mb-2 line-through">Não tem sistema Avançado anti-Ban</p>
-                                <p class="text-green-400 font-semibold flex items-center gap-2">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Sistema Avançado 100% anti-Ban/anti-BlackList 
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-red-500">
-                        <div class="flex items-start gap-4">
-                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                            <div>
-                                <p class="text-red-400 font-bold mb-2 line-through">Sistema antigo desatualizado</p>
-                                <p class="text-green-400 font-semibold flex items-center gap-2">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Nosso sistema é o mais atualizado e completo do mercado
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-red-500">
-                        <div class="flex items-start gap-4">
-                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                            <div>
-                                <p class="text-red-400 font-bold mb-2 line-through">Gruda peito não fucionar</p>
-                                <p class="text-green-400 font-semibold flex items-center gap-2">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Painel que gruda Full capa sem passar da cabeça 
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-red-500">
-                        <div class="flex items-start gap-4">
-                            <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                            <div>
-                                <p class="text-red-400 font-bold mb-2 line-through">Não tem como disfaçar, não tem como jogar rank</p>
-                                <p class="text-green-400 font-semibold flex items-center gap-2">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Painel 100% disfarçado oculto, podendo jogar ap, ou salas, rank, cs rank 
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-   
-    <!-- Produtos -->
-    <section id="produtos" class="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <div class="inline-block bg-red-600 text-white px-6 py-2 rounded-full font-bold mb-4">
-                    ⏰ ESTOQUE LIMITADO - Restam Poucas Unidades!
-                </div>
-                <h3 class="text-4xl font-bold mb-4 text-white">Escolha Seu Pacote VIP abaixo</h3>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-                    Não espere mais para ter a mira e a sensi dos sonhos. Cada minuto que você espera, mais pra traz você vai ficando.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Pacote Iniciante -->
-                <div class="bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-2 relative border border-gray-700">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://static.lumi.new/53/5334eaf11cc346f5434927d6ae073113.webp" alt="Pacote Iniciante" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute bottom-4 left-4 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">
-                            12 unidades restantes
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-2xl font-bold mb-2 text-white">Pacote Iniciante</h4>
-                        <p class="text-gray-400 mb-4 text-sm">Comece a sentir a diferença nos primeiros tiros</p>
-                        
-                        <div class="mb-4">
-                            <p class="text-xs text-gray-500 mb-2 font-semibold">📦 Você Recebe na hora no seu (E-mail):</p>
-                            <ul class="text-sm text-gray-300 space-y-1">
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Painel basico iniciante
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Mira automática 100% capa
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Rastreamento de cabeça
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Sensi VIP Full capa
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Mira que gruda
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Disfarce 100% indetectável
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    100% Anti-Ban/Anti-BlackList!
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="flex items-center justify-between pt-4 border-t border-gray-700">
-                            <div>
-                                <div class="text-sm text-gray-500 line-through mb-1">De: R$ 97,00</div>
-                                <span class="text-3xl font-bold text-green-400">R$ 24,90</span>
-                                <div class="bg-red-600 text-white text-xs px-2 py-1 rounded mt-1 inline-block font-bold">ECONOMIZE R$ 72,10</div>
-                                <p class="text-xs text-gray-400 mt-1">💳 Parcelado em até 4x</p>
-                            </div>
-                            <a href="https://go.perfectpay.com.br/PPU38CQ4R2K" target="_blank" class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-6 py-3 rounded-full font-semibold transition-all hover:scale-105 shadow-md flex items-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                                COMPRAR AGORA! 
-                            </a>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-gray-700">
-                            <p class="text-center text-gray-400 flex items-center justify-center gap-2 text-base">
-                                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                                Garantia de 7 dias | Entrega imediata por e-mail
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pacote Premium -->
-                <div class="bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-2 relative border border-gray-700">
-                    <div class="absolute top-4 left-4 right-4 z-10">
-                        <div class="bg-gradient-to-r from-red-600 to-pink-600 text-white px-4 py-2 rounded-lg text-sm font-bold text-center shadow-md animate-pulse">
-                            🔥 90,00% OFF - ECONOMIZE R$ 267,10! | Apenas 3 unidades disponíveis
-                        </div>
-                    </div>
-                    <div class="absolute top-16 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10 shadow-md animate-bounce">
-                        ⭐ MAIS VENDIDO
-                    </div>
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://static.lumi.new/0d/0d584e9ed794f3e4a5baa4f0fe81d830.webp" alt="Pacote Premium" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-2xl font-bold mb-2 text-white">Pacote Premium</h4>
-                        <p class="text-gray-400 mb-4 text-sm">Comece a sentir uma grande diferença nos primeiros tiros</p>
-                        
-                        <div class="mb-4">
-                            <p class="text-xs text-gray-500 mb-2 font-semibold">📦 Você Recebe na hora no seu (E-mail):</p>
-                            <ul class="text-sm text-gray-300 space-y-1">
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Painel xit + Mod Menu FFH4X
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Rastreamento de cabeça Pro
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    2x Automática
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Aimbot Cabeça
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Aim Regedit
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    2x Aimbot
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    100% HeadShot
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Sensi VIP Full capa
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Disfarce 100% indetectável
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    100% Anti-Ban/Anti-BlackList!
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Nosso Whatsapp Oficial Como seu Suporte Pessoal
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-green-900/50 border border-green-500 rounded-lg p-3 mb-4">
-                            <p class="text-green-400 text-sm font-bold flex items-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                                + BÔNUS HOJE: HS pescoço com Bypass + PAINEL CLT PREMIUM!
-                            </p>
-                        </div>
-                        
-                        <div class="flex items-center justify-between pt-4 border-t border-gray-700">
-                            <div>
-                                <div class="text-sm text-gray-500 line-through mb-1">De: R$ 297,00</div>
-                                <span class="text-3xl font-bold text-green-400">R$ 29,90</span>
-                                <div class="bg-red-600 text-white text-xs px-2 py-1 rounded mt-1 inline-block font-bold">ECONOMIZE R$ 267,10 (90% OFF)</div>
-                                <p class="text-xs text-gray-400 mt-1">💳 Parcelado em até 5x</p>
-                            </div>
-                            <a href="https://go.perfectpay.com.br/PPU38CQ4R2I" target="_blank" class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-6 py-3 rounded-full font-semibold transition-all hover:scale-105 shadow-md flex items-center gap-2 animate-pulse">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                                COMPRAR AGORA!
-                            </a>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-gray-700">
-                            <p class="text-center text-gray-400 flex items-center justify-center gap-2 text-base">
-                                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                                Garantia de 7 dias | Entrega imediata por e-mail
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Depoimentos -->
-    <section class="py-20 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden">
-        <div class="container mx-auto px-4">
-            <h3 class="text-4xl font-bold text-center mb-4">📱 Clientes Reais, Resultados Reais</h3>
-            <p class="text-center text-gray-400 mb-8 text-lg">Veja as conversas de quem já está usando o Painel VIP</p>
-            
-            <div class="relative max-w-6xl mx-auto">
-                <div class="hidden md:block">
-                    <div class="flex gap-6 animate-scroll">
-                        <img src="https://static.lumi.new/03/03769f331e6585d8dc4aa12039d77b68.webp" alt="Feedback 1" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
-                        <img src="https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp" alt="Feedback 2" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
-                        <img src="https://static.lumi.new/ef/ef18c64cf0c5d23efd41237beadb341e.webp" alt="Feedback 3" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
-                        <img src="https://static.lumi.new/83/8353ac944cba71a88419ac25276ae161.webp" alt="Feedback 4" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
-                        <img src="https://static.lumi.new/18/1854e98d1e0bbac7e82991bce2fe2f1d.webp" alt="Feedback 5" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
-                        <!-- Duplicado para loop -->
-                        <img src="https://static.lumi.new/03/03769f331e6585d8dc4aa12039d77b68.webp" alt="Feedback 1" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
-                        <img src="https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp" alt="Feedback 2" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
-                        <img src="https://static.lumi.new/ef/ef18c64cf0c5d23efd41237beadb341e.webp" alt="Feedback 3" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
-                        <img src="https://static.lumi.new/83/8353ac944cba71a88419ac25276ae161.webp" alt="Feedback 4" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
-                        <img src="https://static.lumi.new/18/1854e98d1e0bbac7e82991bce2fe2f1d.webp" alt="Feedback 5" class="h-[500px] w-auto rounded-2xl shadow-2xl border-2 border-green-500/30 hover:scale-105 transition-transform flex-shrink-0">
-                    </div>
-                </div>
-
-                <!-- Mobile Carousel -->
-                <div class="md:hidden relative">
-                    <div id="carousel" class="flex overflow-x-hidden scroll-smooth snap-x snap-mandatory">
-                        <div class="w-full flex-shrink-0 snap-center px-4">
-                            <img src="https://static.lumi.new/03/03769f331e6585d8dc4aa12039d77b68.webp" alt="Feedback 1" class="w-full h-auto max-h-[600px] object-contain rounded-2xl shadow-2xl border-2 border-green-500/30 mx-auto">
-                        </div>
-                        <div class="w-full flex-shrink-0 snap-center px-4">
-                            <img src="https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp" alt="Feedback 2" class="w-full h-auto max-h-[600px] object-contain rounded-2xl shadow-2xl border-2 border-green-500/30 mx-auto">
-                        </div>
-                        <div class="w-full flex-shrink-0 snap-center px-4">
-                            <img src="https://static.lumi.new/ef/ef18c64cf0c5d23efd41237beadb341e.webp" alt="Feedback 3" class="w-full h-auto max-h-[600px] object-contain rounded-2xl shadow-2xl border-2 border-green-500/30 mx-auto">
-                        </div>
-                        <div class="w-full flex-shrink-0 snap-center px-4">
-                            <img src="https://static.lumi.new/83/8353ac944cba71a88419ac25276ae161.webp" alt="Feedback 4" class="w-full h-auto max-h-[600px] object-contain rounded-2xl shadow-2xl border-2 border-green-500/30 mx-auto">
-                        </div>
-                        <div class="w-full flex-shrink-0 snap-center px-4">
-                            <img src="https://static.lumi.new/18/1854e98d1e0bbac7e82991bce2fe2f1d.webp" alt="Feedback 5" class="w-full h-auto max-h-[600px] object-contain rounded-2xl shadow-2xl border-2 border-green-500/30 mx-auto">
-                        </div>
-                    </div>
-                    
-                    <button onclick="prevImage()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full transition-all z-10">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    </button>
-                    
-                    <button onclick="nextImage()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black text-white p-3 rounded-full transition-all z-10">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
-                    
-                    <div class="flex justify-center gap-2 mt-6" id="indicators">
-                        <button onclick="goToImage(0)" class="w-3 h-3 rounded-full bg-green-500 w-8"></button>
-                        <button onclick="goToImage(1)" class="w-3 h-3 rounded-full bg-gray-600"></button>
-                        <button onclick="goToImage(2)" class="w-3 h-3 rounded-full bg-gray-600"></button>
-                        <button onclick="goToImage(3)" class="w-3 h-3 rounded-full bg-gray-600"></button>
-                        <button onclick="goToImage(4)" class="w-3 h-3 rounded-full bg-gray-600"></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-12 text-center">
-                <p class="text-2xl font-bold text-yellow-300 mb-2">
-                    💬 Todas essas mensagens são REAIS - Clientes satisfeitos todo dia!
-                </p>
-                <p class="text-gray-400">
-                    Não fique de fora! Garanta seu XIT agora e seja o próximo a comemorar
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ (Perguntas Frequentes) -->
-    <section class="py-20 bg-black">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <div class="inline-block bg-yellow-600 text-white px-6 py-2 rounded-full font-bold mb-4">
-                        ❓ PERGUNTAS FREQUENTES
-                    </div>
-                    <h3 class="text-4xl font-bold text-white mb-4">
-                        Tire Suas <span class="text-green-400">Últimas Dúvidas</span>
-                    </h3>
-                    <p class="text-gray-400 text-lg">
-                        Tudo o que você precisa saber antes de garantir seu Painel XIT
-                    </p>
-                </div>
-
-                <div class="space-y-4">
-                    <!-- Pergunta 1 -->
-                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700">
-                        <button onclick="toggleFAQ(1)" class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-all">
-                            <h4 class="text-lg font-bold text-white"> Vou ser banido usando o Painel XIT?</h4>
-                            <svg id="icon-1" class="w-6 h-6 text-green-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="faq-1" class="hidden px-6 pb-6">
-                            <p class="text-gray-300 leading-relaxed">
-                                <span class="text-green-400 font-bold">NÃO!</span> Nosso Painel XIT possui sistema <span class="text-green-400 font-semibold">Anti-Ban e Anti-BlackList 100%</span>. Ele foi desenvolvido com tecnologia avançada de disfarce que torna o uso completamente indetectável. Mais de 2.000 players já usam sem nenhum problema há meses. Além disso, oferecemos <span class="text-yellow-300 font-semibold">garantia de 7 dias</span> - se tiver qualquer problema, devolvemos seu dinheiro!
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Pergunta 2 -->
-                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700">
-                        <button onclick="toggleFAQ(2)" class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-all">
-                            <h4 class="text-lg font-bold text-white"> Funciona no meu celular?</h4>
-                            <svg id="icon-2" class="w-6 h-6 text-green-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="faq-2" class="hidden px-6 pb-6">
-                            <p class="text-gray-300 leading-relaxed">
-                                <span class="text-green-400 font-bold">SIM!</span> O Painel XIT é compatível com <span class="text-green-400 font-semibold">Android 7.0 ou superior OU Todos os iPhones do iPhone 6 ao 17 pro Max</span>. Funciona em praticamente qualquer celular moderno. Enviamos um tutorial completo em vídeo mostrando passo-a-passo como instalar no seu dispositivo específico. É tão fácil que até iniciantes conseguem em menos de 10 minutos!
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Pergunta 3 -->
-                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700">
-                        <button onclick="toggleFAQ(3)" class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-all">
-                            <h4 class="text-lg font-bold text-white"> Quanto tempo demora para receber?</h4>
-                            <svg id="icon-3" class="w-6 h-6 text-green-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="faq-3" class="hidden px-6 pb-6">
-                            <p class="text-gray-300 leading-relaxed">
-                                A entrega é <span class="text-green-400 font-bold">INSTANTÂNEA!</span> Após a confirmação do pagamento (PIX é aprovado na hora), você recebe automaticamente no seu e-mail em <span class="text-green-400 font-semibold">até 5 minutos</span>. O e-mail contém o arquivo do Painel XIT + Tutorial completo em vídeo + Suporte direto. Se pagar com cartão, a aprovação pode levar alguns minutos a mais, mas você receberá assim que for aprovado!
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Pergunta 4 -->
-                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700">
-                        <button onclick="toggleFAQ(4)" class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-all">
-                            <h4 class="text-lg font-bold text-white"> É vírus? Pode danificar meu celular?</h4>
-                            <svg id="icon-4" class="w-6 h-6 text-green-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="faq-4" class="hidden px-6 pb-6">
-                            <p class="text-gray-300 leading-relaxed">
-                                <span class="text-green-400 font-bold">NÃO!</span> O Painel XIT é 100% seguro e livre de vírus. É apenas uma modificação de configurações avançadas do jogo, não afeta seu sistema. Temos mais de <span class="text-green-400 font-semibold">2.000 clientes satisfeitos</span> usando diariamente sem nenhum problema. Seu celular continua funcionando normalmente, você só terá vantagem no Free Fire. Além disso, você pode desinstalar a qualquer momento se desejar!
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Pergunta 5 -->
-                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700">
-                        <button onclick="toggleFAQ(5)" class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-all">
-                            <h4 class="text-lg font-bold text-white"> Precisa fazer root no celular?</h4>
-                            <svg id="icon-5" class="w-6 h-6 text-green-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="faq-5" class="hidden px-6 pb-6">
-                            <p class="text-gray-300 leading-relaxed">
-                                <span class="text-green-400 font-bold">NÃO precisa de root!</span> Essa é uma das maiores vantagens do Painel XIT. Ele funciona em celulares normais, sem precisar fazer nenhuma modificação complexa no sistema. Basta instalar e usar. É por isso que dizemos que <span class="text-green-400 font-semibold">até iniciantes conseguem</span> - você não precisa ser expert em tecnologia. Se consegue instalar WhatsApp, consegue instalar o Painel XIT!
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Pergunta 6 -->
-                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700">
-                        <button onclick="toggleFAQ(6)" class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-all">
-                            <h4 class="text-lg font-bold text-white"> E se eu não gostar? Posso pedir reembolso?</h4>
-                            <svg id="icon-6" class="w-6 h-6 text-green-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="faq-6" class="hidden px-6 pb-6">
-                            <p class="text-gray-300 leading-relaxed">
-                                <span class="text-green-400 font-bold">SIM, CLARO!</span> Oferecemos <span class="text-yellow-300 font-bold">Garantia Blindada de 7 Dias</span>. Se você testar o Painel XIT e por qualquer motivo não ficar satisfeito, devolvemos <span class="text-green-400 font-semibold">100% do seu dinheiro</span> de volta, sem perguntas e sem burocracia. Basta enviar um e-mail solicitando. Você não tem NADA a perder e TUDO a ganhar. Estamos tão confiantes na qualidade que assumimos todo o risco!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Banner Final do FAQ -->
-                <div class="mt-12 bg-gradient-to-r from-green-900 to-emerald-900 p-8 rounded-2xl text-center border-2 border-green-500">
-                    <h4 class="text-2xl font-bold text-white mb-3">
-                         Ainda tem dúvidas? Fale com a gente!
-                    </h4>
-                    <p class="text-green-100 text-lg mb-4">
-                        Entre em contato pelo e-mail: <span class="font-bold">newsensi@oficial.com.br</span>
-                    </p>
-                    <a href="#produtos" class="inline-block bg-white text-green-900 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-all">
-                        Não Tenho Mais Dúvidas - QUERO COMPRAR! 
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-
-    <!-- Contato -->
-    <section id="contato" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <h3 class="text-4xl font-bold mb-4 text-white"> Garanta Seu Pacote VIP AGORA</h3>
-                    <p class="text-red-400 text-xl font-bold mb-2">⚡ Entrega IMEDIATA por E-mail após confirmação do pagamento!</p>
-                    <p class="text-gray-400 text-lg">Escolha seu pacote acima e receba instantaneamente</p>
-                </div>
-                
-                
-
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-gray-900 to-black text-white py-12 border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center gap-2 mb-4">
-                        <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <h3 class="text-xl font-bold">New Sensi FF</h3>
-                    </div>
-                    <p class="text-gray-400 text-sm">
-                        Produtos de alta qualidade para gamers que querem dominar no Free Fire em 2026. Entrega imediata apos o pagamento no e-mail, as compras nesse site são 100% seguras.
-                    </p>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-left">
+                    <img src="https://static.lumi.new/material/c0/c0add45d46c1d90121fdceace3cdbf7f.png" alt="Legit XIT Logo" class="footer-logo">
+                    <p class="footer-copyright">New sensi ff 2025© Todos os direitos reservados</p>
                 </div>
-                
-                <div>
-                    <h4 class="font-bold mb-4 text-gray-400">Links Rápidos</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#produtos" class="hover:text-white transition-colors">Pacotes</a></li>
-                        <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold mb-4 text-gray-400">Formas de Pagamento</h4>
-                    <p class="text-gray-400 text-sm mb-4">
-                        💳 Cartão de Crédito em até 5x<br>
-                        💰 PIX (com desconto)<br>
-                        🏦 Boleto Bancário
-                    </p>
-                    <div class="bg-green-900/30 p-3 rounded-lg border border-green-500">
-                        <p class="text-xs text-green-300 font-bold">
-                            ✅ Garantia Total de 7 dias
-                        </p>
-                    </div>
+
+                <div class="footer-links">
+                    <a href="https://legitxit.com.br" target="_blank" rel="noopener noreferrer" class="footer-link">
+                        newsensiff.com.br
+                    </a>
+                    <a href="#termos" class="footer-link" style="font-size: 14px;">
+                        TERMOS E POLÍTICAS
+                    </a>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-                <p>© 2025 New sensi ff. Todos os direitos reservados.</p>
-                
+
+            <div class="footer-bottom">
+                <p class="footer-disclaimer">
+                    Este site não é afiliado ao Free Fire ou Garena. Todas as marcas registradas são propriedade de seus respectivos donos.
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Botão Flutuante WhatsApp -->
-    <a href="https://wa.me/5519997604874?text=Olá!%20Vim%20do%20site%20e%20quero%20tirar%20dúvidas%20sobre%20o%20Painel%20XIT" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110 animate-bounce" title="Fale com nosso suporte no WhatsApp">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">24/7</span>
-    </a>
-
     <script>
-        // Timer
-        let timeLeft = { hours: 23, minutes: 59, seconds: 45 };
-        setInterval(() => {
-            if (timeLeft.seconds > 0) {
-                timeLeft.seconds--;
-            } else if (timeLeft.minutes > 0) {
-                timeLeft.minutes--;
-                timeLeft.seconds = 59;
-            } else if (timeLeft.hours > 0) {
-                timeLeft.hours--;
-                timeLeft.minutes = 59;
-                timeLeft.seconds = 59;
-            }
-            document.getElementById("timer").textContent = 
-                String(timeLeft.hours).padStart(2, "0") + ":" +
-                String(timeLeft.minutes).padStart(2, "0") + ":" +
-                String(timeLeft.seconds).padStart(2, "0");
-        }, 1000);
-
-        // Carousel Mobile
-        let currentIndex = 0;
-        const totalImages = 5;
-
+        // Feedback Carousel
+        const feedbackImages = [
+            "https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp",
+            "https://static.lumi.new/ef/ef18c64cf0c5d23efd41237beadb341e.webp",
+            "https://static.lumi.new/e0/e0fc05e64d8c4217db1d57a0c7a349f5.webp",
+            "https://static.lumi.new/0e/0e6dd639ea5d8e9d82ddcb1e103db36d.webp",
+            "https://static.lumi.new/ea/eafac9f1205fb40b204e80f8919b3dd3.webp"
+        ];
+        
+        let currentFeedback = 0;
+        
         function updateCarousel() {
-            const carousel = document.getElementById("carousel");
-            const indicators = document.getElementById("indicators").children;
+            document.getElementById('carouselImage').src = feedbackImages[currentFeedback];
             
-            carousel.scrollTo({
-                left: currentIndex * carousel.offsetWidth,
-                behavior: "smooth"
+            // Update indicators
+            const indicators = document.getElementById('indicators');
+            indicators.innerHTML = '';
+            feedbackImages.forEach((_, index) => {
+                const indicator = document.createElement('button');
+                indicator.className = 'indicator' + (index === currentFeedback ? ' active' : '');
+                indicator.onclick = () => {
+                    currentFeedback = index;
+                    updateCarousel();
+                };
+                indicators.appendChild(indicator);
             });
-
-            for (let i = 0; i < indicators.length; i++) {
-                if (i === currentIndex) {
-                    indicators[i].className = "w-3 h-3 rounded-full bg-green-500 w-8";
-                } else {
-                    indicators[i].className = "w-3 h-3 rounded-full bg-gray-600";
-                }
-            }
         }
-
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % totalImages;
+        
+        function nextFeedback() {
+            currentFeedback = (currentFeedback + 1) % feedbackImages.length;
             updateCarousel();
         }
-
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        
+        function prevFeedback() {
+            currentFeedback = (currentFeedback - 1 + feedbackImages.length) % feedbackImages.length;
             updateCarousel();
         }
-
-        function goToImage(index) {
-            currentIndex = index;
-            updateCarousel();
-        }
-
-        // Sistema de Notificações de Vendas (Social Proof)
-        const customerNames = [
-            "Gabriel", "Lucas", "Matheus", "Rafael", "Felipe", "Bruno", "Thiago",
-            "Pedro", "João", "Gustavo", "Vitor", "Diego", "Henrique", "Carlos",
-            "Ricardo", "Fernando", "Marcelo", "André", "Rodrigo", "Leandro"
-        ];
         
-        const packages = [
-            { name: "Pacote Iniciante", emoji: "🎮" },
-            { name: "Pacote Premium", emoji: "⭐" }
-        ];
+        // Initialize carousel
+        updateCarousel();
         
-        const cities = [
-            "São Paulo-SP", "Rio de Janeiro-RJ", "Belo Horizonte-MG", "Curitiba-PR",
-            "Porto Alegre-RS", "Salvador-BA", "Brasília-DF", "Fortaleza-CE",
-            "Recife-PE", "Manaus-AM", "Goiânia-GO", "Belém-PA", "Campinas-SP",
-            "São Luís-MA", "Natal-RN", "Maceió-AL", "João Pessoa-PB", "Vitória-ES"
-        ];
-
-        function getRandomItem(array) {
-            return array[Math.floor(Math.random() * array.length)];
-        }
-
-        function getRandomMinutes() {
-            return Math.floor(Math.random() * 25) + 1; // 1-25 minutos
-        }
-
-        function showSaleNotification() {
-            const notification = document.getElementById("saleNotification");
-            const name = getRandomItem(customerNames);
-            const pkg = getRandomItem(packages);
-            const city = getRandomItem(cities);
-            const minutes = getRandomMinutes();
+        // FAQ Toggle
+        function toggleFaq(index) {
+            const answer = document.getElementById('answer-' + index);
+            const arrow = document.getElementById('arrow-' + index);
             
-            document.getElementById("notificationText").textContent = 
-                `${name} de ${city} comprou ${pkg.emoji} ${pkg.name}`;
-            document.getElementById("notificationTime").textContent = 
-                `⏰ Há ${minutes} minuto${minutes > 1 ? 's' : ''} atrás`;
-            
-            notification.classList.remove("hidden");
-            notification.classList.remove("notification-exit");
-            notification.classList.add("notification-enter");
-            
-            // Auto-close após 5 segundos
-            setTimeout(() => {
-                closeNotification();
-            }, 5000);
-        }
-
-        function closeNotification() {
-            const notification = document.getElementById("saleNotification");
-            notification.classList.remove("notification-enter");
-            notification.classList.add("notification-exit");
-            
-            setTimeout(() => {
-                notification.classList.add("hidden");
-            }, 500);
-        }
-
-        // Mostrar primeira notificação após 3 segundos
-        setTimeout(showSaleNotification, 3000);
-        
-        // Mostrar notificações a cada 8-15 segundos
-        setInterval(() => {
-            const randomDelay = Math.random() * 7000 + 8000; // 8-15 segundos
-            setTimeout(showSaleNotification, randomDelay);
-        }, 15000);
-
-        // FAQ Toggle Function
-        function toggleFAQ(id) {
-            const faq = document.getElementById(`faq-${id}`);
-            const icon = document.getElementById(`icon-${id}`);
-            
-            if (faq.classList.contains('hidden')) {
-                faq.classList.remove('hidden');
-                icon.style.transform = 'rotate(180deg)';
+            if (answer.classList.contains('show')) {
+                answer.classList.remove('show');
+                arrow.classList.remove('rotate');
             } else {
-                faq.classList.add('hidden');
-                icon.style.transform = 'rotate(0deg)';
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('show'));
+                document.querySelectorAll('.faq-arrow').forEach(a => a.classList.remove('rotate'));
+                
+                answer.classList.add('show');
+                arrow.classList.add('rotate');
             }
         }
-
-        // Carrossel de Vídeos
-        let currentVideoIndex = 0;
-        const totalVideos = 2;
-
-        function updateVideoCarousel() {
-            const slider = document.getElementById("videoSlider");
-            const indicators = document.getElementById("videoIndicators").children;
-            const videos = slider.querySelectorAll("video");
+        
+        // Purchase Notifications
+        const buyers = [
+            { name: "Carlos S.", plan: "Plano Trimestral" },
+            { name: "Ana M.", plan: "Plano Permanente" },
+            { name: "Pedro L.", plan: "Plano Mensal" },
+            { name: "Julia R.", plan: "Plano Trimestral" },
+            { name: "Lucas P.", plan: "Plano Permanente" },
+            { name: "Marina T.", plan: "Plano Mensal" }
+        ];
+        
+        function showRandomNotification() {
+            const randomBuyer = buyers[Math.floor(Math.random() * buyers.length)];
+            document.getElementById('buyerName').textContent = 
+                randomBuyer.name + ' acabou de comprar o ' + randomBuyer.plan;
+            document.getElementById('notification').classList.add('show');
             
-            // Para todos os vídeos
-            videos.forEach(video => video.pause());
-            
-            // Move o carrossel
-            slider.style.transform = `translateX(-${currentVideoIndex * 100}%)`;
-            
-            // Atualiza indicadores
-            for (let i = 0; i < indicators.length; i++) {
-                if (i === currentVideoIndex) {
-                    indicators[i].className = "w-8 h-3 rounded-full bg-green-500 transition-all duration-300";
-                } else {
-                    indicators[i].className = "w-3 h-3 rounded-full bg-gray-600 transition-all duration-300";
-                }
+            setTimeout(() => {
+                document.getElementById('notification').classList.remove('show');
+            }, 4000);
+        }
+        
+        // Show first notification after 2 seconds
+        setTimeout(showRandomNotification, 2000);
+        
+        // Show notification every 8 seconds
+        setInterval(showRandomNotification, 8000);
+        
+        // Modal Functions
+        function closeModal() {
+            document.getElementById('discountModal').classList.remove('show');
+        }
+        
+        function proceedToMonthly() {
+            window.open('https://go.perfectpay.com.br/PPU38CQ52PH', '_blank');
+            closeModal();
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('discountModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
             }
-        }
-
-        function nextVideo() {
-            currentVideoIndex = (currentVideoIndex + 1) % totalVideos;
-            updateVideoCarousel();
-        }
-
-        function prevVideo() {
-            currentVideoIndex = (currentVideoIndex - 1 + totalVideos) % totalVideos;
-            updateVideoCarousel();
-        }
-
-        function goToVideo(index) {
-            currentVideoIndex = index;
-            updateVideoCarousel();
-        }
+        });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
