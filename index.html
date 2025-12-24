@@ -965,7 +965,37 @@
      </section>
 
 
+<!-- Feedbacks dos Clientes Section -->
+    <section class="section" style="background: linear-gradient(to bottom, rgba(127, 29, 29, 0.1), #000);">
+        <div class="container">
+            <h2 class="section-title">
+                Veja o Que <span style="color: #dc2626;">Nossos Clientes</span> Falam
+            </h2>
+            <p class="section-subtitle">Feedbacks reais de quem já está usando</p>
 
+            <div class="carousel-container">
+                <div class="carousel-image">
+                    <img id="carouselImage" src="https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp" alt="Feedback">
+                </div>
+
+                <button class="carousel-btn prev" onclick="prevFeedback()">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                
+                <button class="carousel-btn next" onclick="nextFeedback()">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <div class="carousel-indicators" id="indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    
     
     <!-- Ofertas Section -->
     <section id="ofertas" class="section" style="background: linear-gradient(to bottom, #000, rgba(127, 29, 29, 0.1));">
@@ -1468,6 +1498,7 @@
     </script>
 </body>
 </html>
+
 
 
 
