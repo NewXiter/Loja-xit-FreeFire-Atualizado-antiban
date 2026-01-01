@@ -3,24 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel XIT - New Sensi FF</title>
-    <link rel="icon" href="https://lumi.new/lumi.ing/logo.png" />
-    
-    <!-- Facebook Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '3525977697696631');
-      fbq('track', 'PageView');
-    </script>
-    <!-- End Facebook Pixel Code -->
-    
+    <title>Free Fire PRO - Curso Completo | Do Iniciante ao Mestre</title>
+    <meta name="description" content="Aprenda as melhores estratégias e técnicas profissionais de Free Fire. Curso completo com coaching personalizado. +10.000 alunos já dominaram o jogo!">
     <style>
         * {
             margin: 0;
@@ -30,1395 +14,1626 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #000;
-            color: #fff;
-            line-height: 1.6;
+            background: #0a0a0a;
+            color: white;
+            overflow-x: hidden;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+
+        /* ... keep existing code */
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
-        
-        /* Banner de Desconto - VERDE */
-        .discount-banner {
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        @keyframes pulse-scale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 30px rgba(0, 255, 65, 0.5); }
+            50% { box-shadow: 0 0 60px rgba(0, 255, 65, 0.8); }
+        }
+        @keyframes slide-in {
+            from { transform: translateX(-400px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes neon-green {
+            0%, 100% { 
+                box-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41;
+                border: 2px solid #00ff41;
+            }
+            50% { 
+                box-shadow: 0 0 20px #00ff41, 0 0 40px #00ff41, 0 0 60px #00ff41;
+                border: 2px solid #00e639;
+            }
+        }
+        @keyframes neon-yellow {
+            0%, 100% { 
+                box-shadow: 0 0 10px #eab308, 0 0 20px #eab308, 0 0 30px #eab308;
+                border: 2px solid #eab308;
+            }
+            50% { 
+                box-shadow: 0 0 20px #f59e0b, 0 0 40px #f59e0b, 0 0 60px #f59e0b;
+                border: 2px solid #fbbf24;
+            }
+        }
+
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-pulse-slow { animation: pulse-slow 20s ease-in-out infinite; }
+        .animate-pulse-scale { animation: pulse-scale 2s ease-in-out infinite; }
+        .animate-bounce-subtle { animation: bounce-subtle 3s infinite; }
+        .animate-glow { animation: glow 2s infinite; }
+        .animate-slide-in { animation: slide-in 0.5s ease forwards; }
+        .animate-neon-green { animation: neon-green 2s ease-in-out infinite; }
+        .animate-neon-yellow { animation: neon-yellow 2s ease-in-out infinite; }
+
+        /* Banner */
+        .banner-verde {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background: linear-gradient(to right, #22c55e, #4ade80, #22c55e);
-            color: white;
+            background: linear-gradient(to right, #00ff41, #00e639, #00ff41);
+            color: black;
             text-align: center;
-            padding: 8px 4px;
-            font-size: 14px;
-            font-weight: 900;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-        
-        .discount-banner .highlight {
-            color: #fbbf24;
-        }
-        
-        @media (min-width: 640px) {
-            .discount-banner {
-                font-size: 18px;
-            }
-        }
-        
-        /* BOTÕES DOS PLANOS - CORES PERSONALIZADAS */
-        .btn-plan {
-            width: 100%;
-            padding: 16px;
-            border-radius: 8px;
+            padding: 12px 16px;
             font-weight: bold;
-            font-size: 18px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: block;
-            text-align: center;
+            font-size: 14px;
+            letter-spacing: 0.05em;
         }
-        
-        /* BOTÃO VERDE - Para planos Android e iPhone (laterais) */
-        .btn-plan.green {
-            background: #22c55e;
+
+        .banner-verde .destaque {
             color: white;
-            box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.5);
-        }
-        
-        .btn-plan.green:hover {
-            background: #16a34a;
-            transform: scale(1.05);
-        }
-        
-        /* BOTÃO VERMELHO - Para plano do meio (Android/iPhone combo) */
-        .btn-plan.red {
-            background: #dc2626;
-            color: white;
-            box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.5);
-        }
-        
-        .btn-plan.red:hover {
-            background: #b91c1c;
-            transform: scale(1.05);
-        }
-        
-        /* Faixa Animada - VERDE */
-        .marquee-section {
-            background: #000;
-            border-top: 1px solid rgba(34, 197, 94, 0.5);
-            border-bottom: 1px solid rgba(34, 197, 94, 0.5);
-            padding: 45px 0 12px 0;
-            overflow: hidden;
-        }
-        
-        .marquee-content {
-            white-space: nowrap;
-            animation: scroll-left 20s linear infinite;
-            display: inline-block;
-        }
-        
-        .marquee-content span {
-            font-size: 24px;
             font-weight: 900;
-            color: #22c55e;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
-        
-        @keyframes scroll-left {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-        
-        /* Notificações de Compra - VERDE */
-        .notification {
+
+        /* Sales Counter */
+        .sales-counter {
             position: fixed;
-            bottom: 24px;
-            left: 24px;
-            z-index: 1000;
-            background: linear-gradient(to right, rgba(17, 24, 39, 0.95), rgba(0, 0, 0, 0.95));
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(34, 197, 94, 0.5);
-            border-radius: 12px;
-            padding: 16px;
-            max-width: 350px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-            animation: slide-in 0.5s ease-out;
-            display: none;
-        }
-        
-        .notification.show {
+            top: 64px;
+            right: 16px;
+            z-index: 999;
+            background: linear-gradient(to right, #dc2626, #db2777);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 9999px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
             display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        
+
+        /* Notifications */
+        .notifications {
+            position: fixed;
+            bottom: 16px;
+            left: 16px;
+            z-index: 999;
+            max-width: 300px;
+        }
+
+        .notification {
+            background: #1a1a1a;
+            border: 2px solid #00ff41;
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 8px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
         .notification-icon {
             width: 40px;
             height: 40px;
-            background: #22c55e;
             border-radius: 50%;
+            background: linear-gradient(to bottom right, #00ff41, #00e639);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            margin-right: 12px;
         }
-        
-        @keyframes slide-in {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        
-        /* Hero Section - VERDE */
+
+        /* Hero Section */
         .hero {
-            position: relative;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 80px 20px;
+            text-align: center;
+            padding: 96px 16px 64px;
+            position: relative;
             overflow: hidden;
         }
-        
-        .hero::before {
-            content: '';
+
+        .hero-bg {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to bottom, rgba(34, 197, 94, 0.2), #000, #000);
+            background: radial-gradient(ellipse at center, rgba(0, 255, 65, 0.1), transparent, transparent);
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 10;
-            max-width: 1000px;
-            text-align: center;
-        }
-        
-        .hero-logo {
-            width: 160px;
-            margin: 0 auto 32px;
-            animation: pulse 2s infinite;
-        }
-        
-        @media (min-width: 768px) {
-            .hero-logo {
-                width: 224px;
-            }
-        }
-        
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.8;
-            }
-        }
-        
-        .hero h1 {
-            font-size: 32px;
-            font-weight: 900;
-            line-height: 1.2;
-            margin-bottom: 24px;
-        }
-        
-        @media (min-width: 768px) {
-            .hero h1 {
-                font-size: 48px;
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .hero h1 {
-                font-size: 64px;
-            }
-        }
-        
-        .hero h1 .red {
-            color: #22c55e;
-        }
-        
-        .hero p {
-            font-size: 12px;
-            color: #d1d5db;
-            max-width: 768px;
-            margin: 0 auto 48px;
-        }
-        
-        @media (min-width: 768px) {
-            .hero p {
-                font-size: 20px;
-            }
-        }
-        
-        .video-container {
-            margin: 48px 0;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 2px solid rgba(34, 197, 94, 0.3);
-            max-width: 896px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-        
-        .video-container iframe,
-        .video-container video {
-            width: 100%;
-            aspect-ratio: 16/9;
-            display: block;
-        }
-        
-        .cta-section {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            align-items: center;
-            margin-top: 32px;
-        }
-        
-        @media (min-width: 640px) {
-            .cta-section {
-                flex-direction: row;
-                justify-content: center;
-            }
-        }
-        
-        .btn-primary {
-            background: #22c55e;
-            color: white;
-            font-weight: bold;
-            padding: 16px 48px;
-            border-radius: 8px;
-            font-size: 20px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 25px 50px -12px rgba(34, 197, 94, 0.5);
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .btn-primary:hover {
-            background: #16a34a;
-            transform: scale(1.05);
-        }
-        
-        .cta-info {
-            font-size: 14px;
-            color: #9ca3af;
-        }
-        
-        .bounce-arrow {
-            position: absolute;
-            bottom: 40px;
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-        
-        /* Sections */
-        .section {
-            padding: 80px 20px;
-        }
-        
-        .section-title {
-            font-size: 28px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 16px;
-        }
-        
-        @media (min-width: 768px) {
-            .section-title {
-                font-size: 48px;
-            }
-        }
-        
-        .section-subtitle {
-            color: #9ca3af;
-            text-align: center;
-            margin-bottom: 64px;
-            font-size: 18px;
-        }
-        
-        .grid {
-            display: grid;
-            gap: 24px;
-        }
-        
-        @media (min-width: 768px) {
-            .grid-3 {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        .card {
-            background: linear-gradient(to bottom right, rgba(34, 197, 94, 0.2), #111827);
-            padding: 32px;
-            border-radius: 16px;
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            transition: all 0.3s;
-        }
-        
-        .card:hover {
-            border-color: rgba(34, 197, 94, 0.5);
-            transform: scale(1.05);
-        }
-        
-        .card-icon {
-            font-size: 48px;
-            text-align: center;
-            margin-bottom: 16px;
-        }
-        
-        .card-title {
-            font-size: 20px;
-            font-weight: bold;
-            color: #4ade80;
-            text-align: center;
-            margin-bottom: 12px;
-        }
-        
-        .card-description {
-            color: #9ca3af;
-            text-align: center;
-        }
-        
-        /* Soluções Section - VERDE */
-        .solution-card {
-            background: linear-gradient(to right, #111827, #000);
-            padding: 32px;
-            border-radius: 16px;
-            border: 2px solid rgba(34, 197, 94, 0.3);
-            transition: all 0.3s;
-            margin-bottom: 24px;
-        }
-        
-        .solution-card:hover {
-            border-color: #22c55e;
-        }
-        
-        .solution-content {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-        
-        @media (min-width: 768px) {
-            .solution-content {
-                flex-direction: row;
-                align-items: center;
-            }
-        }
-        
-        .solution-text {
-            flex: 1;
-        }
-        
-        .solution-number {
-            font-size: 64px;
-            font-weight: 900;
-            color: #22c55e;
-            opacity: 0.2;
-        }
-        
-        @media (min-width: 768px) {
-            .solution-number {
-                font-size: 96px;
-            }
-        }
-        
-        .solution-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 16px 0;
-        }
-        
-        @media (min-width: 768px) {
-            .solution-title {
-                font-size: 32px;
-            }
-        }
-        
-        .solution-description {
-            color: #9ca3af;
-            font-size: 18px;
-        }
-        
-        /* Ofertas Section - VERDE */
-        .plan-card {
-            position: relative;
-            background: linear-gradient(to bottom, #111827, #000);
-            padding: 32px;
-            border-radius: 16px;
-            border: 2px solid #1f2937;
-            transition: all 0.3s;
-        }
-        
-        .plan-card.popular {
-            border-color: #22c55e;
-            transform: scale(1.05);
-        }
-        
-        .plan-card:hover {
-            transform: scale(1.05);
-        }
-        
-        .popular-badge {
-            position: absolute;
-            top: -16px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #22c55e;
-            color: white;
-            padding: 4px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-        
-        .plan-header {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-        
-        .plan-name {
-            font-size: 24px;
-            font-weight: bold;
-            color: #4ade80;
-            margin-bottom: 16px;
-        }
-        
-        .plan-price {
-            font-size: 48px;
-            font-weight: 900;
-        }
-        
-        .plan-period {
-            color: #9ca3af;
-            margin-top: 8px;
-        }
-        
-        .plan-features {
-            list-style: none;
-            margin-bottom: 32px;
-        }
-        
-        .plan-features li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 12px;
-            color: #d1d5db;
-        }
-        
-        .plan-features li::before {
-            content: "✓";
-            color: #22c55e;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        
-        .plan-buyers-tag {
-            text-align: center;
-            margin-top: 12px;
-            padding: 8px;
-            background: rgba(34, 197, 94, 0.1);
-            border-radius: 8px;
-            font-size: 14px;
-            color: #d1d5db;
-        }
-        
-        .plan-buyers-tag strong {
-            color: #22c55e;
-            font-size: 16px;
-        }
-        
-        /* Feedback Carousel - VERDE */
-        .carousel-container {
-            position: relative;
-            max-width: 672px;
+            max-width: 1280px;
             margin: 0 auto;
         }
-        
-        .carousel-image {
+
+        .logo-container {
+            margin-bottom: 32px;
+        }
+
+        .logo {
+            width: 256px;
+            max-width: 90%;
+            height: auto;
+            margin: 0 auto;
+            filter: drop-shadow(0 25px 25px rgba(0,0,0,0.3));
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .text-neon {
+            color: #00ff41;
+            filter: drop-shadow(0 0 10px #00ff41) drop-shadow(0 0 20px #00ff41);
+        }
+
+        .text-neon-red {
+            color: #ef4444;
+            filter: drop-shadow(0 0 10px #ef4444) drop-shadow(0 0 20px #ef4444);
+        }
+
+        .benefits {
+            font-size: 1.125rem;
+            color: #d1d5db;
+            margin-bottom: 32px;
+        }
+
+        .benefits p {
+            margin-bottom: 8px;
+        }
+
+        .user-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(0, 255, 65, 0.1);
+            border: 2px solid #00ff41;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            margin-bottom: 32px;
+        }
+
+        .video-placeholder {
+            max-width: 896px;
+            margin: 0 auto 32px;
             border-radius: 16px;
             overflow: hidden;
-            border: 2px solid rgba(34, 197, 94, 0.3);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 255, 65, 0.2);
+            transition: transform 0.5s;
         }
-        
-        .carousel-image img {
+
+        .video-placeholder:hover {
+            transform: scale(1.05);
+        }
+
+        .video-content {
+            aspect-ratio: 16/9;
+            background: linear-gradient(to bottom right, #111827, #000);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: #00ff41;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to right, #00ff41, #00e639);
+            color: black;
+            font-size: 1.5rem;
+            font-weight: 900;
+            padding: 20px 48px;
+            border-radius: 16px;
+            text-decoration: none;
+            box-shadow: 0 25px 50px -12px rgba(0, 255, 65, 0.5);
+            transition: transform 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 16px;
+            background: linear-gradient(to bottom, transparent, #0f0f0f);
+        }
+
+        .features-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .feature-card {
+            background: #1a1a1a;
+            border: 1px solid #374151;
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.5s;
+        }
+
+        .feature-card:hover {
+            border-color: #00ff41;
+            transform: translateY(-16px);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: linear-gradient(to bottom right, #00ff41, #00e639);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 255, 65, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .feature-card p {
+            color: #9ca3af;
+            text-align: center;
+            line-height: 1.625;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 64px 16px;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .testimonials-subtitle {
+            color: #9ca3af;
+            text-align: center;
+            margin-bottom: 48px;
+            font-size: 1.125rem;
+        }
+
+        .testimonials-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: #1a1a1a;
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.5s;
+        }
+
+        .testimonial-card:hover {
+            border-color: #00ff41;
+            transform: translateY(-8px);
+        }
+
+        .testimonial-card img {
             width: 100%;
             height: auto;
             display: block;
         }
-        
-        .carousel-btn {
+
+        /* Mobile Carousel */
+        .carousel-mobile {
+            display: block;
+        }
+
+        .carousel-desktop {
+            display: none;
+        }
+
+        .carousel-container {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .carousel-nav {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 12px;
+            background: #00ff41;
+            color: black;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             border: none;
+            font-size: 32px;
+            font-weight: 900;
             cursor: pointer;
-            transition: all 0.3s;
-            backdrop-filter: blur(4px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
         }
-        
-        .carousel-btn:hover {
-            background: #22c55e;
+
+        .carousel-nav:hover {
+            transform: translateY(-50%) scale(1.1);
         }
-        
-        .carousel-btn.prev {
+
+        .carousel-nav.prev {
             left: 8px;
         }
-        
-        .carousel-btn.next {
+
+        .carousel-nav.next {
             right: 8px;
         }
-        
-        .carousel-indicators {
+
+        .carousel-dots {
             display: flex;
             justify-content: center;
             gap: 8px;
             margin-top: 24px;
         }
-        
-        .indicator {
-            width: 8px;
-            height: 8px;
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             background: #4b5563;
+            border: none;
             cursor: pointer;
             transition: all 0.3s;
-            border: none;
-            padding: 0;
         }
-        
-        .indicator.active {
-            background: #22c55e;
+
+        .carousel-dot.active {
+            background: #00ff41;
             width: 32px;
+            border-radius: 6px;
         }
-        
-        /* Garantia Section - VERDE */
-        .guarantee-section {
-            padding: 80px 20px;
-            background: linear-gradient(to bottom, #000, #111827);
+
+        .stats-card {
+            background: linear-gradient(to bottom right, #00ff41, #00e639);
+            border-radius: 16px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 24px;
         }
-        
-        .guarantee-container {
+
+        .stats-number {
+            font-size: 3.75rem;
+            font-weight: 900;
+            color: black;
+            margin-bottom: 16px;
+        }
+
+        .stats-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: black;
+        }
+
+        .stats-subtext {
+            color: rgba(0,0,0,0.8);
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* Packages */
+        .packages {
+            padding: 80px 16px;
+        }
+
+        .packages h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .packages-subtitle {
+            color: #9ca3af;
+            text-align: center;
+            margin-bottom: 48px;
+            font-size: 1.125rem;
+        }
+
+        .packages-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .package-card {
+            background: #1a1a1a;
+            border: 2px solid #374151;
+            border-radius: 24px;
+            padding: 32px;
+            transition: all 0.5s;
+            position: relative;
+        }
+
+        .package-card:hover {
+            border-color: #00ff41;
+            transform: translateY(-16px);
+        }
+
+        .package-card.vip {
+            border-color: #eab308;
+        }
+
+        .package-card.vip:hover {
+            border-color: #fbbf24;
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(to right, #eab308, #f59e0b);
+            color: black;
+            padding: 8px 24px;
+            border-radius: 9999px;
+            font-weight: 900;
+            font-size: 14px;
+        }
+
+        .package-icon {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 24px;
+            background: linear-gradient(to bottom right, #00ff41, #00e639);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid #00ff41;
+            box-shadow: 0 10px 15px -3px rgba(0, 255, 65, 0.3);
+        }
+
+        .package-card.vip .package-icon {
+            background: linear-gradient(to bottom right, #eab308, #f59e0b);
+            border-color: #eab308;
+            box-shadow: 0 10px 15px -3px rgba(234, 179, 8, 0.3);
+        }
+
+        .package-title {
+            font-size: 1.875rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 8px;
+            color: #00ff41;
+        }
+
+        .package-card.vip .package-title {
+            color: #eab308;
+        }
+
+        .package-subtitle {
+            text-align: center;
+            color: #9ca3af;
+            margin-bottom: 24px;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .package-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .package-features svg {
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .package-pricing {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .package-old-price {
+            color: #ef4444;
+            text-decoration: line-through;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .package-label {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        .package-price {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #00ff41;
+        }
+
+        .package-card.vip .package-price {
+            color: #eab308;
+        }
+
+        .package-button {
+            width: 100%;
+            background: linear-gradient(to right, #00ff41, #00e639);
+            color: black;
+            font-weight: 900;
+            padding: 16px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s;
+            font-size: 16px;
+        }
+
+        .package-button:hover {
+            transform: scale(1.05);
+        }
+
+        .package-card.vip .package-button {
+            background: linear-gradient(to right, #eab308, #f59e0b);
+        }
+
+        /* Guarantee */
+        .guarantee {
+            padding: 80px 16px;
+            background: linear-gradient(to bottom, transparent, #0f0f0f);
+        }
+
+        .guarantee-content {
             max-width: 896px;
             margin: 0 auto;
             text-align: center;
         }
-        
-        .guarantee-image {
-            width: 192px;
+
+        .guarantee-badge {
+            width: 160px;
+            height: 160px;
             margin: 0 auto 32px;
+            background: linear-gradient(to bottom right, #00ff41, #00e639);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 255, 65, 0.5);
         }
-        
-        @media (min-width: 768px) {
-            .guarantee-image {
-                width: 256px;
-            }
+
+        .guarantee-badge-number {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: black;
         }
-        
-        .guarantee-box {
-            background: linear-gradient(to bottom right, rgba(34, 197, 94, 0.2), #111827);
-            padding: 32px;
-            border-radius: 16px;
-            border: 2px solid rgba(34, 197, 94, 0.3);
-            margin-bottom: 32px;
+
+        .guarantee-badge-text {
+            font-size: 14px;
+            font-weight: 700;
+            color: black;
         }
-        
-        .guarantee-text {
-            font-size: 20px;
+
+        .guarantee h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 24px;
+        }
+
+        .guarantee p {
+            font-size: 1.25rem;
             color: #d1d5db;
-            line-height: 1.8;
+            margin-bottom: 32px;
+            line-height: 1.625;
+            max-width: 672px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
-        /* FAQ Section - VERDE */
+
+        .guarantee-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            font-size: 14px;
+        }
+
+        .guarantee-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 16px;
+        }
+
+        .faq h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .faq-container {
+            max-width: 896px;
+            margin: 0 auto;
+        }
+
         .faq-item {
-            background: linear-gradient(to right, #111827, #000);
+            background: #1a1a1a;
+            border: 1px solid #374151;
             border-radius: 12px;
-            border: 1px solid #1f2937;
             margin-bottom: 16px;
             overflow: hidden;
-            transition: all 0.3s;
+            transition: border-color 0.3s;
         }
-        
+
         .faq-item:hover {
-            border-color: rgba(34, 197, 94, 0.5);
+            border-color: #00ff41;
         }
-        
+
         .faq-question {
             width: 100%;
-            padding: 24px;
-            text-align: left;
+            padding: 20px 24px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            gap: 16px;
-            background: transparent;
+            align-items: center;
+            text-align: left;
+            background: none;
             border: none;
             color: white;
-            font-size: 16px;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 1.125rem;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: background 0.3s;
         }
-        
+
         .faq-question:hover {
-            background: rgba(17, 24, 39, 0.5);
+            background: rgba(0, 255, 65, 0.05);
         }
-        
-        .faq-question span {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .faq-bullet {
-            color: #22c55e;
-        }
-        
-        .faq-arrow {
-            width: 24px;
-            height: 24px;
-            color: #22c55e;
-            flex-shrink: 0;
+
+        .faq-icon {
+            color: #00ff41;
             transition: transform 0.3s;
         }
-        
-        .faq-arrow.rotate {
+
+        .faq-icon.open {
             transform: rotate(180deg);
         }
-        
+
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out;
+            transition: max-height 0.3s;
         }
-        
-        .faq-answer.show {
+
+        .faq-answer.open {
             max-height: 500px;
+            padding: 0 24px 20px;
         }
-        
-        .faq-answer-content {
-            padding: 0 24px 24px 24px;
+
+        .faq-answer p {
             color: #9ca3af;
-            line-height: 1.8;
-            padding-left: 48px;
+            line-height: 1.625;
         }
-        
-        /* Footer - VERDE */
+
+        /* Footer */
         footer {
-            padding: 48px 20px;
-            background: #000;
-            border-top: 1px solid #111827;
+            padding: 48px 16px;
+            border-top: 1px solid #374151;
         }
-        
+
         .footer-content {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-        }
-        
-        .footer-main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            gap: 32px;
-            margin-bottom: 32px;
-        }
-        
-        @media (min-width: 768px) {
-            .footer-main {
-                flex-direction: row;
-            }
-        }
-        
-        .footer-left {
             text-align: center;
         }
-        
-        @media (min-width: 768px) {
-            .footer-left {
-                text-align: left;
-            }
-        }
-        
-        .footer-logo {
-            width: 128px;
-            margin: 0 auto 16px;
-        }
-        
-        @media (min-width: 768px) {
-            .footer-logo {
-                margin: 0 0 16px 0;
-            }
-        }
-        
-        .footer-copyright {
-            color: #6b7280;
-            font-size: 14px;
-        }
-        
-        .footer-links {
+
+        .footer-content > div {
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 24px;
+        }
+
+        .footer-text {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
             gap: 16px;
         }
-        
-        .footer-link {
-            color: #9ca3af;
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: #1a1a1a;
+            border: 1px solid #374151;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s;
         }
-        
-        .footer-link:hover {
-            color: #22c55e;
+
+        .social-link:hover {
+            background: #00ff41;
+            border-color: #00ff41;
+            color: black;
         }
-        
-        .footer-bottom {
-            padding-top: 32px;
-            border-top: 1px solid #111827;
-            text-align: center;
+
+        .footer-credits {
+            font-size: 12px;
+            color: #6b7280;
         }
-        
-        .footer-disclaimer {
-            color: #4b5563;
+
+        .footer-credits a {
+            color: #00ff41;
+            text-decoration: none;
+        }
+
+        .footer-credits a:hover {
+            text-decoration: underline;
+        }
+
+        /* Icons SVG */
+        .icon {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .icon-filled {
+            fill: currentColor;
+            stroke: none;
+        }
+
+        /* Media Queries */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 4.5rem;
+            }
+
+            .logo {
+                width: 320px;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .packages-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .testimonials h2 {
+                font-size: 3.75rem;
+            }
+
+            .packages h2,
+            .faq h2 {
+                font-size: 3.75rem;
+            }
+
+            .carousel-mobile {
+                display: none;
+            }
+
+            .carousel-desktop {
+                display: block;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* STICKY CTA BUTTON */
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9996;
+            display: none;
+        }
+
+        .sticky-cta.show {
+            display: block;
+            animation: sticky-slide-up 0.5s ease-out;
+        }
+
+        @keyframes sticky-slide-up {
+            from {
+                transform: translateX(-50%) translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .sticky-cta a {
+            display: inline-block;
+            background: linear-gradient(to right, #00ff41, #00e639);
+            color: black;
+            font-weight: 900;
+            padding: 12px 18px;
+            border-radius: 9999px;
+            text-decoration: none;
+            box-shadow: 0 25px 50px -12px rgba(0, 255, 65, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-size: 13px;
+        }
+
+        .sticky-cta a:hover {
+            transform: scale(1.06);
+        }
+
+        /* Provas sociais abaixo do CTA (igual referência) */
+        .cta-social-proof {
+            margin-top: 20px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            text-align: left;
             font-size: 14px;
+            color: rgba(229, 231, 235, 0.92);
+        }
+
+        .cta-social-proof .row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-social-proof .icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        .cta-social-proof strong {
+            font-weight: 900;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <noscript>
-      <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=3525977697696631&ev=PageView&noscript=1" />
-    </noscript>
-
-    <!-- Banner de Desconto Fixo -->
-    <div class="discount-banner">
-        <div class="container">
-            <span>OFERTA EXCLUSIVA: <span class="highlight">FINAL DE ANO NOVO!</span> </span>
-        </div>
+    <!-- Banner Verde -->
+    <div class="banner-verde">
+        <p>Desconto só <span class="destaque" id="data-atual">HOJE</span> nessa página <span class="destaque" id="data-display"></span></p>
     </div>
 
-    <!-- Faixa Animada "NEW SENSI" -->
-    <div class="marquee-section">
-        <div class="marquee-content">
-            <span>NEW SENSI • FREE FIRE • ATUALIZADO 2025 • NEW SENSI • FREE FIRE • ATUALIZADO 2025 • NEW SENSI • FREE FIRE • ATUALIZADO 2025 • NEW SENSI • FREE FIRE • ATUALIZADO 2025 • NEW SENSI • FREE FIRE • ATUALIZADO 2025 • NEW SENSI • FREE FIRE • ATUALIZADO 2025</span>
-        </div>
+    <!-- Sales Counter -->
+    <div class="sales-counter">
+        <svg class="icon" viewBox="0 0 24 24" width="16" height="16">
+            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+        </svg>
+        <span><span id="sales-count">252</span> vendas hoje!</span>
     </div>
 
-    <!-- Notificações de Compra -->
-    <div class="notification" id="notification">
-        <div class="notification-icon">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-        </div>
-        <div>
-            <p style="color: white; font-size: 14px; font-weight: 600;">🔥 Nova Compra!</p>
-            <p style="color: #d1d5db; font-size: 12px; margin-top: 4px;" id="buyerName"></p>
-        </div>
-    </div>
+    <!-- Notifications -->
+    <div class="notifications" id="notifications"></div>
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-bg animate-pulse-slow"></div>
         <div class="hero-content">
-            <img src="https://static.lumi.new/material/c0/c0add45d46c1d90121fdceace3cdbf7f.png" alt="Legit XIT Logo" class="hero-logo">
-            
+            <!-- Logo -->
+            <div class="logo-container animate-float">
+                <img src="https://static.lumi.new/03/03af9622056718bde17a728ece6c9024.webp" alt="New Xiter Logo" class="logo">
+            </div>
+
+            <!-- Title -->
             <h1>
-                MELHOR PAINEL!<br> PRA DAR <span class="red">FULL CAPA</span><br> NO FREE FIRE
+                DOMINE O <span class="text-neon">FREE FIRE</span> COMO UM<br>
+                <span class="text-neon-red">PROFISSIONAL!</span>
             </h1>
-            
-            <p>Acesso instantâneo ao melhor xit do Free Fire. Sem risco de ban, sem blacklist. Apenas o melhor PAINEL XIT do Free Fire.</p>
 
-            <!-- Video Wistia Atualizado -->
-            <div style="position: relative; width: 100%; max-width: 800px; margin: 20px auto;">
-                <script src="https://fast.wistia.com/player.js" async></script>
-                <script src="https://fast.wistia.com/embed/m8pcxycab8.js" async type="module"></script>
-                <style>
-                    wistia-player[media-id='m8pcxycab8']:not(:defined) { 
-                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/m8pcxycab8/swatch'); 
-                        display: block; 
-                        filter: blur(5px); 
-                        padding-top: 56.25%; 
-                    }
-                </style>
-                <wistia-player media-id="m8pcxycab8" aspect="1.7777777777777777"></wistia-player>
+            <!-- Benefits -->
+            <div class="benefits">
+                <p>• Curso com + <strong style="color: #00ff41;">10 mil Alunos</strong> Aprovados</p>
+                <p>• Aprenda as <span style="color: #ef4444; font-weight: 700;">Melhores Estratégias</span> dos Pros!</p>
+                <p>• Técnicas de Mira, Posicionamento e Comunicação!</p>
+                <p>• Suporte Exclusivo com Coaches Profissionais 24h!</p>
             </div>
 
-            <div class="cta-section">
-                <a href="#ofertas" class="btn-primary">GARANTIR ACESSO AGORA!</a>
-                <p class="cta-info">✓ Acesso de imediato • ✓ Full capa Garantido!</p>
+            <!-- User Counter -->
+            <div class="user-counter animate-pulse-scale">
+                <svg class="icon" style="color: #00ff41;" width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span><strong style="color: #00ff41; font-size: 1.25rem;" id="user-count">998</strong> <span style="color: #d1d5db;">alunos online agora!</span></span>
             </div>
-        </div>
 
-        <div class="bounce-arrow">
-            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #dc2626;">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-        </div>
-    </section>
-
-    <!-- Dores Section -->
-    <section class="section" style="background: linear-gradient(to bottom, #000, #111827);">
-        <div class="container">
-            <h2 class="section-title">
-                Cansado de <span style="color: #dc2626;">Perder Tempo</span>?
-            </h2>
-            <p class="section-subtitle">Sabemos como é frustrante enfrentar esses problemas...</p>
-
-            <div class="grid grid-3">
-                <div class="card">
-                    <div class="card-icon">⚠️</div>
-                    <h3 class="card-title">Risco de Ban</h3>
-                    <p class="card-description">Medo constante de ser banido usando painéis não confiáveis</p>
+            <!-- Video Placeholder -->
+            <div class="video-placeholder">
+                <div class="video-content">
+                    <div style="text-align: center;">
+                        <div class="play-button">
+                            <svg width="40" height="40" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                            </svg>
+                        </div>
+                        <p style="color: #9ca3af;">Veja como nossos alunos evoluíram!</p>
+                    </div>
                 </div>
+            </div>
 
-                <div class="card">
-                    <div class="card-icon">🔄</div>
-                    <h3 class="card-title">Painéis Desatualizados</h3>
-                    <p class="card-description">Ferramentas que param de funcionar após cada atualização do jogo</p>
+            <!-- CTA Button -->
+            <a href="#pacotes" class="cta-button animate-glow">
+                🎯 QUERO EVOLUIR AGORA!
+            </a>
+
+            <!-- Provas sociais abaixo do CTA (igual referência) -->
+            <div class="cta-social-proof">
+                <div class="row">
+                    <span aria-hidden="true">⭐</span>
+                    <span><strong>Avaliação:</strong> 4.9/5 estrelas (baseado em <strong>+5.000 avaliações</strong>)</span>
                 </div>
-
-                <div class="card">
-                    <div class="card-icon">😤</div>
-                    <h3 class="card-title">Instalação Complicada</h3>
-                    <p class="card-description">Processos difíceis com arquivos confusos e pastas complicadas</p>
+                <div class="row">
+                    <span aria-hidden="true">🏆</span>
+                    <span><strong>Eleito</strong> o melhor painel XIT do Brasil por <strong>3 anos consecutivos</strong></span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Soluções Section -->
-    <section class="section" style="background: linear-gradient(to bottom, #111827, #000);">
-        <div class="container">
-            <h2 class="section-title">
-                A <span style="color: #dc2626;">Solução</span> Perfeita
-            </h2>
-            <p class="section-subtitle">Painel XIT resolve todos esses problemas acima de uma vez</p>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg class="icon" width="40" height="40" viewBox="0 0 24 24" style="stroke: black; stroke-width: 2.5;">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                </div>
+                <h3>Técnicas de Mira</h3>
+                <p>Aprenda técnicas profissionais de mira e controle de recuo. Torne-se preciso como os melhores jogadores!</p>
+            </div>
 
-            <!-- Vídeo do Painel em Ação -->
-            <div style="margin-bottom: 48px;">
-                <div class="video-container" style="max-width: 896px; margin: 0 auto;">
-                    <script src="https://fast.wistia.com/player.js" async></script>
-                    <script src="https://fast.wistia.com/embed/wkc2wjaez1.js" async type="module"></script>
-                    <style>
-                        wistia-player[media-id='wkc2wjaez1']:not(:defined) { 
-                            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/wkc2wjaez1/swatch'); 
-                            display: block; 
-                            filter: blur(5px); 
-                            padding-top:55.0%; 
-                        }
-                    </style>
-                    <wistia-player media-id="wkc2wjaez1" aspect="1.8181818181818181"></wistia-player>
-                   </div>
-                <p style="text-align: center; color: #9ca3af; margin-top: 16px; font-size: 18px;">👆 Veja o Painel XIT em ação</p>
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg class="icon" width="40" height="40" viewBox="0 0 24 24" style="stroke: black; stroke-width: 2.5;">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
                 </div>
-                
-                <div>
-              
-                    <div class="solution-content">
-                        <div class="solution-text">
-                            <div class="solution-number"> </div>
-                           
-                        </div>
-                    </div>
-                </div>
+                <h3>Estratégias Avançadas</h3>
+                <p>Domine posicionamento, rotação e tomada de decisão. Aprenda quando atacar e quando recuar estrategicamente.</p>
+            </div>
 
-                
-                        </div>
-                    </div>
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg class="icon" width="40" height="40" viewBox="0 0 24 24" style="stroke: black; stroke-width: 2.5;">
+                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                    </svg>
                 </div>
+                <h3>Comunicação em Squad</h3>
+                <p>Aprenda a liderar seu time, fazer callouts eficientes e coordenar estratégias vencedoras com sua squad.</p>
             </div>
         </div>
-     </section>
+    </section>
 
+    <!-- Customer Testimonials - Desktop -->
+    <section class="testimonials carousel-desktop">
+        <h2>Veja o que <span class="text-neon">Nossos Alunos</span> Dizem</h2>
+        <p class="testimonials-subtitle">Feedbacks reais de quem já está evoluindo!</p>
+        
+        <div class="testimonials-grid" style="max-width: 1280px; margin: 0 auto;">
+            <div class="testimonial-card">
+                <img src="https://static.lumi.new/c7/c7b914d10688c2fffc5cb4d141e67636.webp" alt="Feedback Cliente 1">
+            </div>
+            <div class="testimonial-card">
+                <img src="https://static.lumi.new/18/18ccbb3b265253da2c711dc58abd771e.webp" alt="Feedback Cliente 2">
+            </div>
+            <div class="testimonial-card">
+                <img src="https://static.lumi.new/18/18e3fc8e4eb0873a2d8b5f2f6bf9e17e.webp" alt="Feedback Cliente 3">
+            </div>
+            <div class="testimonial-card">
+                <img src="https://static.lumi.new/fe/fefcf3863fb7b5c7110f449e572a6fcc.webp" alt="Feedback Cliente 4">
+            </div>
+            <div class="testimonial-card">
+                <img src="https://static.lumi.new/e0/e0d72d5583e8ea847c16e94db16083d0.webp" alt="Feedback Cliente 5">
+            </div>
+            <div class="stats-card">
+                <p class="stats-number">10.000+</p>
+                <p class="stats-text">Alunos Satisfeitos</p>
+                <p class="stats-subtext">E você será o próximo!</p>
+            </div>
+        </div>
+    </section>
 
-<!-- Feedbacks dos Clientes Section -->
-    <section class="section" style="background: linear-gradient(to bottom, rgba(127, 29, 29, 0.1), #000);">
-        <div class="container">
-            <h2 class="section-title">
-                Veja o Que <span style="color: #dc2626;">Nossos Clientes</span> Falam
-            </h2>
-            <p class="section-subtitle">Feedbacks reais de quem já está usando</p>
-
+    <!-- Customer Testimonials - Mobile Carousel -->
+    <section class="testimonials carousel-mobile">
+        <h2>Veja o que <span class="text-neon">Nossos Alunos</span> Dizem</h2>
+        <p class="testimonials-subtitle">Feedbacks reais de quem já está evoluindo!</p>
+        
+        <div style="max-width: 1280px; margin: 0 auto;">
             <div class="carousel-container">
-                <div class="carousel-image">
-                    <img id="carouselImage" src="https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp" alt="Feedback">
+                <div class="testimonial-card">
+                    <img id="carousel-image" src="https://static.lumi.new/c7/c7b914d10688c2fffc5cb4d141e67636.webp" alt="Feedback Cliente">
                 </div>
-
-                <button class="carousel-btn prev" onclick="prevFeedback()">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
                 
-                <button class="carousel-btn next" onclick="nextFeedback()">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                <button class="carousel-nav prev" onclick="prevTestimonial()" aria-label="Anterior">‹</button>
+                <button class="carousel-nav next" onclick="nextTestimonial()" aria-label="Próximo">›</button>
+                
+                <div class="carousel-dots" id="carousel-dots"></div>
+            </div>
+
+            <div class="stats-card">
+                <p class="stats-number">10.000+</p>
+                <p class="stats-text">Alunos Satisfeitos</p>
+                <p class="stats-subtext">E você será o próximo!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="pacotes" class="packages">
+        <h2>Escolha Seu <span class="text-neon">Plano</span> Abaixo</h2>
+        <p class="packages-subtitle">Todos os planos incluem certificado de conclusão</p>
+
+        <div class="packages-grid">
+            <!-- Basic Package -->
+            <div class="package-card">
+                <div class="package-icon">
+                    <svg class="icon" width="48" height="48" viewBox="0 0 24 24" style="stroke: black; stroke-width: 2.5;">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <circle cx="12" cy="12" r="2"/>
                     </svg>
-                </button>
+                </div>
+                <h3 class="package-title">BÁSICO</h3>
+                <p class="package-subtitle">Ideal para iniciantes</p>
 
-                <div class="carousel-indicators" id="indicators"></div>
+                <ul class="package-features">
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
+                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+                        </svg>
+                        <span>30 Aulas em Vídeo HD</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
+                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+                        </svg>
+                        <span>Fundamentos e Mecânicas</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
+                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+                        </svg>
+                        <span>Técnicas de Mira Básica</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
+                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+                        </svg>
+                        <span>Mapas e Posicionamento</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Acesso por 6 meses</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Suporte via Chat</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Certificado Digital</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Garantia de 7 Dias</span>
+                    </li>
+                </ul>
+
+                <div class="package-pricing">
+                    <p class="package-old-price">De R$ 147,90</p>
+                    <p class="package-label">Por apenas</p>
+                    <p class="package-price">R$ 29,90</p>
+                </div>
+
+                <button class="package-button animate-neon-green">🛒 COMPRAR AGORA!</button>
+            </div>
+
+            <!-- Advanced Package -->
+            <div class="package-card">
+                <div class="package-icon">
+                    <svg class="icon" width="48" height="48" viewBox="0 0 24 24" style="stroke: black; stroke-width: 2.5;">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h3 class="package-title">AVANÇADO</h3>
+                <p class="package-subtitle">Para jogadores intermediários</p>
+
+                <ul class="package-features">
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
+                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+                        </svg>
+                        <span>60 Aulas em Vídeo HD</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
+                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+                        </svg>
+                        <span>Tudo do Plano Básico +</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
+                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+                        </svg>
+                        <span>Técnicas Avançadas de Combate</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #ef4444;">
+                            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+                        </svg>
+                        <span>Estratégias Competitivas</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Acesso por 1 ano</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Análise de Gameplay (2x)</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Grupo VIP no Discord</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Garantia de 7 Dias</span>
+                    </li>
+                </ul>
+
+                <div class="package-pricing">
+                    <p class="package-old-price">De R$ 197,90</p>
+                    <p class="package-label">Por apenas</p>
+                    <p class="package-price">R$ 49,90</p>
+                </div>
+
+                <button class="package-button animate-neon-green">🛒 COMPRAR AGORA!</button>
+            </div>
+
+            <!-- VIP Package -->
+            <div class="package-card vip">
+                <div class="package-badge">Mais Popular!</div>
+                <div class="package-icon">
+                    <svg class="icon" width="48" height="48" viewBox="0 0 24 24" style="stroke: black; stroke-width: 2.5;">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                </div>
+                <h3 class="package-title">MENTORIA VIP</h3>
+                <p class="package-subtitle">Acesso VITALÍCIO + Coaching</p>
+
+                <ul class="package-features">
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #eab308;">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>Tudo dos Planos Anteriores</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #eab308;">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>Acesso Vitalício</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #eab308;">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>Mentoria 1-on-1 (Mensal)</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #eab308;">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>Análise Ilimitada de Gameplay</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Suporte Prioritário 24h</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Participação em Treinos Pro</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Atualizações Vitalícias</span>
+                    </li>
+                    <li>
+                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Garantia de 30 Dias!</span>
+                    </li>
+                </ul>
+
+                <div class="package-pricing">
+                    <p class="package-old-price">De R$ 499,90</p>
+                    <p class="package-label">Por apenas</p>
+                    <p class="package-price">R$ 99,90</p>
+                </div>
+
+                <button class="package-button animate-neon-yellow">👑 QUERO SER VIP!</button>
             </div>
         </div>
     </section>
 
-    
-    
-    <!-- Ofertas Section -->
-    <section id="ofertas" class="section" style="background: linear-gradient(to bottom, #000, rgba(127, 29, 29, 0.1));">
-        <div class="container">
-            <h2 class="section-title">
-                Escolha Seu <span style="color: #dc2626;">PAINEL XIT</span> ABAIXO
-            </h2>
-            <p class="section-subtitle">Todos os planos incluem atualizações e suporte no WhatsApp</p>
-
-            <div class="grid grid-3">
-                    <!-- Plano MENSAL -->
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3 class="plan-name">iPHONE/iOS</h3>
-                        <div>
-                            <span class="plan-price">R$ 29,90</span>
-                            <p class="plan-period">ESSE É O MELHOR XIT PARA iPHONE/IOS!</p>
-                        </div>
-                    </div>
-
-                    <ul class="plan-features">
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Painel Mod Menu FFH4X</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> HS pescoço + Bypass</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Mira automática 100% capa</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 2x Automática</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> No Recoil (não espalha tiros)</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Rastreamento de cabeça</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> UMP AUTOMÁTICA</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Aimbot Cabeça</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> UMP AUTOMÁTICA</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Disfarce 100% indetectável</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Com disfarçe pra não leva Ban!</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Sensi VIP Full capa</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Aim Regedit</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 2x Aimbot</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> HeadShot</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Mira que grudar</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Tutorial de instalação</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Instalação rápida e fácil</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BAN!</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BLACKLIST!</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Nosso Whatsapp seu Suporte 
-                    </ul>
-                    <a href="https://go.perfectpay.com.br/PPU38CPMDFF" class="btn-plan green" target="_blank">COMPRAR AGORA!</a>
-                    <div class="plan-buyers-tag">
-                        <strong>547</strong> pessoas já compraram
-                    </div>
-                </div>
-
-              
-                <!-- Plano TRIMESTRAL -->
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3 class="plan-name">ANDROID</h3>
-                        <div>
-                            <span class="plan-price">R$ 29,90</span>
-                            <p class="plan-period">ESSE É O MELHOR XIT PARA ANDROID!</p>
-                        </div>
-                    </div>
-
-                    <ul class="plan-features">
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Painel Mod Menu FFH4X</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> HS pescoço + Bypass</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Mira automática 100% capa</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 2x Automática</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> No Recoil (não espalha tiros)</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Rastreamento de cabeça</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> UMP AUTOMÁTICA</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Aimbot Cabeça</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> UMP AUTOMÁTICA</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Disfarce 100% indetectável</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> disfarçe pra não leva Ban!</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Sensi VIP Full capa</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Aim Regedit</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 2x Aimbot</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> HeadShot</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Mira que grudar</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Tutorial de instalação</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Instalação rápida e fácil</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BAN!</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> 100% ANTI-BLACKLIST!</li>
-                    <li style="color: #ffffff;"><i class="bi bi-check-circle-fill star-green"></i> Nosso Whatsapp seu Suporte 
-                    </ul>
-
-                    <a href="https://go.perfectpay.com.br/PPU38CPQPHL" class="btn-plan green" target="_blank">COMPRAR AGORA!</a>
-                    <div class="plan-buyers-tag">
-                        <strong>682</strong> pessoas já compraram
-                    </div>
-                </div>
-            </div>
-        </div>
-
-         
-    </section>
-            
-<div class="solution-card">
-                    <div class="solution-content">
-                        <div class="solution-text">
-                            <div class="solution-number">1º</div>
-                            <h3 class="solution-title">Acesso Imediato ao Painel</h3>
-                            <p class="solution-description">Imediatamente após o pagamento concluído você receberá acesso ao Painel XIT e um vídeo ensinando a baixar e configurar.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="solution-card">
-                    <div class="solution-content">
-                        <div class="solution-text">
-                            <div class="solution-number">2º</div>
-                            <h3 class="solution-title">Zero Complicação</h3>
-                            <p class="solution-description">Você não precisará mexer com nenhum arquivo e pastas, nada complicado! Você apenas abre o Painel XIT igual um aplicativo normal do celular e usa.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="solution-card">
-                    <div class="solution-content">
-                        <div class="solution-text">
-                            <div class="solution-number">3º</div>
-                            <h3 class="solution-title">Segurança Total</h3>
-                            <p class="solution-description">Depois de baixado e configurado, O Painel XIT vai reconhecer apenas o que é cabeça e... CAPA! Mas claro, sem risco nenhum de BAN e nem de BLACKLIST.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   
-
-    <!-- Depoimentos Section -->
-    <section class="section" style="background: linear-gradient(to bottom, #000, rgba(127, 29, 29, 0.1));">
-        <div class="container">
-            <h2 class="section-title">
-                O Que Dizem Nossos <span style="color: #dc2626;">Clientes VIP</span>
-            </h2>
-            <p class="section-subtitle">Milhares de jogadores já estão usando</p>
-
-            <div class="grid grid-3">
-                <div class="card">
-                    <div style="display: flex; gap: 4px; margin-bottom: 16px;">
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                    </div>
-                    <p style="color: #d1d5db; margin-bottom: 16px; font-style: italic;">"Melhor painel que já usei! Sem complicação e realmente funciona sem risco de ban."</p>
-                    <div>
-                        <p style="font-weight: bold;">João Silva</p>
-                        <p style="font-size: 14px; color: #6b7280;">Jogador há 2 anos</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div style="display: flex; gap: 4px; margin-bottom: 16px;">
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                    </div>
-                    <p style="color: #d1d5db; margin-bottom: 16px; font-style: italic;">"A instalação é super simples e o suporte responde rapidinho. Recomendo demais!"</p>
-                    <div>
-                        <p style="font-weight: bold;">Maria Santos</p>
-                        <p style="font-size: 14px; color: #6b7280;">Streamer</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div style="display: flex; gap: 4px; margin-bottom: 16px;">
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                        <svg width="20" height="20" fill="#dc2626" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                    </div>
-                    <p style="color: #d1d5db; margin-bottom: 16px; font-style: italic;">"Uso o plano permanente e não me arrependo. Atualizações constantes e funciona perfeitamente."</p>
-                    <div>
-                        <p style="font-weight: bold;">Pedro Costa</p>
-                        <p style="font-size: 14px; color: #6b7280;">Jogador Competitivo</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Garantia Section -->
-    <section class="guarantee-section">
-        <div class="guarantee-container">
-            <div style="margin-bottom: 32px;">
-                <img src="https://static.lumi.new/06/061be501724c5e769503ae86bf7aafd5.webp" alt="7 Dias de Garantia" class="guarantee-image">
+    <!-- Guarantee Section -->
+    <section class="guarantee">
+        <div class="guarantee-content">
+            <div class="guarantee-badge">
+                <span class="guarantee-badge-number">7</span>
+                <span class="guarantee-badge-text">DIAS</span>
             </div>
 
-            <h2 class="section-title">
-                <span style="color: #dc2626;">Garantia Total 7 dias</span>
-            </h2>
-            
-            <div class="guarantee-box">
-                <p class="guarantee-text">
-                    Você ganhou <strong style="color: white;">UMA SEMANA INTEIRA</strong> para testar à vontade o PAINEL da New sensi. 
-                    Se você não gostar, devolvemos <strong style="color: #dc2626;">cada centavo</strong> do seu dinheiro de volta 
-                    <span style="color: #ef4444;"> (sem treta)</span>.
-                </p>
-            </div>
+            <h2>Garantia <span class="text-neon">Total</span> de Satisfação</h2>
 
-            <a href="#ofertas" class="btn-primary" style="padding: 20px 64px; font-size: 20px;">TESTAR SEM RISCO AGORA</a>
+            <p>Experimente o curso por 7 dias completos. Se por qualquer motivo você não ficar 100% satisfeito com os resultados, devolvemos seu dinheiro integralmente. Sem perguntas, sem burocracia.</p>
+
+            <div class="guarantee-features">
+                <div class="guarantee-feature">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span>Reembolso em até 24h</span>
+                </div>
+                <div class="guarantee-feature">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span>Sem perguntas</span>
+                </div>
+                <div class="guarantee-feature">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke: #00ff41;">
+                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span>Compra 100% segura</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="section" style="background: linear-gradient(to bottom, #111827, #000);">
-        <div class="container">
-            <h2 class="section-title">
-                <span style="color: #dc2626;">Dúvidas</span> Frequentes
-            </h2>
-            <p class="section-subtitle">Respostas para as perguntas mais comuns</p>
+    <section class="faq" id="faq">
+        <h2>Perguntas <span class="text-neon">Frequentes</span></h2>
 
-            <div style="max-width: 896px; margin: 0 auto;">
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(0)">
-                        <span>
-                            <span class="faq-bullet">●</span>
-                            O PAINEL JÁ ESTÁ ATUALIZADO?
-                        </span>
-                        <svg class="faq-arrow" id="arrow-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="faq-answer" id="answer-0">
-                        <div class="faq-answer-content">
-                            Sim, estão 100% atualizados de acordo com a última atualização do Free Fire. A diferença é que você ganha atualizações PRA SEMPRE adquirindo Agora
-                        </div>
-                    </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(0)">
+                    <span>O curso funciona para iniciantes?</span>
+                    <svg class="icon faq-icon" id="faq-icon-0" width="24" height="24" viewBox="0 0 24 24">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-0">
+                    <p>Sim! Temos módulos específicos desde o básico até o avançado. Você aprenderá no seu próprio ritmo.</p>
                 </div>
+            </div>
 
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(1)">
-                        <span>
-                            <span class="faq-bullet">●</span>
-                            AJUDA NA INSTALAÇÃO?
-                        </span>
-                        <svg class="faq-arrow" id="arrow-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="faq-answer" id="answer-1">
-                        <div class="faq-answer-content">
-                            Sim! Fornecemos um vídeo tutorial completo ensinando passo a passo como baixar e configurar o painel. Além disso, nosso suporte está disponível 24/7 para qualquer dúvida.
-                        </div>
-                    </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(1)">
+                    <span>Quanto tempo dura o acesso?</span>
+                    <svg class="icon faq-icon" id="faq-icon-1" width="24" height="24" viewBox="0 0 24 24">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-1">
+                    <p>Depende do plano escolhido: Básico (6 meses), Avançado (1 ano) e VIP (acesso vitalício).</p>
                 </div>
+            </div>
 
-
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(2)">
-                        <span>
-                            <span class="faq-bullet">●</span>
-                            QUANDO EU RECEBO O PAINEL XIT?
-                        </span>
-                        <svg class="faq-arrow" id="arrow-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="faq-answer" id="answer-3">
-                        <div class="faq-answer-content">
-                            Imediatamente após a confirmação do pagamento! Você receberá um email com as instruções de acesso ao painel e o vídeo tutorial.
-                        </div>
-                    </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(2)">
+                    <span>Como recebo o acesso após a compra?</span>
+                    <svg class="icon faq-icon" id="faq-icon-2" width="24" height="24" viewBox="0 0 24 24">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-2">
+                    <p>Imediatamente após a confirmação do pagamento, você receberá o acesso por e-mail com todas as instruções de login na plataforma.</p>
                 </div>
+            </div>
 
-
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(3)">
-                        <span>
-                            <span class="faq-bullet">●</span>
-                            E SE EU NÃO GOSTAR DO PAINEL XIT?
-                        </span>
-                        <svg class="faq-arrow" id="arrow-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="faq-answer" id="answer-5">
-                        <div class="faq-answer-content">
-                            Sem problemas! Você tem 7 dias de garantia incondicional. Se não gostar, devolvemos 100% do seu dinheiro, sem perguntas e sem complicação.
-                        </div>
-                    </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(3)">
+                    <span>Qual a diferença entre os planos?</span>
+                    <svg class="icon faq-icon" id="faq-icon-3" width="24" height="24" viewBox="0 0 24 24">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-3">
+                    <p>O Básico foca nos fundamentos, o Avançado inclui técnicas competitivas e análise de gameplay, e o VIP oferece mentoria personalizada 1-on-1 com coaches profissionais.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    
+    <!-- Sticky CTA Button (aparece apenas ao chegar no FAQ) -->
+    <div class="sticky-cta" id="sticky-cta">
+        <a href="#pacotes">GARANTIR MINHA VAGA</a>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-main">
-                <div class="footer-left">
-                    <img src="https://static.lumi.new/material/c0/c0add45d46c1d90121fdceace3cdbf7f.png" alt="Legit XIT Logo" class="footer-logo">
-                    <p class="footer-copyright">New sensi ff 2025© Todos os direitos reservados</p>
-                </div>
-
-                <div class="footer-links">
-                    <a href="https://www.instagram.com/new.sensi.ff/" target="_blank" rel="noopener noreferrer" class="footer-link">
-                        @instagram:new.sensi.ff
-                    </a>
-                    <a href="#termos" class="footer-link" style="font-size: 14px;">
-                        TERMOS E POLÍTICAS
+            <div>
+                <p class="footer-text">© 2024 Free Fire PRO. Todos os direitos reservados.</p>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
                     </a>
                 </div>
-            </div>
+                
+                <p class="footer-credits">
+                    Desenvolvido por <a href="#">Free Fire PRO Team</a>
+                </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Feedback Carousel
-        const feedbackImages = [
-            "https://static.lumi.new/04/04b5106e740dc254edc33fb9b634b675.webp",
-            "https://static.lumi.new/ef/ef18c64cf0c5d23efd41237beadb341e.webp",
-            "https://static.lumi.new/e0/e0fc05e64d8c4217db1d57a0c7a349f5.webp",
-            "https://static.lumi.new/0e/0e6dd639ea5d8e9d82ddcb1e103db36d.webp",
-            "https://static.lumi.new/ea/eafac9f1205fb40b204e80f8919b3dd3.webp"
+        // Current Date
+        document.getElementById('data-display').textContent = new Date().toLocaleDateString('pt-BR');
+
+        // Sales Counter
+        let salesCount = 252;
+        setInterval(() => {
+            salesCount += Math.floor(Math.random() * 3) + 1;
+            document.getElementById('sales-count').textContent = salesCount;
+        }, 15000);
+
+        // User Counter
+        let userCount = 998;
+        setInterval(() => {
+            userCount += Math.floor(Math.random() * 8) + 3;
+            document.getElementById('user-count').textContent = userCount.toLocaleString('pt-BR');
+        }, 20000);
+
+        // Purchase Notifications
+        const names = ["João Silva", "Maria Santos", "Pedro Costa", "Ana", "Carlos Souza", "Juliana", "Rafael", "Camila"];
+        const products = ["🎯 Curso Free Fire Básico", "🎯 Curso Free Fire Avançado", "👑 Mentoria VIP"];
+        const cities = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Porto Alegre", "Curitiba", "Recife", "Fortaleza"];
+
+        function showNotification() {
+            const name = names[Math.floor(Math.random() * names.length)];
+            const product = products[Math.floor(Math.random() * products.length)];
+            const city = cities[Math.floor(Math.random() * cities.length)];
+
+            const notif = document.createElement('div');
+            notif.className = 'notification animate-slide-in';
+            notif.innerHTML = `
+                <div class="notification-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color: black;">
+                        <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+                    </svg>
+                </div>
+                <div style="flex: 1; min-width: 0;">
+                    <p style="color: #00ff41; font-weight: 700; font-size: 12px;">🔥 NOVA MATRÍCULA!</p>
+                    <p style="font-weight: 600; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${product}</p>
+                    <p style="color: #9ca3af; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${name} • ${city}</p>
+                </div>
+            `;
+
+            document.getElementById('notifications').appendChild(notif);
+
+            setTimeout(() => {
+                notif.remove();
+            }, 5000);
+        }
+
+        setTimeout(() => showNotification(), 3000);
+        setInterval(() => showNotification(), Math.random() * 7000 + 8000);
+
+        // Carousel
+        const testimonials = [
+            "https://static.lumi.new/c7/c7b914d10688c2fffc5cb4d141e67636.webp",
+            "https://static.lumi.new/18/18ccbb3b265253da2c711dc58abd771e.webp",
+            "https://static.lumi.new/18/18e3fc8e4eb0873a2d8b5f2f6bf9e17e.webp",
+            "https://static.lumi.new/fe/fefcf3863fb7b5c7110f449e572a6fcc.webp",
+            "https://static.lumi.new/e0/e0d72d5583e8ea847c16e94db16083d0.webp"
         ];
-        
-        let currentFeedback = 0;
-        
+        let currentTestimonial = 0;
+
         function updateCarousel() {
-            document.getElementById('carouselImage').src = feedbackImages[currentFeedback];
-            
-            // Update indicators
-            const indicators = document.getElementById('indicators');
-            indicators.innerHTML = '';
-            feedbackImages.forEach((_, index) => {
-                const indicator = document.createElement('button');
-                indicator.className = 'indicator' + (index === currentFeedback ? ' active' : '');
-                indicator.onclick = () => {
-                    currentFeedback = index;
-                    updateCarousel();
-                };
-                indicators.appendChild(indicator);
+            document.getElementById('carousel-image').src = testimonials[currentTestimonial];
+            document.querySelectorAll('.carousel-dot').forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === currentTestimonial);
             });
         }
-        
-        function nextFeedback() {
-            currentFeedback = (currentFeedback + 1) % feedbackImages.length;
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
             updateCarousel();
         }
-        
-        function prevFeedback() {
-            currentFeedback = (currentFeedback - 1 + feedbackImages.length) % feedbackImages.length;
+
+        function prevTestimonial() {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
             updateCarousel();
         }
-        
-        // Initialize carousel
-        updateCarousel();
-        
+
+        // Create carousel dots
+        const dotsContainer = document.getElementById('carousel-dots');
+        testimonials.forEach((_, idx) => {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
+            dot.onclick = () => {
+                currentTestimonial = idx;
+                updateCarousel();
+            };
+            dot.setAttribute('aria-label', `Ir para feedback ${idx + 1}`);
+            dotsContainer.appendChild(dot);
+        });
+
         // FAQ Toggle
         function toggleFaq(index) {
-            const answer = document.getElementById('answer-' + index);
-            const arrow = document.getElementById('arrow-' + index);
+            const answer = document.getElementById(`faq-answer-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
             
-            if (answer.classList.contains('show')) {
-                answer.classList.remove('show');
-                arrow.classList.remove('rotate');
-            } else {
-                // Close all other FAQs
-                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('show'));
-                document.querySelectorAll('.faq-arrow').forEach(a => a.classList.remove('rotate'));
-                
-                answer.classList.add('show');
-                arrow.classList.add('rotate');
-            }
+            answer.classList.toggle('open');
+            icon.classList.toggle('open');
         }
-        
-        // Purchase Notifications
-        const buyers = [
-            { name: "Carlos S.", plan: "Painel XIT Android" },
-            { name: "Ana M.", plan: "Painel XIT iPhone/iOS" },
-            { name: "Pedro L.", plan: "Painel XIT Android" },
-            { name: "Julia R.", plan: "Painel XIT iPhone/iOS" },
-            { name: "Lucas P.", plan: "Painel XIT Android" },
-            { name: "Marina T.", plan: "XIT 2 em 1 Android/iPhone" }
-            { name: "Matheus G.", plan: "XIT 2 em 1 Android/iPhone" }
-        ];
-        
-        function showRandomNotification() {
-            const randomBuyer = buyers[Math.floor(Math.random() * buyers.length)];
-            document.getElementById('buyerName').textContent = 
-                randomBuyer.name + ' acabou de comprar o ' + randomBuyer.plan;
-            document.getElementById('notification').classList.add('show');
-            
-            setTimeout(() => {
-                document.getElementById('notification').classList.remove('show');
-            }, 4000);
+
+        // Sticky CTA: mostrar somente quando o cliente chegar na seção FAQ
+        const stickyCta = document.getElementById('sticky-cta');
+        const faqEl = document.getElementById('faq');
+
+        if (stickyCta && faqEl && 'IntersectionObserver' in window) {
+            const obs = new IntersectionObserver(
+                (entries) => {
+                    const entry = entries && entries[0];
+                    stickyCta.classList.toggle('show', !!entry && entry.isIntersecting);
+                },
+                { threshold: 0.35 }
+            );
+
+            obs.observe(faqEl);
         }
-        
-        // Show first notification after 2 seconds
-        setTimeout(showRandomNotification, 2000);
-        
-        // Show notification every 8 seconds
-        setInterval(showRandomNotification, 8000);
-        
-        // Modal Functions
-        function closeModal() {
-            document.getElementById('discountModal').classList.remove('show');
-        }
-        
-        function proceedToMonthly() {
-            window.open('https://go.perfectpay.com.br/PPU38CQ52PH', '_blank');
-            closeModal();
-        }
-        
-        // Close modal when clicking outside
-        document.getElementById('discountModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
     </script>
 </body>
 </html>
-
-
-
-
-
