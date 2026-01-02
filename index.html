@@ -1025,6 +1025,13 @@
             stroke: none;
         }
 
+        /* Fix text-neon mobile */
+        @media (max-width: 767px) {
+            .text-neon {
+                display: inline-block;
+            }
+        }
+
         /* Media Queries */
         @media (min-width: 768px) {
             h1 {
@@ -1098,7 +1105,9 @@
         }
 
         .sticky-cta a {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             background: linear-gradient(to right, #00ff41, #00e639);
             color: black;
             font-weight: 900;
@@ -1109,6 +1118,8 @@
             text-transform: uppercase;
             letter-spacing: 0.04em;
             font-size: 13px;
+            text-align: center;
+            white-space: nowrap;
         }
 
         .sticky-cta a:hover {
@@ -1665,6 +1676,9 @@
     <footer>
         <div class="footer-content">
             <div>
+                <div style="margin-bottom: 24px;">
+                    <img src="https://static.lumi.new/03/03af9622056718bde17a728ece6c9024.webp" alt="New Xiter Logo" style="width: 120px; height: auto; margin: 0 auto; display: block;">
+                </div>
                 <p class="footer-text">© 2024 Free Fire PRO. Todos os direitos reservados.</p>
                 
                 <div class="social-links">
